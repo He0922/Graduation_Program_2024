@@ -11,6 +11,7 @@
     <None Include="..\..\Source\Graduation_2024Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -29,6 +30,9 @@
     <Filter Include="Source\Graduation_2024">
       <UniqueIdentifier>{D61DB97D-D968-3767-8A74-3557811C3E23}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\DebugHelper.h">
+      <Filter>Source\Graduation_2024</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Graduation_2024\Graduation_2024.Build.cs">
       <Filter>Source\Graduation_2024</Filter>
     </None>
@@ -37,6 +41,48 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Graduation_2024\Graduation_2024.h">
       <Filter>Source\Graduation_2024</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Private">
+      <UniqueIdentifier>{883D0E7F-4A91-3CA5-B7AB-CB8C5B02766C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Graduation_2024\Private\Character">
+      <UniqueIdentifier>{3BC88B6A-7416-30E4-8BCB-90BFEF6B7D0F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\Player_Character.cpp">
+      <Filter>Source\Graduation_2024\Private\Character</Filter>
+    </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\GameModeBase">
+      <UniqueIdentifier>{DE082164-1457-3F76-A4E5-207400143E0E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\GameModeBase\Custom_GameModeBase.cpp">
+      <Filter>Source\Graduation_2024\Private\GameModeBase</Filter>
+    </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\MovementComponent">
+      <UniqueIdentifier>{65826948-B0FA-3A24-8321-D587A6A5E35C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\Player_CMC.cpp">
+      <Filter>Source\Graduation_2024\Private\MovementComponent</Filter>
+    </ClCompile>
+    <Filter Include="Source\Graduation_2024\Public">
+      <UniqueIdentifier>{AF1DB00F-51B8-3DD0-B7E1-EEBA9F130934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Graduation_2024\Public\Character">
+      <UniqueIdentifier>{596C9BBB-4227-3B13-961C-69E2837CFCB1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Player_Character.h">
+      <Filter>Source\Graduation_2024\Public\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\GameModeBase">
+      <UniqueIdentifier>{1B5D2992-4D3F-3136-BD42-E98B9B945DC4}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\GameModeBase\Custom_GameModeBase.h">
+      <Filter>Source\Graduation_2024\Public\GameModeBase</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\MovementComponent">
+      <UniqueIdentifier>{6A951C4A-902C-3B1E-8D9E-9CE2C421574A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\Player_CMC.h">
+      <Filter>Source\Graduation_2024\Public\MovementComponent</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

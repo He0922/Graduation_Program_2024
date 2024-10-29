@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ue5\\project\\graduation_program_2024\\graduation_2024\\source\\graduation_2024\\private\\gamemodebase\\custom_gamemodebase.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ue5\\project\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\ue5\\project\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\graduation_2024\\definitions.graduation_2024.h",
+            "e:\\ue5\\project\\graduation_program_2024\\graduation_2024\\source\\graduation_2024\\public\\gamemodebase\\custom_gamemodebase.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "e:\\ue5\\project\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\custom_gamemodebase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
