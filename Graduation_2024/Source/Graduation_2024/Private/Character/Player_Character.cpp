@@ -2,6 +2,7 @@
 
 
 #include "Character/Player_Character.h"
+#include "../DebugHelper.h"
 
 // Sets default values
 APlayer_Character::APlayer_Character()
