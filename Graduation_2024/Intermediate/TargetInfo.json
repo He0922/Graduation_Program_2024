@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Graduation_2024",
+			"Path": "..\\Source\\Graduation_2024.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Graduation_2024Editor",
+			"Path": "..\\Source\\Graduation_2024Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
