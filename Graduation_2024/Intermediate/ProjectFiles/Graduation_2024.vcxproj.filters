@@ -48,19 +48,19 @@
     <Filter Include="Source\Graduation_2024\Private\Character">
       <UniqueIdentifier>{3BC88B6A-7416-30E4-8BCB-90BFEF6B7D0F}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\Player_Character.cpp">
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\PlayerCharacter.cpp">
       <Filter>Source\Graduation_2024\Private\Character</Filter>
     </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\GameModeBase">
       <UniqueIdentifier>{DE082164-1457-3F76-A4E5-207400143E0E}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Graduation_2024\Private\GameModeBase\Custom_GameModeBase.cpp">
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\GameModeBase\CustomGameModeBase.cpp">
       <Filter>Source\Graduation_2024\Private\GameModeBase</Filter>
     </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\MovementComponent">
       <UniqueIdentifier>{65826948-B0FA-3A24-8321-D587A6A5E35C}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\Player_CMC.cpp">
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\PlayerCharacterMovementComponent.cpp">
       <Filter>Source\Graduation_2024\Private\MovementComponent</Filter>
     </ClCompile>
     <Filter Include="Source\Graduation_2024\Public">
@@ -69,19 +69,19 @@
     <Filter Include="Source\Graduation_2024\Public\Character">
       <UniqueIdentifier>{596C9BBB-4227-3B13-961C-69E2837CFCB1}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Player_Character.h">
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerCharacter.h">
       <Filter>Source\Graduation_2024\Public\Character</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\GameModeBase">
       <UniqueIdentifier>{1B5D2992-4D3F-3136-BD42-E98B9B945DC4}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\GameModeBase\Custom_GameModeBase.h">
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\GameModeBase\CustomGameModeBase.h">
       <Filter>Source\Graduation_2024\Public\GameModeBase</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\MovementComponent">
       <UniqueIdentifier>{6A951C4A-902C-3B1E-8D9E-9CE2C421574A}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\Player_CMC.h">
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\PlayerCharacterMovementComponent.h">
       <Filter>Source\Graduation_2024\Public\MovementComponent</Filter>
     </ClInclude>
   </ItemGroup>

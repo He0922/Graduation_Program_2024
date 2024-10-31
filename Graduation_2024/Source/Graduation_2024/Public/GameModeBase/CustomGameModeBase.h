@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "Custom_GameModeBase.generated.h"
+#include "CustomGameModeBase.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GRADUATION_2024_API ACustom_GameModeBase : public AGameModeBase
+class GRADUATION_2024_API ACustomGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	

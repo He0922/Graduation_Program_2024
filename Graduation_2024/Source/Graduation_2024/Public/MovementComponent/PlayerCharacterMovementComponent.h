@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "Player_CMC.generated.h"
+#include "PlayerCharacterMovementComponent.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GRADUATION_2024_API UPlayer_CMC : public UCharacterMovementComponent
+class GRADUATION_2024_API UPlayerCharacterMovementComponent : public UCharacterMovementComponent
 {
 	GENERATED_BODY()
 	
