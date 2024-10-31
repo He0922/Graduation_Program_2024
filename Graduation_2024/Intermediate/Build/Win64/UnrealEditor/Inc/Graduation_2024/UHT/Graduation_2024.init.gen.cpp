@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeGraduation_2024_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x2102B11E,
+				0x5F16ECA4,
 				0x910820DE,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeGraduation_2024_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_Graduation_2024.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Graduation_2024(Z_Construct_UPackage__Script_Graduation_2024, TEXT("/Script/Graduation_2024"), Z_Registration_Info_UPackage__Script_Graduation_2024, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x2102B11E, 0x910820DE));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Graduation_2024(Z_Construct_UPackage__Script_Graduation_2024, TEXT("/Script/Graduation_2024"), Z_Registration_Info_UPackage__Script_Graduation_2024, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x5F16ECA4, 0x910820DE));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

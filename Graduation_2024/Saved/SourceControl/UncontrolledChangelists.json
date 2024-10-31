@@ -248,6 +248,12 @@
 				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/Misc/White_Box/ThirdPersonMap_Cube212.uasset",
 				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/Misc/White_Box/ThirdPersonMap_Cube213.uasset",
 				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/Misc/White_Box/ThirdPersonMap_Cube214.uasset",
+				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/Character/Player/BP/BP_PlayerCharacter.uasset",
+				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/Character/Player/EnhancedInput/Main_IMC.uasset",
+				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/Character/Player/EnhancedInput/InputAction/IA_Move.uasset",
+				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/Character/Player/EnhancedInput/InputAction/IA_Jump.uasset",
+				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/Character/Player/EnhancedInput/InputAction/IA_Look.uasset",
+				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/BP/BP_CustomGameModeBase.uasset",
 				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/BP_Custom_GameModeBase.uasset",
 				"E:/UE5/Project/Graduation_Program_2024/Graduation_2024/Content/Character/BP_Player_Character.uasset"
 			]
