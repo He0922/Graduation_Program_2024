@@ -63,12 +63,24 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\PlayerCharacterMovementComponent.cpp">
       <Filter>Source\Graduation_2024\Private\MovementComponent</Filter>
     </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\UI">
+      <UniqueIdentifier>{628D4C8F-EBC1-38F9-914B-510DA8B8469D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Graduation_2024\Private\UI\Attributes">
+      <UniqueIdentifier>{E1F290AD-8D7A-3129-99E4-E719DF1C5FBA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\UI\Attributes\PlayerAttributesUW.cpp">
+      <Filter>Source\Graduation_2024\Private\UI\Attributes</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Public">
       <UniqueIdentifier>{AF1DB00F-51B8-3DD0-B7E1-EEBA9F130934}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Graduation_2024\Public\Character">
       <UniqueIdentifier>{596C9BBB-4227-3B13-961C-69E2837CFCB1}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerAttributes.h">
+      <Filter>Source\Graduation_2024\Public\Character</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerCharacter.h">
       <Filter>Source\Graduation_2024\Public\Character</Filter>
     </ClInclude>
@@ -83,6 +95,15 @@
     </Filter>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\PlayerCharacterMovementComponent.h">
       <Filter>Source\Graduation_2024\Public\MovementComponent</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\UI">
+      <UniqueIdentifier>{2A640A15-54C5-3178-B34C-3D58669E8F25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Graduation_2024\Public\UI\Attributes">
+      <UniqueIdentifier>{8C99D0B1-E15B-33C5-8CF5-E68A3E1BF268}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\UI\Attributes\PlayerAttributesUW.h">
+      <Filter>Source\Graduation_2024\Public\UI\Attributes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

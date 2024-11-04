@@ -5,7 +5,18 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
+
+
+#include "Character/PlayerAttributes.h"
+
+
 #include "PlayerCharacter.generated.h"
+
+
+
+
+
+
 
 UCLASS()
 class GRADUATION_2024_API APlayerCharacter : public ACharacter
@@ -83,4 +94,13 @@ public:
 	class UPlayerCharacterMovementComponent* playerCMC;
 
 #pragma endregion
+
+
+#pragma region Player Attribute
+//public:
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attribute")
+//	EPlayerAttributes playerAttributes;
+#pragma endregion
 };
+
+

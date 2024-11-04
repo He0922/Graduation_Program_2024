@@ -4,12 +4,14 @@
 #include "Character/PlayerCharacter.h"
 #include "MovementComponent/PlayerCharacterMovementComponent.h"
 #include "../DebugHelper.h"
+#include "Character/PlayerAttributes.h"
 
 
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+
 
 
 // Sets default values
@@ -19,6 +21,8 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+
 
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationRoll = false;
