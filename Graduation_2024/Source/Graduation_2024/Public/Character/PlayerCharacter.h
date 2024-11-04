@@ -14,10 +14,6 @@
 
 
 
-
-
-
-
 UCLASS()
 class GRADUATION_2024_API APlayerCharacter : public ACharacter
 {
@@ -53,6 +49,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
 	class UInputAction* jumpAction;
+
 #pragma endregion
 
 
@@ -97,9 +94,14 @@ public:
 
 
 #pragma region Player Attribute
-//public:
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attribute")
-//	EPlayerAttributes playerAttributes;
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attribute")
+	FPlayerAttributes fplayerAttributes;
+
+	UPROPERTY()
+	EPlayerAttributes eplayerAttributes;
+
+	void PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes);
 #pragma endregion
 };
 

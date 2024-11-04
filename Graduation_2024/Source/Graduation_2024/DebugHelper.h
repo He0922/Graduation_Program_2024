@@ -6,30 +6,71 @@
 
 namespace Debug
 {
-	static void Print(const FString& Msg,const float Time, const FColor& Color = FColor::MakeRandomColor(), int32 InKey = -1)
+	static void Print(const FString& Msg,const float Time, bool PrintLog, const FColor& Color = FColor::MakeRandomColor(), int32 InKey = -1)
 	{
 		if (GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage(InKey, Time, Color, Msg);
 		}
 
-		UE_LOG(LogTemp, Warning, TEXT("%s"), *Msg);
+		if (PrintLog) { UE_LOG(LogTemp, Warning, TEXT("%s"), *Msg); }
 	}
 
-	static void PrintBool(const FString& Msg, bool bValue, const FColor& Color = FColor::MakeRandomColor(), int32 InKey = -1)
+
+	static void PrintBool(const FString& Msg, bool bValue, const float Time, bool PrintLog, const FColor& Color = FColor::MakeRandomColor(), int32 InKey = -1)
 	{
 		FString BoolString = bValue ? TEXT("true") : TEXT("false");
 		FString FullMsg = Msg + BoolString;
 
 		if (GEngine)
 		{
-			GEngine->AddOnScreenDebugMessage(InKey, 0.f, Color, FullMsg);
+			GEngine->AddOnScreenDebugMessage(InKey, Time, Color, FullMsg);
 		}
 
-		UE_LOG(LogTemp, Warning, TEXT("%s"), *FullMsg);
+		if (PrintLog) {UE_LOG(LogTemp, Warning, TEXT("%s"), *FullMsg);}
+		
 	}
 
-	static void PrintHitResult(const FHitResult& HitResult, const FColor& Color = FColor::MakeRandomColor(), int32 InKey = -1)
+
+    static void PrintFloat(const FString& Msg, float Value, float Time, bool PrintLog, const FColor& Color = FColor::MakeRandomColor(), int32 InKey = -1)
+    {
+        FString FullMsg = Msg + FString::SanitizeFloat(Value);
+
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(InKey, Time, Color, FullMsg);
+        }
+
+		if (PrintLog) { UE_LOG(LogTemp, Warning, TEXT("%s"), *FullMsg); }
+    }
+
+    static void PrintVector(const FString& Msg, const FVector& Value, float Time, bool PrintLog, const FColor& Color = FColor::MakeRandomColor(), int32 InKey = -1)
+    {
+        FString FullMsg = Msg + Value.ToString();
+
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(InKey, Time, Color, FullMsg);
+        }
+
+		if (PrintLog) { UE_LOG(LogTemp, Warning, TEXT("%s"), *FullMsg); }
+    }
+
+    static void PrintInt(const FString& Msg, int32 Value, float Time, bool PrintLog, const FColor& Color = FColor::MakeRandomColor(), int32 InKey = -1)
+    {
+        FString FullMsg = Msg + FString::FromInt(Value);
+
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(InKey, Time, Color, FullMsg);
+        }
+
+        if (PrintLog) { UE_LOG(LogTemp, Warning, TEXT("%s"), *FullMsg); }
+    }
+
+
+
+	static void PrintHitResult(const FHitResult& HitResult, bool PrintLog, const float Time, const FColor& Color = FColor::MakeRandomColor(), int32 InKey = -1)
 	{
 		FString HitResultString = FString::Printf(TEXT("HitResult - Actor: %s, Location: %s, Impact Point: %s, Normal: %s"),
 			*HitResult.GetActor()->GetName(),
@@ -39,9 +80,9 @@ namespace Debug
 
 		if (GEngine)
 		{
-			GEngine->AddOnScreenDebugMessage(InKey, 0.f, Color, HitResultString);
+			GEngine->AddOnScreenDebugMessage(InKey, Time, Color, HitResultString);
 		}
 
-		UE_LOG(LogTemp, Warning, TEXT("%s"), *HitResultString);
+		if (PrintLog) { UE_LOG(LogTemp, Warning, TEXT("%s"), *HitResultString); }
 	}
 }

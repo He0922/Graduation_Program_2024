@@ -64,12 +64,15 @@ void APlayerCharacter::BeginPlay()
 	
 }
 
+
 // Called every frame
 void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	PrintAttributes(fplayerAttributes.Attributes);
 }
+
 
 // Called to bind functionality to input
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -117,6 +120,35 @@ void APlayerCharacter::Look(const FInputActionValue& Value)
 
 	AddControllerYawInput(lookAxisVector.X);
 	AddControllerPitchInput(-lookAxisVector.Y);
+}
+
+
+void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes)
+{
+	for (const auto& Pair : Attributes)
+	{
+		EPlayerAttributes Attribute = Pair.Key;
+		float Value = Pair.Value;
+
+		FString AttributeName;
+		switch (Attribute)
+		{
+		case EPlayerAttributes::ehealth: AttributeName = TEXT("Health"); break;
+		case EPlayerAttributes::eenergy: AttributeName = TEXT("Energy"); break;
+		case EPlayerAttributes::eattack: AttributeName = TEXT("Attack"); break;
+		case EPlayerAttributes::emoveSpeed: AttributeName = TEXT("MoveSpeed"); break;
+		}
+
+		// 打印到控制台
+		UE_LOG(LogTemp, Log, TEXT("Attribute: %s, Value: %f"), *AttributeName, Value);
+
+		// 打印到屏幕
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 0.f, FColor::Green, FString::Printf(TEXT("Attribute: %s, Value: %f"), *AttributeName, Value));
+		}
+	}
+
 }
 
 
