@@ -103,6 +103,11 @@ public:
 
 	void PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes);
 #pragma endregion
+
+#pragma region Player Vector
+public:
+	
+#pragma endregion
 };
 
 
