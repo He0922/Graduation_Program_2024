@@ -45,6 +45,12 @@
     <Filter Include="Source\Graduation_2024\Private">
       <UniqueIdentifier>{883D0E7F-4A91-3CA5-B7AB-CB8C5B02766C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Graduation_2024\Private\Archival">
+      <UniqueIdentifier>{74EED535-F968-3755-975F-F06E07D2CAAE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Archival\Archival.cpp">
+      <Filter>Source\Graduation_2024\Private\Archival</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\Character">
       <UniqueIdentifier>{3BC88B6A-7416-30E4-8BCB-90BFEF6B7D0F}</UniqueIdentifier>
     </Filter>
@@ -59,6 +65,12 @@
     </Filter>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\GameModeBase\CustomGameModeBase.cpp">
       <Filter>Source\Graduation_2024\Private\GameModeBase</Filter>
+    </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\Interface">
+      <UniqueIdentifier>{8F2F88EB-5B5F-391B-954A-576949F4F98C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerAttributesInterface.cpp">
+      <Filter>Source\Graduation_2024\Private\Interface</Filter>
     </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\MovementComponent">
       <UniqueIdentifier>{65826948-B0FA-3A24-8321-D587A6A5E35C}</UniqueIdentifier>
@@ -81,6 +93,12 @@
     <Filter Include="Source\Graduation_2024\Public">
       <UniqueIdentifier>{AF1DB00F-51B8-3DD0-B7E1-EEBA9F130934}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Graduation_2024\Public\Archival">
+      <UniqueIdentifier>{A04C1590-2FF7-3A37-A88C-24813DD71E87}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Archival\Archival.h">
+      <Filter>Source\Graduation_2024\Public\Archival</Filter>
+    </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\Character">
       <UniqueIdentifier>{596C9BBB-4227-3B13-961C-69E2837CFCB1}</UniqueIdentifier>
     </Filter>
@@ -98,6 +116,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\GameModeBase\CustomGameModeBase.h">
       <Filter>Source\Graduation_2024\Public\GameModeBase</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\Interface">
+      <UniqueIdentifier>{F92AA8A3-1426-3A89-83AC-D81E1A9758C2}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerAttributesInterface.h">
+      <Filter>Source\Graduation_2024\Public\Interface</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\MovementComponent">
       <UniqueIdentifier>{6A951C4A-902C-3B1E-8D9E-9CE2C421574A}</UniqueIdentifier>

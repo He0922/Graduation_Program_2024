@@ -271,6 +271,9 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\Graduation_2024\Graduation_2024.h"/>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Archival\Archival.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\Mayfly.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -278,6 +281,9 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\GameModeBase\CustomGameModeBase.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerAttributesInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\MayflyMovementComponent.cpp">
@@ -289,10 +295,12 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\UI\Attributes\PlayerAttributesUW.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Archival\Archival.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Mayfly.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerAttributes.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerCharacter.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\GameModeBase\CustomGameModeBase.h"/>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerAttributesInterface.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\MayflyMovementComponent.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\PlayerCharacterMovementComponent.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\UI\Attributes\PlayerAttributesUW.h"/>

@@ -35,13 +35,45 @@ struct Z_Construct_UClass_UPlayerAttributesUW_Statics
 		{ "IncludePath", "UI/Attributes/PlayerAttributesUW.h" },
 		{ "ModuleRelativePath", "Public/UI/Attributes/PlayerAttributesUW.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerHealth_MetaData[] = {
+		{ "Category", "Player Attributes" },
+		{ "ModuleRelativePath", "Public/UI/Attributes/PlayerAttributesUW.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerEnergy_MetaData[] = {
+		{ "Category", "Player Attributes" },
+		{ "ModuleRelativePath", "Public/UI/Attributes/PlayerAttributesUW.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerAttack_MetaData[] = {
+		{ "Category", "Player Attributes" },
+		{ "ModuleRelativePath", "Public/UI/Attributes/PlayerAttributesUW.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerMoveSpeed_MetaData[] = {
+		{ "Category", "Player Attributes" },
+		{ "ModuleRelativePath", "Public/UI/Attributes/PlayerAttributesUW.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_playerHealth;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_playerEnergy;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_playerAttack;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_playerMoveSpeed;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UPlayerAttributesUW>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAttributesUW_Statics::NewProp_playerHealth = { "playerHealth", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAttributesUW, playerHealth), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerHealth_MetaData), NewProp_playerHealth_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAttributesUW_Statics::NewProp_playerEnergy = { "playerEnergy", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAttributesUW, playerEnergy), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerEnergy_MetaData), NewProp_playerEnergy_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAttributesUW_Statics::NewProp_playerAttack = { "playerAttack", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAttributesUW, playerAttack), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerAttack_MetaData), NewProp_playerAttack_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAttributesUW_Statics::NewProp_playerMoveSpeed = { "playerMoveSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAttributesUW, playerMoveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerMoveSpeed_MetaData), NewProp_playerMoveSpeed_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerAttributesUW_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAttributesUW_Statics::NewProp_playerHealth,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAttributesUW_Statics::NewProp_playerEnergy,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAttributesUW_Statics::NewProp_playerAttack,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAttributesUW_Statics::NewProp_playerMoveSpeed,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerAttributesUW_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerAttributesUW_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UUserWidget,
 	(UObject* (*)())Z_Construct_UPackage__Script_Graduation_2024,
@@ -53,11 +85,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPlayerAttributesUW_Sta
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	nullptr,
-	nullptr,
+	Z_Construct_UClass_UPlayerAttributesUW_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerAttributesUW_Statics::PropPointers),
 	0,
 	0x00B010A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerAttributesUW_Statics::Class_MetaDataParams), Z_Construct_UClass_UPlayerAttributesUW_Statics::Class_MetaDataParams)
@@ -83,10 +115,10 @@ UPlayerAttributesUW::~UPlayerAttributesUW() {}
 struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerAttributesUW, UPlayerAttributesUW::StaticClass, TEXT("UPlayerAttributesUW"), &Z_Registration_Info_UClass_UPlayerAttributesUW, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAttributesUW), 591425729U) },
+		{ Z_Construct_UClass_UPlayerAttributesUW, UPlayerAttributesUW::StaticClass, TEXT("UPlayerAttributesUW"), &Z_Registration_Info_UClass_UPlayerAttributesUW, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAttributesUW), 1931561874U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_227814721(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_2972218977(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

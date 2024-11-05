@@ -8,6 +8,9 @@
 
 
 #include "Character/PlayerAttributes.h"
+#include "UI/Attributes/PlayerAttributesUW.h"
+#include "Interface/PlayerAttributesInterface.h"
+
 
 
 #include "PlayerCharacter.generated.h"
@@ -15,7 +18,7 @@
 
 
 UCLASS()
-class GRADUATION_2024_API APlayerCharacter : public ACharacter
+class GRADUATION_2024_API APlayerCharacter : public ACharacter, public IPlayerAttributesInterface
 {
 	GENERATED_BODY()
 
@@ -33,6 +36,34 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
+#pragma region Interface
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerHealth;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerEnergy;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerAttack;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerMoveSpeed;
+
+
+	virtual float GetHealth() const override;
+	virtual void SetHealth(float AddHP) override;
+
+	virtual float GetEnergy() const override;
+	virtual void SetEnergy(float AddEnergy) override;
+
+	virtual float GetAttack() const override;
+	virtual void SetAttack(float AddAttack) override;
+
+	virtual float GetMoveSpeed() const override;
+	virtual void SetMoveSpeed(float AddMoveSpeed) override;
+#pragma endregion
 
 
 // 创建输入映射、输入动作
@@ -100,13 +131,24 @@ public:
 
 	UPROPERTY()
 	EPlayerAttributes eplayerAttributes;
+#pragma endregion
 
+
+#pragma region Debug Print
 	void PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes);
 #pragma endregion
 
-#pragma region Player Vector
+
+#pragma region UI
 public:
-	
+	UFUNCTION()
+	int InitHUD();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes UW")
+	TSubclassOf<UPlayerAttributesUW> playerAttributesUWClass;
+
+	UPROPERTY()
+	class UPlayerAttributesUW* playerAttributesUW;
 #pragma endregion
 };
 

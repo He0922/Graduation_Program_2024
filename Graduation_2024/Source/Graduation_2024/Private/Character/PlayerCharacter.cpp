@@ -5,6 +5,7 @@
 #include "MovementComponent/PlayerCharacterMovementComponent.h"
 #include "../DebugHelper.h"
 #include "Character/PlayerAttributes.h"
+#include "UI/Attributes/PlayerAttributesUW.h"
 
 
 #include "EnhancedInputComponent.h"
@@ -61,7 +62,8 @@ void APlayerCharacter::BeginPlay()
 			subsystem->AddMappingContext(mainMappingContext, 0);
 		}
 	}
-	
+	SetHealth(0.f);
+	InitHUD();
 }
 
 
@@ -70,7 +72,8 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	PrintAttributes(fplayerAttributes.Attributes);
+	PrintAttributes(fplayerAttributes.Mapattributes);
+	
 }
 
 
@@ -87,6 +90,39 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 	}
 }
+
+
+#pragma region Interface
+float APlayerCharacter::GetHealth() const { return playerHealth; }
+void APlayerCharacter::SetHealth(float AddHP) 
+{ 	
+	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::ehealth, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealth) + AddHP));
+	playerHealth = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealth);
+}
+
+float APlayerCharacter::GetEnergy() const { return playerEnergy; }
+void APlayerCharacter::SetEnergy(float AddEnergy) 
+{ 
+	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::eenergy, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergy) + AddEnergy));
+	playerEnergy = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergy);
+}
+
+
+float APlayerCharacter::GetAttack() const { return playerAttack; }
+void APlayerCharacter::SetAttack(float AddAttack) 
+{ 
+	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::eattack, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eattack) + AddAttack));
+	playerAttack = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eattack);
+}
+
+
+float APlayerCharacter::GetMoveSpeed() const { return playerMoveSpeed; }
+void APlayerCharacter::SetMoveSpeed(float AddMoveSpeed) 
+{ 
+	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::emoveSpeed, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed) + AddMoveSpeed));
+	playerMoveSpeed = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed);
+}
+#pragma endregion
 
 
 #pragma region Player Behavior Control Function
@@ -121,8 +157,10 @@ void APlayerCharacter::Look(const FInputActionValue& Value)
 	AddControllerYawInput(lookAxisVector.X);
 	AddControllerPitchInput(-lookAxisVector.Y);
 }
+#pragma endregion
 
 
+#pragma region Debug Print
 void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes)
 {
 	for (const auto& Pair : Attributes)
@@ -150,6 +188,19 @@ void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Att
 	}
 
 }
-
-
 #pragma endregion
+
+
+#pragma region UI
+int APlayerCharacter::InitHUD()
+{
+	playerAttributesUW = CreateWidget<UPlayerAttributesUW>(GetWorld(), playerAttributesUWClass);
+	if (playerAttributesUW)
+	{
+		playerAttributesUW->AddToViewport();
+		return 0;
+	}
+	return -1;
+}
+#pragma endregion
+
