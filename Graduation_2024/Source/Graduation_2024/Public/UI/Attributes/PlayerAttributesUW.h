@@ -8,8 +8,6 @@
 #include "PlayerAttributesUW.generated.h"
 
 
-class APlayerCharacter;
-
 /**
  * 
  */
@@ -32,7 +30,7 @@ public:
 	float playerEnergy;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
-	float playerAttack;
+	float playerDamage;
 		
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerMoveSpeed;
@@ -43,9 +41,7 @@ public:
 
 #pragma region Player Information
 public:
-	class APlayerCharacter* playerCharacter;
-
-	bool bplayerCharacterIsValid = false;
+	void SetHPUI();
 
 #pragma endregion
 };

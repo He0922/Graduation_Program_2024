@@ -28,7 +28,7 @@ template<> GRADUATION_2024_API UScriptStruct* StaticStruct<struct FPlayerAttribu
 #define FOREACH_ENUM_EPLAYERATTRIBUTES(op) \
 	op(EPlayerAttributes::ehealth) \
 	op(EPlayerAttributes::eenergy) \
-	op(EPlayerAttributes::eattack) \
+	op(EPlayerAttributes::edamage) \
 	op(EPlayerAttributes::emoveSpeed) 
 
 enum class EPlayerAttributes : uint8;

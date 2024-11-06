@@ -7,30 +7,28 @@
 #include "PlayerAttributesInterface.generated.h"
 
 
-/**
- * 
- */
+// This class does not need to be modified.
 UINTERFACE(MinimalAPI)
 class UPlayerAttributesInterface : public UInterface
 {
 	GENERATED_BODY()
-
 };
 
 
-class IPlayerAttributesInterface
+class GRADUATION_2024_API IPlayerAttributesInterface
 {
 	GENERATED_BODY()
 
+	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 	virtual float GetHealth() const = 0;
-	virtual void SetHealth(float AddHP) = 0;
+	virtual void SetHealth(float AddHealth) = 0;
 
 	virtual float GetEnergy() const = 0;
 	virtual void SetEnergy(float AddEnergy) = 0;
 
-	virtual float GetAttack() const = 0;
-	virtual void SetAttack(float AddAttack) = 0;
+	virtual float GetDamage() const = 0;
+	virtual void SetDamage(float AddDamage) = 0;
 
 	virtual float GetMoveSpeed() const = 0;
 	virtual void SetMoveSpeed(float AddMoveSpeed) = 0;

@@ -9,7 +9,7 @@ enum class EPlayerAttributes :uint8
 {
 	ehealth UMETA(DisplayName = "Health"),
 	eenergy UMETA(DisplayName = "Energy"),
-	eattack UMETA(DisplayName = "Attack"),
+	edamage UMETA(DisplayName = "Damage"),
 	emoveSpeed UMETA(DisplayName = "MoveSpeed")
 };
 
@@ -27,7 +27,7 @@ struct FPlayerAttributes
 	{
 		Mapattributes.Add(EPlayerAttributes::ehealth, 100.f);
 		Mapattributes.Add(EPlayerAttributes::eenergy, 50.f);
-		Mapattributes.Add(EPlayerAttributes::eattack, 10.f);
+		Mapattributes.Add(EPlayerAttributes::edamage, 10.f);
 		Mapattributes.Add(EPlayerAttributes::emoveSpeed, 150.f);
 	}
 

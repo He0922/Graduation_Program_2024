@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_PlayerAttributesUW_generated_h
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlayerAttributesUW(); \
 	friend struct Z_Construct_UClass_UPlayerAttributesUW_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UPlayerAttributesUW)
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPlayerAttributesUW(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UPlayerAttributesUW();
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_16_PROLOG
-#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_19_GENERATED_BODY \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_14_PROLOG
+#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_19_INCLASS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_19_ENHANCED_CONSTRUCTORS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_UI_Attributes_PlayerAttributesUW_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -12,7 +12,6 @@
 #include "Interface/PlayerAttributesInterface.h"
 
 
-
 #include "PlayerCharacter.generated.h"
 
 
@@ -46,20 +45,20 @@ public:
 	float playerEnergy;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
-	float playerAttack;
+	float playerDamage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerMoveSpeed;
 
 
 	virtual float GetHealth() const override;
-	virtual void SetHealth(float AddHP) override;
+	virtual void SetHealth(float AddHealth) override;
 
 	virtual float GetEnergy() const override;
 	virtual void SetEnergy(float AddEnergy) override;
 
-	virtual float GetAttack() const override;
-	virtual void SetAttack(float AddAttack) override;
+	virtual float GetDamage() const override;
+	virtual void SetDamage(float AddDamage) override;
 
 	virtual float GetMoveSpeed() const override;
 	virtual void SetMoveSpeed(float AddMoveSpeed) override;

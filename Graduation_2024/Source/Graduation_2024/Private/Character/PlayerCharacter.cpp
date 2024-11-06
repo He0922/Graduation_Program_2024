@@ -32,7 +32,7 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	// 创建自定义的CharacterMovementComponent
 	playerCMC = Cast<UPlayerCharacterMovementComponent>(GetCharacterMovement());
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 500.f, 0.f);
-	GetCharacterMovement()->MaxWalkSpeed = 150.f;
+	GetCharacterMovement()->MaxWalkSpeed = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed);
 	GetCharacterMovement()->bUseControllerDesiredRotation = true;
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 
@@ -62,7 +62,6 @@ void APlayerCharacter::BeginPlay()
 			subsystem->AddMappingContext(mainMappingContext, 0);
 		}
 	}
-	SetHealth(0.f);
 	InitHUD();
 }
 
@@ -94,34 +93,33 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 #pragma region Interface
 float APlayerCharacter::GetHealth() const { return playerHealth; }
-void APlayerCharacter::SetHealth(float AddHP) 
-{ 	
+void APlayerCharacter::SetHealth(float AddHP)
+{
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::ehealth, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealth) + AddHP));
 	playerHealth = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealth);
 }
 
 float APlayerCharacter::GetEnergy() const { return playerEnergy; }
-void APlayerCharacter::SetEnergy(float AddEnergy) 
-{ 
+void APlayerCharacter::SetEnergy(float AddEnergy)
+{
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::eenergy, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergy) + AddEnergy));
 	playerEnergy = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergy);
 }
 
-
-float APlayerCharacter::GetAttack() const { return playerAttack; }
-void APlayerCharacter::SetAttack(float AddAttack) 
-{ 
-	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::eattack, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eattack) + AddAttack));
-	playerAttack = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eattack);
+float APlayerCharacter::GetDamage() const { return playerDamage; }
+void APlayerCharacter::SetDamage(float AddDamage)
+{
+	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::edamage, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::edamage) + AddDamage));
+	playerDamage = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::edamage);
 }
 
-
 float APlayerCharacter::GetMoveSpeed() const { return playerMoveSpeed; }
-void APlayerCharacter::SetMoveSpeed(float AddMoveSpeed) 
-{ 
+void APlayerCharacter::SetMoveSpeed(float AddMoveSpeed)
+{
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::emoveSpeed, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed) + AddMoveSpeed));
 	playerMoveSpeed = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed);
 }
+
 #pragma endregion
 
 
@@ -173,7 +171,7 @@ void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Att
 		{
 		case EPlayerAttributes::ehealth: AttributeName = TEXT("Health"); break;
 		case EPlayerAttributes::eenergy: AttributeName = TEXT("Energy"); break;
-		case EPlayerAttributes::eattack: AttributeName = TEXT("Attack"); break;
+		case EPlayerAttributes::edamage: AttributeName = TEXT("Damage"); break;
 		case EPlayerAttributes::emoveSpeed: AttributeName = TEXT("MoveSpeed"); break;
 		}
 
@@ -197,6 +195,11 @@ int APlayerCharacter::InitHUD()
 	playerAttributesUW = CreateWidget<UPlayerAttributesUW>(GetWorld(), playerAttributesUWClass);
 	if (playerAttributesUW)
 	{
+		SetHealth(0.f);
+		SetEnergy(0.f);
+		SetDamage(0.f);
+		SetMoveSpeed(0.f);
+
 		playerAttributesUW->AddToViewport();
 		return 0;
 	}

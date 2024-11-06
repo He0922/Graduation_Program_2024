@@ -2,8 +2,8 @@
 
 
 #include "UI/Attributes/PlayerAttributesUW.h"
-#include "Character/PlayerCharacter.h"
 #include "../DebugHelper.h"
+#include "Interface/PlayerAttributesInterface.h"
 
 #include "Kismet/GameplayStatics.h"
 
@@ -11,27 +11,33 @@
 void UPlayerAttributesUW::NativeConstruct()
 {
 	Super::NativeConstruct();
-
-	if ((playerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayerCharacter::StaticClass()))) != nullptr) { bplayerCharacterIsValid = true; }
 }
 
 
 void UPlayerAttributesUW::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
 	Super::NativeTick(MyGeometry, InDeltaTime);
+	SetHPUI();
 
-	if (bplayerCharacterIsValid)
+}
+
+void UPlayerAttributesUW::SetHPUI()
+{
+	IPlayerAttributesInterface* HealthInterface = Cast<IPlayerAttributesInterface>(GetOwningPlayerPawn());
+	if (HealthInterface)
 	{
-		playerHealth = playerCharacter->GetHealth();
-		playerEnergy = playerCharacter->GetEnergy();
-		playerAttack = playerCharacter->GetAttack();
-		playerMoveSpeed = playerCharacter->GetMoveSpeed();
-	}
+		playerHealth = HealthInterface->GetHealth();
+		Debug::PrintFloat("UI--HP: ", playerHealth, 0.f, false, FColor::Green);
 
-	Debug::PrintFloat("UI--HP: ", playerHealth, 0.f, false, FColor::Green);
-	Debug::PrintFloat("UI--Energy: ", playerEnergy, 0.f, false, FColor::Green);
-	Debug::PrintFloat("UI--Attack: ", playerAttack, 0.f, false, FColor::Green);
-	Debug::PrintFloat("UI--MoveSpeed: ", playerMoveSpeed, 0.f, false, FColor::Green);
+		playerEnergy = HealthInterface->GetEnergy();
+		Debug::PrintFloat("UI--Energy: ", playerEnergy, 0.f, false, FColor::Green);
+
+		playerDamage = HealthInterface->GetDamage();
+		Debug::PrintFloat("UI--Damage: ", playerDamage, 0.f, false, FColor::Green);
+
+		playerMoveSpeed = HealthInterface->GetMoveSpeed();
+		Debug::PrintFloat("UI--MoveSpeed: ", playerMoveSpeed, 0.f, false, FColor::Green);
+	}
 }
 
 
