@@ -21,6 +21,12 @@ class GRADUATION_2024_API IPlayerAttributesInterface
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
+	virtual float GetHealth_MAX() const = 0;
+	virtual void SetHealth_MAX(float MaxHealth) = 0;
+
+	virtual float GetEnergy_MAX() const = 0;
+	virtual void SetEnergy_MAX(float MaxEnergy) = 0;
+
 	virtual float GetHealth() const = 0;
 	virtual void SetHealth(float AddHealth) = 0;
 

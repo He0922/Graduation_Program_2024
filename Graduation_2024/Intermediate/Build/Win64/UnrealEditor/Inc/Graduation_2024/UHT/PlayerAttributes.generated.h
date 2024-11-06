@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_PlayerAttributes_generated_h
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_20_GENERATED_BODY \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_22_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPlayerAttributes_Statics; \
 	GRADUATION_2024_API static class UScriptStruct* StaticStruct();
 
@@ -26,6 +26,8 @@ template<> GRADUATION_2024_API UScriptStruct* StaticStruct<struct FPlayerAttribu
 
 
 #define FOREACH_ENUM_EPLAYERATTRIBUTES(op) \
+	op(EPlayerAttributes::ehealthMax) \
+	op(EPlayerAttributes::eenergyMax) \
 	op(EPlayerAttributes::ehealth) \
 	op(EPlayerAttributes::eenergy) \
 	op(EPlayerAttributes::edamage) \

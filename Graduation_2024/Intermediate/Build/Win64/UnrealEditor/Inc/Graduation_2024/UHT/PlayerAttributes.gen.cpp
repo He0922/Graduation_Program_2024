@@ -38,14 +38,20 @@ struct Z_Construct_UEnum_Graduation_2024_EPlayerAttributes_Statics
 		{ "edamage.Name", "EPlayerAttributes::edamage" },
 		{ "eenergy.DisplayName", "Energy" },
 		{ "eenergy.Name", "EPlayerAttributes::eenergy" },
+		{ "eenergyMax.DisplayName", "Energy_Max" },
+		{ "eenergyMax.Name", "EPlayerAttributes::eenergyMax" },
 		{ "ehealth.DisplayName", "Health" },
 		{ "ehealth.Name", "EPlayerAttributes::ehealth" },
+		{ "ehealthMax.DispalyName", "Health_Max" },
+		{ "ehealthMax.Name", "EPlayerAttributes::ehealthMax" },
 		{ "emoveSpeed.DisplayName", "MoveSpeed" },
 		{ "emoveSpeed.Name", "EPlayerAttributes::emoveSpeed" },
 		{ "ModuleRelativePath", "Public/Character/PlayerAttributes.h" },
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EPlayerAttributes::ehealthMax", (int64)EPlayerAttributes::ehealthMax },
+		{ "EPlayerAttributes::eenergyMax", (int64)EPlayerAttributes::eenergyMax },
 		{ "EPlayerAttributes::ehealth", (int64)EPlayerAttributes::ehealth },
 		{ "EPlayerAttributes::eenergy", (int64)EPlayerAttributes::eenergy },
 		{ "EPlayerAttributes::edamage", (int64)EPlayerAttributes::edamage },
@@ -120,8 +126,8 @@ struct Z_Construct_UScriptStruct_FPlayerAttributes_Statics
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewProp_Mapattributes_ValueProp = { "Mapattributes", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewProp_Mapattributes_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewProp_Mapattributes_Key_KeyProp = { "Mapattributes_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Graduation_2024_EPlayerAttributes, METADATA_PARAMS(0, nullptr) }; // 3053153658
-const UECodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewProp_Mapattributes = { "Mapattributes", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPlayerAttributes, Mapattributes), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mapattributes_MetaData), NewProp_Mapattributes_MetaData) }; // 3053153658
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewProp_Mapattributes_Key_KeyProp = { "Mapattributes_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Graduation_2024_EPlayerAttributes, METADATA_PARAMS(0, nullptr) }; // 1556152350
+const UECodeGen_Private::FMapPropertyParams Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewProp_Mapattributes = { "Mapattributes", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPlayerAttributes, Mapattributes), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mapattributes_MetaData), NewProp_Mapattributes_MetaData) }; // 1556152350
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FPlayerAttributes_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewProp_Mapattributes_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewProp_Mapattributes_Key_KeyProp_Underlying,
@@ -156,13 +162,13 @@ UScriptStruct* Z_Construct_UScriptStruct_FPlayerAttributes()
 struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EPlayerAttributes_StaticEnum, TEXT("EPlayerAttributes"), &Z_Registration_Info_UEnum_EPlayerAttributes, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3053153658U) },
+		{ EPlayerAttributes_StaticEnum, TEXT("EPlayerAttributes"), &Z_Registration_Info_UEnum_EPlayerAttributes, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1556152350U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FPlayerAttributes::StaticStruct, Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewStructOps, TEXT("PlayerAttributes"), &Z_Registration_Info_UScriptStruct_PlayerAttributes, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerAttributes), 1282166194U) },
+		{ FPlayerAttributes::StaticStruct, Z_Construct_UScriptStruct_FPlayerAttributes_Statics::NewStructOps, TEXT("PlayerAttributes"), &Z_Registration_Info_UScriptStruct_PlayerAttributes, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerAttributes), 2318221677U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_1792679204(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_4275249484(TEXT("/Script/Graduation_2024"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_Statics::EnumInfo));

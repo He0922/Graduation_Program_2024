@@ -39,6 +39,12 @@ public:
 
 #pragma region Interface
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerHealthMax;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerEnergyMax;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerHealth;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
@@ -50,6 +56,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerMoveSpeed;
 
+	virtual float GetHealth_MAX() const override;
+	virtual void SetHealth_MAX(float MaxHealth) override;
+
+	virtual float GetEnergy_MAX() const override;
+	virtual void SetEnergy_MAX(float MaxEnergy) override;
 
 	virtual float GetHealth() const override;
 	virtual void SetHealth(float AddHealth) override;

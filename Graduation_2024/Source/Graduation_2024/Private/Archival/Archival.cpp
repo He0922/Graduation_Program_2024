@@ -30,13 +30,14 @@ void AArchival::BeginPlay()
 
 void AArchival::NotifyActorBeginOverlap(AActor* OtherActor)
 {
-	playerCharacter->SetHealth(100.f);
+	playerCharacter->SetHealth(-10.f);
+	playerCharacter->SetEnergy(-1.f);
 }
 
 
 void AArchival::NotifyActorEndOverlap(AActor* OtherActor)
 {
-	playerCharacter->SetHealth(-100.f);
+	//playerCharacter->SetHealth(-100.f);
 }
 
 

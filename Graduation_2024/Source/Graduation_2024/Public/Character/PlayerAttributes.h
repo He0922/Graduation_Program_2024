@@ -7,6 +7,8 @@
 UENUM(BlueprintType)
 enum class EPlayerAttributes :uint8
 {
+	ehealthMax UMETA(DispalyName = "Health_Max"),
+	eenergyMax UMETA(DisplayName = "Energy_Max"),
 	ehealth UMETA(DisplayName = "Health"),
 	eenergy UMETA(DisplayName = "Energy"),
 	edamage UMETA(DisplayName = "Damage"),
@@ -25,6 +27,8 @@ struct FPlayerAttributes
 
 	FPlayerAttributes()
 	{
+		Mapattributes.Add(EPlayerAttributes::ehealthMax, 100.f);
+		Mapattributes.Add(EPlayerAttributes::eenergyMax, 50.f);
 		Mapattributes.Add(EPlayerAttributes::ehealth, 100.f);
 		Mapattributes.Add(EPlayerAttributes::eenergy, 50.f);
 		Mapattributes.Add(EPlayerAttributes::edamage, 10.f);

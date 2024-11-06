@@ -92,12 +92,33 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 
 #pragma region Interface
+float APlayerCharacter::GetHealth_MAX() const { return playerHealthMax; }
+void APlayerCharacter::SetHealth_MAX(float MaxHealth)
+{
+	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::ehealthMax, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealthMax) + MaxHealth));
+	playerHealthMax = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealthMax);
+
+	Debug::PrintFloat("Player Health Max: ", playerHealthMax, 5.f, false, FColor::Black);
+}
+
+
+float APlayerCharacter::GetEnergy_MAX() const { return playerEnergyMax; }
+void APlayerCharacter::SetEnergy_MAX(float MaxEnergy)
+{
+	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::eenergyMax, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergyMax) + MaxEnergy));
+	playerEnergyMax = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergyMax);
+
+	Debug::PrintFloat("Player Energy Max: ", playerEnergyMax, 5.f, false, FColor::Red);
+}
+
+
 float APlayerCharacter::GetHealth() const { return playerHealth; }
 void APlayerCharacter::SetHealth(float AddHP)
 {
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::ehealth, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealth) + AddHP));
 	playerHealth = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealth);
 }
+
 
 float APlayerCharacter::GetEnergy() const { return playerEnergy; }
 void APlayerCharacter::SetEnergy(float AddEnergy)
@@ -106,12 +127,14 @@ void APlayerCharacter::SetEnergy(float AddEnergy)
 	playerEnergy = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergy);
 }
 
+
 float APlayerCharacter::GetDamage() const { return playerDamage; }
 void APlayerCharacter::SetDamage(float AddDamage)
 {
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::edamage, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::edamage) + AddDamage));
 	playerDamage = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::edamage);
 }
+
 
 float APlayerCharacter::GetMoveSpeed() const { return playerMoveSpeed; }
 void APlayerCharacter::SetMoveSpeed(float AddMoveSpeed)
@@ -169,10 +192,12 @@ void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Att
 		FString AttributeName;
 		switch (Attribute)
 		{
-		case EPlayerAttributes::ehealth: AttributeName = TEXT("Health"); break;
-		case EPlayerAttributes::eenergy: AttributeName = TEXT("Energy"); break;
-		case EPlayerAttributes::edamage: AttributeName = TEXT("Damage"); break;
 		case EPlayerAttributes::emoveSpeed: AttributeName = TEXT("MoveSpeed"); break;
+		case EPlayerAttributes::edamage: AttributeName = TEXT("Damage"); break;
+		case EPlayerAttributes::eenergy: AttributeName = TEXT("Energy"); break;
+		case EPlayerAttributes::ehealth: AttributeName = TEXT("Health"); break;
+		case EPlayerAttributes::eenergyMax: AttributeName = TEXT("Energy_Max"); break;
+		case EPlayerAttributes::ehealthMax: AttributeName = TEXT("Health_Max"); break;
 		}
 
 		// 打印到控制台
@@ -195,6 +220,8 @@ int APlayerCharacter::InitHUD()
 	playerAttributesUW = CreateWidget<UPlayerAttributesUW>(GetWorld(), playerAttributesUWClass);
 	if (playerAttributesUW)
 	{
+		SetHealth_MAX(0.f);
+		SetEnergy_MAX(0.f);
 		SetHealth(0.f);
 		SetEnergy(0.f);
 		SetDamage(0.f);

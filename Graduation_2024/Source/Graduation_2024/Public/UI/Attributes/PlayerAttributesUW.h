@@ -23,9 +23,15 @@ public:
 
 #pragma region Revice Interface
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerAttributes")
+	float playerHealthMax;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerEnergyMax;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerHealth;
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerEnergy;
 	
@@ -34,6 +40,8 @@ public:
 		
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerMoveSpeed;
+
+
 
 
 #pragma endregion

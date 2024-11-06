@@ -26,6 +26,12 @@ void UPlayerAttributesUW::SetHPUI()
 	IPlayerAttributesInterface* HealthInterface = Cast<IPlayerAttributesInterface>(GetOwningPlayerPawn());
 	if (HealthInterface)
 	{
+		playerHealthMax = HealthInterface->GetHealth_MAX();
+		Debug::PrintFloat("UI--HPMax: ", playerHealthMax, 0.f, false, FColor::Green);
+
+		playerEnergyMax = HealthInterface->GetEnergy_MAX();
+		Debug::PrintFloat("UI--EnergyMax: ", playerEnergyMax, 0.f, false, FColor::Green);
+
 		playerHealth = HealthInterface->GetHealth();
 		Debug::PrintFloat("UI--HP: ", playerHealth, 0.f, false, FColor::Green);
 
