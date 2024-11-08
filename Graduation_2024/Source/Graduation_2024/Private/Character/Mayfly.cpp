@@ -37,6 +37,8 @@ AMayfly::AMayfly()
 
 	playerCharacter = nullptr;
 
+	
+
 }
 
 
@@ -47,7 +49,7 @@ void AMayfly::BeginPlay()
 
 	// 在BeginPlay中通过类获取playerCharacter 
 	TArray<AActor*> FoundActors; 
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), FoundActors); 
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), FoundActors);  // 这里可以减少开销，用GetActorOfClass直接指定转换对象不用全局搜索
 	if (FoundActors.Num() > 0) 
 	{ 
 		playerCharacter = Cast<APlayerCharacter>(FoundActors[0]); 
@@ -64,7 +66,7 @@ void AMayfly::BeginPlay()
 		Debug::Print(TEXT("Failed to initialize playerCharacter"), 0, true, FColor::Red, 0);
 	}
 
-	auto MovementComponent = GetCharacterMovement();
+	auto MovementComponent = GetCharacterMovement(); // auto后续需要换成指定的变量类型，并且对象可以写在.h文件中后续调用直接用变量就行不用每次都声明
 	if (MovementComponent)
 	{
 		if (!MovementComponent->IsActive()) 
