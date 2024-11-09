@@ -14,20 +14,18 @@ AMayfly::AMayfly()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	isFollowing = true;
+
 
 	GetCharacterMovement()->MaxWalkSpeed = speed = 204.f;
 
-	desiredHeight = 200.0f; // 设置所需的高度 
 
-	followDistance = 50.0f; // 跟随停止的距离 
-	reengageDistance = 100.0f; // 重新跟随的距离 
+	followDistance = 100.0f; // 跟随停止的距离 
 
 	mayflytype = EMayflyType::eaddHPMAX;
 
 	playerCharacter = nullptr;
 
-	isMovingToTarget = false;
+
 
 }
 
@@ -70,10 +68,56 @@ void AMayfly::Tick(float deltaTime)
 		return; 
 	} 
 
-	if (isFollowing) 
-	{ 
 		//跟随玩家
 		FollowPlayer(); 
+
+}
+
+
+void AMayfly::FollowPlayer()
+{
+	//计算方向
+	FVector direction = (playerCharacter->GetActorLocation() - GetActorLocation()).GetSafeNormal();
+	//计算距离
+	float distance = FVector::Dist(GetActorLocation(), playerCharacter->GetActorLocation()); 
+
+
+	if (distance > followDistance) 
+	{ 
+		AddMovementInput(direction, 1.0f, true); 
+		Debug::Print(FString::Printf(TEXT("Following player - Direction: %s, Speed: %f"), 
+			*direction.ToString(), speed), 0, true, FColor::Green, 0); 
+	}
+	else 
+	{ 
+		//判断是否跟随
+		//isFollowing = false; 
+		AddMovementInput(FVector::ZeroVector, 0, false);
+		Debug::Print(TEXT("Reached follow distance, stopping follow"), 0, true, FColor::Yellow, 0); 
+	}
+}
+
+
+
+#pragma region unused
+	/*变量
+	isFollowing = true;
+	reengageDistance = 100.0f; // 重新跟随的距离 
+	desiredHeight = 200.0f; // 设置所需的高度 
+	isMovingToTarget = false;
+	*/
+
+	/*FollowPlayer中避开障碍物
+	FVector AvoidanceDirection; 
+	if (DetectObstacleInSector(AvoidanceDirection)) 
+	{
+		direction += AvoidanceDirection * 200.0f; // 调整方向以避开障碍物 
+	}
+	*/
+
+	/*Tick中，判断跟随、抵达目标点、超出距离、维持高度
+	if (isFollowing) 
+	{ 
 	}
 	else if (isMovingToTarget) 
 	{ //切换跟随和前往目标点
@@ -88,38 +132,10 @@ void AMayfly::Tick(float deltaTime)
 	
 	//维持高度
 	MaintainHeight();
-
-}
-
-
-void AMayfly::FollowPlayer()
-{
-	//计算方向
-	FVector direction = (playerCharacter->GetActorLocation() - GetActorLocation()).GetSafeNormal();
-	//计算距离
-	float distance = FVector::Dist(GetActorLocation(), playerCharacter->GetActorLocation()); 
-
-	FVector AvoidanceDirection; 
-	if (DetectObstacleInSector(AvoidanceDirection)) 
-	{
-		direction += AvoidanceDirection * 200.0f; // 调整方向以避开障碍物 
-	}
-
-	if (distance > followDistance) 
-	{ 
-		AddMovementInput(direction, 1.0f, true); 
-		Debug::Print(FString::Printf(TEXT("Following player - Direction: %s, Speed: %f"), 
-			*direction.ToString(), speed), 0, true, FColor::Green, 0); 
-	}
-	else 
-	{ 
-		isFollowing = false; 
-		AddMovementInput(FVector::ZeroVector, 0, false);
-		Debug::Print(TEXT("Reached follow distance, stopping follow"), 0, true, FColor::Yellow, 0); 
-	}
-}
+		*/
 
 
+/*保持高度、跟随玩家、前往目标点、避开障碍物
 void AMayfly::MaintainHeight() 
 { 
 	FVector currentLocation = GetActorLocation(); 
@@ -183,7 +199,8 @@ void AMayfly::MoveToTarget(float deltaTime)
 		Debug::Print(TEXT("Reached target location, stopping"), 0, true, FColor::Magenta, 0); 
 	} 
 }
+*/
 
-
+#pragma endregion unused
 
 
