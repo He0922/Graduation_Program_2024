@@ -40,25 +40,20 @@ public:
 	class APlayerCharacter* playerCharacter;
 
 #pragma region Movement settings 
-	UPROPERTY()
-	bool isFollowing;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float speed;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement", meta = (AllowPrivateAccess = "true"))
-	float desiredHeight; 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Distance", meta = (AllowPrivateAccess = "true"))
+	float followDistance;
 #pragma endregion Movement settings
 
-#pragma region Distance settings 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Distance", meta = (AllowPrivateAccess = "true"))
-	float followDistance; 
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Distance", meta = (AllowPrivateAccess = "true"))
-	float reengageDistance;
 
-#pragma endregion Distance settings
 
+	void FollowPlayer();
+
+
+#pragma region unused
+	/*
 #pragma region State settings
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
 	bool isMovingToTarget;
@@ -66,10 +61,24 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement") 
 	FVector targetLocation;
 #pragma endregion State settings
+#pragma region Distance settings 
+	
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Distance", meta = (AllowPrivateAccess = "true"))
+	float reengageDistance;
 
-	void FollowPlayer();
+#pragma endregion Distance settings
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement", meta = (AllowPrivateAccess = "true"))
+	float desiredHeight; 
+
+	UPROPERTY()
+	bool isFollowing;
+
 	void MaintainHeight(); 
 	bool IsBeyondReengageDistance() const; 
 	bool DetectObstacleInSector(FVector& OutAvoidanceDirection);
 	void MoveToTarget(float deltaTime);
+	*/
+#pragma endregion unused
 };
