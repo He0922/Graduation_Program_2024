@@ -33,28 +33,11 @@ public:
 	// Called every frame
 	virtual void Tick(float deltaTime) override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Mayfly Type")
 	EMayflyType mayflytype;
 
 	UPROPERTY()
 	class APlayerCharacter* playerCharacter;
-
-#pragma region path tracing
-	UPROPERTY() 
-	TArray<FVector> playerPath; 
-
-	UPROPERTY() 
-	int32 pathIndex; 
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Path Recording") 
-	float pathRecordInterval; 
-
-	UPROPERTY() 
-	float pathRecordTimer;
-#pragma endregion path tracing
 
 #pragma region Movement settings 
 	UPROPERTY()
@@ -65,9 +48,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement", meta = (AllowPrivateAccess = "true"))
 	float desiredHeight; 
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
-	FVector followOffset; // 跟随偏移量
 #pragma endregion Movement settings
 
 #pragma region Distance settings 
@@ -77,27 +57,19 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Distance", meta = (AllowPrivateAccess = "true"))
 	float reengageDistance;
 
-	//设置误差范围
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Distance", meta = (AllowPrivateAccess = "true"))
-	float acceptableRadius;
-
 #pragma endregion Distance settings
 
-#pragma region Target settings
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Target")
-	FVector targetLocationMember;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Target")
+#pragma region State settings
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
 	bool isMovingToTarget;
-#pragma endregion Target settings
 
-	void RecordPlayerPath(float deltaTime); 
-	void FollowRecordedPath(float deltaTime); 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement") 
+	FVector targetLocation;
+#pragma endregion State settings
+
+	void FollowPlayer();
 	void MaintainHeight(); 
-	bool IsWithinFollowDistance() const; 
 	bool IsBeyondReengageDistance() const; 
-	FVector GetTargetLocationWithOffset(const FVector& targetLocation) const; 
-	float CalculateSpeedBasedOnDistance(float distance) const;
-	void SetTargetLocation(const FVector& newTargetLocation);
-	void MoveToTargetLocation(float deltaTime);
+	bool DetectObstacleInSector(FVector& OutAvoidanceDirection);
+	void MoveToTarget(float deltaTime);
 };
