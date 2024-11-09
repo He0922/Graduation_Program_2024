@@ -16,7 +16,6 @@ enum class EMayflyType :uint8
 };
 
 
-
 UCLASS()
 class GRADUATION_2024_API AMayfly : public ACharacter
 {
@@ -32,7 +31,7 @@ protected:
 
 public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float deltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
@@ -43,19 +42,62 @@ public:
 	UPROPERTY()
 	class APlayerCharacter* playerCharacter;
 
+#pragma region path tracing
+	UPROPERTY() 
+	TArray<FVector> playerPath; 
 
-#pragma region Follow Player Value
-public:
-	FVector mayflyVector;
+	UPROPERTY() 
+	int32 pathIndex; 
 
-	FVector playerVector;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Path Recording") 
+	float pathRecordInterval; 
 
-#pragma endregion
+	UPROPERTY() 
+	float pathRecordTimer;
+#pragma endregion path tracing
 
+#pragma region Movement settings 
+	UPROPERTY()
+	bool isFollowing;
 
-#pragma region Follow Player 
-public:
-	void Move2Player(FVector selfLocation, FVector TargetLocation);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
+	float speed;
 
-#pragma endregion
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement", meta = (AllowPrivateAccess = "true"))
+	float desiredHeight; 
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
+	FVector followOffset; // 跟随偏移量
+#pragma endregion Movement settings
+
+#pragma region Distance settings 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Distance", meta = (AllowPrivateAccess = "true"))
+	float followDistance; 
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Distance", meta = (AllowPrivateAccess = "true"))
+	float reengageDistance;
+
+	//设置误差范围
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Distance", meta = (AllowPrivateAccess = "true"))
+	float acceptableRadius;
+
+#pragma endregion Distance settings
+
+#pragma region Target settings
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Target")
+	FVector targetLocationMember;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Target")
+	bool isMovingToTarget;
+#pragma endregion Target settings
+
+	void RecordPlayerPath(float deltaTime); 
+	void FollowRecordedPath(float deltaTime); 
+	void MaintainHeight(); 
+	bool IsWithinFollowDistance() const; 
+	bool IsBeyondReengageDistance() const; 
+	FVector GetTargetLocationWithOffset(const FVector& targetLocation) const; 
+	float CalculateSpeedBasedOnDistance(float distance) const;
+	void SetTargetLocation(const FVector& newTargetLocation);
+	void MoveToTargetLocation(float deltaTime);
 };

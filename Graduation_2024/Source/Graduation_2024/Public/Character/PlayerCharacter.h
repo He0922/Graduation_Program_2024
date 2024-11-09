@@ -38,6 +38,7 @@ public:
 
 
 #pragma region Interface
+	// 玩家属性变量
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerHealthMax;
 
@@ -56,6 +57,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerMoveSpeed;
 
+
+	// 实现玩家属性接口的定义
 	virtual float GetHealth_MAX() const override;
 	virtual void SetHealth_MAX(float MaxHealth) override;
 
@@ -125,7 +128,7 @@ public:
 #pragma endregion
 
 
-// 创建角色移动组件变量
+// 创建自定义的角色移动组件变量
 #pragma region MovementComponent
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Movement Component")
@@ -136,15 +139,18 @@ public:
 
 #pragma region Player Attribute
 public:
+	// 人物属性结构体
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attribute")
 	FPlayerAttributes fplayerAttributes;
 
+	// 人物属性枚举
 	UPROPERTY()
 	EPlayerAttributes eplayerAttributes;
 #pragma endregion
 
 
 #pragma region Debug Print
+	// 打印人物属性内容
 	void PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes);
 #pragma endregion
 
@@ -154,9 +160,11 @@ public:
 	UFUNCTION()
 	int InitHUD();
 
+	// 在UE蓝图中指定人物属性UI的蓝图对象
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes UW")
 	TSubclassOf<UPlayerAttributesUW> playerAttributesUWClass;
 
+	//// 人物属性UI对象
 	UPROPERTY()
 	class UPlayerAttributesUW* playerAttributesUW;
 #pragma endregion

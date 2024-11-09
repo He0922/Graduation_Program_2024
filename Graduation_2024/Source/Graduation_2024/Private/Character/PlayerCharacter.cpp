@@ -55,6 +55,7 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// EnhancedInput类型转换以及MappingContext的绑定
 	if (APlayerController* playerController = Cast<APlayerController>(Controller))
 	{
 		if (UEnhancedInputLocalPlayerSubsystem* subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(playerController->GetLocalPlayer()))
@@ -81,6 +82,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	// 玩家输入按键绑定
 	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
 	{
 		EnhancedInputComponent->BindAction(moveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move);
@@ -91,6 +93,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 }
 
 
+// 人物属性接口的方法实现通过PlaterAttributes.h文件中定义的数据结构来获取与设置对应变量
 #pragma region Interface
 float APlayerCharacter::GetHealth_MAX() const { return playerHealthMax; }
 void APlayerCharacter::SetHealth_MAX(float MaxHealth)
@@ -182,6 +185,7 @@ void APlayerCharacter::Look(const FInputActionValue& Value)
 
 
 #pragma region Debug Print
+// 打印玩家属性变量
 void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes)
 {
 	for (const auto& Pair : Attributes)
@@ -215,6 +219,7 @@ void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Att
 
 
 #pragma region UI
+// 初始化UI
 int APlayerCharacter::InitHUD()
 {
 	playerAttributesUW = CreateWidget<UPlayerAttributesUW>(GetWorld(), playerAttributesUWClass);
