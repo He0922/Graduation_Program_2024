@@ -13731,3 +13731,569 @@ _MatTransl_3B7A55D3409170328211A060FC2E3BB1E263C720_BBD650804D314CE7A44ADF9BB4F3
 [2024.11.10-11.16.45:425][689]AssetCheck: /Game/VFX/Skill_Material/MPC_Scan 正在验证资产
 [2024.11.10-11.16.47:415][798]LogSlate: Window 'MPC_Scan' being destroyed
 [2024.11.10-11.16.47:421][798]LogSlate: Window 'MPC_Scan' being destroyed
+[2024.11.10-11.23.06:413][495]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/VFX/Skill_Material/BP_ScanActor.BP_ScanActor
+[2024.11.10-11.23.07:421][495]LogBlueprint: Warning: Blueprint /Game/Character/Mayfly/BP_Mayfly is missing GeneratedClass asset tag
+[2024.11.10-11.23.21:786][336]LogSlate: Window 'BP_ScanActor' being destroyed
+[2024.11.10-11.23.21:791][336]LogSlate: Window 'BP_ScanActor' being destroyed
+[2024.11.10-11.23.21:799][336]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2024.11.10-11.23.21:800][336]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.11.10-11.23.21:856][336]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.11.10-11.33.40:747][598]LogHttp: Warning: 00000627C7AF0700: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.33.40:747][598]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 0 (Connection 0 seems to be dead)
+[2024.11.10-11.33.40:753][599]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 1 (Closing connection)
+[2024.11.10-11.33.40:753][599]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 2 (Recv failure: Connection was reset)
+[2024.11.10-11.33.40:753][599]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 3 (Send failure: Connection was reset)
+[2024.11.10-11.33.40:753][599]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 4 (Recv failure: Connection was reset)
+[2024.11.10-11.33.40:753][599]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 5 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.33.40:753][599]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 6 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.33.40:753][599]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 7 (Failed to connect to 127.0.0.1 port 10809 after 2006 ms: Couldn't connect to server)
+[2024.11.10-11.33.40:753][599]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 8 (Closing connection)
+[2024.11.10-11.33.40:753][599]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.34.40:769][778]LogHttp: Warning: 00000627C7AF0700: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.34.40:769][778]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.34.40:769][778]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.34.40:769][778]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.34.40:774][779]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2007 ms: Couldn't connect to server)
+[2024.11.10-11.34.40:774][779]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.34.40:774][779]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.35.40:782][958]LogHttp: Warning: 00000627C7AFA100: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.35.40:782][958]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.35.40:782][958]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.35.40:788][959]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.35.40:788][959]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2002 ms: Couldn't connect to server)
+[2024.11.10-11.35.40:788][959]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.35.40:788][959]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.36.40:939][138]LogHttp: Warning: 00000627C7AF3F00: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.36.40:939][138]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.36.40:939][138]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.36.40:939][138]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.36.40:945][139]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2007 ms: Couldn't connect to server)
+[2024.11.10-11.36.40:945][139]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.36.40:945][139]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.37.40:953][318]LogHttp: Warning: 00000627C7AFCB00: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.37.40:953][318]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.37.40:954][319]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.37.40:954][319]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.37.40:954][319]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2003 ms: Couldn't connect to server)
+[2024.11.10-11.37.40:954][319]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.37.40:954][319]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.38.40:967][498]LogHttp: Warning: 00000627C7AF4D00: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.38.40:967][498]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.38.40:967][498]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.38.40:967][499]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.38.40:967][499]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2005 ms: Couldn't connect to server)
+[2024.11.10-11.38.40:967][499]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.38.40:967][499]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.39.40:976][678]LogHttp: Warning: 00000627C7AFC400: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.39.40:976][678]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.39.40:981][679]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.39.40:981][679]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.39.40:981][679]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2005 ms: Couldn't connect to server)
+[2024.11.10-11.39.40:981][679]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.39.40:981][679]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.40.40:653][857]LogHttp: Warning: 00000627C7AFA800: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.40.40:653][857]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.40.40:653][858]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.40.40:653][858]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.40.40:653][858]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2001 ms: Couldn't connect to server)
+[2024.11.10-11.40.40:653][858]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.40.40:653][858]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.41.40:663][ 37]LogHttp: Warning: 00000627C7AF6200: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.41.40:663][ 37]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.41.40:663][ 37]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.41.40:663][ 37]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.41.40:663][ 37]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2006 ms: Couldn't connect to server)
+[2024.11.10-11.41.40:663][ 37]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.41.40:663][ 37]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.42.40:678][217]LogHttp: Warning: 00000627C7AF6200: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.42.40:678][217]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.42.40:678][218]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.42.40:684][218]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.42.40:684][218]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2005 ms: Couldn't connect to server)
+[2024.11.10-11.42.40:684][218]LogHttp: Warning: 00000627C7AF6200: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.42.40:684][218]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.43.40:691][398]LogHttp: Warning: 00000627C7AFA800: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.43.40:691][398]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.43.40:691][398]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.43.40:691][398]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.43.40:691][398]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2006 ms: Couldn't connect to server)
+[2024.11.10-11.43.40:691][398]LogHttp: Warning: 00000627C7AFA800: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.43.40:691][398]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.44.40:701][577]LogHttp: Warning: 00000627C7AFC400: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.44.40:702][577]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.44.40:702][577]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.44.40:702][577]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.44.40:707][578]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2007 ms: Couldn't connect to server)
+[2024.11.10-11.44.40:707][578]LogHttp: Warning: 00000627C7AFC400: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.44.40:707][578]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.45.40:724][757]LogHttp: Warning: 00000627C7AF4D00: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.45.40:724][758]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.45.40:724][758]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.45.40:724][758]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.45.40:724][758]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2007 ms: Couldn't connect to server)
+[2024.11.10-11.45.40:724][758]LogHttp: Warning: 00000627C7AF4D00: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.45.40:724][758]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.46.40:737][937]LogHttp: Warning: 00000627C7AFCB00: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.46.40:737][937]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.46.40:737][937]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.46.40:737][937]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.46.40:742][938]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2003 ms: Couldn't connect to server)
+[2024.11.10-11.46.40:742][938]LogHttp: Warning: 00000627C7AFCB00: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.46.40:742][938]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.47.40:770][117]LogHttp: Warning: 00000627C7AF3F00: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.47.40:770][117]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.47.40:770][117]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.47.40:770][117]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.47.40:770][117]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2006 ms: Couldn't connect to server)
+[2024.11.10-11.47.40:770][117]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.47.40:770][118]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.48.40:788][297]LogHttp: Warning: 00000627C7AFA100: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.48.40:788][297]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.48.40:793][298]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.48.40:793][298]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.48.40:793][298]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2004 ms: Couldn't connect to server)
+[2024.11.10-11.48.40:793][298]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.48.40:794][298]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.49.40:803][477]LogHttp: Warning: 00000627C7AF0700: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.49.40:803][477]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.49.40:803][478]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.49.40:806][478]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.49.40:806][478]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2004 ms: Couldn't connect to server)
+[2024.11.10-11.49.40:806][478]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.49.40:806][478]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.50.40:813][657]LogHttp: Warning: 00000627C7AF0700: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.50.40:813][657]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.50.40:814][657]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.50.40:814][657]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.50.40:814][657]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2010 ms: Couldn't connect to server)
+[2024.11.10-11.50.40:814][657]LogHttp: Warning: 00000627C7AF0700: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.50.40:814][657]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.51.40:827][837]LogHttp: Warning: 00000627C7AFA100: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.51.40:827][837]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.51.40:827][837]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.51.40:827][837]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.51.40:827][837]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2006 ms: Couldn't connect to server)
+[2024.11.10-11.51.40:827][837]LogHttp: Warning: 00000627C7AFA100: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.51.40:828][837]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.52.40:837][ 18]LogHttp: Warning: 00000627C7AF3F00: request failed, libcurl error: 7 (Couldn't connect to server)
+[2024.11.10-11.52.40:838][ 18]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 0 (Hostname in DNS cache was stale, zapped)
+[2024.11.10-11.52.40:843][ 18]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 1 (  Trying 127.0.0.1:10809...)
+[2024.11.10-11.52.40:843][ 18]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 2 (connect to 127.0.0.1 port 10809 failed: Connection refused)
+[2024.11.10-11.52.40:843][ 18]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 3 (Failed to connect to 127.0.0.1 port 10809 after 2040 ms: Couldn't connect to server)
+[2024.11.10-11.52.40:843][ 18]LogHttp: Warning: 00000627C7AF3F00: libcurl info message cache 4 (Closing connection)
+[2024.11.10-11.52.40:843][ 18]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B6C409774-40B8-4C55-2A9D-5481E883F9C5%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.4.4-35576357%2B%2B%2BUE5%2BRelease-5.4&UserID=0e26cb8e4f6900f01f11f58794a1485f%7C282930c7ee30460ab3f416e8ce778530%7Cadd7c9c4-c7b2-4ecb-8efc-bd84188f2694&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.11.10-11.58.26:211][ 53]LogDerivedDataCache: C:/Users/28919/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:01.083 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1153 files in 792 folders with total size 165 MiB.
+[2024.11.10-12.58.26:159][849]LogDerivedDataCache: C:/Users/28919/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:01.030 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1153 files in 792 folders with total size 165 MiB.
+[2024.11.10-13.10.09:711][710]LogContentBrowserAssetDataSource: Warning: Unable to convert short ParentClass name "None" to path name
+[2024.11.10-13.10.53:334][337]LogContentBrowser: Attempting asset rename: IA_Move1 -> IA_Skill_2
+[2024.11.10-13.10.53:695][337]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.11.10-13.10.53:788][337]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2] ([1] browsable assets)...
+[2024.11.10-13.10.53:788][337]OBJ SavePackage: Finished generating thumbnails for package [/Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2]
+[2024.11.10-13.10.53:807][337]LogSavePackage: Moving output files for package: /Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2
+[2024.11.10-13.10.53:807][337]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/IA_Skill_2CC0383A649469B5721E53A90EA905F1B.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/Character/Player/EnhancedInput/InputAction/IA_Skill_2.uasset'
+[2024.11.10-13.10.53:834][337]LogFileHelpers: InternalPromptForCheckoutAndSave took 139.444 ms (total: 220.257 ms)
+[2024.11.10-13.10.53:974][337]LogUObjectHash: Compacting FUObjectHashTables data took   3.06ms
+[2024.11.10-13.10.54:003][337]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.11.10-13.10.54:028][337]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2024.11.10-13.10.54:111][337]LogContentValidation: Display: Starting to validate 1 assets
+[2024.11.10-13.10.54:111][337]LogContentValidation: Enabled validators:
+[2024.11.10-13.10.54:111][337]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2024.11.10-13.10.54:111][337]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2024.11.10-13.10.54:111][337]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2024.11.10-13.10.54:116][337]LogContentValidation: Display: Validating asset /Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2.IA_Skill_2
+[2024.11.10-13.10.54:117][337]AssetCheck: /Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2 正在验证资产
+[2024.11.10-13.10.54:733][384]LogAssetEditorSubsystem: Opening Asset editor for InputAction /Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2.IA_Skill_2
+[2024.11.10-13.11.05:414][975]LogSlate: Window 'IA_Skill_2' being destroyed
+[2024.11.10-13.11.06:132][ 16]LogAssetEditorSubsystem: Opening Asset editor for InputAction /Game/Character/Player/EnhancedInput/InputAction/IA_Move.IA_Move
+[2024.11.10-13.11.24:019][165]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.11.10-13.11.24:095][165]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2] ([1] browsable assets)...
+[2024.11.10-13.11.24:095][165]OBJ SavePackage: Finished generating thumbnails for package [/Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2]
+[2024.11.10-13.11.24:096][165]LogSavePackage: Moving output files for package: /Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2
+[2024.11.10-13.11.24:096][165]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/IA_Skill_2EF93EF6C4B177A2AA944038EF99B0188.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/Character/Player/EnhancedInput/InputAction/IA_Skill_2.uasset'
+[2024.11.10-13.11.24:107][165]LogFileHelpers: InternalPromptForCheckoutAndSave took 87.199 ms (total: 307.456 ms)
+[2024.11.10-13.11.24:196][165]LogContentValidation: Display: Starting to validate 1 assets
+[2024.11.10-13.11.24:196][165]LogContentValidation: Enabled validators:
+[2024.11.10-13.11.24:196][165]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2024.11.10-13.11.24:196][165]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2024.11.10-13.11.24:196][165]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2024.11.10-13.11.24:196][165]LogContentValidation: Display: Validating asset /Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2.IA_Skill_2
+[2024.11.10-13.11.24:196][165]AssetCheck: /Game/Character/Player/EnhancedInput/InputAction/IA_Skill_2 正在验证资产
+[2024.11.10-13.11.25:683][252]LogSlate: Window 'IA_Skill_2' being destroyed
+[2024.11.10-13.12.22:835][649]LogAssetEditorSubsystem: Opening Asset editor for InputAction /Game/Character/Player/EnhancedInput/InputAction/IA_Jump.IA_Jump
+[2024.11.10-13.12.30:390][ 89]LogSlate: Window 'IA_Jump' being destroyed
+[2024.11.10-13.12.31:511][155]LogAssetEditorSubsystem: Opening Asset editor for InputAction /Game/Character/Player/EnhancedInput/InputAction/IA_Look.IA_Look
+[2024.11.10-13.12.39:103][594]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2024.11.10-13.12.39:107][594]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.11.10-13.12.39:203][594]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Character/Player/EnhancedInput/Main_IMC] ([1] browsable assets)...
+[2024.11.10-13.12.39:203][594]OBJ SavePackage: Finished generating thumbnails for package [/Game/Character/Player/EnhancedInput/Main_IMC]
+[2024.11.10-13.12.39:204][594]LogSavePackage: Moving output files for package: /Game/Character/Player/EnhancedInput/Main_IMC
+[2024.11.10-13.12.39:205][594]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/Main_IMCD2CAB09A4CB41814F1EFEDB1F3A2422D.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/Character/Player/EnhancedInput/Main_IMC.uasset'
+[2024.11.10-13.12.39:214][594]LogFileHelpers: InternalPromptForCheckoutAndSave took 107.637 ms (total: 415.094 ms)
+[2024.11.10-13.12.39:290][594]LogContentValidation: Display: Starting to validate 1 assets
+[2024.11.10-13.12.39:290][594]LogContentValidation: Enabled validators:
+[2024.11.10-13.12.39:290][594]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2024.11.10-13.12.39:290][594]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2024.11.10-13.12.39:290][594]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2024.11.10-13.12.39:290][594]LogContentValidation: Display: Validating asset /Game/Character/Player/EnhancedInput/Main_IMC.Main_IMC
+[2024.11.10-13.12.39:291][594]AssetCheck: /Game/Character/Player/EnhancedInput/Main_IMC 正在验证资产
+[2024.11.10-13.13.10:481][784]LogContentBrowser: Deferred new asset folder creation: 新建文件夹
+[2024.11.10-13.13.10:501][784]LogContentBrowser: Creating deferred item: 新建文件夹
+[2024.11.10-13.13.10:508][785]LogContentBrowser: Renaming the item being created (Deferred Item: 新建文件夹).
+[2024.11.10-13.13.14:735][ 38]LogContentBrowser: Attempting asset rename: 新建文件夹 -> Skil;
+[2024.11.10-13.13.14:756][ 38]LogContentBrowser: End creating deferred item 新建文件夹
+[2024.11.10-13.13.21:435][500]LogContentBrowser: Attempting asset rename: Skil; -> Skil;
+[2024.11.10-13.13.25:234][724]LogContentBrowser: Attempting asset rename: Skil; -> Skill
+[2024.11.10-13.13.28:222][887]LogContentBrowser: Deferred new asset folder creation: 新建文件夹
+[2024.11.10-13.13.28:232][887]LogContentBrowser: Creating deferred item: 新建文件夹
+[2024.11.10-13.13.28:256][889]LogContentBrowser: Renaming the item being created (Deferred Item: 新建文件夹).
+[2024.11.10-13.13.31:569][ 88]LogContentBrowser: Attempting asset rename: 新建文件夹 -> Skill_2
+[2024.11.10-13.13.31:569][ 88]LogContentBrowser: End creating deferred item 新建文件夹
+[2024.11.10-13.15.27:058][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: 未能加载“/Game/Scan/Materials/CRV_ScanEffect_PP_Speed”：无法找到文件。
+[2024.11.10-13.15.27:065][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/CRV_ScanEffect_PP_Speed'
+[2024.11.10-13.15.27:065][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: 未能加载“/Game/Scan/Materials/CRVA_ScanEffect_PP”：无法找到文件。
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/CRVA_ScanEffect_PP'
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: 未能加载“/Game/Scan/Materials/Function/MF_DepthWithNormalOutLine”：无法找到文件。
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/Function/MF_DepthWithNormalOutLine'
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: 未能加载“/Game/Scan/Materials/Function/MF_GetGridWorldPosition”：无法找到文件。
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/Function/MF_GetGridWorldPosition'
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: 未能加载“/Game/Scan/Materials/Function/MF_GhisScanEffect_ScanExpansionRing”：无法找到文件。
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/Function/MF_GhisScanEffect_ScanExpansionRing'
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: 未能加载“/Game/Scan/Materials/Function/MF_ScanEffect_RadialDistortion”：无法找到文件。
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/Function/MF_ScanEffect_RadialDistortion'
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: 未能加载“/Game/Scan/Materials/Function/MF_ScanExpansionRing”：无法找到文件。
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/Function/MF_ScanExpansionRing'
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: 未能加载“/Game/Scan/Materials/Function/MF_SobelUV”：无法找到文件。
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/Function/MF_SobelUV'
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: 未能加载“/Game/Scan/Materials/MPC_Scan”：无法找到文件。
+[2024.11.10-13.15.27:067][316]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/MPC_Scan'
+[2024.11.10-13.15.27:137][316]LogMaterial: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect.uasset: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game.
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node CollectionParameter) CollectionParameter has invalid Collection!
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	Missing Material Function
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+
+[2024.11.10-13.15.27:211][316]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/VFX/Skill_Material/MPP_GhisScanEffect.MPP_GhisScanEffect
+[2024.11.10-13.15.27:268][316]LogMaterial: Warning: [AssetLog] /Engine/Transient.MPP_GhisScanEffect: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game.
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node CollectionParameter) CollectionParameter has invalid Collection!
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	Missing Material Function
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+
+[2024.11.10-13.15.27:470][316]LogStaticMesh: Display: 正在等待静态网格体就绪0/1（/Engine/EditorMeshes/AssetViewer/Sphere_inversenormals）……
+[2024.11.10-13.15.27:571][316]LogStaticMesh: Display: 正在等待静态网格体就绪0/1（/Engine/EditorMeshes/AssetViewer/Floor_Mesh）……
+[2024.11.10-13.15.27:998][316]LogMaterial: Warning: [AssetLog] /Engine/Transient.MPP_GhisScanEffect: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game.
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node CollectionParameter) CollectionParameter has invalid Collection!
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	Missing Material Function
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+
+[2024.11.10-13.15.28:064][316]MaterialEditorStats: Error: [SM6] Missing Material Function
+[2024.11.10-13.15.28:064][316]MaterialEditorStats: Error: [SM6] Missing Material Function
+[2024.11.10-13.15.28:064][316]MaterialEditorStats: Error: [SM6] (Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+[2024.11.10-13.15.28:064][316]MaterialEditorStats: Error: [SM6] (Node If) If input A must be of type float.
+[2024.11.10-13.15.28:064][316]MaterialEditorStats: Error: [SM6] Missing Material Function
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] (Node CollectionParameter) CollectionParameter has invalid Collection!
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] Missing Material Function
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] Missing Material Function
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] (Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] Missing Material Function
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] Missing Material Function
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] (Node If) If input A must be of type float.
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] Missing Material Function
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] (Node If) If input A must be of type float.
+[2024.11.10-13.15.28:065][316]MaterialEditorStats: Error: [SM6] Missing Material Function
+[2024.11.10-13.15.28:433][316]LogSlate: Took 0.002270 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2024.11.10-13.15.52:355][758]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect_Inst.uasset: 未能加载“/Game/Scan/Materials/MPP_GhisScanEffect”：无法找到文件。
+[2024.11.10-13.15.52:355][758]LogLinker: Warning: [AssetLog] D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Content\VFX\Skill_Material\MPP_GhisScanEffect_Inst.uasset: VerifyImport: Failed to load package for import object 'Package /Game/Scan/Materials/MPP_GhisScanEffect'
+[2024.11.10-13.15.52:435][758]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2024.11.10-13.15.53:583][758]LogSlate: Window 'Delete Assets' being destroyed
+[2024.11.10-13.15.53:629][758]LogSlate: Window 'MPP_GhisScanEffect' being destroyed
+[2024.11.10-13.15.53:700][758]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2024.11.10-13.15.53:716][758]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.11.10-13.15.53:769][758]LogUObjectGlobals: Force Deleting 8 Package(s):
+	Asset Name: /Game/VFX/Skill_Material/MPP_GhisScanEffect_Inst.MPP_GhisScanEffect_Inst
+	Asset Type: MaterialInstanceConstant
+	Asset Name: /Game/VFX/Skill_Material/MPP_GhisScanEffect.MPP_GhisScanEffect
+	Asset Type: Material
+	Asset Name: /Game/VFX/Skill_Material/MPC_Scan.MPC_Scan
+	Asset Type: MaterialParameterCollection
+	Asset Name: /Game/VFX/Skill_Material/MPC_ObjectMaskIndex.MPC_ObjectMaskIndex
+	Asset Type: MaterialParameterCollection
+	Asset Name: /Game/VFX/Skill_Material/CRVA_ScanEffect_PP.CRVA_ScanEffect_PP
+	Asset Type: CurveLinearColorAtlas
+	Asset Name: /Game/VFX/Skill_Material/CRV_ScanEffect_PP_Speed.CRV_ScanEffect_PP_Speed
+	Asset Type: CurveLinearColor
+	Asset Name: /Game/VFX/Skill_Material/CRV_Scan_Blend.CRV_Scan_Blend
+	Asset Type: CurveFloat
+	Asset Name: /Game/VFX/Skill_Material/BP_ScanActor.BP_ScanActor
+	Asset Type: Blueprint
+[2024.11.10-13.15.54:314][758]LogMaterial: Warning: [AssetLog] /Engine/Transient.MPP_GhisScanEffect: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game.
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node CollectionParameter) CollectionParameter has invalid Collection!
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	Missing Material Function
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+
+[2024.11.10-13.15.54:319][758]LogMaterial: Warning: [AssetLog] /Engine/Transient.MPP_GhisScanEffect: Failed to compile Material for platform PCD3D_SM6, Default Material will be used in game.
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node CollectionParameter) CollectionParameter has invalid Collection!
+	Missing Material Function
+	Missing Material Function
+	(Node CurveAtlasRowParameter) > The curve and atlas are not currently set.
+	Missing Material Function
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+	(Node If) If input A must be of type float.
+	Missing Material Function
+
+[2024.11.10-13.15.54:552][758]LogUObjectHash: Compacting FUObjectHashTables data took   1.51ms
+[2024.11.10-13.15.54:576][758]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2024.11.10-13.15.54:595][758]LogUObjectHash: Compacting FUObjectHashTables data took   0.58ms
+[2024.11.10-13.15.54:661][758]LogUObjectHash: Compacting FUObjectHashTables data took   0.58ms
+[2024.11.10-13.15.58:158][955]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2024.11.10-13.15.58:192][955]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
+[2024.11.10-13.15.59:126][955]LogSlate: Window 'Delete Assets' being destroyed
+[2024.11.10-13.15.59:158][955]LogUObjectHash: Compacting FUObjectHashTables data took   1.82ms
+[2024.11.10-13.15.59:178][955]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2024.11.10-13.15.59:202][955]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.11.10-13.17.50:467][271]LogSlate: Window '将内容添加到项目' being destroyed
+[2024.11.10-13.18.54:916][225]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.11.10-13.18.55:002][225]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Scan/Materials/m_Scan] ([1] browsable assets)...
+[2024.11.10-13.18.55:094][225]OBJ SavePackage:     Rendered thumbnail for [Material /Game/Scan/Materials/m_Scan.m_Scan]
+[2024.11.10-13.18.55:094][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/Scan/Materials/m_Scan]
+[2024.11.10-13.18.55:094][225]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Scan/Materials/m_Scan" FILE="../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/Scan/Materials/m_Scan.uasset" SILENT=true
+[2024.11.10-13.18.55:108][225]LogSavePackage: Moving output files for package: /Game/Scan/Materials/m_Scan
+[2024.11.10-13.18.55:109][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/m_ScanF6FE95B7456BDABEA18A5FA44FCC7487.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/Scan/Materials/m_Scan.uasset'
+[2024.11.10-13.18.55:109][225]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Scan/Materials/MPP_GhisScanEffect] ([1] browsable assets)...
+[2024.11.10-13.18.55:145][225]OBJ SavePackage:     Rendered thumbnail for [Material /Game/Scan/Materials/MPP_GhisScanEffect.MPP_GhisScanEffect]
+[2024.11.10-13.18.55:145][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/Scan/Materials/MPP_GhisScanEffect]
+[2024.11.10-13.18.55:145][225]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Scan/Materials/MPP_GhisScanEffect" FILE="../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/Scan/Materials/MPP_GhisScanEffect.uasset" SILENT=true
+[2024.11.10-13.18.55:157][225]LogSavePackage: Moving output files for package: /Game/Scan/Materials/MPP_GhisScanEffect
+[2024.11.10-13.18.55:157][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MPP_GhisScanEffectE010E64B4D44113E35579E845040E446.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/Scan/Materials/MPP_GhisScanEffect.uasset'
+[2024.11.10-13.18.55:159][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_GetObjectWithDepthIndex] ([1] browsable assets)...
+[2024.11.10-13.18.55:159][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_GetObjectWithDepthIndex]
+[2024.11.10-13.18.55:160][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_GetObjectWithDepthIndex
+[2024.11.10-13.18.55:160][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_GetObjectWithDepthIndex44B91E094D36068DDC9F63B70D56AC03.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_GetObjectWithDepthIndex.uasset'
+[2024.11.10-13.18.55:163][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_ScanExpansionRing] ([1] browsable assets)...
+[2024.11.10-13.18.55:163][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_ScanExpansionRing]
+[2024.11.10-13.18.55:166][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_ScanExpansionRing
+[2024.11.10-13.18.55:166][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_ScanExpansionRing06B05F9B498D3809C559DDA8762A8C73.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_ScanExpansionRing.uasset'
+[2024.11.10-13.18.55:166][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion] ([1] browsable assets)...
+[2024.11.10-13.18.55:167][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion]
+[2024.11.10-13.18.55:170][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion
+[2024.11.10-13.18.55:170][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_ScanEffect_RadialDistortion9D3CFCBA49D742925E94AE9F2F633B9E.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion.uasset'
+[2024.11.10-13.18.55:171][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing] ([1] browsable assets)...
+[2024.11.10-13.18.55:171][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing]
+[2024.11.10-13.18.55:174][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing
+[2024.11.10-13.18.55:174][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_GhisScanEffect_ScanExpansionR0E4FD0F14ECE83A7569E61A96023B554.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing.uasset'
+[2024.11.10-13.18.55:175][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_GetGridWorldPosition] ([1] browsable assets)...
+[2024.11.10-13.18.55:175][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_GetGridWorldPosition]
+[2024.11.10-13.18.55:177][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_GetGridWorldPosition
+[2024.11.10-13.18.55:177][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_GetGridWorldPosition1D7147494C403B0C0C6AF39A4A53807A.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_GetGridWorldPosition.uasset'
+[2024.11.10-13.18.55:179][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_DepthWithNormalOutLine] ([1] browsable assets)...
+[2024.11.10-13.18.55:179][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_DepthWithNormalOutLine]
+[2024.11.10-13.18.55:182][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_DepthWithNormalOutLine
+[2024.11.10-13.18.55:182][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_DepthWithNormalOutLine06C2D8E84D6CD7C2D2AC9EAB4EC79E3D.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_DepthWithNormalOutLine.uasset'
+[2024.11.10-13.18.55:183][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_SobelUV] ([1] browsable assets)...
+[2024.11.10-13.18.55:183][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_SobelUV]
+[2024.11.10-13.18.55:186][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_SobelUV
+[2024.11.10-13.18.55:186][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_SobelUV7A7C892A491AC647363915A825486FF4.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_SobelUV.uasset'
+[2024.11.10-13.18.55:187][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_GetStencilAtIndex] ([1] browsable assets)...
+[2024.11.10-13.18.55:187][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_GetStencilAtIndex]
+[2024.11.10-13.18.55:189][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_GetStencilAtIndex
+[2024.11.10-13.18.55:189][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_GetStencilAtIndexABA3E9684857E972594467A12FAA0B86.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_GetStencilAtIndex.uasset'
+[2024.11.10-13.18.55:198][225]LogFileHelpers: InternalPromptForCheckoutAndSave took 282.332 ms (total: 697.427 ms)
+[2024.11.10-13.18.55:263][225]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2024.11.10-13.18.55:284][225]LogUObjectHash: Compacting FUObjectHashTables data took   1.32ms
+[2024.11.10-13.18.55:300][225]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.11.10-13.18.55:341][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.BP_ScanActor_C' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:341][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.BP_ScanActor:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:341][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.BP_ScanActor:EventGraph.K2Node_Event_0' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:341][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.BP_ScanActor:EventGraph.K2Node_Event_1' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:342][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.BP_ScanActor:EventGraph.K2Node_Event_2' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:342][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.SKEL_BP_ScanActor_C:ReceiveBeginPlay' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:342][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.SKEL_BP_ScanActor_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:342][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.SKEL_BP_ScanActor_C:ReceiveTick' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:342][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.SKEL_BP_ScanActor_C:UserConstructionScript' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:342][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.SKEL_BP_ScanActor_C' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:342][225]LogMetaData: Removing '/Game/VFX/Skill_Material/BP_ScanActor.BP_ScanActor_C:ReceiveBeginPlay' ref from Metadata '/Game/Scan/Materials/BP_ScanActor.PackageMetaData'
+[2024.11.10-13.18.55:348][225]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.11.10-13.18.55:415][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_GetGridWorldPosition] ([1] browsable assets)...
+[2024.11.10-13.18.55:415][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_GetGridWorldPosition]
+[2024.11.10-13.18.55:417][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_GetGridWorldPosition
+[2024.11.10-13.18.55:417][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_GetGridWorldPositionEA5C4DF241D1D18DD3892FACBF481CAD.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_GetGridWorldPosition.uasset'
+[2024.11.10-13.18.55:418][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing] ([1] browsable assets)...
+[2024.11.10-13.18.55:418][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing]
+[2024.11.10-13.18.55:421][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing
+[2024.11.10-13.18.55:421][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_GhisScanEffect_ScanExpansionR5C737CF244CBF5669534CAB327927694.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing.uasset'
+[2024.11.10-13.18.55:422][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion] ([1] browsable assets)...
+[2024.11.10-13.18.55:422][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion]
+[2024.11.10-13.18.55:426][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion
+[2024.11.10-13.18.55:426][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_ScanEffect_RadialDistortion8DE0ED64433E8EE889F3E08E01AD3981.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion.uasset'
+[2024.11.10-13.18.55:427][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/Function/MF_ScanExpansionRing] ([1] browsable assets)...
+[2024.11.10-13.18.55:427][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/Function/MF_ScanExpansionRing]
+[2024.11.10-13.18.55:430][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/Function/MF_ScanExpansionRing
+[2024.11.10-13.18.55:430][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MF_ScanExpansionRing6D4099A348058CECCDA0E5AC5716B0AF.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/Function/MF_ScanExpansionRing.uasset'
+[2024.11.10-13.18.55:431][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/BP_ScanActor] ([2] browsable assets)...
+[2024.11.10-13.18.55:431][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/BP_ScanActor]
+[2024.11.10-13.18.55:431][225]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/VFX/Skill_Material/BP_ScanActor" FILE="../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/BP_ScanActor.uasset" SILENT=true
+[2024.11.10-13.18.55:432][225]LogAssetRegistry: Warning: ScanPathsSynchronous: Package /Game/VFX/Skill_Material/BP_ScanActor does not exist, will not scan.
+[2024.11.10-13.18.55:441][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/BP_ScanActor
+[2024.11.10-13.18.55:441][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/BP_ScanActor624B647D47E33AC5CFC2439129EA3823.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/BP_ScanActor.uasset'
+[2024.11.10-13.18.55:443][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/CRV_ScanEffect_PP_Speed] ([1] browsable assets)...
+[2024.11.10-13.18.55:443][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/CRV_ScanEffect_PP_Speed]
+[2024.11.10-13.18.55:444][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/CRV_ScanEffect_PP_Speed
+[2024.11.10-13.18.55:444][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/CRV_ScanEffect_PP_Speed93A4C74A40878DF7E68ED7AED62874B0.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/CRV_ScanEffect_PP_Speed.uasset'
+[2024.11.10-13.18.55:445][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/CRVA_ScanEffect_PP] ([1] browsable assets)...
+[2024.11.10-13.18.55:445][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/CRVA_ScanEffect_PP]
+[2024.11.10-13.18.55:451][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/CRVA_ScanEffect_PP
+[2024.11.10-13.18.55:451][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/CRVA_ScanEffect_PPE8EBE5834DE3C27B33FB6D81BE982DD8.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/CRVA_ScanEffect_PP.uasset'
+[2024.11.10-13.18.55:453][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/m_Scan] ([1] browsable assets)...
+[2024.11.10-13.18.55:453][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/m_Scan]
+[2024.11.10-13.18.55:453][225]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/VFX/Skill_Material/m_Scan" FILE="../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/m_Scan.uasset" SILENT=true
+[2024.11.10-13.18.55:457][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/m_Scan
+[2024.11.10-13.18.55:457][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/m_ScanCB7E7522467875C87086FF82F1773C26.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/m_Scan.uasset'
+[2024.11.10-13.18.55:458][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/m_Scan_Inst] ([1] browsable assets)...
+[2024.11.10-13.18.55:458][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/m_Scan_Inst]
+[2024.11.10-13.18.55:458][225]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/VFX/Skill_Material/m_Scan_Inst" FILE="../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/m_Scan_Inst.uasset" SILENT=true
+[2024.11.10-13.18.55:459][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/m_Scan_Inst
+[2024.11.10-13.18.55:459][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/m_Scan_Inst0D951E2344B4224439039D922708A99C.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/m_Scan_Inst.uasset'
+[2024.11.10-13.18.55:460][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/MPC_ObjectMaskIndex] ([1] browsable assets)...
+[2024.11.10-13.18.55:460][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/MPC_ObjectMaskIndex]
+[2024.11.10-13.18.55:461][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/MPC_ObjectMaskIndex
+[2024.11.10-13.18.55:461][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MPC_ObjectMaskIndex1A61C33544394DDE3AF9189870EFEC5C.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/MPC_ObjectMaskIndex.uasset'
+[2024.11.10-13.18.55:461][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/MPC_Scan] ([1] browsable assets)...
+[2024.11.10-13.18.55:462][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/MPC_Scan]
+[2024.11.10-13.18.55:462][225]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/VFX/Skill_Material/MPC_Scan" FILE="../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/MPC_Scan.uasset" SILENT=true
+[2024.11.10-13.18.55:462][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/MPC_Scan
+[2024.11.10-13.18.55:462][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MPC_Scan6B7C721F4D91AEA0423E49ADA602E6A1.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/MPC_Scan.uasset'
+[2024.11.10-13.18.55:463][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/MPP_GhisScanEffect] ([1] browsable assets)...
+[2024.11.10-13.18.55:463][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/MPP_GhisScanEffect]
+[2024.11.10-13.18.55:476][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/MPP_GhisScanEffect
+[2024.11.10-13.18.55:476][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MPP_GhisScanEffect98D2633B48DC7CD0D49C368355604F99.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/MPP_GhisScanEffect.uasset'
+[2024.11.10-13.18.55:477][225]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/VFX/Skill_Material/MPP_GhisScanEffect_Inst] ([1] browsable assets)...
+[2024.11.10-13.18.55:477][225]OBJ SavePackage: Finished generating thumbnails for package [/Game/VFX/Skill_Material/MPP_GhisScanEffect_Inst]
+[2024.11.10-13.18.55:478][225]LogSavePackage: Moving output files for package: /Game/VFX/Skill_Material/MPP_GhisScanEffect_Inst
+[2024.11.10-13.18.55:478][225]LogSavePackage: Moving '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Saved/MPP_GhisScanEffect_Inst7398C99C49E7491246CD54945E6E76B4.tmp' to '../../../../../Programes/Graduation_Program_2024/Graduation_2024/Content/VFX/Skill_Material/MPP_GhisScanEffect_Inst.uasset'
+[2024.11.10-13.18.55:489][225]LogFileHelpers: InternalPromptForCheckoutAndSave took 140.507 ms (total: 837.935 ms)
+[2024.11.10-13.18.55:552][225]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2024.11.10-13.18.55:575][225]LogUObjectHash: Compacting FUObjectHashTables data took   1.29ms
+[2024.11.10-13.18.55:591][225]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2024.11.10-13.18.55:627][225]LogAssetRegistry: Warning: D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Content/Scan\Materials\m_Scan.uasset: package was marked as deleted in editor, but has been modified on disk. It will once again be returned from AssetRegistry queries.
+[2024.11.10-13.18.55:627][225]LogAssetRegistry: Warning: D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Content/Scan\Materials\MPP_GhisScanEffect.uasset: package was marked as deleted in editor, but has been modified on disk. It will once again be returned from AssetRegistry queries.
+[2024.11.10-13.18.55:636][225]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Starting to validate 17 assets
+[2024.11.10-13.18.55:637][225]LogContentValidation: Enabled validators:
+[2024.11.10-13.18.55:637][225]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2024.11.10-13.18.55:637][225]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2024.11.10-13.18.55:637][225]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/Function/MF_GetObjectWithDepthIndex.MF_GetObjectWithDepthIndex
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/Function/MF_GetObjectWithDepthIndex 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/Function/MF_ScanExpansionRing.MF_ScanExpansionRing
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/Function/MF_ScanExpansionRing 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion.MF_ScanEffect_RadialDistortion
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/Function/MF_ScanEffect_RadialDistortion 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing.MF_GhisScanEffect_ScanExpansionRing
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/Function/MF_GhisScanEffect_ScanExpansionRing 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/Function/MF_GetGridWorldPosition.MF_GetGridWorldPosition
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/Function/MF_GetGridWorldPosition 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/Function/MF_DepthWithNormalOutLine.MF_DepthWithNormalOutLine
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/Function/MF_DepthWithNormalOutLine 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/Function/MF_SobelUV.MF_SobelUV
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/Function/MF_SobelUV 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/Function/MF_GetStencilAtIndex.MF_GetStencilAtIndex
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/Function/MF_GetStencilAtIndex 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/BP_ScanActor.BP_ScanActor
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/BP_ScanActor 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/CRV_ScanEffect_PP_Speed.CRV_ScanEffect_PP_Speed
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/CRV_ScanEffect_PP_Speed 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/CRVA_ScanEffect_PP.CRVA_ScanEffect_PP
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/CRVA_ScanEffect_PP 正在验证资产
+[2024.11.10-13.18.55:637][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/m_Scan.m_Scan
+[2024.11.10-13.18.55:637][225]AssetCheck: /Game/VFX/Skill_Material/m_Scan 正在验证资产
+[2024.11.10-13.18.55:638][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/m_Scan_Inst.m_Scan_Inst
+[2024.11.10-13.18.55:638][225]AssetCheck: /Game/VFX/Skill_Material/m_Scan_Inst 正在验证资产
+[2024.11.10-13.18.55:638][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/MPC_ObjectMaskIndex.MPC_ObjectMaskIndex
+[2024.11.10-13.18.55:638][225]AssetCheck: /Game/VFX/Skill_Material/MPC_ObjectMaskIndex 正在验证资产
+[2024.11.10-13.18.55:638][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/MPC_Scan.MPC_Scan
+[2024.11.10-13.18.55:638][225]AssetCheck: /Game/VFX/Skill_Material/MPC_Scan 正在验证资产
+[2024.11.10-13.18.55:638][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/MPP_GhisScanEffect.MPP_GhisScanEffect
+[2024.11.10-13.18.55:638][225]AssetCheck: /Game/VFX/Skill_Material/MPP_GhisScanEffect 正在验证资产
+[2024.11.10-13.18.55:638][225]LogContentValidation: Display: Validating asset /Game/VFX/Skill_Material/MPP_GhisScanEffect_Inst.MPP_GhisScanEffect_Inst
+[2024.11.10-13.18.55:638][225]AssetCheck: /Game/VFX/Skill_Material/MPP_GhisScanEffect_Inst 正在验证资产
+[2024.11.10-13.19.06:333][845]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/VFX/Skill_Material/MPP_GhisScanEffect.MPP_GhisScanEffect
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: Texture samplers: 0/16
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(20)
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: LWC 降级 usages (Est.): 3
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: LWC 添加 usages (Est.): 8
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: LWC 减 usages (Est.): 13
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: LWC 除 usages (Est.): 16
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: LWC 乘法向量向量 usages (Est.): 10
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: LWC 其他 usages (Est.): 20
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: Shader Count: 0
+[2024.11.10-13.19.06:595][845]MaterialEditorStats: Preshaders: 21  (21 param fetches, 48 ops)
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: Texture samplers: 3/16
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(20)
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: LWC 降级 usages (Est.): 3
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: LWC 添加 usages (Est.): 8
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: LWC 减 usages (Est.): 13
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: LWC 除 usages (Est.): 16
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: LWC 乘法向量向量 usages (Est.): 10
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: LWC 其他 usages (Est.): 20
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: Shader Count: 2
+[2024.11.10-13.19.06:861][847]MaterialEditorStats: Preshaders: 21  (21 param fetches, 48 ops)
+[2024.11.10-13.19.14:244][240]LogSlate: Window 'MPP_GhisScanEffect' being destroyed
+[2024.11.10-13.19.14:251][240]LogSlate: Window 'MPP_GhisScanEffect' being destroyed
+[2024.11.10-13.19.14:264][240]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2024.11.10-13.19.14:264][240]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.11.10-13.19.14:321][240]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
