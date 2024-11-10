@@ -72,6 +72,9 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerAttributesInterface.cpp">
       <Filter>Source\Graduation_2024\Private\Interface</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerInteractionInterface.cpp">
+      <Filter>Source\Graduation_2024\Private\Interface</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\MovementComponent">
       <UniqueIdentifier>{65826948-B0FA-3A24-8321-D587A6A5E35C}</UniqueIdentifier>
     </Filter>
@@ -127,6 +130,9 @@
       <UniqueIdentifier>{F92AA8A3-1426-3A89-83AC-D81E1A9758C2}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerAttributesInterface.h">
+      <Filter>Source\Graduation_2024\Public\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerInteractionInterface.h">
       <Filter>Source\Graduation_2024\Public\Interface</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\MovementComponent">

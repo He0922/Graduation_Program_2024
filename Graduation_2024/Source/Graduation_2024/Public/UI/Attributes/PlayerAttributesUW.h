@@ -49,6 +49,8 @@ public:
 
 #pragma region Player Information
 public:
+	class IPlayerAttributesInterface* PlayerAttributesInterface;
+
 	void SetHPUI();
 
 #pragma endregion
