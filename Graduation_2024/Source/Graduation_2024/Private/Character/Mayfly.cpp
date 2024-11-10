@@ -14,30 +14,18 @@ AMayfly::AMayfly()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	isFollowing = true;
+
 
 	GetCharacterMovement()->MaxWalkSpeed = speed = 204.f;
 
-	desiredHeight = 200.0f; // 设置所需的高度 
 
-	pathRecordInterval = 0.5f; // 设置记录间隔时间（秒）
-	pathRecordTimer = 0.0f; 
-	pathIndex = 0; 
-
-	followDistance = 50.0f; // 跟随停止的距离 
-	reengageDistance = 100.0f; // 重新跟随的距离 
-	acceptableRadius = 10.0f; // 设置可接受的误差范围，避免震荡
-
-	followOffset = FVector(100.0f, 0.0f, 0.0f); // 设置跟随偏移量
-
-	targetLocationMember = FVector::ZeroVector; 
-	isMovingToTarget = false;
+	followDistance = 100.0f; // 跟随停止的距离 
 
 	mayflytype = EMayflyType::eaddHPMAX;
 
 	playerCharacter = nullptr;
 
-	
+
 
 }
 
@@ -49,39 +37,21 @@ void AMayfly::BeginPlay()
 
 	// 在BeginPlay中通过类获取playerCharacter 
 	TArray<AActor*> FoundActors; 
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), FoundActors);  // 这里可以减少开销，用GetActorOfClass直接指定转换对象不用全局搜索
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), FoundActors); 
 	if (FoundActors.Num() > 0) 
 	{ 
 		playerCharacter = Cast<APlayerCharacter>(FoundActors[0]); 
 	} 
 
+	//判断是否获取playerCharacter
 	if (playerCharacter)
 	{ 
-		RecordPlayerPath(0.0f); // 初始化路径记录 
 		Debug::Print(FString::Printf(TEXT("playerCharacter initialized: %s"), 
 			*playerCharacter->GetName()), 0, true, FColor::Green, 0);
 	} 
 	else 
 	{ 
 		Debug::Print(TEXT("Failed to initialize playerCharacter"), 0, true, FColor::Red, 0);
-	}
-
-	auto MovementComponent = GetCharacterMovement(); // auto后续需要换成指定的变量类型，并且对象可以写在.h文件中后续调用直接用变量就行不用每次都声明
-	if (MovementComponent)
-	{
-		if (!MovementComponent->IsActive()) 
-		{
-			MovementComponent->Activate(true); 
-			// 确保移动组件被激活 
-			Debug::Print(TEXT("CharacterMovementComponent has been activated"), 0, true, FColor::Green, 0); 
-		} 
-		// 强制设置移动模式为 Walking 
-		MovementComponent->SetMovementMode(EMovementMode::MOVE_Walking);
-		Debug::Print(TEXT("Movement mode set to Walking"), 0, true, FColor::Green, 0);
-	} 
-	else 
-	{ 
-		Debug::Print(TEXT("CharacterMovementComponent is not valid"), 0, true, FColor::Red, 0); 
 	}
 }
 
@@ -91,46 +61,69 @@ void AMayfly::Tick(float deltaTime)
 {
 	Super::Tick(deltaTime);
 
+	//判断playerCharacter是否失效
 	if (!playerCharacter)
 	{
 		Debug::Print(TEXT("playerCharacter is null in Tick"), 0, true, FColor::Red, 0); 
-		// 在每个Tick中尝试重新获取playerCharacter 
-		TArray<AActor*> FoundActors; 
-		UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), FoundActors); 
-		if (FoundActors.Num() > 0) 
-		{ 
-			playerCharacter = Cast<APlayerCharacter>(FoundActors[0]); 
-			if (playerCharacter)
-			{ 
-				Debug::Print(FString::Printf(TEXT("Reinitialized playerCharacter: %s"), *playerCharacter->GetName()), 0, true, FColor::Green, 0); 
-			}
-		} 
 		return; 
 	} 
-	Debug::Print(FString::Printf(TEXT("Tick called - isFollowing: %s, isMovingToTarget: %s"), 
-		isFollowing ? TEXT("true") : TEXT("false"), 
-		isMovingToTarget ? TEXT("true") : TEXT("false")), 0, true, FColor::Green, 0);
 
-	auto MovementComponent = GetCharacterMovement(); 
-	Debug::Print(FString::Printf(TEXT("Movement Component - Velocity: %s, Acceleration: %s, Location: %s, MaxWalkSpeed: %f, MovementMode: %d"), 
-		*MovementComponent->Velocity.ToString(), 
-		*MovementComponent->GetCurrentAcceleration().ToString(), 
-		*GetActorLocation().ToString(), 
-		MovementComponent->MaxWalkSpeed, 
-		(int32)MovementComponent->MovementMode), 0, true, FColor::Cyan, 0);
+		//跟随玩家
+		FollowPlayer(); 
 
+}
+
+
+void AMayfly::FollowPlayer()
+{
+	//计算方向
+	FVector direction = (playerCharacter->GetActorLocation() - GetActorLocation()).GetSafeNormal();
+	//计算距离
+	float distance = FVector::Dist(GetActorLocation(), playerCharacter->GetActorLocation()); 
+
+
+	if (distance > followDistance) 
+	{ 
+		AddMovementInput(direction, 1.0f, true); 
+		Debug::Print(FString::Printf(TEXT("Following player - Direction: %s, Speed: %f"), 
+			*direction.ToString(), speed), 0, true, FColor::Green, 0); 
+	}
+	else 
+	{ 
+		//判断是否跟随
+		//isFollowing = false; 
+		AddMovementInput(FVector::ZeroVector, 0, false);
+		Debug::Print(TEXT("Reached follow distance, stopping follow"), 0, true, FColor::Yellow, 0); 
+	}
+}
+
+
+
+#pragma region unused
+	/*变量
+	isFollowing = true;
+	reengageDistance = 100.0f; // 重新跟随的距离 
+	desiredHeight = 200.0f; // 设置所需的高度 
+	isMovingToTarget = false;
+	*/
+
+	/*FollowPlayer中避开障碍物
+	FVector AvoidanceDirection; 
+	if (DetectObstacleInSector(AvoidanceDirection)) 
+	{
+		direction += AvoidanceDirection * 200.0f; // 调整方向以避开障碍物 
+	}
+	*/
+
+	/*Tick中，判断跟随、抵达目标点、超出距离、维持高度
 	if (isFollowing) 
 	{ 
-		// 记录玩家角色的路径 
-		RecordPlayerPath(deltaTime); 
-		// 跟随记录的路径 
-		FollowRecordedPath(deltaTime); 
 	}
-	else if (isMovingToTarget)
-	{
-		MoveToTargetLocation(deltaTime);
+	else if (isMovingToTarget) 
+	{ //切换跟随和前往目标点
+		MoveToTarget(deltaTime); 
 	}
-	else if (IsBeyondReengageDistance()) 
+	else if (IsBeyondReengageDistance()) //判断是否超出距离
 	{ 
 		// 如果距离再次增加，则重新开始跟随 
 		isFollowing = true; 
@@ -139,95 +132,15 @@ void AMayfly::Tick(float deltaTime)
 	
 	//维持高度
 	MaintainHeight();
-
-}
-
-
-// Called to bind functionality to input
-void AMayfly::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
+		*/
 
 
-void AMayfly::RecordPlayerPath(float deltaTime)
-{
-	if (playerCharacter)
-	{
-		pathRecordTimer += deltaTime;
-		if (pathRecordTimer >= pathRecordInterval)
-		{
-			playerPath.Add(playerCharacter->GetActorLocation());
-			pathRecordTimer = 0.0f;
-			Debug::Print(FString::Printf(TEXT("Recorded player path at location: %s"), *playerCharacter->GetActorLocation().ToString()), 0, true, FColor::Black, 0);
-		}
-	}
-	else 
-	{
-		Debug::Print(TEXT("playerCharacter is null in RecordPlayerPath"), 0, true, FColor::Red, 0);
-	}
-}
-
-
-void AMayfly::FollowRecordedPath(float deltaTime)
-{
-	if (playerPath.Num() > 0)
-	{
-		FVector calculatedTargetLocation = GetTargetLocationWithOffset(playerPath[pathIndex]);
-		FVector direction = playerCharacter->GetActorLocation() - GetActorLocation();
-		float distance = FVector::Dist(GetActorLocation(), calculatedTargetLocation);
-
-		Debug::Print(FString::Printf(TEXT("Following path to target: %s, current distance: %f"), 
-			*calculatedTargetLocation.ToString(), distance), 0, true, FColor::Blue, 0);
-
-		if (distance < acceptableRadius) // 接近目标点后更新索引 
-		{
-			pathIndex = (pathIndex + 1) % playerPath.Num();
-			Debug::Print(TEXT("Reached path point, updating pathIndex"), 0, true, FColor::Orange, 0);
-		}
-		else
-		{
-			Debug::Print(FString::Printf(TEXT("Current Speed: %f, Direction: %s"), speed, *direction.ToString()), 0, true, FColor::Green, 0);
-
-			AddMovementInput(direction,1.0f,true); 
-
-			
-
-			Debug::Print(FString::Printf(TEXT("Moving towards target with speed: %f"), speed), 0, true, FColor::Green, 0);
-			
-			// 如果接近PlayerCharacter，则停止跟随 
-			if (distance < followDistance) 
-			{ 
-				isFollowing = false; 
-				GetCharacterMovement()->StopMovementImmediately();
-				Debug::Print(TEXT("Reached playerCharacter, stopping follow"), 0, true, FColor::Yellow, 0);
-			}
-		}
-	}
-	else
-	{
-		Debug::Print(TEXT("No recorded player path"), 0, true, FColor::Red, 0);
-	}
-}
-
-
+/*保持高度、跟随玩家、前往目标点、避开障碍物
 void AMayfly::MaintainHeight() 
 { 
 	FVector currentLocation = GetActorLocation(); 
 	currentLocation.Z = desiredHeight; 
 	SetActorLocation(currentLocation); 
-}
-
-
-bool AMayfly::IsWithinFollowDistance() const 
-{
-	if (playerCharacter)
-	{ 
-		float distance = FVector::Dist(GetActorLocation(), playerCharacter->GetActorLocation()); 
-		return distance < followDistance;
-	}
-	return false;
 }
 
 
@@ -242,56 +155,52 @@ bool AMayfly::IsBeyondReengageDistance() const
 }
 
 
-FVector AMayfly::GetTargetLocationWithOffset(const FVector& targetLocation) const
+bool AMayfly::DetectObstacleInSector(FVector& OutAvoidanceDirection) 
 {
-	// 计算与玩家角色位置的偏移量 
-	FVector offsetDirection = GetActorRightVector() * followOffset.X;
-	return targetLocation + offsetDirection;
+	FVector Start = GetActorLocation(); 
+	FVector Forward = GetActorForwardVector(); 
+	float detectionRadius = 200.0f; // 检测半径 
+	float sectorAngle = 120.0f; // 扇形角度 
+
+	FHitResult hitResult; 
+	FCollisionQueryParams collisionParams; 
+	collisionParams.AddIgnoredActor(this); 
+	for (float angle = -sectorAngle / 2.0f; angle <= sectorAngle / 2.0f; angle += 10.0f) // 每10度检测一次 
+	{ 
+		FVector Direction = Forward.RotateAngleAxis(angle, FVector::UpVector); 
+		FVector End = Start + (Direction * detectionRadius); 
+
+		if (GetWorld()->LineTraceSingleByChannel(hitResult, Start, End, ECC_Visibility, collisionParams)) 
+		{ 
+			FVector hitNormal = hitResult.ImpactNormal; 
+			OutAvoidanceDirection = FVector::CrossProduct(hitNormal, FVector::UpVector).GetSafeNormal(); return true; 
+		} 
+	} 
+	return false; 
 }
 
 
-float AMayfly::CalculateSpeedBasedOnDistance(float distance) const 
-{ 
-	// 计算速度，使速度随着距离的减小而减小 
-	if (distance <= acceptableRadius) 
+void AMayfly::MoveToTarget(float deltaTime) 
+{
+	FVector direction = (targetLocation - GetActorLocation()).GetSafeNormal(); 
+	float distance = FVector::Dist(GetActorLocation(), targetLocation);
+	float acceptableRadius = 50.0f;
+
+	if (distance > acceptableRadius) // 设置一个合理的误差范围 
 	{ 
-		return 0.0f; // 当距离非常小时，速度为0 
+		AddMovementInput(direction, 1.0f, true); 
+		Debug::Print(FString::Printf(TEXT("Moving to target - Direction: %s, Speed: %f"), 
+			*direction.ToString(), speed), 0, true, FColor::Blue, 0); 
 	} 
 	else 
 	{ 
-		// 使用插值函数，使速度与距离成比例变化 
-		return FMath::Clamp((distance - acceptableRadius) / (followDistance - acceptableRadius), 0.0f, 1.0f) * speed; 
+		isMovingToTarget = false; 
+		AddMovementInput(FVector::ZeroVector, 0, false); 
+		Debug::Print(TEXT("Reached target location, stopping"), 0, true, FColor::Magenta, 0); 
 	} 
 }
+*/
+
+#pragma endregion unused
 
 
-void AMayfly::SetTargetLocation(const FVector& newTargetLocation)
-{
-	targetLocationMember = newTargetLocation;
-	isMovingToTarget = true;
-	isFollowing = false; // 停止跟随PlayerCharacter
-}
-
-
-void AMayfly::MoveToTargetLocation(float deltaTime)
-{
-	FVector direction = targetLocationMember - GetActorLocation(); 
-	direction.Z = 0; // 忽略高度差异 
-	float distance = direction.Size(); 
-
-	Debug::Print(FString::Printf(TEXT("Moving to target location: %s, current distance: %f"), 
-		*targetLocationMember.ToString(), distance), 0, true, FColor::Cyan, 0);
-
-	if (distance < acceptableRadius) // 接近目标点后停止 
-	{ 
-		isMovingToTarget = false; // 到达目标点后停止移动 
-		Debug::Print(TEXT("Reached target location, stopping"), 0, true, FColor::Magenta, 0);
-		GetCharacterMovement()->StopMovementImmediately();
-	} 
-	else 
-	{ 
-		direction.Normalize(); 
-		AddMovementInput(direction, speed * deltaTime);
-		Debug::Print(FString::Printf(TEXT("Moving towards target with speed: %f"), speed), 0, true, FColor::Green, 0);
-	} 
-}
