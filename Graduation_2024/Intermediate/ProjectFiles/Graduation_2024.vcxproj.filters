@@ -81,6 +81,12 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\PlayerCharacterMovementComponent.cpp">
       <Filter>Source\Graduation_2024\Private\MovementComponent</Filter>
     </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\SkillComponent">
+      <UniqueIdentifier>{7F20B35C-9073-3391-BA01-99707842FEDA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\SkillComponent\PlayerSkillComponent.cpp">
+      <Filter>Source\Graduation_2024\Private\SkillComponent</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\UI">
       <UniqueIdentifier>{628D4C8F-EBC1-38F9-914B-510DA8B8469D}</UniqueIdentifier>
     </Filter>
@@ -131,6 +137,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\PlayerCharacterMovementComponent.h">
       <Filter>Source\Graduation_2024\Public\MovementComponent</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\SkillComponent">
+      <UniqueIdentifier>{2731E19B-BF3B-3843-9E89-F190D081EE16}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\SkillComponent\PlayerSkillComponent.h">
+      <Filter>Source\Graduation_2024\Public\SkillComponent</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\UI">
       <UniqueIdentifier>{2A640A15-54C5-3178-B34C-3D58669E8F25}</UniqueIdentifier>

@@ -10,6 +10,7 @@
 #include "Character/PlayerAttributes.h"
 #include "UI/Attributes/PlayerAttributesUW.h"
 #include "Interface/PlayerAttributesInterface.h"
+#include "SkillComponent/PlayerSkillComponent.h"
 
 
 #include "PlayerCharacter.generated.h"
@@ -78,6 +79,12 @@ public:
 	virtual void SetMoveSpeed(float AddMoveSpeed) override;
 #pragma endregion
 
+#pragma region SkillClass
+	//实现玩家技能接口的定义
+	void StartScan();
+	void EndScan();
+#pragma endregion
+
 
 // 创建输入映射、输入动作
 #pragma region Player Behavior Control
@@ -93,6 +100,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
 	class UInputAction* jumpAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
+	class UInputAction* ScanAction;
 
 #pragma endregion
 
@@ -133,6 +143,14 @@ public:
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Movement Component")
 	class UPlayerCharacterMovementComponent* playerCMC;
+
+#pragma endregion
+
+	// 创建自定义的角色技能组件变量
+#pragma region SkilComponent
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Skill Component")
+	class UPlayerSkillComponent* playerSkillComponent;
 
 #pragma endregion
 
