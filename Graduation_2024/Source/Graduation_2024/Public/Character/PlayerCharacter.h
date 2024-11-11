@@ -10,6 +10,8 @@
 #include "Character/PlayerAttributes.h"
 #include "UI/Attributes/PlayerAttributesUW.h"
 #include "Interface/PlayerAttributesInterface.h"
+#include "Interface/PlayerInteractionInterface.h"
+#include "SkillComponent/PlayerSkillComponent.h"
 
 
 #include "PlayerCharacter.generated.h"
@@ -37,7 +39,24 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 
-#pragma region Interface
+#pragma region Initialize And Check
+public:
+	void CheckCollisionObject();
+
+	IPlayerInteractionInterface* currentInteractable = nullptr;
+
+#pragma endregion
+
+#pragma region Collision
+public:
+	// 重写Collision碰撞事件函数
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+	virtual void NotifyActorEndOverlap(AActor* OtherActor) override;
+#pragma endregion
+
+
+#pragma region Player Attributes Interface
+public:
 	// 玩家属性变量
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerHealthMax;
@@ -79,6 +98,13 @@ public:
 #pragma endregion
 
 
+#pragma region SkillClass
+	//实现玩家技能接口的定义
+	void StartScan();
+	void EndScan();
+#pragma endregion
+
+
 // 创建输入映射、输入动作
 #pragma region Player Behavior Control
 public:
@@ -94,6 +120,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
 	class UInputAction* jumpAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
+	class UInputAction* ScanAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	class UInputAction* objectInteraction;
+
 #pragma endregion
 
 
@@ -106,6 +138,9 @@ public:
 	// 用于控制玩家视角旋转
 	UFUNCTION()
 	void Look(const FInputActionValue& Value);
+
+	UFUNCTION()
+	void ObjectInteraction();
 #pragma endregion
 
 
@@ -133,6 +168,14 @@ public:
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Movement Component")
 	class UPlayerCharacterMovementComponent* playerCMC;
+
+#pragma endregion
+
+	// 创建自定义的角色技能组件变量
+#pragma region SkilComponent
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Skill Component")
+	class UPlayerSkillComponent* playerSkillComponent;
 
 #pragma endregion
 

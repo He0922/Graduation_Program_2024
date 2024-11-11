@@ -4,13 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Interface/PlayerInteractionInterface.h"
 
 #include "Archival.generated.h"
 
 
 
 UCLASS()
-class GRADUATION_2024_API AArchival : public AActor
+class GRADUATION_2024_API AArchival : public AActor, public IPlayerInteractionInterface
 {
 	GENERATED_BODY()
 	
@@ -32,5 +33,44 @@ public:
 #pragma region Player Inormation
 public:
 	class APlayerCharacter* playerCharacter;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archive Point Mesh")
+	class UStaticMeshComponent* archiveMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Stand in Postion")
+	class UStaticMeshComponent* playerStandSphere;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archive Collision")
+	class UBoxComponent* archiveCollision;
+
+#pragma endregion
+
+
+#pragma region Interaction Interface
+public:
+	virtual void InteractArchive()override;
+#pragma endregion
+
+
+#pragma region refresh Player Statue
+public:
+	// 玩家属性变量
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerHealthMax;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerEnergyMax;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerHealth;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerEnergy;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerDamage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
+	float playerMoveSpeed;
 #pragma endregion
 };

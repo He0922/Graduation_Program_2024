@@ -23,8 +23,6 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-
-
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationRoll = false;
 	bUseControllerRotationYaw = false;
@@ -47,6 +45,9 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	camera->SetupAttachment(cameraBoom, USpringArmComponent::SocketName);
 	camera->bUsePawnControlRotation = false;
 
+
+	//创建玩家技能组件
+	playerSkillComponent = CreateDefaultSubobject<UPlayerSkillComponent>(TEXT("SkillComponent"));
 }
 
 
@@ -85,17 +86,59 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	// 玩家输入按键绑定
 	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
 	{
+		// 移动
 		EnhancedInputComponent->BindAction(moveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move);
-		EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look);
 		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
 		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
+
+		//镜头旋转
+		EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look);
+
+		//技能
+		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Started, this, &APlayerCharacter::StartScan);
+		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Completed, this, &APlayerCharacter::EndScan);
+
+		//交互
+		EnhancedInputComponent->BindAction(objectInteraction, ETriggerEvent::Completed, this, &APlayerCharacter::ObjectInteraction);
 	}
 }
 
 
+#pragma region Initialize And Check
+void APlayerCharacter::CheckCollisionObject()
+{
+}
+
+#pragma endregion
+
+
+
+void APlayerCharacter::NotifyActorBeginOverlap(AActor* OtherActor)
+{
+	Super::NotifyActorBeginOverlap(OtherActor);
+
+	if (IPlayerInteractionInterface* Interactable = Cast<IPlayerInteractionInterface>(OtherActor)) { currentInteractable = Interactable; }
+	
+	Debug::Print("Begin Player Collision Actor Name: " + OtherActor->GetName(), 5.f, false);
+}
+
+
+void APlayerCharacter::NotifyActorEndOverlap(AActor* OtherActor)
+{
+	Super::NotifyActorEndOverlap(OtherActor);
+
+	if (IPlayerInteractionInterface* Interactable = Cast<IPlayerInteractionInterface>(OtherActor))
+	{
+		if (currentInteractable == Interactable) { currentInteractable = nullptr; }
+	}
+	
+	Debug::Print("End Player Collision Actor Name: " + OtherActor->GetName(), 5.f, false);
+}
+;
+
 // 人物属性接口的方法实现通过PlaterAttributes.h文件中定义的数据结构来获取与设置对应变量
-#pragma region Interface
-float APlayerCharacter::GetHealth_MAX() const { return playerHealthMax; }
+#pragma region Player Attributes Interface
+float APlayerCharacter::GetHealth_MAX() const { return fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealthMax);; }
 void APlayerCharacter::SetHealth_MAX(float MaxHealth)
 {
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::ehealthMax, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealthMax) + MaxHealth));
@@ -105,7 +148,7 @@ void APlayerCharacter::SetHealth_MAX(float MaxHealth)
 }
 
 
-float APlayerCharacter::GetEnergy_MAX() const { return playerEnergyMax; }
+float APlayerCharacter::GetEnergy_MAX() const { return fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergyMax); }
 void APlayerCharacter::SetEnergy_MAX(float MaxEnergy)
 {
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::eenergyMax, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergyMax) + MaxEnergy));
@@ -115,7 +158,7 @@ void APlayerCharacter::SetEnergy_MAX(float MaxEnergy)
 }
 
 
-float APlayerCharacter::GetHealth() const { return playerHealth; }
+float APlayerCharacter::GetHealth() const { return fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealth); }
 void APlayerCharacter::SetHealth(float AddHP)
 {
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::ehealth, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealth) + AddHP));
@@ -123,7 +166,7 @@ void APlayerCharacter::SetHealth(float AddHP)
 }
 
 
-float APlayerCharacter::GetEnergy() const { return playerEnergy; }
+float APlayerCharacter::GetEnergy() const { return fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergy); }
 void APlayerCharacter::SetEnergy(float AddEnergy)
 {
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::eenergy, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::eenergy) + AddEnergy));
@@ -131,7 +174,7 @@ void APlayerCharacter::SetEnergy(float AddEnergy)
 }
 
 
-float APlayerCharacter::GetDamage() const { return playerDamage; }
+float APlayerCharacter::GetDamage() const { return fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::edamage); }
 void APlayerCharacter::SetDamage(float AddDamage)
 {
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::edamage, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::edamage) + AddDamage));
@@ -139,13 +182,12 @@ void APlayerCharacter::SetDamage(float AddDamage)
 }
 
 
-float APlayerCharacter::GetMoveSpeed() const { return playerMoveSpeed; }
+float APlayerCharacter::GetMoveSpeed() const { return fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed); }
 void APlayerCharacter::SetMoveSpeed(float AddMoveSpeed)
 {
 	fplayerAttributes.SetPlayerAttributes(EPlayerAttributes::emoveSpeed, (fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed) + AddMoveSpeed));
 	playerMoveSpeed = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed);
 }
-
 #pragma endregion
 
 
@@ -181,6 +223,16 @@ void APlayerCharacter::Look(const FInputActionValue& Value)
 	AddControllerYawInput(lookAxisVector.X);
 	AddControllerPitchInput(-lookAxisVector.Y);
 }
+
+
+void APlayerCharacter::ObjectInteraction()
+{
+	if (currentInteractable) 
+	{ 
+		currentInteractable->InteractArchive(); 
+	}
+}
+
 #pragma endregion
 
 
@@ -236,6 +288,19 @@ int APlayerCharacter::InitHUD()
 		return 0;
 	}
 	return -1;
+}
+#pragma endregion
+
+
+#pragma region SKILL
+void APlayerCharacter::StartScan()
+{
+	playerSkillComponent->StartScan();
+}
+
+void APlayerCharacter::EndScan()
+{
+	playerSkillComponent->EndScan();
 }
 #pragma endregion
 

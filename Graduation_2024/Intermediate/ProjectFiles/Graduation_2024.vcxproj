@@ -286,10 +286,16 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerAttributesInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerInteractionInterface.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\MayflyMovementComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\PlayerCharacterMovementComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\SkillComponent\PlayerSkillComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\UI\Attributes\PlayerAttributesUW.cpp">
@@ -301,8 +307,10 @@
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerCharacter.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\GameModeBase\CustomGameModeBase.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerAttributesInterface.h"/>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerInteractionInterface.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\MayflyMovementComponent.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\PlayerCharacterMovementComponent.h"/>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\SkillComponent\PlayerSkillComponent.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\UI\Attributes\PlayerAttributesUW.h"/>
   </ItemGroup>
   <PropertyGroup>

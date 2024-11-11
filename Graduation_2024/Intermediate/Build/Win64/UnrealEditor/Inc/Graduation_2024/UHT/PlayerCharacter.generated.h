@@ -15,13 +15,14 @@ struct FInputActionValue;
 #endif
 #define GRADUATION_2024_PlayerCharacter_generated_h
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execInitHUD); \
+	DECLARE_FUNCTION(execObjectInteraction); \
 	DECLARE_FUNCTION(execLook); \
 	DECLARE_FUNCTION(execMove);
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -31,7 +32,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<APlayerCharacter*>(this); }
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APlayerCharacter(APlayerCharacter&&); \
@@ -43,13 +44,13 @@ public: \
 	NO_API virtual ~APlayerCharacter();
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_19_PROLOG
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_22_GENERATED_BODY \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_21_PROLOG
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_24_INCLASS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

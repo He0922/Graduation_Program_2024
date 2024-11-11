@@ -11,6 +11,7 @@
 void UPlayerAttributesUW::NativeConstruct()
 {
 	Super::NativeConstruct();
+	PlayerAttributesInterface = Cast<IPlayerAttributesInterface>(GetOwningPlayerPawn());
 }
 
 
@@ -23,25 +24,24 @@ void UPlayerAttributesUW::NativeTick(const FGeometry& MyGeometry, float InDeltaT
 
 void UPlayerAttributesUW::SetHPUI()
 {
-	IPlayerAttributesInterface* HealthInterface = Cast<IPlayerAttributesInterface>(GetOwningPlayerPawn());
-	if (HealthInterface)
+	if (PlayerAttributesInterface)
 	{
-		playerHealthMax = HealthInterface->GetHealth_MAX();
+		playerHealthMax = PlayerAttributesInterface->GetHealth_MAX();
 		Debug::PrintFloat("UI--HPMax: ", playerHealthMax, 0.f, false, FColor::Green);
 
-		playerEnergyMax = HealthInterface->GetEnergy_MAX();
+		playerEnergyMax = PlayerAttributesInterface->GetEnergy_MAX();
 		Debug::PrintFloat("UI--EnergyMax: ", playerEnergyMax, 0.f, false, FColor::Green);
 
-		playerHealth = HealthInterface->GetHealth();
+		playerHealth = PlayerAttributesInterface->GetHealth();
 		Debug::PrintFloat("UI--HP: ", playerHealth, 0.f, false, FColor::Green);
 
-		playerEnergy = HealthInterface->GetEnergy();
+		playerEnergy = PlayerAttributesInterface->GetEnergy();
 		Debug::PrintFloat("UI--Energy: ", playerEnergy, 0.f, false, FColor::Green);
 
-		playerDamage = HealthInterface->GetDamage();
+		playerDamage = PlayerAttributesInterface->GetDamage();
 		Debug::PrintFloat("UI--Damage: ", playerDamage, 0.f, false, FColor::Green);
 
-		playerMoveSpeed = HealthInterface->GetMoveSpeed();
+		playerMoveSpeed = PlayerAttributesInterface->GetMoveSpeed();
 		Debug::PrintFloat("UI--MoveSpeed: ", playerMoveSpeed, 0.f, false, FColor::Green);
 	}
 }
