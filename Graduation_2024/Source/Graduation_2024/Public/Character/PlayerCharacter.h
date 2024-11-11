@@ -98,7 +98,13 @@ public:
 #pragma endregion
 
 
+#pragma region Property To Skill
+public:
+	void OnEnergyEmpty();
+#pragma endregion
+
 #pragma region SkillClass
+public:
 	//实现玩家技能接口的定义
 	void StartScan();
 	void EndScan();
