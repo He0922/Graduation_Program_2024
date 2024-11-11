@@ -257,7 +257,7 @@ void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Att
 		}
 
 		// 打印到控制台
-		UE_LOG(LogTemp, Log, TEXT("Attribute: %s, Value: %f"), *AttributeName, Value);
+		//UE_LOG(LogTemp, Log, TEXT("Attribute: %s, Value: %f"), *AttributeName, Value);
 
 		// 打印到屏幕
 		if (GEngine)
@@ -266,6 +266,14 @@ void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Att
 		}
 	}
 
+}
+#pragma endregion
+
+#pragma region Property To Skill
+//玩家属性对技能影响
+void APlayerCharacter::OnEnergyEmpty()
+{
+	EndScan();
 }
 #pragma endregion
 
@@ -296,6 +304,8 @@ int APlayerCharacter::InitHUD()
 void APlayerCharacter::StartScan()
 {
 	playerSkillComponent->StartScan();
+	//5000是默认值， 到时候要设置的话， 传到这里就好
+	playerSkillComponent->SetScanDistance(5000);
 }
 
 void APlayerCharacter::EndScan()
