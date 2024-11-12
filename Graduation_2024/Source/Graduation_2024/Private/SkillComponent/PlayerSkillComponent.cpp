@@ -23,43 +23,27 @@ void UPlayerSkillComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 }
 
-#pragma region Scan
-void UPlayerSkillComponent::StartScan()
+#pragma region Cold Time
+void UPlayerSkillComponent::SetColdTimerHandle(ESkillType skillType)
 {
-	UE_LOG(PlayerSkillComponentLog, Display, TEXT("StartScan"));
-
-	//设置当前能量扣除值
-	nowEnergyCostAmount = ScanEnergyCost;
-
-	StartEnergyCost(true);
+	switch (skillType)
+	{
+		case ESkillType::Scan:
+			InScanColdState();
+			GetWorld()->GetTimerManager().SetTimer(ScanColdTimeTh, this,  &UPlayerSkillComponent::OutScanColdState, 1.0f, false, ScanColdTime);
+			break;
+		case ESkillType::Other:
+			break;
+		default:
+			break;
+	}
 }
 
-void UPlayerSkillComponent::EndScan()
-{
-	UE_LOG(PlayerSkillComponentLog, Display, TEXT("EndScan"));
-
-	EndEnergyCost();
-}
-
-void UPlayerSkillComponent::SetScanDistance(float newDistance = 5000)
-{
-	ScanDistance = newDistance;
-}
-
-float UPlayerSkillComponent::GetScanDistance()
-{
-	return ScanDistance;
-}
 #pragma endregion
+
 
 //能量减少
 #pragma region CostEnergy
-//获取玩家能量
-float UPlayerSkillComponent::GetPlayerNowEnergy()
-{
-	return playerCharacter->GetEnergy();
-}
-
 //是否为持续扣除
 void UPlayerSkillComponent::StartEnergyCost(bool IFTh = false)
 {
@@ -91,4 +75,53 @@ void UPlayerSkillComponent::EndEnergyCost()
 }
 #pragma endregion
 
+#pragma region Scan
+float UPlayerSkillComponent::GetPlayerNowEnergy()
+{
+	return playerCharacter->GetEnergy();
+}
 
+void UPlayerSkillComponent::StartScan()
+{
+	if (IFScanIsInCold)
+	{
+		return;
+	}
+
+	UE_LOG(PlayerSkillComponentLog, Display, TEXT("StartScan"));
+
+	//设置当前能量扣除值
+	nowEnergyCostAmount = ScanEnergyCost;
+
+	StartEnergyCost(true);
+}
+
+void UPlayerSkillComponent::EndScan()
+{
+	if (IFScanIsInCold)
+	{
+		return;
+	}
+
+	UE_LOG(PlayerSkillComponentLog, Display, TEXT("EndScan"));
+
+	EndEnergyCost();
+	//设置冷却时间
+	SetColdTimerHandle(ESkillType::Scan);
+}
+
+void UPlayerSkillComponent::SetScanDistance(float newDistance = 5000)
+{
+	ScanDistance = newDistance;
+}
+
+void UPlayerSkillComponent::InScanColdState()
+{
+	IFScanIsInCold = true;
+}
+void UPlayerSkillComponent::OutScanColdState()
+{
+	IFScanIsInCold = false;
+	GetWorld()->GetTimerManager().ClearTimer(ScanColdTimeTh);
+}
+#pragma endregion

@@ -14,12 +14,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_PlayerSkillComponent_generated_h
 
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetScanColdState); \
 	DECLARE_FUNCTION(execGetScanDistance); \
-	DECLARE_FUNCTION(execGetPlayerNowEnergy);
+	DECLARE_FUNCTION(execGetPlayerNowEnergy); \
+	DECLARE_FUNCTION(execEndScan); \
+	DECLARE_FUNCTION(execStartScan);
 
 
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlayerSkillComponent(); \
 	friend struct Z_Construct_UClass_UPlayerSkillComponent_Statics; \
@@ -28,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(UPlayerSkillComponent)
 
 
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPlayerSkillComponent(UPlayerSkillComponent&&); \
@@ -40,13 +43,13 @@ public: \
 	NO_API virtual ~UPlayerSkillComponent();
 
 
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_9_PROLOG
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_12_GENERATED_BODY \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_17_PROLOG
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_20_INCLASS_NO_PURE_DECLS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -56,5 +59,13 @@ template<> GRADUATION_2024_API UClass* StaticClass<class UPlayerSkillComponent>(
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h
 
+
+#define FOREACH_ENUM_ESKILLTYPE(op) \
+	op(ESkillType::Scan) \
+	op(ESkillType::Other) 
+
+enum class ESkillType : uint8;
+template<> struct TIsUEnumClass<ESkillType> { enum { Value = true }; };
+template<> GRADUATION_2024_API UEnum* StaticEnum<ESkillType>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

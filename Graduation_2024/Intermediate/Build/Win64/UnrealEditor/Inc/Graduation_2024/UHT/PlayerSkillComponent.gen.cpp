@@ -13,8 +13,96 @@ void EmptyLinkFunctionForGeneratedCodePlayerSkillComponent() {}
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerSkillComponent();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerSkillComponent_NoRegister();
+GRADUATION_2024_API UEnum* Z_Construct_UEnum_Graduation_2024_ESkillType();
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
 // End Cross Module References
+
+// Begin Enum ESkillType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_ESkillType;
+static UEnum* ESkillType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_ESkillType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_ESkillType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Graduation_2024_ESkillType, (UObject*)Z_Construct_UPackage__Script_Graduation_2024(), TEXT("ESkillType"));
+	}
+	return Z_Registration_Info_UEnum_ESkillType.OuterSingleton;
+}
+template<> GRADUATION_2024_API UEnum* StaticEnum<ESkillType>()
+{
+	return ESkillType_StaticEnum();
+}
+struct Z_Construct_UEnum_Graduation_2024_ESkillType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+		{ "Other.Name", "ESkillType::Other" },
+		{ "Scan.Name", "ESkillType::Scan" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "ESkillType::Scan", (int64)ESkillType::Scan },
+		{ "ESkillType::Other", (int64)ESkillType::Other },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Graduation_2024_ESkillType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_Graduation_2024,
+	nullptr,
+	"ESkillType",
+	"ESkillType",
+	Z_Construct_UEnum_Graduation_2024_ESkillType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_Graduation_2024_ESkillType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_Graduation_2024_ESkillType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_Graduation_2024_ESkillType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_Graduation_2024_ESkillType()
+{
+	if (!Z_Registration_Info_UEnum_ESkillType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_ESkillType.InnerSingleton, Z_Construct_UEnum_Graduation_2024_ESkillType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_ESkillType.InnerSingleton;
+}
+// End Enum ESkillType
+
+// Begin Class UPlayerSkillComponent Function EndScan
+struct Z_Construct_UFunction_UPlayerSkillComponent_EndScan_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerSkillComponent_EndScan_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerSkillComponent, nullptr, "EndScan", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_EndScan_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerSkillComponent_EndScan_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPlayerSkillComponent_EndScan()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerSkillComponent_EndScan_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayerSkillComponent::execEndScan)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->EndScan();
+	P_NATIVE_END;
+}
+// End Class UPlayerSkillComponent Function EndScan
 
 // Begin Class UPlayerSkillComponent Function GetPlayerNowEnergy
 struct Z_Construct_UFunction_UPlayerSkillComponent_GetPlayerNowEnergy_Statics
@@ -25,7 +113,13 @@ struct Z_Construct_UFunction_UPlayerSkillComponent_GetPlayerNowEnergy_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xc8\xa1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xc8\xa1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
@@ -57,6 +151,52 @@ DEFINE_FUNCTION(UPlayerSkillComponent::execGetPlayerNowEnergy)
 }
 // End Class UPlayerSkillComponent Function GetPlayerNowEnergy
 
+// Begin Class UPlayerSkillComponent Function GetScanColdState
+struct Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics
+{
+	struct PlayerSkillComponent_eventGetScanColdState_Parms
+	{
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((PlayerSkillComponent_eventGetScanColdState_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayerSkillComponent_eventGetScanColdState_Parms), &Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerSkillComponent, nullptr, "GetScanColdState", nullptr, nullptr, Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::PlayerSkillComponent_eventGetScanColdState_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::PlayerSkillComponent_eventGetScanColdState_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayerSkillComponent::execGetScanColdState)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetScanColdState();
+	P_NATIVE_END;
+}
+// End Class UPlayerSkillComponent Function GetScanColdState
+
 // Begin Class UPlayerSkillComponent Function GetScanDistance
 struct Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics
 {
@@ -78,7 +218,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlaye
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerSkillComponent, nullptr, "GetScanDistance", nullptr, nullptr, Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::PlayerSkillComponent_eventGetScanDistance_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerSkillComponent, nullptr, "GetScanDistance", nullptr, nullptr, Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::PlayerSkillComponent_eventGetScanDistance_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::Function_MetaDataParams) };
 static_assert(sizeof(Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance_Statics::PlayerSkillComponent_eventGetScanDistance_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance()
 {
@@ -98,13 +238,45 @@ DEFINE_FUNCTION(UPlayerSkillComponent::execGetScanDistance)
 }
 // End Class UPlayerSkillComponent Function GetScanDistance
 
+// Begin Class UPlayerSkillComponent Function StartScan
+struct Z_Construct_UFunction_UPlayerSkillComponent_StartScan_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerSkillComponent_StartScan_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerSkillComponent, nullptr, "StartScan", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_StartScan_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerSkillComponent_StartScan_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPlayerSkillComponent_StartScan()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerSkillComponent_StartScan_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayerSkillComponent::execStartScan)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StartScan();
+	P_NATIVE_END;
+}
+// End Class UPlayerSkillComponent Function StartScan
+
 // Begin Class UPlayerSkillComponent
 void UPlayerSkillComponent::StaticRegisterNativesUPlayerSkillComponent()
 {
 	UClass* Class = UPlayerSkillComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "EndScan", &UPlayerSkillComponent::execEndScan },
 		{ "GetPlayerNowEnergy", &UPlayerSkillComponent::execGetPlayerNowEnergy },
+		{ "GetScanColdState", &UPlayerSkillComponent::execGetScanColdState },
 		{ "GetScanDistance", &UPlayerSkillComponent::execGetScanDistance },
+		{ "StartScan", &UPlayerSkillComponent::execStartScan },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -148,15 +320,29 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 		{ "Category", "ScanProperty" },
 		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ScanColdTime_MetaData[] = {
+		{ "Category", "ScanProperty" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xc9\xa8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc8\xb4\xca\xb1\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xc9\xa8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc8\xb4\xca\xb1\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanDistance;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanEnergyCost;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanECFrequency;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanColdTime;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UPlayerSkillComponent_GetPlayerNowEnergy, "GetPlayerNowEnergy" }, // 2832822393
-		{ &Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance, "GetScanDistance" }, // 4221617695
+		{ &Z_Construct_UFunction_UPlayerSkillComponent_EndScan, "EndScan" }, // 2430249800
+		{ &Z_Construct_UFunction_UPlayerSkillComponent_GetPlayerNowEnergy, "GetPlayerNowEnergy" }, // 4036743481
+		{ &Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState, "GetScanColdState" }, // 1862270726
+		{ &Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance, "GetScanDistance" }, // 2075880884
+		{ &Z_Construct_UFunction_UPlayerSkillComponent_StartScan, "StartScan" }, // 3570409872
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -167,10 +353,12 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanDistance = { "ScanDistance", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanDistance_MetaData), NewProp_ScanDistance_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanEnergyCost = { "ScanEnergyCost", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanEnergyCost), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanEnergyCost_MetaData), NewProp_ScanEnergyCost_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanECFrequency = { "ScanECFrequency", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanECFrequency), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanECFrequency_MetaData), NewProp_ScanECFrequency_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanColdTime = { "ScanColdTime", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanColdTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanColdTime_MetaData), NewProp_ScanColdTime_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerSkillComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanDistance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanEnergyCost,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanECFrequency,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanColdTime,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerSkillComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerSkillComponent_Statics::DependentSingletons[])() = {
@@ -212,13 +400,16 @@ UPlayerSkillComponent::~UPlayerSkillComponent() {}
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics
 {
+	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
+		{ ESkillType_StaticEnum, TEXT("ESkillType"), &Z_Registration_Info_UEnum_ESkillType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1991362591U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 3547163890U) },
+		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 3148556188U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_233325725(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_1350238536(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

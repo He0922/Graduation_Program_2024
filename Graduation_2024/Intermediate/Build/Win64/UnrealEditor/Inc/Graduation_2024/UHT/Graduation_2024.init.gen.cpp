@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeGraduation_2024_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x9ABF1E3A,
-				0xB1565F0B,
+				0xBFC16D67,
+				0x223B4ACC,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Graduation_2024.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Graduation_2024.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Graduation_2024(Z_Construct_UPackage__Script_Graduation_2024, TEXT("/Script/Graduation_2024"), Z_Registration_Info_UPackage__Script_Graduation_2024, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x9ABF1E3A, 0xB1565F0B));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Graduation_2024(Z_Construct_UPackage__Script_Graduation_2024, TEXT("/Script/Graduation_2024"), Z_Registration_Info_UPackage__Script_Graduation_2024, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xBFC16D67, 0x223B4ACC));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

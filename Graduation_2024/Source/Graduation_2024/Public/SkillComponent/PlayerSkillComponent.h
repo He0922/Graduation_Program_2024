@@ -6,6 +6,14 @@
 #include "Components/ActorComponent.h"
 #include "PlayerSkillComponent.generated.h"
 
+//技能类型
+UENUM(BlueprintType)
+enum class ESkillType : uint8
+{
+	Scan,
+	Other
+};
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent),Blueprintable, BlueprintType)
 class GRADUATION_2024_API UPlayerSkillComponent : public UActorComponent
 {
@@ -20,11 +28,21 @@ protected:
 public:	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-//玩家属性设置
-public:
+protected:
 	//玩家获取
 	class APlayerCharacter* playerCharacter;
 
+//冷却时间
+#pragma region Cold Time
+private:
+	void SetColdTimerHandle(ESkillType skillType);
+
+	//扫描冷却时间计时器
+	FTimerHandle ScanColdTimeTh;
+#pragma endregion
+
+//玩家属性设置
+#pragma region Player Property
 //技能消耗能量
 private:
 	void StartEnergyCost(bool IFTh);
@@ -34,8 +52,10 @@ private:
 	//设置当前扣除能量的值
 	float nowEnergyCostAmount = 0;
 
-#pragma region AboutScan
+#pragma endregion
+
 //扫描相关属性
+#pragma region AboutScan
 private:
 	//扫描控制组件
 	class UScanControllerComponent* SC_Component;
@@ -53,22 +73,38 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ScanProperty")
 	float ScanECFrequency = 1;
 
+	//扫描冷却时间
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ScanProperty")
+	float ScanColdTime = 5.0f;
+
+	bool IFScanIsInCold = false;
+
 //扫描相关， 要外部绑定
 public:
 	void SetScanDistance();
 
+	UFUNCTION(BlueprintCallable)
 	void StartScan();
 		
+	UFUNCTION(BlueprintCallable)
 	void EndScan();
 
 	UFUNCTION(BlueprintCallable)
+	//获取玩家能量
 	float GetPlayerNowEnergy();
 	
 	//扫描距离
 	void SetScanDistance(float newDistance);
 
 	UFUNCTION(BlueprintCallable)
-	float GetScanDistance();
+	float GetScanDistance() const {	return ScanDistance;}
+
+	//冷却状态
+	void InScanColdState();
+	void OutScanColdState();
+
+	UFUNCTION(BlueprintCallable)
+	bool GetScanColdState() const { return IFScanIsInCold; }
 };
 
 #pragma endregion
