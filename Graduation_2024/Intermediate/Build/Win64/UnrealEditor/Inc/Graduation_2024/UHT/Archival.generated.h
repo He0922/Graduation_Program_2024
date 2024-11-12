@@ -14,7 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_Archival_generated_h
 
+<<<<<<< Updated upstream
 #define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_16_INCLASS_NO_PURE_DECLS \
+=======
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_INCLASS_NO_PURE_DECLS \
+>>>>>>> Stashed changes
 private: \
 	static void StaticRegisterNativesAArchival(); \
 	friend struct Z_Construct_UClass_AArchival_Statics; \
@@ -24,7 +28,11 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AArchival*>(this); }
 
 
+<<<<<<< Updated upstream
 #define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_16_ENHANCED_CONSTRUCTORS \
+=======
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_ENHANCED_CONSTRUCTORS \
+>>>>>>> Stashed changes
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AArchival(AArchival&&); \
@@ -36,12 +44,21 @@ public: \
 	NO_API virtual ~AArchival();
 
 
+<<<<<<< Updated upstream
 #define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_13_PROLOG
 #define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_16_INCLASS_NO_PURE_DECLS \
 	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_16_ENHANCED_CONSTRUCTORS \
+=======
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_14_PROLOG
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_ENHANCED_CONSTRUCTORS \
+>>>>>>> Stashed changes
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

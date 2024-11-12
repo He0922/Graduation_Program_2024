@@ -302,6 +302,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Archival\Archival.h" />
+<<<<<<< Updated upstream
+=======
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Archival\ArchiveID.h" />
+>>>>>>> Stashed changes
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Mayfly.h" />
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerAttributes.h" />
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerCharacter.h" />

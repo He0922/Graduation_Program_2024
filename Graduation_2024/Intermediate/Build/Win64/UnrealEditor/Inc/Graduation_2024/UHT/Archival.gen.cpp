@@ -16,6 +16,7 @@ ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 GRADUATION_2024_API UClass* Z_Construct_UClass_AArchival();
 GRADUATION_2024_API UClass* Z_Construct_UClass_AArchival_NoRegister();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerInteractionInterface_NoRegister();
+GRADUATION_2024_API UEnum* Z_Construct_UEnum_Graduation_2024_EArchiveID();
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
 // End Cross Module References
 
@@ -33,6 +34,10 @@ struct Z_Construct_UClass_AArchival_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "IncludePath", "Archival/Archival.h" },
+		{ "ModuleRelativePath", "Public/Archival/Archival.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_archiveID_MetaData[] = {
+		{ "Category", "Archive ID" },
 		{ "ModuleRelativePath", "Public/Archival/Archival.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_archiveMesh_MetaData[] = {
@@ -81,6 +86,8 @@ struct Z_Construct_UClass_AArchival_Statics
 		{ "ModuleRelativePath", "Public/Archival/Archival.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_archiveID_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_archiveID;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_archiveMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_playerStandSphere;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_archiveCollision;
@@ -98,6 +105,8 @@ struct Z_Construct_UClass_AArchival_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AArchival_Statics::NewProp_archiveID_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AArchival_Statics::NewProp_archiveID = { "archiveID", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchival, archiveID), Z_Construct_UEnum_Graduation_2024_EArchiveID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_archiveID_MetaData), NewProp_archiveID_MetaData) }; // 1920841488
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchival_Statics::NewProp_archiveMesh = { "archiveMesh", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchival, archiveMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_archiveMesh_MetaData), NewProp_archiveMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchival_Statics::NewProp_playerStandSphere = { "playerStandSphere", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchival, playerStandSphere), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerStandSphere_MetaData), NewProp_playerStandSphere_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AArchival_Statics::NewProp_archiveCollision = { "archiveCollision", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchival, archiveCollision), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_archiveCollision_MetaData), NewProp_archiveCollision_MetaData) };
@@ -108,6 +117,8 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AArchival_Stati
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AArchival_Statics::NewProp_playerDamage = { "playerDamage", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchival, playerDamage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerDamage_MetaData), NewProp_playerDamage_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AArchival_Statics::NewProp_playerMoveSpeed = { "playerMoveSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AArchival, playerMoveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerMoveSpeed_MetaData), NewProp_playerMoveSpeed_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AArchival_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchival_Statics::NewProp_archiveID_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchival_Statics::NewProp_archiveID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchival_Statics::NewProp_archiveMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchival_Statics::NewProp_playerStandSphere,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AArchival_Statics::NewProp_archiveCollision,
@@ -162,11 +173,16 @@ AArchival::~AArchival() {}
 struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AArchival, AArchival::StaticClass, TEXT("AArchival"), &Z_Registration_Info_UClass_AArchival, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchival), 2781271120U) },
+		{ Z_Construct_UClass_AArchival, AArchival::StaticClass, TEXT("AArchival"), &Z_Registration_Info_UClass_AArchival, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchival), 1603212135U) },
 	};
 };
+<<<<<<< Updated upstream
 static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_2737732738(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_Statics::ClassInfo),
+=======
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_3450682718(TEXT("/Script/Graduation_2024"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_Statics::ClassInfo),
+>>>>>>> Stashed changes
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

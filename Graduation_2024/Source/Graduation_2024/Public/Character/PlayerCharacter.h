@@ -41,9 +41,9 @@ public:
 
 #pragma region Initialize And Check
 public:
-	void CheckCollisionObject();
-
 	IPlayerInteractionInterface* currentInteractable = nullptr;
+
+	EArchiveID collisionArchiveID;
 
 #pragma endregion
 

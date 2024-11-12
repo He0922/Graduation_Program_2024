@@ -80,4 +80,9 @@ void AArchival::InteractArchive()
 	}
 }
 
+EArchiveID AArchival::GetArchiveID()
+{
+	return archiveID;
+}
+
 #pragma endregion

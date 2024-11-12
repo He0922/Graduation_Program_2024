@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "Archival/ArchiveID.h"
 #include "PlayerInteractionInterface.generated.h"
 
 // This class does not need to be modified.
@@ -24,6 +25,7 @@ class GRADUATION_2024_API IPlayerInteractionInterface
 public:
 	// ”Î¥Ê¥¢µ„Ωªª•
 	virtual void InteractArchive() = 0;
+	virtual EArchiveID GetArchiveID() = 0;
 
 
 };

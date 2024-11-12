@@ -105,9 +105,6 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 
 #pragma region Initialize And Check
-void APlayerCharacter::CheckCollisionObject()
-{
-}
 
 #pragma endregion
 
@@ -117,9 +114,20 @@ void APlayerCharacter::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
 
-	if (IPlayerInteractionInterface* Interactable = Cast<IPlayerInteractionInterface>(OtherActor)) { currentInteractable = Interactable; }
-	
-	Debug::Print("Begin Player Collision Actor Name: " + OtherActor->GetName(), 5.f, false);
+	if (IPlayerInteractionInterface* Interactable = Cast<IPlayerInteractionInterface>(OtherActor)) 
+	{ 
+		currentInteractable = Interactable; 
+		collisionArchiveID = currentInteractable->GetArchiveID();
+		switch (collisionArchiveID)
+		{
+		case EArchiveID::Archive1:
+			Debug::Print("Archive 1", 5.f, false);
+			break;
+		case EArchiveID::Archive2:
+			Debug::Print("Archive 2", 5.f, false);
+			break;
+		}
+	}
 }
 
 
@@ -131,8 +139,6 @@ void APlayerCharacter::NotifyActorEndOverlap(AActor* OtherActor)
 	{
 		if (currentInteractable == Interactable) { currentInteractable = nullptr; }
 	}
-	
-	Debug::Print("End Player Collision Actor Name: " + OtherActor->GetName(), 5.f, false);
 }
 ;
 
@@ -227,13 +233,10 @@ void APlayerCharacter::Look(const FInputActionValue& Value)
 
 void APlayerCharacter::ObjectInteraction()
 {
-	if (currentInteractable) 
-	{ 
-		currentInteractable->InteractArchive(); 
-	}
+	if (currentInteractable) { currentInteractable->InteractArchive(); }
 }
 
-#pragma endregion
+#pragma endregion 
 
 
 #pragma region Debug Print

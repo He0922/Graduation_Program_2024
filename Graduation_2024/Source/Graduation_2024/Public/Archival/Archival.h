@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Interface/PlayerInteractionInterface.h"
+#include "ArchiveID.h"
 
 #include "Archival.generated.h"
 
@@ -29,6 +30,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archive ID")
+	EArchiveID archiveID = EArchiveID::None;
+
 
 #pragma region Player Inormation
 public:
@@ -49,6 +54,8 @@ public:
 #pragma region Interaction Interface
 public:
 	virtual void InteractArchive()override;
+
+	virtual EArchiveID GetArchiveID() override;
 #pragma endregion
 
 
