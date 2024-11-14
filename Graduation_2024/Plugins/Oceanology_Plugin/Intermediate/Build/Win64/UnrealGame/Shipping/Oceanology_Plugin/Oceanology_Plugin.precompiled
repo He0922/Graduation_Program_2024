@@ -1,0 +1,9 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\Oceanology_Plugin\\Module.Oceanology_Plugin.1.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\Oceanology_Plugin\\Module.Oceanology_Plugin.2.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\Oceanology_Plugin\\Module.Oceanology_Plugin.3.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\Oceanology_Plugin\\Module.Oceanology_Plugin.4.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\Oceanology_Plugin\\Module.Oceanology_Plugin.5.cpp.obj"
+	]
+}
