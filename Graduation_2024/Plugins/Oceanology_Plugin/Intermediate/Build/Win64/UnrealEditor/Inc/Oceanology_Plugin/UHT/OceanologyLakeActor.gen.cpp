@@ -509,7 +509,7 @@ void Z_Construct_UClass_AOceanologyLake_Statics::NewProp_EnableCausticsOnGround_
 	((AOceanologyLake*)Obj)->EnableCausticsOnGround = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AOceanologyLake_Statics::NewProp_EnableCausticsOnGround = { "EnableCausticsOnGround", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AOceanologyLake), &Z_Construct_UClass_AOceanologyLake_Statics::NewProp_EnableCausticsOnGround_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnableCausticsOnGround_MetaData), NewProp_EnableCausticsOnGround_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOceanologyLake_Statics::NewProp_GroundCaustics = { "GroundCaustics", nullptr, (EPropertyFlags)0x0010000000000025, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOceanologyLake, GroundCaustics), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GroundCaustics_MetaData), NewProp_GroundCaustics_MetaData) }; // 2850990811
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOceanologyLake_Statics::NewProp_GroundCaustics = { "GroundCaustics", nullptr, (EPropertyFlags)0x0010000000000025, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOceanologyLake, GroundCaustics), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GroundCaustics_MetaData), NewProp_GroundCaustics_MetaData) }; // 1718873675
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOceanologyLake_Statics::NewProp_WaterProjection = { "WaterProjection", nullptr, (EPropertyFlags)0x0010000000000025, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOceanologyLake, WaterProjection), Z_Construct_UScriptStruct_FOceanologyWaterProjection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WaterProjection_MetaData), NewProp_WaterProjection_MetaData) }; // 1198342164
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOceanologyLake_Statics::NewProp_CausticsMaterial = { "CausticsMaterial", nullptr, (EPropertyFlags)0x0114000000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOceanologyLake, CausticsMaterial), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CausticsMaterial_MetaData), NewProp_CausticsMaterial_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOceanologyLake_Statics::NewProp_CausticsMID = { "CausticsMID", nullptr, (EPropertyFlags)0x0040c00000022801, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOceanologyLake, CausticsMID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CausticsMID_MetaData), NewProp_CausticsMID_MetaData) };
@@ -576,14 +576,14 @@ AOceanologyLake::~AOceanologyLake() {}
 // End Class AOceanologyLake
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyLakeActor_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyLakeActor_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AOceanologyLake, AOceanologyLake::StaticClass, TEXT("AOceanologyLake"), &Z_Registration_Info_UClass_AOceanologyLake, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOceanologyLake), 194097097U) },
+		{ Z_Construct_UClass_AOceanologyLake, AOceanologyLake::StaticClass, TEXT("AOceanologyLake"), &Z_Registration_Info_UClass_AOceanologyLake, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOceanologyLake), 2038199193U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyLakeActor_h_3484956784(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyLakeActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyLakeActor_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyLakeActor_h_2793245311(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyLakeActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyLakeActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

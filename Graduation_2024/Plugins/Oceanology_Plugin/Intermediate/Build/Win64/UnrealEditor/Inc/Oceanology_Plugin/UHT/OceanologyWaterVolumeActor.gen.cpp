@@ -387,21 +387,33 @@ struct Z_Construct_UClass_AOceanologyWaterVolume_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DebugEnabled_MetaData[] = {
 		{ "Category", "Settings|Debug" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Turning on/off debug messages of the water volume. WARNING: Debugging affects performance, do NOT use in production! */" },
+#endif
 		{ "ModuleRelativePath", "Public/Actors/OceanologyWaterVolumeActor.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Turning on/off debug messages of the water volume. WARNING: Debugging affects performance, do NOT use in production!" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OceanologyWater_MetaData[] = {
 		{ "Category", "Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** The owner water of this water volume. Mandatory. Used to determine wave height. Physics & swimming logic's fundamental settings. */" },
+#endif
 		{ "ModuleRelativePath", "Public/Actors/OceanologyWaterVolumeActor.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The owner water of this water volume. Mandatory. Used to determine wave height. Physics & swimming logic's fundamental settings." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BoundsAlignActor_MetaData[] = {
 		{ "Category", "Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Actor to align rotation to. If set this actor is always included in the bounds calculation. */" },
+#endif
 		{ "ModuleRelativePath", "Public/Actors/OceanologyWaterVolumeActor.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Actor to align rotation to. If set this actor is always included in the bounds calculation." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CheckInitialOverlapOnBeginPlay_MetaData[] = {
 		{ "Category", "Settings" },
@@ -548,14 +560,14 @@ AOceanologyWaterVolume::~AOceanologyWaterVolume() {}
 // End Class AOceanologyWaterVolume
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterVolumeActor_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterVolumeActor_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AOceanologyWaterVolume, AOceanologyWaterVolume::StaticClass, TEXT("AOceanologyWaterVolume"), &Z_Registration_Info_UClass_AOceanologyWaterVolume, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOceanologyWaterVolume), 321236893U) },
+		{ Z_Construct_UClass_AOceanologyWaterVolume, AOceanologyWaterVolume::StaticClass, TEXT("AOceanologyWaterVolume"), &Z_Registration_Info_UClass_AOceanologyWaterVolume, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOceanologyWaterVolume), 1697156874U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterVolumeActor_h_4095715141(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterVolumeActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterVolumeActor_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterVolumeActor_h_1515253617(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterVolumeActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterVolumeActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

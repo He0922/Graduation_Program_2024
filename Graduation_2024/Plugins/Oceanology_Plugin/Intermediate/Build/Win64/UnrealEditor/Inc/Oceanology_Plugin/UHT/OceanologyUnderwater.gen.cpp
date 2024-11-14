@@ -39,9 +39,13 @@ struct Z_Construct_UScriptStruct_FOceanologyUnderwater_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyUnderwater.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AtmosphereLighting_MetaData[] = {
 		{ "Category", "Underwater" },
@@ -366,10 +370,10 @@ struct Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventLerpUnderwater_Parms, A), Z_Construct_UScriptStruct_FOceanologyUnderwater, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 1763236404
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventLerpUnderwater_Parms, B), Z_Construct_UScriptStruct_FOceanologyUnderwater, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 1763236404
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventLerpUnderwater_Parms, A), Z_Construct_UScriptStruct_FOceanologyUnderwater, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 358567345
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventLerpUnderwater_Parms, B), Z_Construct_UScriptStruct_FOceanologyUnderwater, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 358567345
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::NewProp_Alpha = { "Alpha", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventLerpUnderwater_Parms, Alpha), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Alpha_MetaData), NewProp_Alpha_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventLerpUnderwater_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyUnderwater, METADATA_PARAMS(0, nullptr) }; // 1763236404
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventLerpUnderwater_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyUnderwater, METADATA_PARAMS(0, nullptr) }; // 358567345
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::NewProp_A,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater_Statics::NewProp_B,
@@ -424,7 +428,7 @@ struct Z_Construct_UFunction_UOceanologyUnderwaterHelper_SetMaterialParameters_S
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_SetMaterialParameters_Statics::NewProp_MID = { "MID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventSetMaterialParameters_Parms, MID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_SetMaterialParameters_Statics::NewProp_Underwater = { "Underwater", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventSetMaterialParameters_Parms, Underwater), Z_Construct_UScriptStruct_FOceanologyUnderwater, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Underwater_MetaData), NewProp_Underwater_MetaData) }; // 1763236404
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyUnderwaterHelper_SetMaterialParameters_Statics::NewProp_Underwater = { "Underwater", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyUnderwaterHelper_eventSetMaterialParameters_Parms, Underwater), Z_Construct_UScriptStruct_FOceanologyUnderwater, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Underwater_MetaData), NewProp_Underwater_MetaData) }; // 358567345
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyUnderwaterHelper_SetMaterialParameters_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyUnderwaterHelper_SetMaterialParameters_Statics::NewProp_MID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyUnderwaterHelper_SetMaterialParameters_Statics::NewProp_Underwater,
@@ -471,16 +475,20 @@ struct Z_Construct_UClass_UOceanologyUnderwaterHelper_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "IncludePath", "Structs/OceanologyUnderwater.h" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologyUnderwater.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater, "LerpUnderwater" }, // 649963146
-		{ &Z_Construct_UFunction_UOceanologyUnderwaterHelper_SetMaterialParameters, "SetMaterialParameters" }, // 802227516
+		{ &Z_Construct_UFunction_UOceanologyUnderwaterHelper_LerpUnderwater, "LerpUnderwater" }, // 1604042704
+		{ &Z_Construct_UFunction_UOceanologyUnderwaterHelper_SetMaterialParameters, "SetMaterialParameters" }, // 1586820863
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -526,18 +534,18 @@ UOceanologyUnderwaterHelper::~UOceanologyUnderwaterHelper() {}
 // End Class UOceanologyUnderwaterHelper
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FOceanologyUnderwater::StaticStruct, Z_Construct_UScriptStruct_FOceanologyUnderwater_Statics::NewStructOps, TEXT("OceanologyUnderwater"), &Z_Registration_Info_UScriptStruct_OceanologyUnderwater, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyUnderwater), 1763236404U) },
+		{ FOceanologyUnderwater::StaticStruct, Z_Construct_UScriptStruct_FOceanologyUnderwater_Statics::NewStructOps, TEXT("OceanologyUnderwater"), &Z_Registration_Info_UScriptStruct_OceanologyUnderwater, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyUnderwater), 358567345U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyUnderwaterHelper, UOceanologyUnderwaterHelper::StaticClass, TEXT("UOceanologyUnderwaterHelper"), &Z_Registration_Info_UClass_UOceanologyUnderwaterHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyUnderwaterHelper), 1828609943U) },
+		{ Z_Construct_UClass_UOceanologyUnderwaterHelper, UOceanologyUnderwaterHelper::StaticClass, TEXT("UOceanologyUnderwaterHelper"), &Z_Registration_Info_UClass_UOceanologyUnderwaterHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyUnderwaterHelper), 4218939863U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_3501885325(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_800131216(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyUnderwater_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

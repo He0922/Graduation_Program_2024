@@ -39,9 +39,13 @@ struct Z_Construct_UScriptStruct_FOceanologyRVT_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyRVT.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BoxMaxEdgeFalloff_MetaData[] = {
 		{ "Category", "RVT" },
@@ -72,24 +76,36 @@ struct Z_Construct_UScriptStruct_FOceanologyRVT_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WaterZMax_MetaData[] = {
 		{ "Category", "RVT" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Lake */" },
+#endif
 		{ "DisplayName", "WaterZMax" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologyRVT.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Lake" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WaterZMin_MetaData[] = {
 		{ "Category", "RVT" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Lake */" },
+#endif
 		{ "DisplayName", "WaterZMin" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologyRVT.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Lake" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ShorelineSurfaceScatteringColor_MetaData[] = {
 		{ "Category", "RVT" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Determines the surface scattering color of the shore based on RVT shore texture. (T_Heightmap) */" },
+#endif
 		{ "DisplayName", "Shoreline Surface Scattering Color" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologyRVT.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Determines the surface scattering color of the shore based on RVT shore texture. (T_Heightmap)" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_T_Heightmap_MetaData[] = {
 		{ "Category", "RVT" },
@@ -189,10 +205,10 @@ struct Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventLerpRVT_Parms, A), Z_Construct_UScriptStruct_FOceanologyRVT, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 2074104667
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventLerpRVT_Parms, B), Z_Construct_UScriptStruct_FOceanologyRVT, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 2074104667
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventLerpRVT_Parms, A), Z_Construct_UScriptStruct_FOceanologyRVT, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 1549818250
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventLerpRVT_Parms, B), Z_Construct_UScriptStruct_FOceanologyRVT, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 1549818250
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::NewProp_Alpha = { "Alpha", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventLerpRVT_Parms, Alpha), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Alpha_MetaData), NewProp_Alpha_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventLerpRVT_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyRVT, METADATA_PARAMS(0, nullptr) }; // 2074104667
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventLerpRVT_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyRVT, METADATA_PARAMS(0, nullptr) }; // 1549818250
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::NewProp_A,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT_Statics::NewProp_B,
@@ -247,7 +263,7 @@ struct Z_Construct_UFunction_UOceanologyRVTHelper_SetMaterialParameters_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_SetMaterialParameters_Statics::NewProp_MID = { "MID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventSetMaterialParameters_Parms, MID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_SetMaterialParameters_Statics::NewProp_RVT = { "RVT", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventSetMaterialParameters_Parms, RVT), Z_Construct_UScriptStruct_FOceanologyRVT, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RVT_MetaData), NewProp_RVT_MetaData) }; // 2074104667
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRVTHelper_SetMaterialParameters_Statics::NewProp_RVT = { "RVT", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRVTHelper_eventSetMaterialParameters_Parms, RVT), Z_Construct_UScriptStruct_FOceanologyRVT, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RVT_MetaData), NewProp_RVT_MetaData) }; // 1549818250
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyRVTHelper_SetMaterialParameters_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyRVTHelper_SetMaterialParameters_Statics::NewProp_MID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyRVTHelper_SetMaterialParameters_Statics::NewProp_RVT,
@@ -294,16 +310,20 @@ struct Z_Construct_UClass_UOceanologyRVTHelper_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "IncludePath", "Structs/OceanologyRVT.h" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologyRVT.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT, "LerpRVT" }, // 1826488986
-		{ &Z_Construct_UFunction_UOceanologyRVTHelper_SetMaterialParameters, "SetMaterialParameters" }, // 2680922944
+		{ &Z_Construct_UFunction_UOceanologyRVTHelper_LerpRVT, "LerpRVT" }, // 121010949
+		{ &Z_Construct_UFunction_UOceanologyRVTHelper_SetMaterialParameters, "SetMaterialParameters" }, // 2868086312
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -349,18 +369,18 @@ UOceanologyRVTHelper::~UOceanologyRVTHelper() {}
 // End Class UOceanologyRVTHelper
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FOceanologyRVT::StaticStruct, Z_Construct_UScriptStruct_FOceanologyRVT_Statics::NewStructOps, TEXT("OceanologyRVT"), &Z_Registration_Info_UScriptStruct_OceanologyRVT, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyRVT), 2074104667U) },
+		{ FOceanologyRVT::StaticStruct, Z_Construct_UScriptStruct_FOceanologyRVT_Statics::NewStructOps, TEXT("OceanologyRVT"), &Z_Registration_Info_UScriptStruct_OceanologyRVT, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyRVT), 1549818250U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyRVTHelper, UOceanologyRVTHelper::StaticClass, TEXT("UOceanologyRVTHelper"), &Z_Registration_Info_UClass_UOceanologyRVTHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyRVTHelper), 3330548138U) },
+		{ Z_Construct_UClass_UOceanologyRVTHelper, UOceanologyRVTHelper::StaticClass, TEXT("UOceanologyRVTHelper"), &Z_Registration_Info_UClass_UOceanologyRVTHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyRVTHelper), 4052880168U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_3060006431(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_1477086164(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRVT_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

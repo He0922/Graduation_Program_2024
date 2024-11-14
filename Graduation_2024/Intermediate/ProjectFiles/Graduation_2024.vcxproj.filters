@@ -27,6 +27,447 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\Oceanology_Plugin">
+      <UniqueIdentifier>{D3F496BF-882A-3ECC-884F-6EF5DDBBBE2A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\Oceanology_Plugin\Source">
+      <UniqueIdentifier>{38570648-7F60-30A5-B7CC-E2ACD2E345B2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor">
+      <UniqueIdentifier>{2254A408-B57C-3779-A692-24E56E899D7A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Oceanology_PluginEditor.Build.cs">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor</Filter>
+    </None>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private">
+      <UniqueIdentifier>{674ACFF9-3344-3F7A-870C-970464BAEDCE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\OceanologyWaterUIStyle.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Oceanology_PluginEditor.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Actors">
+      <UniqueIdentifier>{6F6B5268-2019-3560-B198-9044C5E2DA72}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Actors\OceanologyMaterialToStructConverterActor.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Actors</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\DataAsset">
+      <UniqueIdentifier>{4DA8FBEC-1D64-3446-97DD-EE976670EABB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\DataAsset\OceanologyLakePresetFactory.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\DataAsset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\DataAsset\OceanologyOceanPresetFactory.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\DataAsset</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Utils">
+      <UniqueIdentifier>{EDAA0AE4-CE2B-38FF-ACE4-542DF4167862}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Utils\OceanologyManagerDetailsCustomization.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Utils\OceanologyWaterParentDetailsCustomization.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Utils\OceanologyWaterVolumeDetailsCustomization.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Private\Utils</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public">
+      <UniqueIdentifier>{5A7572DF-C42A-3EF3-838A-991E45B7E4A1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\OceanologyWaterUIStyle.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Oceanology_PluginEditor.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Actors">
+      <UniqueIdentifier>{9335CC53-5139-365B-A850-C6171E35605A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Actors\OceanologyMaterialToStructConverterActor.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Actors</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\DataAsset">
+      <UniqueIdentifier>{2773C6FC-F3A0-3A57-A381-4A9636F8E765}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\DataAsset\OceanologyLakePresetFactory.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\DataAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\DataAsset\OceanologyOceanPresetFactory.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\DataAsset</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Utils">
+      <UniqueIdentifier>{DAFB6C30-0CF0-349F-B4D7-0680A25DDB8B}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Utils\OceanologyManagerDetailsCustomization.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Utils\OceanologyWaterParentDetailsCustomization.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Utils\OceanologyWaterVolumeDetailsCustomization.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Utils</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Oceanology_Plugin.uplugin">
+      <Filter>Plugins\Oceanology_Plugin</Filter>
+    </None>
+    <Filter Include="Plugins\Oceanology_Plugin\Config">
+      <UniqueIdentifier>{7D11A161-3ECF-3AB0-ADA5-29ADC8D757A9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Config\DefaultOceanology_Plugin.ini">
+      <Filter>Plugins\Oceanology_Plugin\Config</Filter>
+    </None>
+    <Filter Include="Plugins\Oceanology_Plugin\Resources">
+      <UniqueIdentifier>{0E6B587C-2708-322B-B560-D82D59CB74AA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Resources\Icon128.png">
+      <Filter>Plugins\Oceanology_Plugin\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Resources\LakePreset128.png">
+      <Filter>Plugins\Oceanology_Plugin\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Resources\OceanPreset128.png">
+      <Filter>Plugins\Oceanology_Plugin\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\Oceanology_Plugin\Shaders">
+      <UniqueIdentifier>{C472C036-33C8-3EA3-9EC5-59FEFC1CAFE5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\Oceanology_Plugin\Shaders\Private">
+      <UniqueIdentifier>{019C1EF3-9004-34AF-AB44-6A46A8EF6652}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Shaders\Private\OceanologyWaterMeshVertexFactory.ush">
+      <Filter>Plugins\Oceanology_Plugin\Shaders\Private</Filter>
+    </None>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin">
+      <UniqueIdentifier>{1D1ACA4D-8AC8-3CD3-B7CA-82AE25CEAD39}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Oceanology_Plugin.Build.cs">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin</Filter>
+    </None>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private">
+      <UniqueIdentifier>{046A19E5-F14A-386A-8692-F8FC892795AE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\OceanologyRuntimeSettings.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Oceanology_Plugin.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Oceanology_PluginBPLibrary.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors">
+      <UniqueIdentifier>{40315B65-C18A-32DB-AD6D-2A08B49F54AE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors\OceanologyInfiniteOceanActor.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors\OceanologyLakeActor.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors\OceanologyManagerActor.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors\OceanologyWaterNiagaraWavesVolume.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors\OceanologyWaterParentActor.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors\OceanologyWaterVolumeActor.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Actors</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components">
+      <UniqueIdentifier>{6FE70DDA-BB01-3427-9ADA-A89E7E253D01}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\OceanAudioComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\OceanBuoyancyComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\OceanologyHeightmapComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\OceanologyInfiniteComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\OceanologyUnderwaterComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\OceanSwimmingComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\QuadTree">
+      <UniqueIdentifier>{E01911B3-F672-36DE-B532-CC3BA66E78C8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\QuadTree\OceanologyWaterMeshComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\QuadTree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\QuadTree\OceanologyWaterMeshSceneProxy.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\QuadTree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\QuadTree\OceanologyWaterQuadTree.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\QuadTree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\QuadTree\OceanologyWaterVertexFactory.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\QuadTree</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\Wave">
+      <UniqueIdentifier>{3200835C-4B43-3B15-A4A6-E6E26DE1B7A9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\Wave\OceanologyEmptyWaveSolverComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\Wave\OceanologyGerstnerWaveSolverComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\Wave\OceanologyWaveSolverComponent.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Components\Wave</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\DataAsset">
+      <UniqueIdentifier>{23202399-28CB-34A0-98EC-5E91415F0354}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\DataAsset\OceanologyLakePreset.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\DataAsset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\DataAsset\OceanologyOceanPreset.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\DataAsset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\DataAsset\OceanologyWaterPreset.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\DataAsset</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Utils">
+      <UniqueIdentifier>{E4116E22-9694-3645-9FB4-854B266BEE2B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Utils\OceanologyMessageUtils.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Utils\OceanologyRVTBaker.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Utils\OceanologyWaterUtils.cpp">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Private\Utils</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public">
+      <UniqueIdentifier>{D55F7E3A-0606-3E3F-91F2-D6060AA1DC62}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\OceanologyRuntimeSettings.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Oceanology_Plugin.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Oceanology_PluginBPLibrary.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors">
+      <UniqueIdentifier>{4FBDAE11-16F4-32F7-96F4-6F3AFE2EA607}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors\OceanologyInfiniteOceanActor.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors\OceanologyLakeActor.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors\OceanologyManagerActor.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors\OceanologyWaterNiagaraWavesVolume.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors\OceanologyWaterParentActor.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors\OceanologyWaterVolumeActor.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Actors</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components">
+      <UniqueIdentifier>{73528D31-0D4C-3B28-A6E0-DEA348A190F5}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\OceanAudioComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\OceanBuoyancyComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\OceanologyHeightmapComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\OceanologyInfiniteComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\OceanologyUnderwaterComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\OceanSwimmingComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree">
+      <UniqueIdentifier>{A2B10B9F-0B69-3219-A403-F793006138F6}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree\OceanologyWaterInstanceDataBuffer.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree\OceanologyWaterMeshComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree\OceanologyWaterMeshSceneProxy.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree\OceanologyWaterQuadTree.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree\OceanologyWaterVertexFactory.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree\OceanologyWaterVertexFactory.inl">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\QuadTree</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\Wave">
+      <UniqueIdentifier>{D87D20CF-8F66-30A5-AE7F-DD4993102F12}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\Wave\OceanologyEmptyWaveSolverComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\Wave\OceanologyGerstnerWaveSolverComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\Wave\OceanologyWaveSolverComponent.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Components\Wave</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\DataAsset">
+      <UniqueIdentifier>{5F26F4D7-DFD2-3A1C-AD27-8E40A1B5EA05}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\DataAsset\OceanologyLakePreset.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\DataAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\DataAsset\OceanologyOceanPreset.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\DataAsset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\DataAsset\OceanologyWaterPreset.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\DataAsset</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Enums">
+      <UniqueIdentifier>{EAC11393-1248-3474-B2C5-6257AFEE7590}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Enums\OceanologyGerstnerWaveSummarize.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Enums\OceanologyUnderwaterMode.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Enums\OceanologyWaterPresetMode.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Enums</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs">
+      <UniqueIdentifier>{7AE27A0E-E746-3398-B050-96FFE27309CE}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyActorHeight.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyBaseOffset.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyBubbles.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyBubblesSettings.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyCaustics.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyFlipbook.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyFoam.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyFolding.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyGGX.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyGlobalDisplacement.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyGroundCaustics.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyHorizonCorrection.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyLakePresetResult.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyLakeQuadTreeSettings.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyMask.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyMaskUnderwater.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyOceanPresetResult.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyOceanQuadTreeSettings.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyProcedural.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyRefraction.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyRVT.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologySurfaceScattering.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyUnderwater.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyVolumetricFog.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyWaterPresetResult.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyWaterProjection.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyWaterQuadTreeSettings.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyWaves.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs\OceanologyWetness.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Structs</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Utils">
+      <UniqueIdentifier>{E841979C-6B11-3D5C-BE1B-AF51AC5716FB}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Utils\OceanologyMessageUtils.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Utils\OceanologyRVTBaker.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Utils\OceanologyWaterUtils.h">
+      <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Utils</Filter>
+    </ClInclude>
     <Filter Include="Source\Graduation_2024">
       <UniqueIdentifier>{D61DB97D-D968-3767-8A74-3557811C3E23}</UniqueIdentifier>
     </Filter>

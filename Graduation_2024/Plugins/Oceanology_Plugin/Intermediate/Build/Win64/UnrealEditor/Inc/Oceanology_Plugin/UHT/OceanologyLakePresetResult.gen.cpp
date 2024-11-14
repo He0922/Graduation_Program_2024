@@ -35,9 +35,13 @@ struct Z_Construct_UScriptStruct_FOceanologyLakePresetResult_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// has to be in SYNC with OceanologyLakePreset fields\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyLakePresetResult.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "has to be in SYNC with OceanologyLakePreset fields" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GroundCaustics_MetaData[] = {
 		{ "Category", "Caustics" },
@@ -52,7 +56,7 @@ struct Z_Construct_UScriptStruct_FOceanologyLakePresetResult_Statics
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FOceanologyLakePresetResult_Statics::NewProp_GroundCaustics = { "GroundCaustics", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FOceanologyLakePresetResult, GroundCaustics), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GroundCaustics_MetaData), NewProp_GroundCaustics_MetaData) }; // 2850990811
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FOceanologyLakePresetResult_Statics::NewProp_GroundCaustics = { "GroundCaustics", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FOceanologyLakePresetResult, GroundCaustics), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GroundCaustics_MetaData), NewProp_GroundCaustics_MetaData) }; // 1718873675
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FOceanologyLakePresetResult_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOceanologyLakePresetResult_Statics::NewProp_GroundCaustics,
 };
@@ -81,15 +85,15 @@ UScriptStruct* Z_Construct_UScriptStruct_FOceanologyLakePresetResult()
 // End ScriptStruct FOceanologyLakePresetResult
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyLakePresetResult_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyLakePresetResult_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FOceanologyLakePresetResult::StaticStruct, Z_Construct_UScriptStruct_FOceanologyLakePresetResult_Statics::NewStructOps, TEXT("OceanologyLakePresetResult"), &Z_Registration_Info_UScriptStruct_OceanologyLakePresetResult, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyLakePresetResult), 4127253012U) },
+		{ FOceanologyLakePresetResult::StaticStruct, Z_Construct_UScriptStruct_FOceanologyLakePresetResult_Statics::NewStructOps, TEXT("OceanologyLakePresetResult"), &Z_Registration_Info_UScriptStruct_OceanologyLakePresetResult, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyLakePresetResult), 2522097882U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyLakePresetResult_h_2915526662(TEXT("/Script/Oceanology_Plugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyLakePresetResult_h_1594422405(TEXT("/Script/Oceanology_Plugin"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyLakePresetResult_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyLakePresetResult_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyLakePresetResult_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyLakePresetResult_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

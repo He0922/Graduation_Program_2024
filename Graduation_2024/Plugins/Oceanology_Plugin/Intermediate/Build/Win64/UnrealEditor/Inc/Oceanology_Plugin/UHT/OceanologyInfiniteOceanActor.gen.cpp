@@ -65,7 +65,9 @@ struct Z_Construct_UFunction_AOceanologyInfiniteOcean_ForceFollow_Statics
 		{ "CallInEditor", "true" },
 		{ "Category", "Infinite" },
 		{ "ModuleRelativePath", "Public/Actors/OceanologyInfiniteOceanActor.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Can be used to call a force follow on the actor when follow in editor is disabled." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -297,7 +299,7 @@ struct Z_Construct_UClass_AOceanologyInfiniteOcean_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AOceanologyInfiniteOcean_CreateOrUpdateShorelineWetnessMID, "CreateOrUpdateShorelineWetnessMID" }, // 4198152009
-		{ &Z_Construct_UFunction_AOceanologyInfiniteOcean_ForceFollow, "ForceFollow" }, // 3066330705
+		{ &Z_Construct_UFunction_AOceanologyInfiniteOcean_ForceFollow, "ForceFollow" }, // 2312279537
 		{ &Z_Construct_UFunction_AOceanologyInfiniteOcean_GetShorelineWetnessMID, "GetShorelineWetnessMID" }, // 985715229
 		{ &Z_Construct_UFunction_AOceanologyInfiniteOcean_InitShorelineWetness, "InitShorelineWetness" }, // 3934883295
 		{ &Z_Construct_UFunction_AOceanologyInfiniteOcean_LoadPreset, "LoadPreset" }, // 741391174
@@ -322,7 +324,7 @@ void Z_Construct_UClass_AOceanologyInfiniteOcean_Statics::NewProp_EnableWetness_
 	((AOceanologyInfiniteOcean*)Obj)->EnableWetness = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AOceanologyInfiniteOcean_Statics::NewProp_EnableWetness = { "EnableWetness", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AOceanologyInfiniteOcean), &Z_Construct_UClass_AOceanologyInfiniteOcean_Statics::NewProp_EnableWetness_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnableWetness_MetaData), NewProp_EnableWetness_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOceanologyInfiniteOcean_Statics::NewProp_Wetness = { "Wetness", nullptr, (EPropertyFlags)0x0010000000000025, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOceanologyInfiniteOcean, Wetness), Z_Construct_UScriptStruct_FOceanologyWetness, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Wetness_MetaData), NewProp_Wetness_MetaData) }; // 256899756
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOceanologyInfiniteOcean_Statics::NewProp_Wetness = { "Wetness", nullptr, (EPropertyFlags)0x0010000000000025, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOceanologyInfiniteOcean, Wetness), Z_Construct_UScriptStruct_FOceanologyWetness, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Wetness_MetaData), NewProp_Wetness_MetaData) }; // 2569763290
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOceanologyInfiniteOcean_Statics::NewProp_ShorelineWetnessMaterial = { "ShorelineWetnessMaterial", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOceanologyInfiniteOcean, ShorelineWetnessMaterial), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ShorelineWetnessMaterial_MetaData), NewProp_ShorelineWetnessMaterial_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOceanologyInfiniteOcean_Statics::NewProp_ShorelineWetnessMID = { "ShorelineWetnessMID", nullptr, (EPropertyFlags)0x0040c00000022801, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AOceanologyInfiniteOcean, ShorelineWetnessMID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ShorelineWetnessMID_MetaData), NewProp_ShorelineWetnessMID_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOceanologyInfiniteOcean_Statics::PropPointers[] = {
@@ -385,14 +387,14 @@ AOceanologyInfiniteOcean::~AOceanologyInfiniteOcean() {}
 // End Class AOceanologyInfiniteOcean
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyInfiniteOceanActor_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyInfiniteOceanActor_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AOceanologyInfiniteOcean, AOceanologyInfiniteOcean::StaticClass, TEXT("AOceanologyInfiniteOcean"), &Z_Registration_Info_UClass_AOceanologyInfiniteOcean, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOceanologyInfiniteOcean), 3160590823U) },
+		{ Z_Construct_UClass_AOceanologyInfiniteOcean, AOceanologyInfiniteOcean::StaticClass, TEXT("AOceanologyInfiniteOcean"), &Z_Registration_Info_UClass_AOceanologyInfiniteOcean, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOceanologyInfiniteOcean), 2745954556U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyInfiniteOceanActor_h_325441277(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyInfiniteOceanActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyInfiniteOceanActor_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyInfiniteOceanActor_h_3116418371(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyInfiniteOceanActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyInfiniteOceanActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

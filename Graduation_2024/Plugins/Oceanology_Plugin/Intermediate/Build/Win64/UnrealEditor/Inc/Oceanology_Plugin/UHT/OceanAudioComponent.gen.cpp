@@ -129,13 +129,19 @@ struct Z_Construct_UClass_UOceanAudioComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Mode_MetaData[] = {
 		{ "Category", "Ocean Audio" },
 		{ "ModuleRelativePath", "Public/Components/OceanAudioComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Control the mode of the Ocean Audio component. None = Disabled, Underwater = sound below waves, Waves = sound above waves" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DebugEnabled_MetaData[] = {
 		{ "Category", "Ocean Audio|Debug" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Turning on/off debug messages of the water audio. WARNING: Debugging affects performance, do NOT use in production! */" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/OceanAudioComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Turning on/off debug messages of the water audio. WARNING: Debugging affects performance, do NOT use in production!" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OceanologyWater_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Components/OceanAudioComponent.h" },
@@ -209,18 +215,18 @@ UOceanAudioComponent::~UOceanAudioComponent() {}
 // End Class UOceanAudioComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EOceanAudioMode_StaticEnum, TEXT("EOceanAudioMode"), &Z_Registration_Info_UEnum_EOceanAudioMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1933340687U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanAudioComponent, UOceanAudioComponent::StaticClass, TEXT("UOceanAudioComponent"), &Z_Registration_Info_UClass_UOceanAudioComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanAudioComponent), 3084069917U) },
+		{ Z_Construct_UClass_UOceanAudioComponent, UOceanAudioComponent::StaticClass, TEXT("UOceanAudioComponent"), &Z_Registration_Info_UClass_UOceanAudioComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanAudioComponent), 1705143412U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_852065995(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_2098991097(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanAudioComponent_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

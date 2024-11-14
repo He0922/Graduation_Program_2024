@@ -37,9 +37,13 @@ struct Z_Construct_UScriptStruct_FOceanologyGGX_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyGGX.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GGX_MetaData[] = {
 		{ "Category", "GGX" },
@@ -131,10 +135,10 @@ struct Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventLerpGGX_Parms, A), Z_Construct_UScriptStruct_FOceanologyGGX, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 149473620
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventLerpGGX_Parms, B), Z_Construct_UScriptStruct_FOceanologyGGX, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 149473620
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventLerpGGX_Parms, A), Z_Construct_UScriptStruct_FOceanologyGGX, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 4287862550
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventLerpGGX_Parms, B), Z_Construct_UScriptStruct_FOceanologyGGX, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 4287862550
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::NewProp_Alpha = { "Alpha", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventLerpGGX_Parms, Alpha), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Alpha_MetaData), NewProp_Alpha_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventLerpGGX_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyGGX, METADATA_PARAMS(0, nullptr) }; // 149473620
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventLerpGGX_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyGGX, METADATA_PARAMS(0, nullptr) }; // 4287862550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::NewProp_A,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX_Statics::NewProp_B,
@@ -189,7 +193,7 @@ struct Z_Construct_UFunction_UOceanologyGGXHelper_SetMaterialParameters_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_SetMaterialParameters_Statics::NewProp_MID = { "MID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventSetMaterialParameters_Parms, MID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_SetMaterialParameters_Statics::NewProp_GGX = { "GGX", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventSetMaterialParameters_Parms, GGX), Z_Construct_UScriptStruct_FOceanologyGGX, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GGX_MetaData), NewProp_GGX_MetaData) }; // 149473620
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGGXHelper_SetMaterialParameters_Statics::NewProp_GGX = { "GGX", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGGXHelper_eventSetMaterialParameters_Parms, GGX), Z_Construct_UScriptStruct_FOceanologyGGX, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GGX_MetaData), NewProp_GGX_MetaData) }; // 4287862550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyGGXHelper_SetMaterialParameters_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyGGXHelper_SetMaterialParameters_Statics::NewProp_MID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyGGXHelper_SetMaterialParameters_Statics::NewProp_GGX,
@@ -236,16 +240,20 @@ struct Z_Construct_UClass_UOceanologyGGXHelper_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "IncludePath", "Structs/OceanologyGGX.h" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologyGGX.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX, "LerpGGX" }, // 2660907418
-		{ &Z_Construct_UFunction_UOceanologyGGXHelper_SetMaterialParameters, "SetMaterialParameters" }, // 782970958
+		{ &Z_Construct_UFunction_UOceanologyGGXHelper_LerpGGX, "LerpGGX" }, // 1193482008
+		{ &Z_Construct_UFunction_UOceanologyGGXHelper_SetMaterialParameters, "SetMaterialParameters" }, // 245697401
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -291,18 +299,18 @@ UOceanologyGGXHelper::~UOceanologyGGXHelper() {}
 // End Class UOceanologyGGXHelper
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FOceanologyGGX::StaticStruct, Z_Construct_UScriptStruct_FOceanologyGGX_Statics::NewStructOps, TEXT("OceanologyGGX"), &Z_Registration_Info_UScriptStruct_OceanologyGGX, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyGGX), 149473620U) },
+		{ FOceanologyGGX::StaticStruct, Z_Construct_UScriptStruct_FOceanologyGGX_Statics::NewStructOps, TEXT("OceanologyGGX"), &Z_Registration_Info_UScriptStruct_OceanologyGGX, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyGGX), 4287862550U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyGGXHelper, UOceanologyGGXHelper::StaticClass, TEXT("UOceanologyGGXHelper"), &Z_Registration_Info_UClass_UOceanologyGGXHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyGGXHelper), 1297033380U) },
+		{ Z_Construct_UClass_UOceanologyGGXHelper, UOceanologyGGXHelper::StaticClass, TEXT("UOceanologyGGXHelper"), &Z_Registration_Info_UClass_UOceanologyGGXHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyGGXHelper), 1003096393U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_1201813291(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_882980193(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGGX_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

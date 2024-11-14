@@ -866,9 +866,13 @@ struct Z_Construct_UClass_UOceanBuoyancyComponent_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BuoyancyUpdateInterval_MetaData[] = {
 		{ "Category", "Buoyancy" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Value 0 means real-time buoyancy. Increasing the value provides better performance, but buoyancy might become more inaccurate. Be careful changing this. This controls tick rate. */" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/OceanBuoyancyComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Value 0 means real-time buoyancy. Increasing the value provides better performance, but buoyancy might become more inaccurate. Be careful changing this. This controls tick rate." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DefaultMeshDensity_MetaData[] = {
 		{ "Category", "Buoyancy" },
@@ -908,27 +912,43 @@ struct Z_Construct_UClass_UOceanBuoyancyComponent_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GlobalWaveForceEnabled_MetaData[] = {
 		{ "Category", "Buoyancy" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Enabling this will make global wave forces of the ocean affect the buoyancy direction. */" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/OceanBuoyancyComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enabling this will make global wave forces of the ocean affect the buoyancy direction." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AngleAdjustedForceStrength_MetaData[] = {
 		{ "Category", "Buoyancy|Flow" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** This defines the force strength of the flow physics based on angle. Turn on debug to see the angles. */" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/OceanBuoyancyComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This defines the force strength of the flow physics based on angle. Turn on debug to see the angles." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OrientMeshRotationYawTowardsFlowDirection_MetaData[] = {
 		{ "Category", "Buoyancy|Flow" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Orient the mesh rotation towards the direction of the flow if a flow is present. */" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/OceanBuoyancyComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Orient the mesh rotation towards the direction of the flow if a flow is present." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DebugEnabled_MetaData[] = {
 		{ "Category", "Buoyancy|Debug" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Enable/disable special debug messages and spheres that indicate buoyancy interactions. WARNING: Debugging affects performance, do NOT use in production! */" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/OceanBuoyancyComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enable/disable special debug messages and spheres that indicate buoyancy interactions. WARNING: Debugging affects performance, do NOT use in production!" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DebugSphereColorPontoons_MetaData[] = {
 		{ "Category", "Buoyancy|Debug" },
@@ -1176,7 +1196,7 @@ UOceanBuoyancyComponent::~UOceanBuoyancyComponent() {}
 // End Class UOceanBuoyancyComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EOceanBuoyancyPontoonMode_StaticEnum, TEXT("EOceanBuoyancyPontoonMode"), &Z_Registration_Info_UEnum_EOceanBuoyancyPontoonMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1954147311U) },
@@ -1185,12 +1205,12 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 		{ FOceanBuoyancyPontoon::StaticStruct, Z_Construct_UScriptStruct_FOceanBuoyancyPontoon_Statics::NewStructOps, TEXT("OceanBuoyancyPontoon"), &Z_Registration_Info_UScriptStruct_OceanBuoyancyPontoon, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanBuoyancyPontoon), 3963780799U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanBuoyancyComponent, UOceanBuoyancyComponent::StaticClass, TEXT("UOceanBuoyancyComponent"), &Z_Registration_Info_UClass_UOceanBuoyancyComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanBuoyancyComponent), 854313354U) },
+		{ Z_Construct_UClass_UOceanBuoyancyComponent, UOceanBuoyancyComponent::StaticClass, TEXT("UOceanBuoyancyComponent"), &Z_Registration_Info_UClass_UOceanBuoyancyComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanBuoyancyComponent), 2672189427U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_1695317297(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::EnumInfo));
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_4057423036(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanBuoyancyComponent_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

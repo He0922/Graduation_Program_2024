@@ -37,9 +37,13 @@ struct Z_Construct_UScriptStruct_FOceanologyGroundCaustics_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyGroundCaustics.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DarknessExposure_MetaData[] = {
 		{ "Category", "GroundCaustics" },
@@ -139,10 +143,10 @@ struct Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventLerpGroundCaustics_Parms, A), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 2850990811
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventLerpGroundCaustics_Parms, B), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 2850990811
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventLerpGroundCaustics_Parms, A), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 1718873675
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventLerpGroundCaustics_Parms, B), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 1718873675
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::NewProp_Alpha = { "Alpha", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventLerpGroundCaustics_Parms, Alpha), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Alpha_MetaData), NewProp_Alpha_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventLerpGroundCaustics_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(0, nullptr) }; // 2850990811
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventLerpGroundCaustics_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(0, nullptr) }; // 1718873675
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::NewProp_A,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics_Statics::NewProp_B,
@@ -197,7 +201,7 @@ struct Z_Construct_UFunction_UOceanologyGroundCausticsHelper_SetMaterialParamete
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_SetMaterialParameters_Statics::NewProp_MID = { "MID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventSetMaterialParameters_Parms, MID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_SetMaterialParameters_Statics::NewProp_GroundCaustics = { "GroundCaustics", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventSetMaterialParameters_Parms, GroundCaustics), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GroundCaustics_MetaData), NewProp_GroundCaustics_MetaData) }; // 2850990811
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyGroundCausticsHelper_SetMaterialParameters_Statics::NewProp_GroundCaustics = { "GroundCaustics", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyGroundCausticsHelper_eventSetMaterialParameters_Parms, GroundCaustics), Z_Construct_UScriptStruct_FOceanologyGroundCaustics, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GroundCaustics_MetaData), NewProp_GroundCaustics_MetaData) }; // 1718873675
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyGroundCausticsHelper_SetMaterialParameters_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyGroundCausticsHelper_SetMaterialParameters_Statics::NewProp_MID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyGroundCausticsHelper_SetMaterialParameters_Statics::NewProp_GroundCaustics,
@@ -244,16 +248,20 @@ struct Z_Construct_UClass_UOceanologyGroundCausticsHelper_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "IncludePath", "Structs/OceanologyGroundCaustics.h" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologyGroundCaustics.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics, "LerpGroundCaustics" }, // 4123896122
-		{ &Z_Construct_UFunction_UOceanologyGroundCausticsHelper_SetMaterialParameters, "SetMaterialParameters" }, // 501689017
+		{ &Z_Construct_UFunction_UOceanologyGroundCausticsHelper_LerpGroundCaustics, "LerpGroundCaustics" }, // 817521683
+		{ &Z_Construct_UFunction_UOceanologyGroundCausticsHelper_SetMaterialParameters, "SetMaterialParameters" }, // 2890122853
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -299,18 +307,18 @@ UOceanologyGroundCausticsHelper::~UOceanologyGroundCausticsHelper() {}
 // End Class UOceanologyGroundCausticsHelper
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FOceanologyGroundCaustics::StaticStruct, Z_Construct_UScriptStruct_FOceanologyGroundCaustics_Statics::NewStructOps, TEXT("OceanologyGroundCaustics"), &Z_Registration_Info_UScriptStruct_OceanologyGroundCaustics, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyGroundCaustics), 2850990811U) },
+		{ FOceanologyGroundCaustics::StaticStruct, Z_Construct_UScriptStruct_FOceanologyGroundCaustics_Statics::NewStructOps, TEXT("OceanologyGroundCaustics"), &Z_Registration_Info_UScriptStruct_OceanologyGroundCaustics, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyGroundCaustics), 1718873675U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyGroundCausticsHelper, UOceanologyGroundCausticsHelper::StaticClass, TEXT("UOceanologyGroundCausticsHelper"), &Z_Registration_Info_UClass_UOceanologyGroundCausticsHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyGroundCausticsHelper), 3589288485U) },
+		{ Z_Construct_UClass_UOceanologyGroundCausticsHelper, UOceanologyGroundCausticsHelper::StaticClass, TEXT("UOceanologyGroundCausticsHelper"), &Z_Registration_Info_UClass_UOceanologyGroundCausticsHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyGroundCausticsHelper), 315371528U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_2627722401(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_2256905319(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyGroundCaustics_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

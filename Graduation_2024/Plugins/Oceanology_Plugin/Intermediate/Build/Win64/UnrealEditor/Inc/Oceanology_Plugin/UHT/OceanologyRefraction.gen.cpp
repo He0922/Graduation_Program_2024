@@ -37,9 +37,13 @@ struct Z_Construct_UScriptStruct_FOceanologyRefraction_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyRefraction.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CriticalAngleBendWidth_MetaData[] = {
 		{ "Category", "Refraction" },
@@ -164,10 +168,10 @@ struct Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventLerpRefraction_Parms, A), Z_Construct_UScriptStruct_FOceanologyRefraction, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 27191110
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventLerpRefraction_Parms, B), Z_Construct_UScriptStruct_FOceanologyRefraction, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 27191110
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventLerpRefraction_Parms, A), Z_Construct_UScriptStruct_FOceanologyRefraction, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 3969240598
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventLerpRefraction_Parms, B), Z_Construct_UScriptStruct_FOceanologyRefraction, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 3969240598
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::NewProp_Alpha = { "Alpha", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventLerpRefraction_Parms, Alpha), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Alpha_MetaData), NewProp_Alpha_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventLerpRefraction_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyRefraction, METADATA_PARAMS(0, nullptr) }; // 27191110
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventLerpRefraction_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyRefraction, METADATA_PARAMS(0, nullptr) }; // 3969240598
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::NewProp_A,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction_Statics::NewProp_B,
@@ -222,7 +226,7 @@ struct Z_Construct_UFunction_UOceanologyRefractionHelper_SetMaterialParameters_S
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_SetMaterialParameters_Statics::NewProp_MID = { "MID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventSetMaterialParameters_Parms, MID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_SetMaterialParameters_Statics::NewProp_Refraction = { "Refraction", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventSetMaterialParameters_Parms, Refraction), Z_Construct_UScriptStruct_FOceanologyRefraction, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Refraction_MetaData), NewProp_Refraction_MetaData) }; // 27191110
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyRefractionHelper_SetMaterialParameters_Statics::NewProp_Refraction = { "Refraction", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyRefractionHelper_eventSetMaterialParameters_Parms, Refraction), Z_Construct_UScriptStruct_FOceanologyRefraction, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Refraction_MetaData), NewProp_Refraction_MetaData) }; // 3969240598
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyRefractionHelper_SetMaterialParameters_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyRefractionHelper_SetMaterialParameters_Statics::NewProp_MID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyRefractionHelper_SetMaterialParameters_Statics::NewProp_Refraction,
@@ -269,16 +273,20 @@ struct Z_Construct_UClass_UOceanologyRefractionHelper_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "IncludePath", "Structs/OceanologyRefraction.h" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologyRefraction.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction, "LerpRefraction" }, // 2773636498
-		{ &Z_Construct_UFunction_UOceanologyRefractionHelper_SetMaterialParameters, "SetMaterialParameters" }, // 3812029309
+		{ &Z_Construct_UFunction_UOceanologyRefractionHelper_LerpRefraction, "LerpRefraction" }, // 126832784
+		{ &Z_Construct_UFunction_UOceanologyRefractionHelper_SetMaterialParameters, "SetMaterialParameters" }, // 792496716
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -324,18 +332,18 @@ UOceanologyRefractionHelper::~UOceanologyRefractionHelper() {}
 // End Class UOceanologyRefractionHelper
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FOceanologyRefraction::StaticStruct, Z_Construct_UScriptStruct_FOceanologyRefraction_Statics::NewStructOps, TEXT("OceanologyRefraction"), &Z_Registration_Info_UScriptStruct_OceanologyRefraction, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyRefraction), 27191110U) },
+		{ FOceanologyRefraction::StaticStruct, Z_Construct_UScriptStruct_FOceanologyRefraction_Statics::NewStructOps, TEXT("OceanologyRefraction"), &Z_Registration_Info_UScriptStruct_OceanologyRefraction, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyRefraction), 3969240598U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyRefractionHelper, UOceanologyRefractionHelper::StaticClass, TEXT("UOceanologyRefractionHelper"), &Z_Registration_Info_UClass_UOceanologyRefractionHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyRefractionHelper), 1901801733U) },
+		{ Z_Construct_UClass_UOceanologyRefractionHelper, UOceanologyRefractionHelper::StaticClass, TEXT("UOceanologyRefractionHelper"), &Z_Registration_Info_UClass_UOceanologyRefractionHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyRefractionHelper), 282525060U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_2207551897(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_2639046996(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyRefraction_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
