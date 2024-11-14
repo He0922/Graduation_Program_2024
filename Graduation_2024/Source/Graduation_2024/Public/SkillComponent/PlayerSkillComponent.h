@@ -105,6 +105,12 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool GetScanColdState() const { return IFScanIsInCold; }
+#pragma endregion
+
+	//½»»¥½Úµã
+#pragma region AboutInterectBlock
+public:
+	void InterctBlock();
+#pragma endregion
 };
 
-#pragma endregion

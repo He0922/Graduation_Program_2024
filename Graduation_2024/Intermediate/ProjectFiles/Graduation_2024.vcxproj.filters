@@ -66,6 +66,15 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\GameModeBase\CustomGameModeBase.cpp">
       <Filter>Source\Graduation_2024\Private\GameModeBase</Filter>
     </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\InterectBlock">
+      <UniqueIdentifier>{08F870AB-1CB0-392F-BF54-7C64F9CDC377}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\InterectBlock\BlockActor.cpp">
+      <Filter>Source\Graduation_2024\Private\InterectBlock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\InterectBlock\BlockActorManager.cpp">
+      <Filter>Source\Graduation_2024\Private\InterectBlock</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\Interface">
       <UniqueIdentifier>{8F2F88EB-5B5F-391B-954A-576949F4F98C}</UniqueIdentifier>
     </Filter>
@@ -108,6 +117,9 @@
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Archival\Archival.h">
       <Filter>Source\Graduation_2024\Public\Archival</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Archival\ArchiveID.h">
+      <Filter>Source\Graduation_2024\Public\Archival</Filter>
+    </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\Character">
       <UniqueIdentifier>{596C9BBB-4227-3B13-961C-69E2837CFCB1}</UniqueIdentifier>
     </Filter>
@@ -125,6 +137,15 @@
     </Filter>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\GameModeBase\CustomGameModeBase.h">
       <Filter>Source\Graduation_2024\Public\GameModeBase</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\InterectBlock">
+      <UniqueIdentifier>{CDC2A6CA-E722-3594-927A-25DF1D0736C0}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\InterectBlock\BlockActor.h">
+      <Filter>Source\Graduation_2024\Public\InterectBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\InterectBlock\BlockActorManager.h">
+      <Filter>Source\Graduation_2024\Public\InterectBlock</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\Interface">
       <UniqueIdentifier>{F92AA8A3-1426-3A89-83AC-D81E1A9758C2}</UniqueIdentifier>
@@ -160,12 +181,4 @@
       <Filter>Source\Graduation_2024\Public\UI\Attributes</Filter>
     </ClInclude>
   </ItemGroup>
-<<<<<<< Updated upstream
-=======
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\Archival\ArchiveID.h">
-      <Filter>Source\Graduation_2024\Public\Archival</Filter>
-    </ClInclude>
-  </ItemGroup>
->>>>>>> Stashed changes
 </Project>

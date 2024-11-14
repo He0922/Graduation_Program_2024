@@ -97,6 +97,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		//¼¼ÄÜ
 		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Started, this, &APlayerCharacter::StartScan);
 		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Completed, this, &APlayerCharacter::EndScan);
+		EnhancedInputComponent->BindAction(IterctBlock, ETriggerEvent::Started, this, &APlayerCharacter::InterctBlock);
 
 		//½»»¥
 		EnhancedInputComponent->BindAction(objectInteraction, ETriggerEvent::Completed, this, &APlayerCharacter::ObjectInteraction);
@@ -314,6 +315,11 @@ void APlayerCharacter::StartScan()
 void APlayerCharacter::EndScan()
 {
 	playerSkillComponent->EndScan();
+}
+
+void APlayerCharacter::InterctBlock()
+{
+	playerSkillComponent->InterctBlock();
 }
 #pragma endregion
 

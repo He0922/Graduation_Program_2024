@@ -14,11 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_PlayerInteractionInterface_generated_h
 
-<<<<<<< Updated upstream
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_13_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_ENHANCED_CONSTRUCTORS \
->>>>>>> Stashed changes
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	GRADUATION_2024_API UPlayerInteractionInterface(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -32,11 +28,7 @@ public: \
 	GRADUATION_2024_API virtual ~UPlayerInteractionInterface();
 
 
-<<<<<<< Updated upstream
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_13_GENERATED_UINTERFACE_BODY() \
-=======
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_GENERATED_UINTERFACE_BODY() \
->>>>>>> Stashed changes
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_GENERATED_UINTERFACE_BODY() \
 private: \
 	static void StaticRegisterNativesUPlayerInteractionInterface(); \
 	friend struct Z_Construct_UClass_UPlayerInteractionInterface_Statics; \
@@ -45,26 +37,15 @@ public: \
 	DECLARE_SERIALIZER(UPlayerInteractionInterface)
 
 
-<<<<<<< Updated upstream
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_13_GENERATED_BODY \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_GENERATED_BODY \
 	PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_13_GENERATED_UINTERFACE_BODY() \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_13_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_GENERATED_BODY \
-	PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_GENERATED_UINTERFACE_BODY() \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_ENHANCED_CONSTRUCTORS \
->>>>>>> Stashed changes
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_GENERATED_UINTERFACE_BODY() \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-<<<<<<< Updated upstream
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_13_INCLASS_IINTERFACE_NO_PURE_DECLS \
-=======
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_INCLASS_IINTERFACE_NO_PURE_DECLS \
->>>>>>> Stashed changes
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_INCLASS_IINTERFACE_NO_PURE_DECLS \
 protected: \
 	virtual ~IPlayerInteractionInterface() {} \
 public: \
@@ -73,19 +54,11 @@ public: \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
-<<<<<<< Updated upstream
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_10_PROLOG
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_21_GENERATED_BODY \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_11_PROLOG
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_13_INCLASS_IINTERFACE_NO_PURE_DECLS \
-=======
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_11_PROLOG
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_22_GENERATED_BODY \
-PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-public: \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_INCLASS_IINTERFACE_NO_PURE_DECLS \
->>>>>>> Stashed changes
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Interface_PlayerInteractionInterface_h_14_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

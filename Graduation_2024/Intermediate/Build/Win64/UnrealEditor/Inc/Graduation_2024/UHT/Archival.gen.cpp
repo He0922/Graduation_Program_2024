@@ -176,13 +176,8 @@ struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_20
 		{ Z_Construct_UClass_AArchival, AArchival::StaticClass, TEXT("AArchival"), &Z_Registration_Info_UClass_AArchival, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArchival), 1603212135U) },
 	};
 };
-<<<<<<< Updated upstream
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_2737732738(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_3450682718(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_Statics::ClassInfo),
-=======
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_3450682718(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_Statics::ClassInfo),
->>>>>>> Stashed changes
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

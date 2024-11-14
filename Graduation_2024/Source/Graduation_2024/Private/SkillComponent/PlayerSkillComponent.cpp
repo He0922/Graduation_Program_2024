@@ -2,6 +2,7 @@
 #include "../DebugHelper.h"
 #include "TimerManager.h"
 #include "Character/PlayerCharacter.h"
+#include "InterectBlock/BlockActor.h"
 
 
 DEFINE_LOG_CATEGORY_STATIC(PlayerSkillComponentLog, All, All);
@@ -123,5 +124,49 @@ void UPlayerSkillComponent::OutScanColdState()
 {
 	IFScanIsInCold = false;
 	GetWorld()->GetTimerManager().ClearTimer(ScanColdTimeTh);
+}
+#pragma endregion
+
+#pragma region Interect Block
+void UPlayerSkillComponent::InterctBlock()
+{
+	UE_LOG(LogTemp, Display, TEXT("Interct"));
+
+	FVector CharacterLocation = GetOwner()->GetActorLocation();
+	float Radius = 100.f; // 设置触发器半径
+
+	// 定义球形碰撞体
+	FCollisionShape CollisionShape = FCollisionShape::MakeSphere(Radius);
+
+	// 进行碰撞检查，返回范围内的所有物体
+	TArray<FHitResult> HitResults;
+	FCollisionQueryParams CollisionParams;
+	CollisionParams.AddIgnoredActor(GetOwner()); // 忽略自身
+
+	bool bHit = GetWorld()->SweepMultiByChannel(HitResults, CharacterLocation, CharacterLocation, FQuat::Identity, ECC_Visibility, CollisionShape, CollisionParams);
+
+	if (bHit)
+	{
+		// 处理找到的所有物体
+		for (const FHitResult& Hit : HitResults)
+		{
+			AActor* HitActor = Hit.GetActor();
+			if (HitActor)
+			{
+				// 这里假设目标物体有一个名为 `Interact` 的方法
+				ABlockActor* Interactable = Cast<ABlockActor>(HitActor);
+				if (Interactable)
+				{
+					UE_LOG(LogTemp, Display, TEXT("InterctBlock"));
+
+					Interactable->InteractionBlock();  // 调用接口中的方法
+					break;
+				}
+			}
+		}
+	}
+
+	// 可选：在调试时可视化球形范围
+	DrawDebugSphere(GetWorld(), CharacterLocation, Radius, 12, FColor::Green, false, 2.0f);
 }
 #pragma endregion

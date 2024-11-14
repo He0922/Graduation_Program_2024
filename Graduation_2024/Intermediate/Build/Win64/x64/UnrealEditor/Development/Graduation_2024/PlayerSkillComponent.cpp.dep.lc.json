@@ -55,8 +55,11 @@
             "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\source\\graduation_2024\\public\\interface\\playerattributesinterface.h",
             "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\playerattributesinterface.generated.h",
             "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\source\\graduation_2024\\public\\interface\\playerinteractioninterface.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\source\\graduation_2024\\public\\archival\\archiveid.h",
             "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\playerinteractioninterface.generated.h",
-            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\playercharacter.generated.h"
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\playercharacter.generated.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\source\\graduation_2024\\public\\interectblock\\blockactor.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\blockactor.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

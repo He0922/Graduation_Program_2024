@@ -108,6 +108,8 @@ public:
 	//实现玩家技能接口的定义
 	void StartScan();
 	void EndScan();
+
+	void InterctBlock();
 #pragma endregion
 
 
@@ -131,6 +133,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	class UInputAction* objectInteraction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	class UInputAction* IterctBlock;
 
 #pragma endregion
 
