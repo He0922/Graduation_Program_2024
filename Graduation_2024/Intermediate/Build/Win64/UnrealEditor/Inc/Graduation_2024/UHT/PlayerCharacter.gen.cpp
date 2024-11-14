@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
@@ -21,19 +22,50 @@ ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 ENHANCEDINPUT_API UScriptStruct* Z_Construct_UScriptStruct_FInputActionValue();
 GRADUATION_2024_API UClass* Z_Construct_UClass_APlayerCharacter();
 GRADUATION_2024_API UClass* Z_Construct_UClass_APlayerCharacter_NoRegister();
+GRADUATION_2024_API UClass* Z_Construct_UClass_UArchivalUW_NoRegister();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerAttributesInterface_NoRegister();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerAttributesUW_NoRegister();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerCharacterMovementComponent_NoRegister();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerSkillComponent_NoRegister();
+GRADUATION_2024_API UEnum* Z_Construct_UEnum_Graduation_2024_EArchiveID();
 GRADUATION_2024_API UEnum* Z_Construct_UEnum_Graduation_2024_EPlayerAttributes();
 GRADUATION_2024_API UScriptStruct* Z_Construct_UScriptStruct_FPlayerAttributes();
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
 // End Cross Module References
 
-// Begin Class APlayerCharacter Function InitHUD
-struct Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics
+// Begin Class APlayerCharacter Function InitArchivalUW
+struct Z_Construct_UFunction_APlayerCharacter_InitArchivalUW_Statics
 {
-	struct PlayerCharacter_eventInitHUD_Parms
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Character/PlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_InitArchivalUW_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "InitArchivalUW", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_InitArchivalUW_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_InitArchivalUW_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_APlayerCharacter_InitArchivalUW()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_InitArchivalUW_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APlayerCharacter::execInitArchivalUW)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->InitArchivalUW();
+	P_NATIVE_END;
+}
+// End Class APlayerCharacter Function InitArchivalUW
+
+// Begin Class APlayerCharacter Function InitArttributesUW
+struct Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics
+{
+	struct PlayerCharacter_eventInitArttributesUW_Parms
 	{
 		int32 ReturnValue;
 	};
@@ -46,30 +78,30 @@ struct Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventInitHUD_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::NewProp_ReturnValue,
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventInitArttributesUW_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::NewProp_ReturnValue,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "InitHUD", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::PlayerCharacter_eventInitHUD_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::PlayerCharacter_eventInitHUD_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_APlayerCharacter_InitHUD()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "InitArttributesUW", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::PlayerCharacter_eventInitArttributesUW_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::PlayerCharacter_eventInitArttributesUW_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_APlayerCharacter_InitArttributesUW()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_InitHUD_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_InitArttributesUW_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(APlayerCharacter::execInitHUD)
+DEFINE_FUNCTION(APlayerCharacter::execInitArttributesUW)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(int32*)Z_Param__Result=P_THIS->InitHUD();
+	*(int32*)Z_Param__Result=P_THIS->InitArttributesUW();
 	P_NATIVE_END;
 }
-// End Class APlayerCharacter Function InitHUD
+// End Class APlayerCharacter Function InitArttributesUW
 
 // Begin Class APlayerCharacter Function Look
 struct Z_Construct_UFunction_APlayerCharacter_Look_Statics
@@ -173,6 +205,48 @@ DEFINE_FUNCTION(APlayerCharacter::execMove)
 }
 // End Class APlayerCharacter Function Move
 
+// Begin Class APlayerCharacter Function MoveToTarget
+struct Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics
+{
+	struct PlayerCharacter_eventMoveToTarget_Parms
+	{
+		FVector TargetLocation;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Character/PlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_TargetLocation;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::NewProp_TargetLocation = { "TargetLocation", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventMoveToTarget_Parms, TargetLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::NewProp_TargetLocation,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "MoveToTarget", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::PlayerCharacter_eventMoveToTarget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::PlayerCharacter_eventMoveToTarget_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_APlayerCharacter_MoveToTarget()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_MoveToTarget_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APlayerCharacter::execMoveToTarget)
+{
+	P_GET_STRUCT(FVector,Z_Param_TargetLocation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MoveToTarget(Z_Param_TargetLocation);
+	P_NATIVE_END;
+}
+// End Class APlayerCharacter Function MoveToTarget
+
 // Begin Class APlayerCharacter Function ObjectInteraction
 struct Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics
 {
@@ -207,9 +281,11 @@ void APlayerCharacter::StaticRegisterNativesAPlayerCharacter()
 {
 	UClass* Class = APlayerCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "InitHUD", &APlayerCharacter::execInitHUD },
+		{ "InitArchivalUW", &APlayerCharacter::execInitArchivalUW },
+		{ "InitArttributesUW", &APlayerCharacter::execInitArttributesUW },
 		{ "Look", &APlayerCharacter::execLook },
 		{ "Move", &APlayerCharacter::execMove },
+		{ "MoveToTarget", &APlayerCharacter::execMoveToTarget },
 		{ "ObjectInteraction", &APlayerCharacter::execObjectInteraction },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -326,7 +402,7 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerAttributesUWClass_MetaData[] = {
-		{ "Category", "Player Attributes UW" },
+		{ "Category", "UW" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbdUE\xef\xbf\xbd\xef\xbf\xbd\xcd\xbc\xef\xbf\xbd\xef\xbf\xbd\xd6\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbdUI\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcd\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
 #endif
@@ -344,6 +420,24 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "/ \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbdUI\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
 #endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_archivalUWClass_MetaData[] = {
+		{ "Category", "UW" },
+		{ "ModuleRelativePath", "Public/Character/PlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_archivalUW_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//// \xef\xbf\xbd\xe6\xb4\xa2\xef\xbf\xbd\xef\xbf\xbdUI\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Character/PlayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "/ \xef\xbf\xbd\xe6\xb4\xa2\xef\xbf\xbd\xef\xbf\xbdUI\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UnlockedArchivalPointsArray_MetaData[] = {
+		{ "Category", "Archival Point ID" },
+		{ "ModuleRelativePath", "Public/Character/PlayerCharacter.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_playerHealthMax;
@@ -368,12 +462,19 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_eplayerAttributes;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_playerAttributesUWClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_playerAttributesUW;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_archivalUWClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_archivalUW;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_UnlockedArchivalPointsArray_Inner_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_UnlockedArchivalPointsArray_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_UnlockedArchivalPointsArray;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_APlayerCharacter_InitHUD, "InitHUD" }, // 1374757500
+		{ &Z_Construct_UFunction_APlayerCharacter_InitArchivalUW, "InitArchivalUW" }, // 1400121291
+		{ &Z_Construct_UFunction_APlayerCharacter_InitArttributesUW, "InitArttributesUW" }, // 2275816697
 		{ &Z_Construct_UFunction_APlayerCharacter_Look, "Look" }, // 3513500393
 		{ &Z_Construct_UFunction_APlayerCharacter_Move, "Move" }, // 107334934
+		{ &Z_Construct_UFunction_APlayerCharacter_MoveToTarget, "MoveToTarget" }, // 3522872287
 		{ &Z_Construct_UFunction_APlayerCharacter_ObjectInteraction, "ObjectInteraction" }, // 162636615
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -405,6 +506,11 @@ const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_APlayerCharacter
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_eplayerAttributes = { "eplayerAttributes", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, eplayerAttributes), Z_Construct_UEnum_Graduation_2024_EPlayerAttributes, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_eplayerAttributes_MetaData), NewProp_eplayerAttributes_MetaData) }; // 1556152350
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_playerAttributesUWClass = { "playerAttributesUWClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, playerAttributesUWClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UPlayerAttributesUW_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerAttributesUWClass_MetaData), NewProp_playerAttributesUWClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_playerAttributesUW = { "playerAttributesUW", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, playerAttributesUW), Z_Construct_UClass_UPlayerAttributesUW_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerAttributesUW_MetaData), NewProp_playerAttributesUW_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_archivalUWClass = { "archivalUWClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, archivalUWClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UArchivalUW_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_archivalUWClass_MetaData), NewProp_archivalUWClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_archivalUW = { "archivalUW", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, archivalUW), Z_Construct_UClass_UArchivalUW_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_archivalUW_MetaData), NewProp_archivalUW_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_UnlockedArchivalPointsArray_Inner_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_UnlockedArchivalPointsArray_Inner = { "UnlockedArchivalPointsArray", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Graduation_2024_EArchiveID, METADATA_PARAMS(0, nullptr) }; // 1920841488
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_UnlockedArchivalPointsArray = { "UnlockedArchivalPointsArray", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, UnlockedArchivalPointsArray), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UnlockedArchivalPointsArray_MetaData), NewProp_UnlockedArchivalPointsArray_MetaData) }; // 1920841488
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_playerHealthMax,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_playerEnergyMax,
@@ -428,6 +534,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerCh
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_eplayerAttributes,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_playerAttributesUWClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_playerAttributesUW,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_archivalUWClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_archivalUW,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_UnlockedArchivalPointsArray_Inner_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_UnlockedArchivalPointsArray_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_UnlockedArchivalPointsArray,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_APlayerCharacter_Statics::DependentSingletons[])() = {
@@ -473,10 +584,10 @@ APlayerCharacter::~APlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 624658737U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2330394005U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_569552173(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_956278204(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

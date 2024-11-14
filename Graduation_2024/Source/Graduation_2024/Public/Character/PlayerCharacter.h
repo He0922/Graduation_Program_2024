@@ -8,9 +8,15 @@
 
 
 #include "Character/PlayerAttributes.h"
+
+
 #include "UI/Attributes/PlayerAttributesUW.h"
+#include "UI/Archival/ArchivalUW.h"
+
 #include "Interface/PlayerAttributesInterface.h"
-#include "Interface/PlayerInteractionInterface.h"
+#include "Interface/ArchivalInterface.h"
+
+
 #include "SkillComponent/PlayerSkillComponent.h"
 
 
@@ -40,12 +46,9 @@ public:
 
 
 #pragma region Initialize And Check
-public:
-	IPlayerInteractionInterface* currentInteractable = nullptr;
-
-	EArchiveID collisionArchiveID;
 
 #pragma endregion
+
 
 #pragma region Collision
 public:
@@ -146,6 +149,9 @@ public:
 	UFUNCTION()
 	void Move(const FInputActionValue& Value);
 
+	UFUNCTION()
+	void MoveToTarget(FVector TargetLocation);
+
 	// 用于控制玩家视角旋转
 	UFUNCTION()
 	void Look(const FInputActionValue& Value);
@@ -182,6 +188,7 @@ public:
 
 #pragma endregion
 
+
 	// 创建自定义的角色技能组件变量
 #pragma region SkilComponent
 public:
@@ -210,17 +217,55 @@ public:
 
 
 #pragma region UI
+// 人物状态UI
 public:
 	UFUNCTION()
-	int InitHUD();
+	int InitArttributesUW();
 
 	// 在UE蓝图中指定人物属性UI的蓝图对象
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes UW")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW")
 	TSubclassOf<UPlayerAttributesUW> playerAttributesUWClass;
 
 	//// 人物属性UI对象
 	UPROPERTY()
 	class UPlayerAttributesUW* playerAttributesUW;
+
+
+// 存储点UI
+public:
+	UFUNCTION()
+	void InitArchivalUW();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW")
+	TSubclassOf<UArchivalUW> archivalUWClass;
+
+	//// 存储点UI对象
+	UPROPERTY()
+	class UArchivalUW* archivalUW;
+
+#pragma endregion
+
+
+#pragma region Controller
+	APlayerController* playerController;
+	
+	void EnablePlayerInput();
+	void DisablePlayerInput();
+#pragma endregion
+
+
+#pragma region Archival
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archival Point ID")
+	TArray<EArchiveID> UnlockedArchivalPointsArray;
+
+	IArchivalInterface* archivalInteractable = nullptr;
+
+	EArchiveID collisionArchiveID;
+
+	FVector archivalPlayerStandLocation;
+
+	void TeleportTo(EArchiveID ArchivalID);
 #pragma endregion
 };
 

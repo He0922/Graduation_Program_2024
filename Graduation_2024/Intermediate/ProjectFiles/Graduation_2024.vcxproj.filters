@@ -501,6 +501,12 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\PlayerCharacter.cpp">
       <Filter>Source\Graduation_2024\Private\Character</Filter>
     </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\Controller">
+      <UniqueIdentifier>{3AB94723-B337-32DA-9D5C-5D363368E757}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Controller\PlayerAIController.cpp">
+      <Filter>Source\Graduation_2024\Private\Controller</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\GameModeBase">
       <UniqueIdentifier>{DE082164-1457-3F76-A4E5-207400143E0E}</UniqueIdentifier>
     </Filter>
@@ -519,10 +525,10 @@
     <Filter Include="Source\Graduation_2024\Private\Interface">
       <UniqueIdentifier>{8F2F88EB-5B5F-391B-954A-576949F4F98C}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerAttributesInterface.cpp">
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\ArchivalInterface.cpp">
       <Filter>Source\Graduation_2024\Private\Interface</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerInteractionInterface.cpp">
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerAttributesInterface.cpp">
       <Filter>Source\Graduation_2024\Private\Interface</Filter>
     </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\MovementComponent">
@@ -543,6 +549,12 @@
     <Filter Include="Source\Graduation_2024\Private\UI">
       <UniqueIdentifier>{628D4C8F-EBC1-38F9-914B-510DA8B8469D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Graduation_2024\Private\UI\Archival">
+      <UniqueIdentifier>{191D70EF-83D2-33CB-BEDB-2AA0E1D22E7C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\UI\Archival\ArchivalUW.cpp">
+      <Filter>Source\Graduation_2024\Private\UI\Archival</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\UI\Attributes">
       <UniqueIdentifier>{E1F290AD-8D7A-3129-99E4-E719DF1C5FBA}</UniqueIdentifier>
     </Filter>
@@ -573,6 +585,12 @@
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerCharacter.h">
       <Filter>Source\Graduation_2024\Public\Character</Filter>
     </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\Controller">
+      <UniqueIdentifier>{3924B88C-ACCB-3029-B645-A04B29BD966E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Controller\PlayerAIController.h">
+      <Filter>Source\Graduation_2024\Public\Controller</Filter>
+    </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\GameModeBase">
       <UniqueIdentifier>{1B5D2992-4D3F-3136-BD42-E98B9B945DC4}</UniqueIdentifier>
     </Filter>
@@ -591,10 +609,10 @@
     <Filter Include="Source\Graduation_2024\Public\Interface">
       <UniqueIdentifier>{F92AA8A3-1426-3A89-83AC-D81E1A9758C2}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerAttributesInterface.h">
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\ArchivalInterface.h">
       <Filter>Source\Graduation_2024\Public\Interface</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerInteractionInterface.h">
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerAttributesInterface.h">
       <Filter>Source\Graduation_2024\Public\Interface</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\MovementComponent">
@@ -615,6 +633,12 @@
     <Filter Include="Source\Graduation_2024\Public\UI">
       <UniqueIdentifier>{2A640A15-54C5-3178-B34C-3D58669E8F25}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Graduation_2024\Public\UI\Archival">
+      <UniqueIdentifier>{64987782-FFC8-371C-A7C6-0B05CED5AB4A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\UI\Archival\ArchivalUW.h">
+      <Filter>Source\Graduation_2024\Public\UI\Archival</Filter>
+    </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\UI\Attributes">
       <UniqueIdentifier>{8C99D0B1-E15B-33C5-8CF5-E68A3E1BF268}</UniqueIdentifier>
     </Filter>

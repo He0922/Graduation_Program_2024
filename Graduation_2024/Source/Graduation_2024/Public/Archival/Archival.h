@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Interface/PlayerInteractionInterface.h"
+#include "Interface/ArchivalInterface.h"
 #include "ArchiveID.h"
 
 #include "Archival.generated.h"
@@ -12,7 +12,7 @@
 
 
 UCLASS()
-class GRADUATION_2024_API AArchival : public AActor, public IPlayerInteractionInterface
+class GRADUATION_2024_API AArchival : public AActor, public IArchivalInterface
 {
 	GENERATED_BODY()
 	
@@ -29,10 +29,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archive ID")
-	EArchiveID archiveID = EArchiveID::None;
 
 
 #pragma region Player Inormation
@@ -53,9 +49,23 @@ public:
 
 #pragma region Interaction Interface
 public:
-	virtual void InteractArchive()override;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archive Information")
+	EArchiveID archiveID = EArchiveID::None;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archive Information")
+	FVector archivePlayerStandLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archive Information")
+	FVector archiveLocation;
+
+
+	virtual void RefreshPlayerStatus()override;
 
 	virtual EArchiveID GetArchiveID() override;
+
+	virtual FVector GetPlayerStandLocation() override;
+
+	virtual FVector GetArchiveLocation() override;
 #pragma endregion
 
 
