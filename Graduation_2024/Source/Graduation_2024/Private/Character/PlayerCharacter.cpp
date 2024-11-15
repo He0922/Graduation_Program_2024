@@ -261,11 +261,12 @@ void APlayerCharacter::ObjectInteraction()
 		archivalInteractable->RefreshPlayerStatus();
 		// 获取存储点ID
 		collisionArchiveID = archivalInteractable->GetArchiveID();
+		// 获取存储点位置
+		archivalLocation = archivalInteractable->GetPlayerStandLocation();
 		// 检查并存入存储点ID
-		if (!UnlockedArchivalPointsArray.Contains(collisionArchiveID))
-		{
-			UnlockedArchivalPointsArray.Add(collisionArchiveID);
-		}
+		if (!unlockedArchivalPointsIDArray.Contains(collisionArchiveID)) { unlockedArchivalPointsIDArray.Add(collisionArchiveID); }
+		// 检查并存入存储点位置
+		if (!unlockedArchivalPointsLocationArray.Contains(archivalLocation)) { unlockedArchivalPointsLocationArray.Add(archivalLocation); }
 		
 		InitArchivalUW();
 		UAIBlueprintHelperLibrary::SimpleMoveToLocation(playerController, archivalPlayerStandLocation);
@@ -345,6 +346,7 @@ void APlayerCharacter::InitArchivalUW()
 	archivalUW = CreateWidget<UArchivalUW>(GetWorld(), archivalUWClass);
 	if (archivalUW)
 	{
+		DisablePlayerInput();
 		archivalUW->AddToViewport();
 	}
 }
@@ -374,10 +376,18 @@ void APlayerCharacter::InterctBlock()
 #pragma region Controller
 void APlayerCharacter::EnablePlayerInput()
 {
+	FInputModeGameOnly InputModeGameOnly;
+	playerController->bShowMouseCursor = false;
+	playerController->SetInputMode(InputModeGameOnly);
 	EnableInput(playerController);
 }
+
+
 void APlayerCharacter::DisablePlayerInput()
 {
+	FInputModeUIOnly InputModeUIOnly;
+	playerController->bShowMouseCursor = true;
+	playerController->SetInputMode(InputModeUIOnly);
 	DisableInput(playerController);
 }
 #pragma endregion

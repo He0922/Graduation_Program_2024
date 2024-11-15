@@ -16,6 +16,8 @@ struct FInputActionValue;
 #define GRADUATION_2024_PlayerCharacter_generated_h
 
 #define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execDisablePlayerInput); \
+	DECLARE_FUNCTION(execEnablePlayerInput); \
 	DECLARE_FUNCTION(execInitArchivalUW); \
 	DECLARE_FUNCTION(execInitArttributesUW); \
 	DECLARE_FUNCTION(execObjectInteraction); \

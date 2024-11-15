@@ -223,7 +223,7 @@ public:
 	int InitArttributesUW();
 
 	// 在UE蓝图中指定人物属性UI的蓝图对象
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW|AttributesUW")
 	TSubclassOf<UPlayerAttributesUW> playerAttributesUWClass;
 
 	//// 人物属性UI对象
@@ -236,7 +236,7 @@ public:
 	UFUNCTION()
 	void InitArchivalUW();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW|ArchivalUW")
 	TSubclassOf<UArchivalUW> archivalUWClass;
 
 	//// 存储点UI对象
@@ -249,21 +249,29 @@ public:
 #pragma region Controller
 	APlayerController* playerController;
 	
+	UFUNCTION(BlueprintCallable, Category = "Custom Controller Function")
 	void EnablePlayerInput();
+
+	UFUNCTION(BlueprintCallable, Category = "Custom Controller Function")
 	void DisablePlayerInput();
 #pragma endregion
 
 
 #pragma region Archival
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archival Point ID")
-	TArray<EArchiveID> UnlockedArchivalPointsArray;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archival|Archival Point ID")
+	TArray<EArchiveID> unlockedArchivalPointsIDArray;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Archival|Archival Ponit Location")
+	TArray<FVector> unlockedArchivalPointsLocationArray;
 
 	IArchivalInterface* archivalInteractable = nullptr;
 
 	EArchiveID collisionArchiveID;
 
 	FVector archivalPlayerStandLocation;
+
+	FVector archivalLocation;
 
 	void TeleportTo(EArchiveID ArchivalID);
 #pragma endregion
