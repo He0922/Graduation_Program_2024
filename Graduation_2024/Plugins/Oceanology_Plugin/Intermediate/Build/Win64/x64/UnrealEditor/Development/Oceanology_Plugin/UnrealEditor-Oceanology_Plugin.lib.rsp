@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Oceanology_Plugin.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.1.cpp.obj"
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.2.cpp.obj"
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.3.cpp.obj"
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.4.cpp.obj"
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.5.cpp.obj"
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Default.rc2.res"
+/OUT:"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\UnrealEditor-Oceanology_Plugin.lib"

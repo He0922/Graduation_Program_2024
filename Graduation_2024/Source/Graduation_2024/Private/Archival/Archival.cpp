@@ -34,6 +34,7 @@ void AArchival::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	archiveLocation = GetActorLocation();
 }
 
 
@@ -68,11 +69,12 @@ void AArchival::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	
 }
 
 
 #pragma region Interaction Interface
-void AArchival::InteractArchive()
+void AArchival::RefreshPlayerStatus()
 {
 	if (playerCharacter)
 	{
@@ -80,9 +82,24 @@ void AArchival::InteractArchive()
 	}
 }
 
+
 EArchiveID AArchival::GetArchiveID()
 {
 	return archiveID;
+}
+
+
+FVector AArchival::GetPlayerStandLocation()
+{
+	archivePlayerStandLocation = playerStandSphere->GetComponentLocation();
+	return archivePlayerStandLocation;
+}
+
+
+FVector AArchival::GetArchiveLocation()
+{
+	archiveLocation = GetActorLocation();
+	return archiveLocation;
 }
 
 #pragma endregion

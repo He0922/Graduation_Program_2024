@@ -59,8 +59,8 @@ struct Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyOceanPreset_eventLerpPreset_Parms, A), Z_Construct_UClass_UOceanologyOceanPreset_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyOceanPreset_eventLerpPreset_Parms, B), Z_Construct_UClass_UOceanologyOceanPreset_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) };
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::NewProp_Alpha = { "Alpha", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyOceanPreset_eventLerpPreset_Parms, Alpha), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Alpha_MetaData), NewProp_Alpha_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::NewProp_OutWaterPresetResult = { "OutWaterPresetResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyOceanPreset_eventLerpPreset_Parms, OutWaterPresetResult), Z_Construct_UScriptStruct_FOceanologyWaterPresetResult, METADATA_PARAMS(0, nullptr) }; // 2933757707
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::NewProp_OutOceanPresetResult = { "OutOceanPresetResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyOceanPreset_eventLerpPreset_Parms, OutOceanPresetResult), Z_Construct_UScriptStruct_FOceanologyOceanPresetResult, METADATA_PARAMS(0, nullptr) }; // 1355251285
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::NewProp_OutWaterPresetResult = { "OutWaterPresetResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyOceanPreset_eventLerpPreset_Parms, OutWaterPresetResult), Z_Construct_UScriptStruct_FOceanologyWaterPresetResult, METADATA_PARAMS(0, nullptr) }; // 1369265139
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::NewProp_OutOceanPresetResult = { "OutOceanPresetResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyOceanPreset_eventLerpPreset_Parms, OutOceanPresetResult), Z_Construct_UScriptStruct_FOceanologyOceanPresetResult, METADATA_PARAMS(0, nullptr) }; // 3964374628
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::NewProp_A,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset_Statics::NewProp_B,
@@ -131,7 +131,7 @@ struct Z_Construct_UClass_UOceanologyOceanPreset_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset, "LerpPreset" }, // 1261466857
+		{ &Z_Construct_UFunction_UOceanologyOceanPreset_LerpPreset, "LerpPreset" }, // 4224823120
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -144,7 +144,7 @@ void Z_Construct_UClass_UOceanologyOceanPreset_Statics::NewProp_EnableWetness_Se
 	((UOceanologyOceanPreset*)Obj)->EnableWetness = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UOceanologyOceanPreset_Statics::NewProp_EnableWetness = { "EnableWetness", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UOceanologyOceanPreset), &Z_Construct_UClass_UOceanologyOceanPreset_Statics::NewProp_EnableWetness_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnableWetness_MetaData), NewProp_EnableWetness_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOceanologyOceanPreset_Statics::NewProp_Wetness = { "Wetness", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UOceanologyOceanPreset, Wetness), Z_Construct_UScriptStruct_FOceanologyWetness, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Wetness_MetaData), NewProp_Wetness_MetaData) }; // 256899756
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOceanologyOceanPreset_Statics::NewProp_Wetness = { "Wetness", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UOceanologyOceanPreset, Wetness), Z_Construct_UScriptStruct_FOceanologyWetness, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Wetness_MetaData), NewProp_Wetness_MetaData) }; // 2569763290
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOceanologyOceanPreset_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOceanologyOceanPreset_Statics::NewProp_EnableWetness,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOceanologyOceanPreset_Statics::NewProp_Wetness,
@@ -187,14 +187,14 @@ UOceanologyOceanPreset::~UOceanologyOceanPreset() {}
 // End Class UOceanologyOceanPreset
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_DataAsset_OceanologyOceanPreset_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_DataAsset_OceanologyOceanPreset_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyOceanPreset, UOceanologyOceanPreset::StaticClass, TEXT("UOceanologyOceanPreset"), &Z_Registration_Info_UClass_UOceanologyOceanPreset, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyOceanPreset), 3947436363U) },
+		{ Z_Construct_UClass_UOceanologyOceanPreset, UOceanologyOceanPreset::StaticClass, TEXT("UOceanologyOceanPreset"), &Z_Registration_Info_UClass_UOceanologyOceanPreset, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyOceanPreset), 2047238156U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_DataAsset_OceanologyOceanPreset_h_370207116(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_DataAsset_OceanologyOceanPreset_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_DataAsset_OceanologyOceanPreset_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_DataAsset_OceanologyOceanPreset_h_2792787702(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_DataAsset_OceanologyOceanPreset_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_DataAsset_OceanologyOceanPreset_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

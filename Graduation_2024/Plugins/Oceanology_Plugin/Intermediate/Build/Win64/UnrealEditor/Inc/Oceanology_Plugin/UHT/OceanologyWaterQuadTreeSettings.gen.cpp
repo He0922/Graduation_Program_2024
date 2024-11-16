@@ -39,67 +39,103 @@ struct Z_Construct_UScriptStruct_FOceanologyWaterQuadTreeSettings_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TileSize_MetaData[] = {
 		{ "Category", "QuadTree" },
 		{ "ClampMin", "100" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** World size of the water tiles at LOD0. Multiply this with the ExtentInTiles to get the world extents of the system */" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyWaterQuadTreeSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "World size of the water tiles at LOD0. Multiply this with the ExtentInTiles to get the world extents of the system" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExtentInTiles_MetaData[] = {
 		{ "Category", "QuadTree" },
 		{ "ClampMin", "1" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** The extent of the system in number of tiles. Maximum number of tiles for this system will be ExtentInTiles.X*2*ExtentInTiles.Y*2 */" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyWaterQuadTreeSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The extent of the system in number of tiles. Maximum number of tiles for this system will be ExtentInTiles.X*2*ExtentInTiles.Y*2" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TessellationFactor_MetaData[] = {
 		{ "Category", "QuadTree" },
 		{ "ClampMax", "12" },
 		{ "ClampMin", "1" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Highest tessellation factor of a water tile. Max number of verts on the side of a tile will be (2^TessellationFactor)+1)  */" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyWaterQuadTreeSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Highest tessellation factor of a water tile. Max number of verts on the side of a tile will be (2^TessellationFactor)+1)" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LODScale_MetaData[] = {
 		{ "Category", "QuadTree" },
 		{ "ClampMin", "0.5" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** World scale of the concentric LODs */" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyWaterQuadTreeSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "World scale of the concentric LODs" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ForceUpdateCount_MetaData[] = {
 		{ "Category", "QuadTree" },
 		{ "ClampMax", "20" },
 		{ "ClampMin", "1" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** The count of force updates necessary after certain re-render requests. (Scale change, location change, and so.) */" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyWaterQuadTreeSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The count of force updates necessary after certain re-render requests. (Scale change, location change, and so.)" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CheckForUpdateInterval_MetaData[] = {
 		{ "Category", "QuadTree" },
 		{ "ClampMax", "1.0" },
 		{ "ClampMin", "0" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** The interval to check for updates whether quad tree re-render requests are available and necessary. 0 = real time checking on event tick, but NOT real-time re-render. Re-render happens on-demand. */" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyWaterQuadTreeSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The interval to check for updates whether quad tree re-render requests are available and necessary. 0 = real time checking on event tick, but NOT real-time re-render. Re-render happens on-demand." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ForceCollapseDensityLevel_MetaData[] = {
 		{ "Category", "QuadTree" },
 		{ "ClampMin", "-1" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** At above what density level a tile is allowed to force collapse even if not all leaf nodes in the subtree are present.\n\x09 *\x09""Collapsing will not occus if any child node in the subtree has different materials.\n\x09 *\x09Setting this to -1 means no collapsing is allowed and the water mesh will always keep it's silhouette at any distance.\n\x09 *\x09Setting this to 0 will allow every level to collapse\n\x09 *\x09Setting this to something higher than the LODCount will have no effect\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyWaterQuadTreeSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "At above what density level a tile is allowed to force collapse even if not all leaf nodes in the subtree are present.\n    Collapsing will not occus if any child node in the subtree has different materials.\n    Setting this to -1 means no collapsing is allowed and the water mesh will always keep it's silhouette at any distance.\n    Setting this to 0 will allow every level to collapse\n    Setting this to something higher than the LODCount will have no effect" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MaxWaveHeightMultiplier_MetaData[] = {
 		{ "Category", "QuadTree" },
 		{ "ClampMin", "1" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Used to multiply the Min and Max bounds on Z axis of the quad tree actor's quad tree mesh bounds. Bigger your waves are, the more you need to increase this value to prevent your water being frustum culled. */" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyWaterQuadTreeSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Used to multiply the Min and Max bounds on Z axis of the quad tree actor's quad tree mesh bounds. Bigger your waves are, the more you need to increase this value to prevent your water being frustum culled." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bUseFarMesh_MetaData[] = {
 		{ "Category", "QuadTree|FarDistance" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Forces the water mesh to always render the far mesh, regardless if there is an ocean or not.*/" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyWaterQuadTreeSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Forces the water mesh to always render the far mesh, regardless if there is an ocean or not." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FarDistanceMeshExtent_MetaData[] = {
 		{ "Category", "QuadTree|FarDistance" },
@@ -190,15 +226,15 @@ UScriptStruct* Z_Construct_UScriptStruct_FOceanologyWaterQuadTreeSettings()
 // End ScriptStruct FOceanologyWaterQuadTreeSettings
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyWaterQuadTreeSettings_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyWaterQuadTreeSettings_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FOceanologyWaterQuadTreeSettings::StaticStruct, Z_Construct_UScriptStruct_FOceanologyWaterQuadTreeSettings_Statics::NewStructOps, TEXT("OceanologyWaterQuadTreeSettings"), &Z_Registration_Info_UScriptStruct_OceanologyWaterQuadTreeSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyWaterQuadTreeSettings), 3621248554U) },
+		{ FOceanologyWaterQuadTreeSettings::StaticStruct, Z_Construct_UScriptStruct_FOceanologyWaterQuadTreeSettings_Statics::NewStructOps, TEXT("OceanologyWaterQuadTreeSettings"), &Z_Registration_Info_UScriptStruct_OceanologyWaterQuadTreeSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyWaterQuadTreeSettings), 1431740656U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyWaterQuadTreeSettings_h_1079930887(TEXT("/Script/Oceanology_Plugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyWaterQuadTreeSettings_h_1484075706(TEXT("/Script/Oceanology_Plugin"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyWaterQuadTreeSettings_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyWaterQuadTreeSettings_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyWaterQuadTreeSettings_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyWaterQuadTreeSettings_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

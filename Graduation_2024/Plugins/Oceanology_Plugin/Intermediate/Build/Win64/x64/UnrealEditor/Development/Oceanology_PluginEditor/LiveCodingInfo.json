@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Oceanology_PluginEditor.cpp.obj": [
+			"OceanologyLakePresetFactory.gen.cpp.obj",
+			"OceanologyMaterialToStructConverterActor.gen.cpp.obj",
+			"OceanologyOceanPresetFactory.gen.cpp.obj",
+			"Oceanology_PluginEditor.init.gen.cpp.obj",
+			"OceanologyMaterialToStructConverterActor.cpp.obj",
+			"OceanologyLakePresetFactory.cpp.obj",
+			"OceanologyOceanPresetFactory.cpp.obj",
+			"OceanologyWaterUIStyle.cpp.obj",
+			"Oceanology_PluginEditor.cpp.obj",
+			"OceanologyManagerDetailsCustomization.cpp.obj",
+			"OceanologyWaterParentDetailsCustomization.cpp.obj",
+			"OceanologyWaterVolumeDetailsCustomization.cpp.obj"
+		]
+	}
+}

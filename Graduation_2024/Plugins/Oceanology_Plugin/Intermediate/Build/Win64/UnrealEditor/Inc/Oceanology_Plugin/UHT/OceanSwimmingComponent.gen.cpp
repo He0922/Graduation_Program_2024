@@ -1875,67 +1875,93 @@ struct Z_Construct_UClass_UOceanSwimmingComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwimmingUpdateInterval_MetaData[] = {
 		{ "Category", "Swimming" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Value 0 means real-time swimming state checking. Can be changed, but might provide inaccuracy. This controls tick rate." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BuoyancyPontoonSocketForEnterWaterEvent_MetaData[] = {
 		{ "Category", "Swimming" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The name of the buoyancy pontoon that is used for enter water tracing events. A Buoyancy Pontoon must exist with this name with 'WaterEnterExitEventOnly' mode." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwimmingBuoyancyForceMultiplier_MetaData[] = {
 		{ "Category", "Swimming" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The buoyant force that pushes the character towards the water surface." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Immersion_MetaData[] = {
 		{ "Category", "Swimming" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The immersion depth of the character in which it starts/stops swimming." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwimUpLimiter_MetaData[] = {
 		{ "Category", "Swimming" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This configuration limits how high you can swim up." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwimMaxSpeed_MetaData[] = {
 		{ "Category", "Swimming|Speed" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "How fast the character swims during regular swimming." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwimFastMaxSpeed_MetaData[] = {
 		{ "Category", "Swimming|Speed" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "How fast the character swims during swim sprinting." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SurfaceLockedSwimmingLimiter_MetaData[] = {
 		{ "Category", "Swimming" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This configuration limits how high the surface locked swimming happens." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnterExitWaterToleranceOffset_MetaData[] = {
 		{ "Category", "Swimming" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "By default the enter/exit water tolerance works with the collision capsule's scaled half height. With this you can add offset." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DrowningEnabled_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Drowning" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "If enabled character will start drown, then eventually die of drowning." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DrowningTimeWarningInSeconds_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Drowning" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "After how many seconds the character will start drowning." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DrowningTimeDeathInSeconds_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Drowning" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "After how many seconds the character will die of drowning." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnableUnderwaterEffects_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Effects" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Special underwater effects control during swimming." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HeadBubblesEffectNiagara_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Effects" },
@@ -1944,7 +1970,9 @@ struct Z_Construct_UClass_UOceanSwimmingComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HeadSocketName_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Effects" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The head socket name in character's skeleton tree where the effect will spawn." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RightFootBubblesEffectNiagara_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Effects" },
@@ -1957,12 +1985,16 @@ struct Z_Construct_UClass_UOceanSwimmingComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RightFootSocketName_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Effects" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The right foot socket name in character's skeleton tree where the effect will spawn." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LeftFootSocketName_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Effects" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The left foot socket name in character's skeleton tree where the effect will spawn." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StopHeadBubblesWhileSwimFast_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Effects" },
@@ -1983,7 +2015,9 @@ struct Z_Construct_UClass_UOceanSwimmingComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwimFastTrailSocketName_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Effects" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The swim fast trail socket name in character's skeleton tree where the effect will spawn." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwimFastTrailSound_MetaData[] = {
 		{ "Category", "Swimming|Underwater|Sound" },
@@ -1991,9 +2025,13 @@ struct Z_Construct_UClass_UOceanSwimmingComponent_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DebugEnabled_MetaData[] = {
 		{ "Category", "Swimming|Debug" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Turning on/off debug points and messages support. WARNING: Debugging affects performance, do NOT use in production! */" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Turning on/off debug points and messages support. WARNING: Debugging affects performance, do NOT use in production!" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnteredWaterVolume_MetaData[] = {
 		{ "Category", "Swimming|State" },
@@ -2066,12 +2104,16 @@ struct Z_Construct_UClass_UOceanSwimmingComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwimmingOrientRotationToMovement_MetaData[] = {
 		{ "Category", "Swimming|Controls" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Use orient rotation to movement during swimming? It will reset to original once you stop swimming." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwimmingUseControllerRotationYaw_MetaData[] = {
 		{ "Category", "Swimming|Controls" },
 		{ "ModuleRelativePath", "Public/Components/OceanSwimmingComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Use controller rotation yaw during swimming? It will reset to original once you stop swimming. Multi-dimension animations might require this type of config to be turned ON." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnStartSwimming_MetaData[] = {
 		{ "Category", "Swimming" },
@@ -2634,14 +2676,14 @@ UOceanSwimmingComponent::~UOceanSwimmingComponent() {}
 // End Class UOceanSwimmingComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanSwimmingComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanSwimmingComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanSwimmingComponent, UOceanSwimmingComponent::StaticClass, TEXT("UOceanSwimmingComponent"), &Z_Registration_Info_UClass_UOceanSwimmingComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanSwimmingComponent), 1707352252U) },
+		{ Z_Construct_UClass_UOceanSwimmingComponent, UOceanSwimmingComponent::StaticClass, TEXT("UOceanSwimmingComponent"), &Z_Registration_Info_UClass_UOceanSwimmingComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanSwimmingComponent), 2662839528U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanSwimmingComponent_h_598659293(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanSwimmingComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanSwimmingComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanSwimmingComponent_h_1667894297(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanSwimmingComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanSwimmingComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

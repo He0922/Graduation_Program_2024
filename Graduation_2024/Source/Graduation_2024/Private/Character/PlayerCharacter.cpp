@@ -6,7 +6,9 @@
 #include "../DebugHelper.h"
 #include "Character/PlayerAttributes.h"
 #include "UI/Attributes/PlayerAttributesUW.h"
-
+#include "Archival/Archival.h"
+#include "Controller/PlayerAIController.h"
+#include "Blueprint/AIBlueprintHelperLibrary.h"
 
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
@@ -48,6 +50,9 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 
 	//创建玩家技能组件
 	playerSkillComponent = CreateDefaultSubobject<UPlayerSkillComponent>(TEXT("SkillComponent"));
+
+
+
 }
 
 
@@ -57,14 +62,16 @@ void APlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	// EnhancedInput类型转换以及MappingContext的绑定
-	if (APlayerController* playerController = Cast<APlayerController>(Controller))
+	playerController = Cast<APlayerController>(Controller);
+	if (playerController)
 	{
 		if (UEnhancedInputLocalPlayerSubsystem* subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(playerController->GetLocalPlayer()))
 		{
 			subsystem->AddMappingContext(mainMappingContext, 0);
 		}
 	}
-	InitHUD();
+	
+	InitArttributesUW();
 }
 
 
@@ -115,11 +122,13 @@ void APlayerCharacter::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
 
-	if (IPlayerInteractionInterface* Interactable = Cast<IPlayerInteractionInterface>(OtherActor)) 
+	// 检查碰撞体是否是存储点(进行存储点接口方法实现检查)
+	if (IArchivalInterface* Interactable = Cast<IArchivalInterface>(OtherActor))
 	{ 
-		currentInteractable = Interactable; 
-		collisionArchiveID = currentInteractable->GetArchiveID();
-		switch (collisionArchiveID)
+		archivalInteractable = Interactable;
+		archivalPlayerStandLocation = Interactable->GetPlayerStandLocation();
+		collisionArchiveID = archivalInteractable->GetArchiveID();
+		/*switch (collisionArchiveID)
 		{
 		case EArchiveID::Archive1:
 			Debug::Print("Archive 1", 5.f, false);
@@ -127,8 +136,9 @@ void APlayerCharacter::NotifyActorBeginOverlap(AActor* OtherActor)
 		case EArchiveID::Archive2:
 			Debug::Print("Archive 2", 5.f, false);
 			break;
-		}
+		}*/
 	}
+	
 }
 
 
@@ -136,9 +146,9 @@ void APlayerCharacter::NotifyActorEndOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorEndOverlap(OtherActor);
 
-	if (IPlayerInteractionInterface* Interactable = Cast<IPlayerInteractionInterface>(OtherActor))
+	if (IArchivalInterface* Interactable = Cast<IArchivalInterface>(OtherActor))
 	{
-		if (currentInteractable == Interactable) { currentInteractable = nullptr; }
+		if (archivalInteractable == Interactable) { archivalInteractable = nullptr; }
 	}
 }
 ;
@@ -219,6 +229,17 @@ void APlayerCharacter::Move(const FInputActionValue& Value)
 }
 
 
+void APlayerCharacter::MoveToTarget(FVector TargetLocation)
+{
+	FVector playerLocation = GetActorLocation();
+	
+	FVector Direction = TargetLocation - playerLocation;
+	Direction.Z = 0;
+
+	AddMovementInput(Direction,1.f);
+}
+
+
 void APlayerCharacter::Look(const FInputActionValue& Value)
 {
 	// 获取玩家输入方向
@@ -234,7 +255,24 @@ void APlayerCharacter::Look(const FInputActionValue& Value)
 
 void APlayerCharacter::ObjectInteraction()
 {
-	if (currentInteractable) { currentInteractable->InteractArchive(); }
+	if (archivalInteractable)
+	{ 
+		// 刷新玩家状态
+		archivalInteractable->RefreshPlayerStatus();
+		// 获取存储点ID
+		collisionArchiveID = archivalInteractable->GetArchiveID();
+		// 获取存储点位置
+		archivalLocation = archivalInteractable->GetPlayerStandLocation();
+		// 检查并存入存储点ID
+		if (!unlockedArchivalPointsIDArray.Contains(collisionArchiveID)) { unlockedArchivalPointsIDArray.Add(collisionArchiveID); }
+		// 检查并存入存储点位置
+		if (!unlockedArchivalPointsLocationArray.Contains(archivalLocation)) { unlockedArchivalPointsLocationArray.Add(archivalLocation); }
+		
+		InitArchivalUW();
+		UAIBlueprintHelperLibrary::SimpleMoveToLocation(playerController, archivalPlayerStandLocation);
+	}
+
+	
 }
 
 #pragma endregion 
@@ -284,7 +322,7 @@ void APlayerCharacter::OnEnergyEmpty()
 
 #pragma region UI
 // 初始化UI
-int APlayerCharacter::InitHUD()
+int APlayerCharacter::InitArttributesUW()
 {
 	playerAttributesUW = CreateWidget<UPlayerAttributesUW>(GetWorld(), playerAttributesUWClass);
 	if (playerAttributesUW)
@@ -300,6 +338,17 @@ int APlayerCharacter::InitHUD()
 		return 0;
 	}
 	return -1;
+}
+
+
+void APlayerCharacter::InitArchivalUW()
+{
+	archivalUW = CreateWidget<UArchivalUW>(GetWorld(), archivalUWClass);
+	if (archivalUW)
+	{
+		DisablePlayerInput();
+		archivalUW->AddToViewport();
+	}
 }
 #pragma endregion
 
@@ -323,3 +372,30 @@ void APlayerCharacter::InterctBlock()
 }
 #pragma endregion
 
+
+#pragma region Controller
+void APlayerCharacter::EnablePlayerInput()
+{
+	FInputModeGameOnly InputModeGameOnly;
+	playerController->bShowMouseCursor = false;
+	playerController->SetInputMode(InputModeGameOnly);
+	EnableInput(playerController);
+}
+
+
+void APlayerCharacter::DisablePlayerInput()
+{
+	FInputModeUIOnly InputModeUIOnly;
+	playerController->bShowMouseCursor = true;
+	playerController->SetInputMode(InputModeUIOnly);
+	DisableInput(playerController);
+}
+#pragma endregion
+
+
+#pragma region Archival
+void APlayerCharacter::TeleportTo(EArchiveID ArchivalID)
+{
+}
+
+#pragma endregion

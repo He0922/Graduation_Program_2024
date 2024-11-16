@@ -112,9 +112,13 @@ struct Z_Construct_UClass_AOceanologyWaterNiagaraWavesVolume_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OceanologyWater_MetaData[] = {
 		{ "Category", "Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** The owner water of this water volume. Mandatory. Used to determine wave height. Physics & swimming logic's fundamental settings. */" },
+#endif
 		{ "ModuleRelativePath", "Public/Actors/OceanologyWaterNiagaraWavesVolume.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The owner water of this water volume. Mandatory. Used to determine wave height. Physics & swimming logic's fundamental settings." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NiagaraWaves_MetaData[] = {
 		{ "Category", "Settings" },
@@ -182,14 +186,14 @@ AOceanologyWaterNiagaraWavesVolume::~AOceanologyWaterNiagaraWavesVolume() {}
 // End Class AOceanologyWaterNiagaraWavesVolume
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterNiagaraWavesVolume_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterNiagaraWavesVolume_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AOceanologyWaterNiagaraWavesVolume, AOceanologyWaterNiagaraWavesVolume::StaticClass, TEXT("AOceanologyWaterNiagaraWavesVolume"), &Z_Registration_Info_UClass_AOceanologyWaterNiagaraWavesVolume, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOceanologyWaterNiagaraWavesVolume), 3275728762U) },
+		{ Z_Construct_UClass_AOceanologyWaterNiagaraWavesVolume, AOceanologyWaterNiagaraWavesVolume::StaticClass, TEXT("AOceanologyWaterNiagaraWavesVolume"), &Z_Registration_Info_UClass_AOceanologyWaterNiagaraWavesVolume, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOceanologyWaterNiagaraWavesVolume), 2240669242U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterNiagaraWavesVolume_h_2426244657(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterNiagaraWavesVolume_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterNiagaraWavesVolume_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterNiagaraWavesVolume_h_1984034002(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterNiagaraWavesVolume_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Actors_OceanologyWaterNiagaraWavesVolume_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

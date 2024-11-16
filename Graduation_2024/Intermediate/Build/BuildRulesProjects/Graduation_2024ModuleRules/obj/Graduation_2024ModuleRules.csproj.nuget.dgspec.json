@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UE5\\Project\\Graduation_Program_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\Graduation_2024ModuleRules.csproj": {}
+    "E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\Graduation_2024ModuleRules.csproj": {}
   },
   "projects": {
     "D:\\Unreal_Engine5\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj": {
@@ -1040,14 +1040,14 @@
         }
       }
     },
-    "E:\\UE5\\Project\\Graduation_Program_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\Graduation_2024ModuleRules.csproj": {
+    "E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\Graduation_2024ModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UE5\\Project\\Graduation_Program_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\Graduation_2024ModuleRules.csproj",
+        "projectUniqueName": "E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\Graduation_2024ModuleRules.csproj",
         "projectName": "Graduation_2024ModuleRules",
-        "projectPath": "E:\\UE5\\Project\\Graduation_Program_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\Graduation_2024ModuleRules.csproj",
+        "projectPath": "E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\Graduation_2024ModuleRules.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\UE5\\Project\\Graduation_Program_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\obj\\",
+        "outputPath": "E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Intermediate\\Build\\BuildRulesProjects\\Graduation_2024ModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

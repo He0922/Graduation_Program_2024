@@ -263,19 +263,27 @@ struct Z_Construct_UClass_UOceanologyHeightmapComponent_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BuildLevels_MetaData[] = {
 		{ "Category", "Heightmap" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Number of streaming low mips to build for the virtual texture. */" },
+#endif
 		{ "DisplayName", "Build Levels" },
 		{ "ModuleRelativePath", "Public/Components/OceanologyHeightmapComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Number of streaming low mips to build for the virtual texture." },
+#endif
 		{ "UIMax", "12" },
 		{ "UIMin", "0" },
 	};
 #if WITH_EDITORONLY_DATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TextureSize_MetaData[] = {
 		{ "Category", "Heightmap" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Approximate size of built heightmap texture\n// After changing RVT settings, this will update after changing BuildLevels\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/OceanologyHeightmapComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Approximate size of built heightmap texture\nAfter changing RVT settings, this will update after changing BuildLevels" },
+#endif
 	};
 #endif // WITH_EDITORONLY_DATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BakedHeightmap_MetaData[] = {
@@ -411,14 +419,14 @@ UOceanologyHeightmapComponent::~UOceanologyHeightmapComponent() {}
 // End Class UOceanologyHeightmapComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyHeightmapComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyHeightmapComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyHeightmapComponent, UOceanologyHeightmapComponent::StaticClass, TEXT("UOceanologyHeightmapComponent"), &Z_Registration_Info_UClass_UOceanologyHeightmapComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyHeightmapComponent), 2026467411U) },
+		{ Z_Construct_UClass_UOceanologyHeightmapComponent, UOceanologyHeightmapComponent::StaticClass, TEXT("UOceanologyHeightmapComponent"), &Z_Registration_Info_UClass_UOceanologyHeightmapComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyHeightmapComponent), 2985713217U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyHeightmapComponent_h_2976799147(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyHeightmapComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyHeightmapComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyHeightmapComponent_h_2832794526(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyHeightmapComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyHeightmapComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -38,9 +38,13 @@ struct Z_Construct_UScriptStruct_FOceanologyBubbles_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologyBubbles.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BubbleColor_MetaData[] = {
 		{ "Category", "Bubbles" },
@@ -116,10 +120,10 @@ struct Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventLerpBubbles_Parms, A), Z_Construct_UScriptStruct_FOceanologyBubbles, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 1625956528
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventLerpBubbles_Parms, B), Z_Construct_UScriptStruct_FOceanologyBubbles, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 1625956528
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventLerpBubbles_Parms, A), Z_Construct_UScriptStruct_FOceanologyBubbles, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 2296796678
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventLerpBubbles_Parms, B), Z_Construct_UScriptStruct_FOceanologyBubbles, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 2296796678
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::NewProp_Alpha = { "Alpha", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventLerpBubbles_Parms, Alpha), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Alpha_MetaData), NewProp_Alpha_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventLerpBubbles_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyBubbles, METADATA_PARAMS(0, nullptr) }; // 1625956528
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventLerpBubbles_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologyBubbles, METADATA_PARAMS(0, nullptr) }; // 2296796678
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::NewProp_A,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles_Statics::NewProp_B,
@@ -174,7 +178,7 @@ struct Z_Construct_UFunction_UOceanologyBubblesHelper_SetMaterialParameters_Stat
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_SetMaterialParameters_Statics::NewProp_MID = { "MID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventSetMaterialParameters_Parms, MID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_SetMaterialParameters_Statics::NewProp_Bubbles = { "Bubbles", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventSetMaterialParameters_Parms, Bubbles), Z_Construct_UScriptStruct_FOceanologyBubbles, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Bubbles_MetaData), NewProp_Bubbles_MetaData) }; // 1625956528
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologyBubblesHelper_SetMaterialParameters_Statics::NewProp_Bubbles = { "Bubbles", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologyBubblesHelper_eventSetMaterialParameters_Parms, Bubbles), Z_Construct_UScriptStruct_FOceanologyBubbles, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Bubbles_MetaData), NewProp_Bubbles_MetaData) }; // 2296796678
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologyBubblesHelper_SetMaterialParameters_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyBubblesHelper_SetMaterialParameters_Statics::NewProp_MID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologyBubblesHelper_SetMaterialParameters_Statics::NewProp_Bubbles,
@@ -221,16 +225,20 @@ struct Z_Construct_UClass_UOceanologyBubblesHelper_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "IncludePath", "Structs/OceanologyBubbles.h" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologyBubbles.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles, "LerpBubbles" }, // 3623933887
-		{ &Z_Construct_UFunction_UOceanologyBubblesHelper_SetMaterialParameters, "SetMaterialParameters" }, // 260953830
+		{ &Z_Construct_UFunction_UOceanologyBubblesHelper_LerpBubbles, "LerpBubbles" }, // 1303452841
+		{ &Z_Construct_UFunction_UOceanologyBubblesHelper_SetMaterialParameters, "SetMaterialParameters" }, // 2643086909
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -276,18 +284,18 @@ UOceanologyBubblesHelper::~UOceanologyBubblesHelper() {}
 // End Class UOceanologyBubblesHelper
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FOceanologyBubbles::StaticStruct, Z_Construct_UScriptStruct_FOceanologyBubbles_Statics::NewStructOps, TEXT("OceanologyBubbles"), &Z_Registration_Info_UScriptStruct_OceanologyBubbles, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyBubbles), 1625956528U) },
+		{ FOceanologyBubbles::StaticStruct, Z_Construct_UScriptStruct_FOceanologyBubbles_Statics::NewStructOps, TEXT("OceanologyBubbles"), &Z_Registration_Info_UScriptStruct_OceanologyBubbles, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologyBubbles), 2296796678U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyBubblesHelper, UOceanologyBubblesHelper::StaticClass, TEXT("UOceanologyBubblesHelper"), &Z_Registration_Info_UClass_UOceanologyBubblesHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyBubblesHelper), 602094635U) },
+		{ Z_Construct_UClass_UOceanologyBubblesHelper, UOceanologyBubblesHelper::StaticClass, TEXT("UOceanologyBubblesHelper"), &Z_Registration_Info_UClass_UOceanologyBubblesHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyBubblesHelper), 485180341U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_2189792647(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_3726463409(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologyBubbles_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

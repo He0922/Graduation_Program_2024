@@ -38,9 +38,13 @@ struct Z_Construct_UScriptStruct_FOceanologySurfaceScattering_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/Structs/OceanologySurfaceScattering.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraVectorPower_MetaData[] = {
 		{ "Category", "SurfaceScattering" },
@@ -61,19 +65,27 @@ struct Z_Construct_UScriptStruct_FOceanologySurfaceScattering_Statics
 		{ "Category", "SurfaceScattering" },
 		{ "ClampMax", "1000.0" },
 		{ "ClampMin", "-500.0" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Single layer water attribute. (HIGH) */" },
+#endif
 		{ "DisplayName", "PhaseGHigh" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologySurfaceScattering.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Single layer water attribute. (HIGH)" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PhaseGLow_MetaData[] = {
 		{ "Category", "SurfaceScattering" },
 		{ "ClampMax", "500.0" },
 		{ "ClampMin", "-100.0" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Single layer water attribute. (LOW) */" },
+#endif
 		{ "DisplayName", "PhaseGLow" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologySurfaceScattering.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Single layer water attribute. (LOW)" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ScatterBoost_MetaData[] = {
 		{ "Category", "SurfaceScattering" },
@@ -137,31 +149,47 @@ struct Z_Construct_UScriptStruct_FOceanologySurfaceScattering_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Absorption_MetaData[] = {
 		{ "Category", "SurfaceScattering" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** This is the surface absorption color of the water. */" },
+#endif
 		{ "DisplayName", "Absorption" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologySurfaceScattering.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is the surface absorption color of the water." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AbsorptionFar_MetaData[] = {
 		{ "Category", "SurfaceScattering" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** This is the surface far absorption color of the water. */" },
+#endif
 		{ "DisplayName", "Absorption Far" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologySurfaceScattering.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is the surface far absorption color of the water." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Scattering_MetaData[] = {
 		{ "Category", "SurfaceScattering" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** This is the surface scattering color of the water. */" },
+#endif
 		{ "DisplayName", "Scattering" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologySurfaceScattering.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is the surface scattering color of the water." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ScatteringFar_MetaData[] = {
 		{ "Category", "SurfaceScattering" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** This is the far surface scattering color of the water. */" },
+#endif
 		{ "DisplayName", "Scattering Far" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologySurfaceScattering.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is the far surface scattering color of the water." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_CameraVectorPower;
@@ -292,10 +320,10 @@ struct Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScatt
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventLerpSurfaceScattering_Parms, A), Z_Construct_UScriptStruct_FOceanologySurfaceScattering, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 1043397312
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventLerpSurfaceScattering_Parms, B), Z_Construct_UScriptStruct_FOceanologySurfaceScattering, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 1043397312
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventLerpSurfaceScattering_Parms, A), Z_Construct_UScriptStruct_FOceanologySurfaceScattering, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 2426833340
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventLerpSurfaceScattering_Parms, B), Z_Construct_UScriptStruct_FOceanologySurfaceScattering, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 2426833340
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::NewProp_Alpha = { "Alpha", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventLerpSurfaceScattering_Parms, Alpha), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Alpha_MetaData), NewProp_Alpha_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventLerpSurfaceScattering_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologySurfaceScattering, METADATA_PARAMS(0, nullptr) }; // 1043397312
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::NewProp_OutResult = { "OutResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventLerpSurfaceScattering_Parms, OutResult), Z_Construct_UScriptStruct_FOceanologySurfaceScattering, METADATA_PARAMS(0, nullptr) }; // 2426833340
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::NewProp_A,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering_Statics::NewProp_B,
@@ -350,7 +378,7 @@ struct Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_SetMaterialParam
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_SetMaterialParameters_Statics::NewProp_MID = { "MID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventSetMaterialParameters_Parms, MID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_SetMaterialParameters_Statics::NewProp_SurfaceScattering = { "SurfaceScattering", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventSetMaterialParameters_Parms, SurfaceScattering), Z_Construct_UScriptStruct_FOceanologySurfaceScattering, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SurfaceScattering_MetaData), NewProp_SurfaceScattering_MetaData) }; // 1043397312
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_SetMaterialParameters_Statics::NewProp_SurfaceScattering = { "SurfaceScattering", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(OceanologySurfaceScatteringHelper_eventSetMaterialParameters_Parms, SurfaceScattering), Z_Construct_UScriptStruct_FOceanologySurfaceScattering, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SurfaceScattering_MetaData), NewProp_SurfaceScattering_MetaData) }; // 2426833340
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_SetMaterialParameters_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_SetMaterialParameters_Statics::NewProp_MID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_SetMaterialParameters_Statics::NewProp_SurfaceScattering,
@@ -397,16 +425,20 @@ struct Z_Construct_UClass_UOceanologySurfaceScatteringHelper_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\n * Generated at: 10 March 2024\n **/" },
+#endif
 		{ "IncludePath", "Structs/OceanologySurfaceScattering.h" },
 		{ "ModuleRelativePath", "Public/Structs/OceanologySurfaceScattering.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is an auto-generated class from Material Parameters via AOceanologyMaterialToStructConverter. DO NOT EDIT BY HAND EVER! Your changes will be lost. Edit the material itself instead!\nGenerated at: 10 March 2024" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering, "LerpSurfaceScattering" }, // 2943023549
-		{ &Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_SetMaterialParameters, "SetMaterialParameters" }, // 3575918262
+		{ &Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_LerpSurfaceScattering, "LerpSurfaceScattering" }, // 4161690114
+		{ &Z_Construct_UFunction_UOceanologySurfaceScatteringHelper_SetMaterialParameters, "SetMaterialParameters" }, // 3458779932
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -452,18 +484,18 @@ UOceanologySurfaceScatteringHelper::~UOceanologySurfaceScatteringHelper() {}
 // End Class UOceanologySurfaceScatteringHelper
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FOceanologySurfaceScattering::StaticStruct, Z_Construct_UScriptStruct_FOceanologySurfaceScattering_Statics::NewStructOps, TEXT("OceanologySurfaceScattering"), &Z_Registration_Info_UScriptStruct_OceanologySurfaceScattering, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologySurfaceScattering), 1043397312U) },
+		{ FOceanologySurfaceScattering::StaticStruct, Z_Construct_UScriptStruct_FOceanologySurfaceScattering_Statics::NewStructOps, TEXT("OceanologySurfaceScattering"), &Z_Registration_Info_UScriptStruct_OceanologySurfaceScattering, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOceanologySurfaceScattering), 2426833340U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologySurfaceScatteringHelper, UOceanologySurfaceScatteringHelper::StaticClass, TEXT("UOceanologySurfaceScatteringHelper"), &Z_Registration_Info_UClass_UOceanologySurfaceScatteringHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologySurfaceScatteringHelper), 2316310353U) },
+		{ Z_Construct_UClass_UOceanologySurfaceScatteringHelper, UOceanologySurfaceScatteringHelper::StaticClass, TEXT("UOceanologySurfaceScatteringHelper"), &Z_Registration_Info_UClass_UOceanologySurfaceScatteringHelper, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologySurfaceScatteringHelper), 338326072U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_505723885(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_3695940066(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Structs_OceanologySurfaceScattering_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

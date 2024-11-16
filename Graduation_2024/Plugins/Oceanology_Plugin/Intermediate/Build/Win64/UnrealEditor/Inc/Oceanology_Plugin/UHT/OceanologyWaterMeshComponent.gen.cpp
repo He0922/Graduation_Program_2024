@@ -86,11 +86,15 @@ struct Z_Construct_UClass_UOceanologyWaterMeshComponent_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "ClassGroupNames", "Rendering Water" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * Water Mesh Component responsible for generating and rendering a continuous water mesh on top of all the existing water body actors in the world\n * The component contains a quadtree which defines where there are water tiles. A function for traversing the quadtree and outputing a list of instance data for each tile to be rendered from a point of view is included\n */" },
+#endif
 		{ "HideCategories", "Object Activation Components|Activation Collision Lighting HLOD Navigation Replication Input MaterialParameters TextureStreaming Tags AssetUserData Cooking Mobility Trigger" },
 		{ "IncludePath", "Components/QuadTree/OceanologyWaterMeshComponent.h" },
 		{ "ModuleRelativePath", "Public/Components/QuadTree/OceanologyWaterMeshComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Water Mesh Component responsible for generating and rendering a continuous water mesh on top of all the existing water body actors in the world\nThe component contains a quadtree which defines where there are water tiles. A function for traversing the quadtree and outputing a list of instance data for each tile to be rendered from a point of view is included" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_QuadTreeSettings_MetaData[] = {
 		{ "Category", "QuadTree" },
@@ -103,9 +107,13 @@ struct Z_Construct_UClass_UOceanologyWaterMeshComponent_Statics
 		{ "ModuleRelativePath", "Public/Components/QuadTree/OceanologyWaterMeshComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UsedMaterials_MetaData[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Unique list of materials used by this component */" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/QuadTree/OceanologyWaterMeshComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Unique list of materials used by this component" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_QuadTreeSettings;
@@ -124,7 +132,7 @@ struct Z_Construct_UClass_UOceanologyWaterMeshComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOceanologyWaterMeshComponent_Statics::NewProp_QuadTreeSettings = { "QuadTreeSettings", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UOceanologyWaterMeshComponent, QuadTreeSettings), Z_Construct_UScriptStruct_FOceanologyWaterQuadTreeSettings, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuadTreeSettings_MetaData), NewProp_QuadTreeSettings_MetaData) }; // 3621248554
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOceanologyWaterMeshComponent_Statics::NewProp_QuadTreeSettings = { "QuadTreeSettings", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UOceanologyWaterMeshComponent, QuadTreeSettings), Z_Construct_UScriptStruct_FOceanologyWaterQuadTreeSettings, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuadTreeSettings_MetaData), NewProp_QuadTreeSettings_MetaData) }; // 1431740656
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOceanologyWaterMeshComponent_Statics::NewProp_WaterMaterialInstance = { "WaterMaterialInstance", nullptr, (EPropertyFlags)0x0114c00000002000, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UOceanologyWaterMeshComponent, WaterMaterialInstance), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WaterMaterialInstance_MetaData), NewProp_WaterMaterialInstance_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOceanologyWaterMeshComponent_Statics::NewProp_WaterFarDistanceMaterialInstance = { "WaterFarDistanceMaterialInstance", nullptr, (EPropertyFlags)0x0114c00000002000, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UOceanologyWaterMeshComponent, WaterFarDistanceMaterialInstance), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WaterFarDistanceMaterialInstance_MetaData), NewProp_WaterFarDistanceMaterialInstance_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOceanologyWaterMeshComponent_Statics::NewProp_UsedMaterials_ElementProp = { "UsedMaterials", nullptr, (EPropertyFlags)0x0104000000000000, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(0, nullptr) };
@@ -174,14 +182,14 @@ UOceanologyWaterMeshComponent::~UOceanologyWaterMeshComponent() {}
 // End Class UOceanologyWaterMeshComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_QuadTree_OceanologyWaterMeshComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_QuadTree_OceanologyWaterMeshComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyWaterMeshComponent, UOceanologyWaterMeshComponent::StaticClass, TEXT("UOceanologyWaterMeshComponent"), &Z_Registration_Info_UClass_UOceanologyWaterMeshComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyWaterMeshComponent), 2288061848U) },
+		{ Z_Construct_UClass_UOceanologyWaterMeshComponent, UOceanologyWaterMeshComponent::StaticClass, TEXT("UOceanologyWaterMeshComponent"), &Z_Registration_Info_UClass_UOceanologyWaterMeshComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyWaterMeshComponent), 2915456656U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_QuadTree_OceanologyWaterMeshComponent_h_247595612(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_QuadTree_OceanologyWaterMeshComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_QuadTree_OceanologyWaterMeshComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_QuadTree_OceanologyWaterMeshComponent_h_3220415347(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_QuadTree_OceanologyWaterMeshComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_QuadTree_OceanologyWaterMeshComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

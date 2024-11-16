@@ -133,7 +133,9 @@ struct Z_Construct_UFunction_UOceanologyInfiniteComponent_ForceFollow_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Infinite" },
 		{ "ModuleRelativePath", "Public/Components/OceanologyInfiniteComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Can be used to call a force follow on the actor when follow in editor is disabled." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -353,32 +355,44 @@ struct Z_Construct_UClass_UOceanologyInfiniteComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnableInfinity_MetaData[] = {
 		{ "Category", "Infinite" },
 		{ "ModuleRelativePath", "Public/Components/OceanologyInfiniteComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enable/disable the Infinite follow system." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnableInfinityInEditor_MetaData[] = {
 		{ "Category", "Infinite" },
 		{ "ModuleRelativePath", "Public/Components/OceanologyInfiniteComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enable/disable the Infinite follow system in editor. Affects ONLY the editor!" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnableInfinityInGame_MetaData[] = {
 		{ "Category", "Infinite" },
 		{ "ModuleRelativePath", "Public/Components/OceanologyInfiniteComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enable/disable the Infinite follow system in game. Affects ONLY the game after BeginPlay!" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FollowUpdateInterval_MetaData[] = {
 		{ "Category", "Infinite" },
 		{ "ModuleRelativePath", "Public/Components/OceanologyInfiniteComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Value 0 means real-time update checking (not real-time relocation!). Increasing the value provides better performance via delayed updates. This affects how often the Event Tick checks for follow requests." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TimeJump_MetaData[] = {
 		{ "Category", "Infinite" },
 		{ "ModuleRelativePath", "Public/Components/OceanologyInfiniteComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This controls the distance based on GridJump when the follow request happens. 0 = real-time relocation IF FollowUpdateInterval is = 0 as well." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnableDebug_MetaData[] = {
 		{ "Category", "Infinite|Debug" },
 		{ "ModuleRelativePath", "Public/Components/OceanologyInfiniteComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enable/disable debug messages of the infinite component." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnInfiniteLocationChanged_MetaData[] = {
 		{ "Category", "Infinite" },
@@ -412,7 +426,7 @@ struct Z_Construct_UClass_UOceanologyInfiniteComponent_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UOceanologyInfiniteComponent_Follow, "Follow" }, // 3944292482
-		{ &Z_Construct_UFunction_UOceanologyInfiniteComponent_ForceFollow, "ForceFollow" }, // 1288890963
+		{ &Z_Construct_UFunction_UOceanologyInfiniteComponent_ForceFollow, "ForceFollow" }, // 2916027632
 		{ &Z_Construct_UFunction_UOceanologyInfiniteComponent_Init, "Init" }, // 1832706839
 		{ &Z_Construct_UFunction_UOceanologyInfiniteComponent_InitDefaultOrigin, "InitDefaultOrigin" }, // 2188614554
 		{ &Z_Construct_UFunction_UOceanologyInfiniteComponent_SetOrigin, "SetOrigin" }, // 3564809616
@@ -500,14 +514,14 @@ UOceanologyInfiniteComponent::~UOceanologyInfiniteComponent() {}
 // End Class UOceanologyInfiniteComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyInfiniteComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyInfiniteComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOceanologyInfiniteComponent, UOceanologyInfiniteComponent::StaticClass, TEXT("UOceanologyInfiniteComponent"), &Z_Registration_Info_UClass_UOceanologyInfiniteComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyInfiniteComponent), 3899703816U) },
+		{ Z_Construct_UClass_UOceanologyInfiniteComponent, UOceanologyInfiniteComponent::StaticClass, TEXT("UOceanologyInfiniteComponent"), &Z_Registration_Info_UClass_UOceanologyInfiniteComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOceanologyInfiniteComponent), 996692349U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyInfiniteComponent_h_2125310376(TEXT("/Script/Oceanology_Plugin"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyInfiniteComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyInfiniteComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyInfiniteComponent_h_2386206599(TEXT("/Script/Oceanology_Plugin"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyInfiniteComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Plugins_Oceanology_Plugin_Source_Oceanology_Plugin_Public_Components_OceanologyInfiniteComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
