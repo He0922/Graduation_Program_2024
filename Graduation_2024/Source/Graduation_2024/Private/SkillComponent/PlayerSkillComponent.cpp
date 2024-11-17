@@ -16,6 +16,7 @@ void UPlayerSkillComponent::BeginPlay()
 {
 	Super::BeginPlay();	
 
+	//得到玩家类
 	playerCharacter = Cast<APlayerCharacter>(GetOwner());
 }
 
@@ -25,6 +26,7 @@ void UPlayerSkillComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 }
 
 #pragma region Cold Time
+//设置对应技能的冷却计时器
 void UPlayerSkillComponent::SetColdTimerHandle(ESkillType skillType)
 {
 	switch (skillType)
@@ -82,6 +84,7 @@ float UPlayerSkillComponent::GetPlayerNowEnergy()
 	return playerCharacter->GetEnergy();
 }
 
+//开始扫描
 void UPlayerSkillComponent::StartScan()
 {
 	if (IFScanIsInCold)
@@ -97,6 +100,7 @@ void UPlayerSkillComponent::StartScan()
 	StartEnergyCost(true);
 }
 
+//结束扫描
 void UPlayerSkillComponent::EndScan()
 {
 	if (IFScanIsInCold)
@@ -111,15 +115,19 @@ void UPlayerSkillComponent::EndScan()
 	SetColdTimerHandle(ESkillType::Scan);
 }
 
+//设置扫描距离
 void UPlayerSkillComponent::SetScanDistance(float newDistance = 5000)
 {
 	ScanDistance = newDistance;
 }
 
+//判断是否在冷却中
 void UPlayerSkillComponent::InScanColdState()
 {
 	IFScanIsInCold = true;
 }
+
+//离开冷却状态
 void UPlayerSkillComponent::OutScanColdState()
 {
 	IFScanIsInCold = false;
@@ -127,6 +135,7 @@ void UPlayerSkillComponent::OutScanColdState()
 }
 #pragma endregion
 
+//生成一个范围，用于检测内部的可交互节点
 #pragma region Interect Block
 void UPlayerSkillComponent::InterctBlock()
 {

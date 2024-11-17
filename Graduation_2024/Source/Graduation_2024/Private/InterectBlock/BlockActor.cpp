@@ -14,7 +14,7 @@
 DEFINE_LOG_CATEGORY_STATIC(BlockActorLog, All, All);
 ABlockActor::ABlockActor()
 {
-    PrimaryActorTick.bCanEverTick = true;
+    PrimaryActorTick.bCanEverTick = false;
 
     // 初始化静态网格组件
     BlockMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BlockMesh"));
@@ -40,7 +40,7 @@ void ABlockActor::BeginPlay()
     InteractionBox->OnComponentEndOverlap.AddDynamic(this, &ABlockActor::OnOverlapEnd);
 }
 
-//初始化节点
+//初始化节点,材质，以及自身管理类
 void ABlockActor::InitBlock(UMaterialInstance* DefualtBlockMaterial, UMaterialInstance* ActiveBlockMaterial, ABlockActorManager* blockactorManager)
 {
     myBlockActorManager = blockactorManager;
@@ -97,6 +97,7 @@ void ABlockActor::InteractionBlock()
 
     UE_LOG(BlockActorLog, Warning, TEXT("Block Active: %s"), *temp);
 
+    //设置当前状态，并调用节点管理类，的刷新节点，将自身传入
     SetNowState();
     myBlockActorManager->refreshBlock.Broadcast(this, ISActive);
 }

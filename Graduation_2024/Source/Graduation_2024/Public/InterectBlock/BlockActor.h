@@ -29,20 +29,26 @@ protected:
     virtual void BeginPlay() override;
 
 public:
+    //默认值设置
+    //类型
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BlockType")
     EBlockType blockType = EBlockType::Red;
 
+    //默认是否为激活节点
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BlockType")
     bool ISActive = false;
 
+    //节点初始化，由节点管理类调用
     void InitBlock(UMaterialInstance* DefualtBlockMaterial, UMaterialInstance* ActiveBlockMaterial, ABlockActorManager* myBlockactorManager);
 
     // 玩家是否按下了交互键
     void InteractionBlock();
 
+    //设置面片或连线生成的位置， 以自身作为原点偏移
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InitPosition")
     FVector InitPosition;
 
+    //得到世界空间下的生成位置
     FVector GetInitPosition() const { return InitPosition + GetActorLocation(); }
 
 protected:
@@ -60,7 +66,7 @@ protected:
     void SetNowState();
 
 protected:
-    // 事件响应玩家进入范围
+    // 事件响应玩家进入范围（不知道有没有用，先留着
     UFUNCTION()
     void OnOverlapBegin(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
@@ -71,6 +77,7 @@ private:
     // 玩家是否在范围内
     bool bIsPlayerInRange;
 
+    //自身管理类以及材质
     ABlockActorManager* myBlockActorManager;
     UMaterialInstance* defualtBlockMaterial;
     UMaterialInstance* activeBlockMaterial;
