@@ -105,11 +105,11 @@ struct Z_Construct_UFunction_ABlockActor_OnOverlapBegin_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xef\xbf\xbd\xc2\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd3\xa6\xef\xbf\xbd\xef\xbf\xbd\xd2\xbd\xef\xbf\xbd\xef\xbf\xbd\xeb\xb7\xb6\xce\xa7\n" },
+		{ "Comment", "// \xef\xbf\xbd\xc2\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd3\xa6\xef\xbf\xbd\xef\xbf\xbd\xd2\xbd\xef\xbf\xbd\xef\xbf\xbd\xeb\xb7\xb6\xce\xa7\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd6\xaa\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc3\xbb\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc3\xa3\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
 #endif
 		{ "ModuleRelativePath", "Public/InterectBlock/BlockActor.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xef\xbf\xbd\xc2\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd3\xa6\xef\xbf\xbd\xef\xbf\xbd\xd2\xbd\xef\xbf\xbd\xef\xbf\xbd\xeb\xb7\xb6\xce\xa7" },
+		{ "ToolTip", "\xef\xbf\xbd\xc2\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd3\xa6\xef\xbf\xbd\xef\xbf\xbd\xd2\xbd\xef\xbf\xbd\xef\xbf\xbd\xeb\xb7\xb6\xce\xa7\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd6\xaa\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc3\xbb\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc3\xa3\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OverlappedComponent_MetaData[] = {
@@ -264,15 +264,33 @@ struct Z_Construct_UClass_ABlockActor_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_blockType_MetaData[] = {
 		{ "Category", "BlockType" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xc4\xac\xef\xbf\xbd\xef\xbf\xbd\xd6\xb5\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Public/InterectBlock/BlockActor.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xc4\xac\xef\xbf\xbd\xef\xbf\xbd\xd6\xb5\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ISActive_MetaData[] = {
 		{ "Category", "BlockType" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xc4\xac\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xce\xaa\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xda\xb5\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Public/InterectBlock/BlockActor.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xc4\xac\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xce\xaa\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xda\xb5\xef\xbf\xbd" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InitPosition_MetaData[] = {
 		{ "Category", "InitPosition" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xac\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc9\xb5\xef\xbf\xbd\xce\xbb\xef\xbf\xbd\xc3\xa3\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xce\xaa\xd4\xad\xef\xbf\xbd\xef\xbf\xbd\xc6\xab\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Public/InterectBlock/BlockActor.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xac\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc9\xb5\xef\xbf\xbd\xce\xbb\xef\xbf\xbd\xc3\xa3\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xce\xaa\xd4\xad\xef\xbf\xbd\xef\xbf\xbd\xc6\xab\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BlockMesh_MetaData[] = {
 		{ "Category", "BlockActor" },
@@ -301,7 +319,7 @@ struct Z_Construct_UClass_ABlockActor_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABlockActor_OnOverlapBegin, "OnOverlapBegin" }, // 3899957598
+		{ &Z_Construct_UFunction_ABlockActor_OnOverlapBegin, "OnOverlapBegin" }, // 2871885433
 		{ &Z_Construct_UFunction_ABlockActor_OnOverlapEnd, "OnOverlapEnd" }, // 1431978831
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -372,10 +390,10 @@ struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_I
 		{ EBlockType_StaticEnum, TEXT("EBlockType"), &Z_Registration_Info_UEnum_EBlockType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 261377382U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABlockActor, ABlockActor::StaticClass, TEXT("ABlockActor"), &Z_Registration_Info_UClass_ABlockActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlockActor), 4084731057U) },
+		{ Z_Construct_UClass_ABlockActor, ABlockActor::StaticClass, TEXT("ABlockActor"), &Z_Registration_Info_UClass_ABlockActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlockActor), 3895157013U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_1559407709(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_117807970(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::EnumInfo));

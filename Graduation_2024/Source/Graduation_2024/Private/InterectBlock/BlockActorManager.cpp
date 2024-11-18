@@ -25,6 +25,7 @@ void ABlockActorManager::InitMeshComs()
 	UEnum* EnumPtr = FindObject<UEnum>(ANY_PACKAGE, TEXT("EBlockType"), true);
 	if (!EnumPtr) return;
 
+	//按照类型来生成对应网格和连线组件
 	for (auto block : AblockActorsOnScene)
 	{
 		//生成SPMC组件
@@ -42,15 +43,18 @@ void ABlockActorManager::InitMeshComs()
 	}
 }
 
+//生成SplineMesh组件
 void ABlockActorManager::InitSplineMeshCom(UEnum* EnumPtr, EBlockType type)
 {
 	FString tempMeshComponentName = EnumPtr->GetNameStringByValue((int8)type) + "SplineMeshComponent";
 
+	//设置组件默认值
 	USplineMeshComponent* splineMeshComponent = NewObject< USplineMeshComponent>(this, *tempMeshComponentName);
 	splineMeshComponent->SetMobility(EComponentMobility::Type::Movable);
 	splineMeshComponent->RegisterComponent();
 	splineMeshComponent->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
 
+	//设置连线属性，网格体， 宽度， 朝前轴
 	splineMeshComponent->SetStartScale(FVector2D(SplineWidth, SplineWidth));
 	splineMeshComponent->SetEndScale(FVector2D(SplineWidth, SplineWidth));
 	splineMeshComponent->SetStaticMesh(nullptr);
@@ -68,15 +72,17 @@ void ABlockActorManager::InitSplineMeshCom(UEnum* EnumPtr, EBlockType type)
 		}
 	}
 
+	//Map中添加组件
 	BI_Line.Add(type, splineMeshComponent);
 }
 
+//生成ProceduralMesh组件
 void ABlockActorManager::InitProceduralMeshCom(UEnum* EnumPtr, EBlockType type)
 {
 	FString temp = EnumPtr->GetNameStringByValue((int8)type) + "MeshComponent";
 
+	//设置组件默认值
 	UProceduralMeshComponent* ProceduralMesh = NewObject<UProceduralMeshComponent>(this, *temp);
-
 	ProceduralMesh->SetMobility(EComponentMobility::Type::Movable);
 
 	ProceduralMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
@@ -84,6 +90,7 @@ void ABlockActorManager::InitProceduralMeshCom(UEnum* EnumPtr, EBlockType type)
 	ProceduralMesh->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 	ProceduralMesh->SetCollisionResponseToChannel(CollisionType, ECollisionResponse::ECR_Overlap);
 
+	//绑定对应碰撞事件
 	ProceduralMesh->OnComponentBeginOverlap.AddDynamic(this, &ABlockActorManager::OnTriangleOverlapBegin);
 	ProceduralMesh->OnComponentEndOverlap.AddDynamic(this, &ABlockActorManager::OnTriangleOnOverlapEnd);
 
@@ -101,6 +108,7 @@ void ABlockActorManager::InitProceduralMeshCom(UEnum* EnumPtr, EBlockType type)
 		}
 	}
 
+	//Map中添加组件
 	BI_Triangles.Add(type, ProceduralMesh);
 }
 
@@ -118,6 +126,7 @@ void ABlockActorManager::InitBlockActorsOnScene()
 			}
 		}
 
+		//若节点默认为已激活，则添加到激活的列表中
 		if (block->ISActive)
 		{
 			OnAddActiveBlocks(block);
@@ -125,7 +134,7 @@ void ABlockActorManager::InitBlockActorsOnScene()
 	}
 }
 
-
+//刷新节点， 节点类中调用
 void ABlockActorManager::RefreshActiveBlocks(ABlockActor* blockActor, bool IsActive)
 {
 	if (!blockActor)
@@ -144,8 +153,10 @@ void ABlockActorManager::RefreshActiveBlocks(ABlockActor* blockActor, bool IsAct
 //在生成前还要清除一遍对应的静态网格实例
 void ABlockActorManager::OnAddActiveBlocks(ABlockActor* blockActor)
 {
+	//已激活节点中进行添加
 	AblockActorsOnActive.Add(blockActor);
 
+	//对应Map类型的数量增加
 	if (AblockTypeAmount.Contains(blockActor->blockType))
 	{
 		AblockTypeAmount[blockActor->blockType]++;
@@ -155,12 +166,13 @@ void ABlockActorManager::OnAddActiveBlocks(ABlockActor* blockActor)
 		AblockTypeAmount.Add(blockActor->blockType, 1);
 	}
 
-	//大于二时，消除线
+	//大于二时，消除线，
 	if (AblockTypeAmount[blockActor->blockType] > 2)
 	{
 		ClearLineByType(blockActor->blockType);
 	}
 
+	//生成线或者网格
 	for (auto type : AblockTypeAmount)
 	{
 		if (type.Value == 2)
@@ -174,15 +186,18 @@ void ABlockActorManager::OnAddActiveBlocks(ABlockActor* blockActor)
 	}
 }
 
+//移除激活的节点
 void ABlockActorManager::OnRemoveActiveBlocks(ABlockActor* blockActor)
 {
 	AblockActorsOnActive.Remove(blockActor);
 
+	//减少数量
 	if (AblockTypeAmount.Contains(blockActor->blockType))
 	{
 		AblockTypeAmount[blockActor->blockType]--;
 	}
 
+	//判断当前数量，来清除生成的连线或者三角面片
 	if (AblockTypeAmount[blockActor->blockType] < 2)
 	{
 		ClearLineByType(blockActor->blockType);
@@ -192,6 +207,7 @@ void ABlockActorManager::OnRemoveActiveBlocks(ABlockActor* blockActor)
 		ClearTriangleByType(blockActor->blockType);
 	}
 
+	//根据当前数量生成连线或者三角面片
 	for (auto type : AblockTypeAmount)
 	{
 		if (type.Value == 2)
@@ -205,6 +221,7 @@ void ABlockActorManager::OnRemoveActiveBlocks(ABlockActor* blockActor)
 	}
 }
 
+//生成连线
 void ABlockActorManager::InitLineByBlock(EBlockType type)
 {
 	if (AblockTypeAmount[type] != 2)
@@ -219,6 +236,7 @@ void ABlockActorManager::InitLineByBlock(EBlockType type)
 	{
 		if (type == block->blockType)
 		{
+			//由于是本地空间，所以需要减去父物体的世界位置
 			PointPos.Add(block->GetInitPosition() - GetActorLocation());
 		}
 	}
@@ -227,11 +245,13 @@ void ABlockActorManager::InitLineByBlock(EBlockType type)
 	BI_Line[type]->SetStartAndEnd(PointPos[0], PointPos[1] - PointPos[0], PointPos[1], PointPos[1] - PointPos[0]);
 }
 
+//根据类型清除连线
 void ABlockActorManager::ClearLineByType(EBlockType type)
 {
 	BI_Line[type]->SetStaticMesh(nullptr);
 }
 
+//生成三角面片
 void ABlockActorManager::InitTriangleByBlock(EBlockType type)
 {
 	if (AblockTypeAmount[type] != 3)
@@ -249,6 +269,7 @@ void ABlockActorManager::InitTriangleByBlock(EBlockType type)
 		}
 	}
 
+	//对应顶点位置，序号， UV，切线，顶点颜色等
 	TArray<int32> triangles;
 	triangles.Add(0);
 	triangles.Add(1);
@@ -266,6 +287,7 @@ void ABlockActorManager::InitTriangleByBlock(EBlockType type)
 	BI_Triangles[type]->CreateMeshSection_LinearColor(0, vertices, triangles, normals, uvs, vertexColors, tangents, true);
 }
 
+//根据类型清除三角面片
 void ABlockActorManager::ClearTriangleByType(EBlockType type)
 {
 	BI_Triangles[type]->ClearAllMeshSections();
@@ -285,6 +307,7 @@ void ABlockActorManager::ClearAllLineAndTriangle()
 	}
 }
 
+//重叠开始事件
 void ABlockActorManager::OnTriangleOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* c, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if (HasOverlap) return; // 避免重复触发
@@ -297,6 +320,7 @@ void ABlockActorManager::OnTriangleOverlapBegin(UPrimitiveComponent* OverlappedC
 	}
 }
 
+//重叠结束事件
 void ABlockActorManager::OnTriangleOnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex)
 {
 	if (OtherActor && (OtherActor != this) && HasOverlap)
