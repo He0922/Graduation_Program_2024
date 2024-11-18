@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_PlayerAttributes_generated_h
 
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_22_GENERATED_BODY \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h_22_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPlayerAttributes_Statics; \
 	GRADUATION_2024_API static class UScriptStruct* StaticStruct();
 
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> GRADUATION_2024_API UScriptStruct* StaticStruct<struct FPlayerAttributes>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h
+#define CURRENT_FILE_ID FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerAttributes_h
 
 
 #define FOREACH_ENUM_EPLAYERATTRIBUTES(op) \

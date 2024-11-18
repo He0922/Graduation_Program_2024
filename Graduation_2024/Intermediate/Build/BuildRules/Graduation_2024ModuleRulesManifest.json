@@ -1,10 +1,10 @@
 {
 	"SourceFiles": [
-		"D:\\UE\\Programes\\Graduation_Program_2024\\Graduation_2024\\Source\\Graduation_2024\\Graduation_2024.Build.cs",
-		"D:\\UE\\Programes\\Graduation_Program_2024\\Graduation_2024\\Plugins\\Oceanology_Plugin\\Source\\Oceanology_PluginEditor\\Oceanology_PluginEditor.Build.cs",
-		"D:\\UE\\Programes\\Graduation_Program_2024\\Graduation_2024\\Plugins\\Oceanology_Plugin\\Source\\Oceanology_Plugin\\Oceanology_Plugin.Build.cs",
-		"D:\\UE\\Programes\\Graduation_Program_2024\\Graduation_2024\\Source\\Graduation_2024.Target.cs",
-		"D:\\UE\\Programes\\Graduation_Program_2024\\Graduation_2024\\Source\\Graduation_2024Editor.Target.cs"
+		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Source\\Graduation_2024\\Graduation_2024.Build.cs",
+		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Plugins\\Oceanology_Plugin\\Source\\Oceanology_PluginEditor\\Oceanology_PluginEditor.Build.cs",
+		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Plugins\\Oceanology_Plugin\\Source\\Oceanology_Plugin\\Oceanology_Plugin.Build.cs",
+		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Source\\Graduation_2024.Target.cs",
+		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Source\\Graduation_2024Editor.Target.cs"
 	],
 	"EngineVersion": "5.4.4"
 }
