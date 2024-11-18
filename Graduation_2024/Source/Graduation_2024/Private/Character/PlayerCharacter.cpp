@@ -369,7 +369,7 @@ void APlayerCharacter::EndScan()
 void APlayerCharacter::InterctBlock()
 {
 	playerSkillComponent->InterctBlock();
-}
+}9
 #pragma endregion
 
 
