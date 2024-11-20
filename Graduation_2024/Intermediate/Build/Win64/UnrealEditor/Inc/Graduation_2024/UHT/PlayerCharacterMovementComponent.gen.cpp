@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacterMovementComponent() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_UCharacterMovementComponent();
+ENGINE_API UEnum* Z_Construct_UEnum_Engine_EObjectTypeQuery();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerCharacterMovementComponent();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerCharacterMovementComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
@@ -35,13 +36,75 @@ struct Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics
 		{ "IncludePath", "MovementComponent/PlayerCharacterMovementComponent.h" },
 		{ "ModuleRelativePath", "Public/MovementComponent/PlayerCharacterMovementComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CapsuleTraceClimbableSurfaceTraceTypes_MetaData[] = {
+		{ "Category", "Character Movement: Climbing" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xe6\xb4\xa2\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xe2\xb5\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MovementComponent/PlayerCharacterMovementComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xe6\xb4\xa2\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xe2\xb5\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LineTraceClibableSurfaceTraceTypes_MetaData[] = {
+		{ "Category", "Character Movement: Climbing" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xe6\xb4\xa2\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xdf\xbc\xef\xbf\xbd\xe2\xb5\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MovementComponent/PlayerCharacterMovementComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xe6\xb4\xa2\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xdf\xbc\xef\xbf\xbd\xe2\xb5\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ClimbCapsuleTraceRadius_MetaData[] = {
+		{ "Category", "Character Movement: Climbing" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xeb\xbe\xb6\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MovementComponent/PlayerCharacterMovementComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xeb\xbe\xb6" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ClibCapsuleTraceHalfHeight_MetaData[] = {
+		{ "Category", "Character Movement: Climbing" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/MovementComponent/PlayerCharacterMovementComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_CapsuleTraceClimbableSurfaceTraceTypes_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_CapsuleTraceClimbableSurfaceTraceTypes;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_LineTraceClibableSurfaceTraceTypes_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_LineTraceClibableSurfaceTraceTypes;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ClimbCapsuleTraceRadius;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ClibCapsuleTraceHalfHeight;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UPlayerCharacterMovementComponent>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_CapsuleTraceClimbableSurfaceTraceTypes_Inner = { "CapsuleTraceClimbableSurfaceTraceTypes", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(0, nullptr) }; // 1798967895
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_CapsuleTraceClimbableSurfaceTraceTypes = { "CapsuleTraceClimbableSurfaceTraceTypes", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerCharacterMovementComponent, CapsuleTraceClimbableSurfaceTraceTypes), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CapsuleTraceClimbableSurfaceTraceTypes_MetaData), NewProp_CapsuleTraceClimbableSurfaceTraceTypes_MetaData) }; // 1798967895
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_LineTraceClibableSurfaceTraceTypes_Inner = { "LineTraceClibableSurfaceTraceTypes", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Engine_EObjectTypeQuery, METADATA_PARAMS(0, nullptr) }; // 1798967895
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_LineTraceClibableSurfaceTraceTypes = { "LineTraceClibableSurfaceTraceTypes", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerCharacterMovementComponent, LineTraceClibableSurfaceTraceTypes), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LineTraceClibableSurfaceTraceTypes_MetaData), NewProp_LineTraceClibableSurfaceTraceTypes_MetaData) }; // 1798967895
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_ClimbCapsuleTraceRadius = { "ClimbCapsuleTraceRadius", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerCharacterMovementComponent, ClimbCapsuleTraceRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ClimbCapsuleTraceRadius_MetaData), NewProp_ClimbCapsuleTraceRadius_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_ClibCapsuleTraceHalfHeight = { "ClibCapsuleTraceHalfHeight", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerCharacterMovementComponent, ClibCapsuleTraceHalfHeight), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ClibCapsuleTraceHalfHeight_MetaData), NewProp_ClibCapsuleTraceHalfHeight_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_CapsuleTraceClimbableSurfaceTraceTypes_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_CapsuleTraceClimbableSurfaceTraceTypes,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_LineTraceClibableSurfaceTraceTypes_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_LineTraceClibableSurfaceTraceTypes,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_ClimbCapsuleTraceRadius,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_ClibCapsuleTraceHalfHeight,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UCharacterMovementComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_Graduation_2024,
@@ -53,11 +116,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPlayerCharacterMovemen
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	nullptr,
-	nullptr,
+	Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::PropPointers),
 	0,
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::Class_MetaDataParams)
@@ -83,10 +146,10 @@ UPlayerCharacterMovementComponent::~UPlayerCharacterMovementComponent() {}
 struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerCharacterMovementComponent, UPlayerCharacterMovementComponent::StaticClass, TEXT("UPlayerCharacterMovementComponent"), &Z_Registration_Info_UClass_UPlayerCharacterMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerCharacterMovementComponent), 1677519694U) },
+		{ Z_Construct_UClass_UPlayerCharacterMovementComponent, UPlayerCharacterMovementComponent::StaticClass, TEXT("UPlayerCharacterMovementComponent"), &Z_Registration_Info_UClass_UPlayerCharacterMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerCharacterMovementComponent), 2815544921U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_2516687447(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_1847463529(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
