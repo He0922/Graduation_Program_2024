@@ -9,6 +9,7 @@
 			"BlockActor.gen.cpp.obj",
 			"BlockActorManager.gen.cpp.obj",
 			"CustomGameModeBase.gen.cpp.obj",
+			"Graduation_2024.init.gen.cpp.obj",
 			"Mayfly.gen.cpp.obj",
 			"MayflyMovementComponent.gen.cpp.obj",
 			"PlayerAIController.gen.cpp.obj",
@@ -16,6 +17,7 @@
 			"PlayerAttributesInterface.gen.cpp.obj",
 			"PlayerAttributesUW.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
+			"PlayerCharacterMovementComponent.gen.cpp.obj",
 			"PlayerSkillComponent.gen.cpp.obj",
 			"Graduation_2024.cpp.obj",
 			"Archival.cpp.obj",
@@ -31,8 +33,6 @@
 			"PlayerSkillComponent.cpp.obj",
 			"ArchivalUW.cpp.obj",
 			"PlayerAttributesUW.cpp.obj",
-			"Graduation_2024.init.gen.cpp.obj",
-			"PlayerCharacterMovementComponent.gen.cpp.obj",
 			"PlayerCharacterMovementComponent.cpp.obj"
 		]
 	}

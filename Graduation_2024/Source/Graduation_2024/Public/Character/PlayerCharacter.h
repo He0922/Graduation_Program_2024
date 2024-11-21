@@ -140,6 +140,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	class UInputAction* IterctBlock;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	class UInputAction* climbAction;
+
 #pragma endregion
 
 
@@ -158,6 +161,9 @@ public:
 
 	UFUNCTION()
 	void ObjectInteraction();
+
+	UFUNCTION()
+	void ClimbingActionStarted(const FInputActionValue& Value);
 #pragma endregion
 
 

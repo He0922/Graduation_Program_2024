@@ -6,6 +6,8 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "PlayerCharacterMovementComponent.generated.h"
 
+
+
 /**
  * 
  */
@@ -41,6 +43,8 @@ public:
 	bool CapsuleTraceClimbableSurface();
 
 	FHitResult TraceFormEyeHeight(float TraceDistance, float TraceStartOffset);
+
+	bool IsClimbing() const;
 #pragma endregion
 
 
@@ -68,4 +72,8 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Character Movement: Climbing")
 	float ClibCapsuleTraceHalfHeight = 72.f;
 #pragma endregion
+
+public:
+	void ToggleClimbing(bool bEnableClimb);
+	bool IsClimbing() const;
 };

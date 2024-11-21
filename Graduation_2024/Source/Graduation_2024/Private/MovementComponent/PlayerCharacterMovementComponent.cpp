@@ -92,6 +92,21 @@ FHitResult UPlayerCharacterMovementComponent::DoLineTraceSingleByObject(const FV
 
 
 #pragma region ClimbCore
+void UPlayerCharacterMovementComponent::ToggleClimbing(bool bEnableClimb)
+{
+	if (bEnableClimb)
+	{
+
+	}
+}
+
+
+bool UPlayerCharacterMovementComponent::IsClimbing() const
+{
+	return false;
+}
+
+
 bool UPlayerCharacterMovementComponent::CapsuleTraceClimbableSurface()
 {
 
@@ -119,5 +134,4 @@ FHitResult UPlayerCharacterMovementComponent::TraceFormEyeHeight(float TraceDist
 
 	return DoLineTraceSingleByObject(Start, End, true);
 }
-
 #pragma endregion

@@ -275,6 +275,20 @@ void APlayerCharacter::ObjectInteraction()
 	
 }
 
+void APlayerCharacter::ClimbingActionStarted(const FInputActionValue& Value)
+{
+	if (!playerCMC) return;
+
+	if (playerCMC->IsClimbing())
+	{
+		playerCMC->ToggleClimbing(true);
+	}
+	else
+	{
+		playerCMC->ToggleClimbing(false);
+	}
+}
+
 #pragma endregion 
 
 
