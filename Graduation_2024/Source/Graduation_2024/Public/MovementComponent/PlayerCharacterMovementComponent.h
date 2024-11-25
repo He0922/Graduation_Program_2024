@@ -75,5 +75,5 @@ public:
 
 public:
 	void ToggleClimbing(bool bEnableClimb);
-	bool IsClimbing() const;
+	//bool IsClimbing() const;
 };

@@ -15,18 +15,19 @@ struct FInputActionValue;
 #endif
 #define GRADUATION_2024_PlayerCharacter_generated_h
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDisablePlayerInput); \
 	DECLARE_FUNCTION(execEnablePlayerInput); \
 	DECLARE_FUNCTION(execInitArchivalUW); \
 	DECLARE_FUNCTION(execInitArttributesUW); \
+	DECLARE_FUNCTION(execClimbingActionStarted); \
 	DECLARE_FUNCTION(execObjectInteraction); \
 	DECLARE_FUNCTION(execLook); \
 	DECLARE_FUNCTION(execMoveToTarget); \
 	DECLARE_FUNCTION(execMove);
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_INCLASS_NO_PURE_DECLS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -36,7 +37,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<APlayerCharacter*>(this); }
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_ENHANCED_CONSTRUCTORS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APlayerCharacter(APlayerCharacter&&); \
@@ -48,13 +49,13 @@ public: \
 	NO_API virtual ~APlayerCharacter();
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_27_PROLOG
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_GENERATED_BODY \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_27_PROLOG
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_INCLASS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_ENHANCED_CONSTRUCTORS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_INCLASS_NO_PURE_DECLS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -62,7 +63,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> GRADUATION_2024_API UClass* StaticClass<class APlayerCharacter>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h
+#define CURRENT_FILE_ID FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_PlayerCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
