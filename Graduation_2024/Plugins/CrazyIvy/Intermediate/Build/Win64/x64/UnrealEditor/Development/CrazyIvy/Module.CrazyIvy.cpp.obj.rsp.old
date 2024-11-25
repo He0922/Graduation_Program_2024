@@ -1,11 +1,11 @@
-"D:\A530C\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp"
-/FI"D:\A530C\Intermediate\Build\Win64\x64\A530CEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/FI"D:\A530C\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Definitions.CrazyIvy.h"
-/Yu"D:\A530C\Intermediate\Build\Win64\x64\A530CEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/Fp"D:\A530C\Intermediate\Build\Win64\x64\A530CEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.pch"
-/Fo"D:\A530C\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.obj"
-/sourceDependencies "D:\A530C\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.dep.json"
-@"D:\A530C\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\CrazyIvy.Shared.rsp"
+"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp"
+/FI"E:\UE\C541\Intermediate\Build\Win64\x64\C541Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Definitions.CrazyIvy.h"
+/Yu"E:\UE\C541\Intermediate\Build\Win64\x64\C541Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"E:\UE\C541\Intermediate\Build\Win64\x64\C541Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.obj"
+/sourceDependencies "E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.dep.json"
+@"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\CrazyIvy.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
@@ -24,6 +24,7 @@
 /D_WINDLL
 /D_DISABLE_EXTENDED_ALIGNED_STORAGE
 /Ob2
+/d2ExtendedWarningInfo
 /Ox
 /Ot
 /GF
