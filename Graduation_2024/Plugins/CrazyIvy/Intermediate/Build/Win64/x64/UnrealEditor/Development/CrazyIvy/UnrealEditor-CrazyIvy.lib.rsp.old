@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-CrazyIvy.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\A530C\Intermediate\Build\Win64\x64\A530CEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"D:\A530C\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.obj"
+"D:\A530C\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Default.rc2.res"
+/OUT:"D:\A530C\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\UnrealEditor-CrazyIvy.lib"

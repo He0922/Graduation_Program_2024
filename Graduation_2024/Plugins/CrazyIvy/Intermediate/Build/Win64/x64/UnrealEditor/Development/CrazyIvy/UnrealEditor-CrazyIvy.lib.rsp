@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-CrazyIvy.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\UE\C541\Intermediate\Build\Win64\x64\C541Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.obj"
+"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\CrazyIvy.cpp.obj"
+"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\IvyCustomDetailPanel.cpp.obj"
+"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\IvyGeneratorBase.cpp.obj"
+"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Default.rc2.res"
+/OUT:"E:\UE\C541\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\UnrealEditor-CrazyIvy.lib"
