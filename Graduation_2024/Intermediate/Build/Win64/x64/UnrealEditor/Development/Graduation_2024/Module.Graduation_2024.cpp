@@ -27,6 +27,7 @@
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Interface/ArchivalInterface.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Interface/PlayerAttributesInterface.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/MovementComponent/MayflyMovementComponent.cpp"
+#include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/MovementComponent/PlayerCharacterMovementComponent.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/SkillComponent/PlayerSkillComponent.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/UI/Archival/ArchivalUW.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/UI/Attributes/PlayerAttributesUW.cpp"
