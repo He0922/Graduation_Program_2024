@@ -30,9 +30,90 @@
     <Filter Include="Plugins">
       <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Plugins\CrazyIvy">
+      <UniqueIdentifier>{5121113E-630B-328C-8E12-4DFA427858CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CrazyIvy\Source">
+      <UniqueIdentifier>{14D01BBD-EE7C-351B-B8E7-DE9357311872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CrazyIvy\Source\CrazyIvy">
+      <UniqueIdentifier>{8B8F3334-3C40-39B4-8094-342FF3EDB9C7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CrazyIvy\Source\CrazyIvy\CrazyIvy.Build.cs">
+      <Filter>Plugins\CrazyIvy\Source\CrazyIvy</Filter>
+    </None>
+    <Filter Include="Plugins\CrazyIvy\Source\CrazyIvy\Private">
+      <UniqueIdentifier>{52D2D46A-5084-3329-B003-345CF45FBCC9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\CrazyIvy\Source\CrazyIvy\Private\CrazyIvy.cpp">
+      <Filter>Plugins\CrazyIvy\Source\CrazyIvy\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\CrazyIvy\Source\CrazyIvy\Private\IvyCustomDetailPanel.cpp">
+      <Filter>Plugins\CrazyIvy\Source\CrazyIvy\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\CrazyIvy\Source\CrazyIvy\Private\IvyGeneratorBase.cpp">
+      <Filter>Plugins\CrazyIvy\Source\CrazyIvy\Private</Filter>
+    </ClCompile>
+    <None Include="..\..\Plugins\CrazyIvy\Source\CrazyIvy\Private\roboto-regular_[allfont.net].ttf">
+      <Filter>Plugins\CrazyIvy\Source\CrazyIvy\Private</Filter>
+    </None>
+    <Filter Include="Plugins\CrazyIvy\Source\CrazyIvy\Public">
+      <UniqueIdentifier>{2051FF7E-F33C-3D4D-89AF-FD448E262E80}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\CrazyIvy\Source\CrazyIvy\Public\CrazyIvy.h">
+      <Filter>Plugins\CrazyIvy\Source\CrazyIvy\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\CrazyIvy\Source\CrazyIvy\Public\IvyCustomDetailPanel.h">
+      <Filter>Plugins\CrazyIvy\Source\CrazyIvy\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\CrazyIvy\Source\CrazyIvy\Public\IvyGeneratorBase.h">
+      <Filter>Plugins\CrazyIvy\Source\CrazyIvy\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\CrazyIvy\Source\CrazyIvy\Public\SMeshData.h">
+      <Filter>Plugins\CrazyIvy\Source\CrazyIvy\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\CrazyIvy\CrazyIvy.uplugin">
+      <Filter>Plugins\CrazyIvy</Filter>
+    </None>
+    <Filter Include="Plugins\CrazyIvy\Resources">
+      <UniqueIdentifier>{1BB251CC-F620-3398-9EEB-B7425189F07C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CrazyIvy\Resources\Icon128.png">
+      <Filter>Plugins\CrazyIvy\Resources</Filter>
+    </None>
     <Filter Include="Plugins\Oceanology_Plugin">
       <UniqueIdentifier>{D3F496BF-882A-3ECC-884F-6EF5DDBBBE2A}</UniqueIdentifier>
     </Filter>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Oceanology_Plugin.uplugin">
+      <Filter>Plugins\Oceanology_Plugin</Filter>
+    </None>
+    <Filter Include="Plugins\Oceanology_Plugin\Config">
+      <UniqueIdentifier>{7D11A161-3ECF-3AB0-ADA5-29ADC8D757A9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Config\DefaultOceanology_Plugin.ini">
+      <Filter>Plugins\Oceanology_Plugin\Config</Filter>
+    </None>
+    <Filter Include="Plugins\Oceanology_Plugin\Resources">
+      <UniqueIdentifier>{0E6B587C-2708-322B-B560-D82D59CB74AA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Resources\Icon128.png">
+      <Filter>Plugins\Oceanology_Plugin\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Resources\LakePreset128.png">
+      <Filter>Plugins\Oceanology_Plugin\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Resources\OceanPreset128.png">
+      <Filter>Plugins\Oceanology_Plugin\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\Oceanology_Plugin\Shaders">
+      <UniqueIdentifier>{C472C036-33C8-3EA3-9EC5-59FEFC1CAFE5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\Oceanology_Plugin\Shaders\Private">
+      <UniqueIdentifier>{019C1EF3-9004-34AF-AB44-6A46A8EF6652}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\Oceanology_Plugin\Shaders\Private\OceanologyWaterMeshVertexFactory.ush">
+      <Filter>Plugins\Oceanology_Plugin\Shaders\Private</Filter>
+    </None>
     <Filter Include="Plugins\Oceanology_Plugin\Source">
       <UniqueIdentifier>{38570648-7F60-30A5-B7CC-E2ACD2E345B2}</UniqueIdentifier>
     </Filter>
@@ -114,36 +195,6 @@
     <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Utils\OceanologyWaterVolumeDetailsCustomization.h">
       <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_PluginEditor\Public\Utils</Filter>
     </ClInclude>
-    <None Include="..\..\Plugins\Oceanology_Plugin\Oceanology_Plugin.uplugin">
-      <Filter>Plugins\Oceanology_Plugin</Filter>
-    </None>
-    <Filter Include="Plugins\Oceanology_Plugin\Config">
-      <UniqueIdentifier>{7D11A161-3ECF-3AB0-ADA5-29ADC8D757A9}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\Oceanology_Plugin\Config\DefaultOceanology_Plugin.ini">
-      <Filter>Plugins\Oceanology_Plugin\Config</Filter>
-    </None>
-    <Filter Include="Plugins\Oceanology_Plugin\Resources">
-      <UniqueIdentifier>{0E6B587C-2708-322B-B560-D82D59CB74AA}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\Oceanology_Plugin\Resources\Icon128.png">
-      <Filter>Plugins\Oceanology_Plugin\Resources</Filter>
-    </None>
-    <None Include="..\..\Plugins\Oceanology_Plugin\Resources\LakePreset128.png">
-      <Filter>Plugins\Oceanology_Plugin\Resources</Filter>
-    </None>
-    <None Include="..\..\Plugins\Oceanology_Plugin\Resources\OceanPreset128.png">
-      <Filter>Plugins\Oceanology_Plugin\Resources</Filter>
-    </None>
-    <Filter Include="Plugins\Oceanology_Plugin\Shaders">
-      <UniqueIdentifier>{C472C036-33C8-3EA3-9EC5-59FEFC1CAFE5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\Oceanology_Plugin\Shaders\Private">
-      <UniqueIdentifier>{019C1EF3-9004-34AF-AB44-6A46A8EF6652}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\Oceanology_Plugin\Shaders\Private\OceanologyWaterMeshVertexFactory.ush">
-      <Filter>Plugins\Oceanology_Plugin\Shaders\Private</Filter>
-    </None>
     <Filter Include="Plugins\Oceanology_Plugin\Source\Oceanology_Plugin">
       <UniqueIdentifier>{1D1ACA4D-8AC8-3CD3-B7CA-82AE25CEAD39}</UniqueIdentifier>
     </Filter>
@@ -498,12 +549,18 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\Mayfly.cpp">
       <Filter>Source\Graduation_2024\Private\Character</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\PlayerCharacter.cpp">
-      <Filter>Source\Graduation_2024\Private\Character</Filter>
+    <Filter Include="Source\Graduation_2024\Private\Character\Player">
+      <UniqueIdentifier>{1BD796B2-BBDD-3804-9D5D-071D64991EBA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\Player\PlayerCharacter.cpp">
+      <Filter>Source\Graduation_2024\Private\Character\Player</Filter>
     </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\Controller">
       <UniqueIdentifier>{3AB94723-B337-32DA-9D5C-5D363368E757}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Controller\CustomPlayerController.cpp">
+      <Filter>Source\Graduation_2024\Private\Controller</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Controller\PlayerAIController.cpp">
       <Filter>Source\Graduation_2024\Private\Controller</Filter>
     </ClCompile>
@@ -528,17 +585,32 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\ArchivalInterface.cpp">
       <Filter>Source\Graduation_2024\Private\Interface</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\CustomPlayerStatusInterface.cpp">
+      <Filter>Source\Graduation_2024\Private\Interface</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerAttributesInterface.cpp">
       <Filter>Source\Graduation_2024\Private\Interface</Filter>
     </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\MovementComponent">
       <UniqueIdentifier>{65826948-B0FA-3A24-8321-D587A6A5E35C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\CustomFloatingPawnMovement.cpp">
+      <Filter>Source\Graduation_2024\Private\MovementComponent</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\MayflyMovementComponent.cpp">
       <Filter>Source\Graduation_2024\Private\MovementComponent</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\MovementComponent\PlayerCharacterMovementComponent.cpp">
       <Filter>Source\Graduation_2024\Private\MovementComponent</Filter>
+    </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\Pawn">
+      <UniqueIdentifier>{31C09434-ABC2-379F-8508-7633E91E3FB8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Pawn\FloorRaft.cpp">
+      <Filter>Source\Graduation_2024\Private\Pawn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Pawn\MyPawn.cpp">
+      <Filter>Source\Graduation_2024\Private\Pawn</Filter>
     </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\SkillComponent">
       <UniqueIdentifier>{7F20B35C-9073-3391-BA01-99707842FEDA}</UniqueIdentifier>
@@ -579,15 +651,24 @@
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Mayfly.h">
       <Filter>Source\Graduation_2024\Public\Character</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerAttributes.h">
-      <Filter>Source\Graduation_2024\Public\Character</Filter>
+    <Filter Include="Source\Graduation_2024\Public\Character\Player">
+      <UniqueIdentifier>{D3A83718-9FBA-32DD-A490-627E87F72AAF}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Player\CustomPlayerStatus.h">
+      <Filter>Source\Graduation_2024\Public\Character\Player</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\PlayerCharacter.h">
-      <Filter>Source\Graduation_2024\Public\Character</Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Player\PlayerAttributes.h">
+      <Filter>Source\Graduation_2024\Public\Character\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Player\PlayerCharacter.h">
+      <Filter>Source\Graduation_2024\Public\Character\Player</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\Controller">
       <UniqueIdentifier>{3924B88C-ACCB-3029-B645-A04B29BD966E}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Controller\CustomPlayerController.h">
+      <Filter>Source\Graduation_2024\Public\Controller</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Controller\PlayerAIController.h">
       <Filter>Source\Graduation_2024\Public\Controller</Filter>
     </ClInclude>
@@ -612,17 +693,32 @@
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\ArchivalInterface.h">
       <Filter>Source\Graduation_2024\Public\Interface</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\CustomPlayerStatusInterface.h">
+      <Filter>Source\Graduation_2024\Public\Interface</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerAttributesInterface.h">
       <Filter>Source\Graduation_2024\Public\Interface</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\MovementComponent">
       <UniqueIdentifier>{6A951C4A-902C-3B1E-8D9E-9CE2C421574A}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\CustomFloatingPawnMovement.h">
+      <Filter>Source\Graduation_2024\Public\MovementComponent</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\MayflyMovementComponent.h">
       <Filter>Source\Graduation_2024\Public\MovementComponent</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\MovementComponent\PlayerCharacterMovementComponent.h">
       <Filter>Source\Graduation_2024\Public\MovementComponent</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\Pawn">
+      <UniqueIdentifier>{4AC194DA-1C89-312E-8FAB-4FE96D36E9D6}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Pawn\FloorRaft.h">
+      <Filter>Source\Graduation_2024\Public\Pawn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Pawn\MyPawn.h">
+      <Filter>Source\Graduation_2024\Public\Pawn</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\SkillComponent">
       <UniqueIdentifier>{2731E19B-BF3B-3843-9E89-F190D081EE16}</UniqueIdentifier>

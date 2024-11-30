@@ -74,6 +74,5 @@ public:
 #pragma endregion
 
 public:
-	void ToggleClimbing(bool bEnableClimb);
-	//bool IsClimbing() const;
+
 };

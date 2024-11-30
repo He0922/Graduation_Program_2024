@@ -1,7 +1,7 @@
 #include "SkillComponent/PlayerSkillComponent.h"
 #include "../DebugHelper.h"
 #include "TimerManager.h"
-#include "Character/PlayerCharacter.h"
+#include "Character/Player/PlayerCharacter.h"
 #include "InterectBlock/BlockActor.h"
 
 

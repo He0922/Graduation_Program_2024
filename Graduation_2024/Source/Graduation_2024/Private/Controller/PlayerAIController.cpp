@@ -9,7 +9,7 @@
 #include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
 
-#include "Character/PlayerCharacter.h"
+#include "Character/Player/PlayerCharacter.h"
 
 
 #include "Controller/PlayerAIController.h"

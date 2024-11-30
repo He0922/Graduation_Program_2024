@@ -2,7 +2,7 @@
 
 
 #include "MovementComponent/PlayerCharacterMovementComponent.h"
-#include "Character/PlayerCharacter.h"
+#include "Character/Player/PlayerCharacter.h"
 #include "../DebugHelper.h"
 
 #include "Kismet/KismetSystemLibrary.h"
@@ -92,19 +92,7 @@ FHitResult UPlayerCharacterMovementComponent::DoLineTraceSingleByObject(const FV
 
 
 #pragma region ClimbCore
-void UPlayerCharacterMovementComponent::ToggleClimbing(bool bEnableClimb)
-{
-	if (bEnableClimb)
-	{
 
-	}
-}
-
-
-bool UPlayerCharacterMovementComponent::IsClimbing() const
-{
-	return false;
-}
 
 
 bool UPlayerCharacterMovementComponent::CapsuleTraceClimbableSurface()

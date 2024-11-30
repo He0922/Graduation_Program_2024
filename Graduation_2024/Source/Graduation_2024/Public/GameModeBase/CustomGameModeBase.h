@@ -14,4 +14,5 @@ class GRADUATION_2024_API ACustomGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+	ACustomGameModeBase();
 };
