@@ -30,7 +30,7 @@ protected:
 
 #pragma region PawnObejct
 public:
-	APawn* ControllerPawn;
+	APawn* CurrentControllerPawn;
 
 	class APlayerCharacter* Player;
 
@@ -51,7 +51,7 @@ public:
 	class UInputAction* jumpAction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
-	class UInputAction* ChangeAction;
+	class UInputAction* objectInteraction;
 #pragma endregion
 
 
@@ -64,6 +64,8 @@ public:
 	void JumpStop();
 
 	void Look(const FInputActionValue& InputValue);
+
+	void ObjectInteraction();
 
 	// 切换玩家控制对象
 	void ChangeObject(APawn* PawnObject);

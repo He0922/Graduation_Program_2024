@@ -34,7 +34,7 @@ void ACustomPlayerController::BeginPlay()
 		Debug::Print("Bind Fail", 5.f, false);
 	}
 
-	ControllerPawn = GetPawn();
+	CurrentControllerPawn = GetPawn();
 	
 	Player = Cast<APlayerCharacter>(GetPawn());
 }
@@ -60,6 +60,7 @@ void ACustomPlayerController::SetupInputComponent()
 		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Started, this, &ACustomPlayerController::Jump);
 		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Completed, this, &ACustomPlayerController::JumpStop);
 		EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::Look);
+		EnhancedInputComponent->BindAction(objectInteraction, ETriggerEvent::Completed, this, &ACustomPlayerController::ObjectInteraction);
 
 		Debug::Print("Cast Success EnhancedInputComponent", 5.f, false);
 	}
@@ -84,10 +85,10 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 	const FVector forwardDirection = FRotationMatrix(yawRotation).GetUnitAxis(EAxis::X);
 	const FVector rightDirection = FRotationMatrix(yawRotation).GetUnitAxis(EAxis::Y);
 
-	if (ControllerPawn)
+	if (CurrentControllerPawn)
 	{
-		ControllerPawn->AddMovementInput(forwardDirection, movementVector.X);
-		ControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
+		CurrentControllerPawn->AddMovementInput(forwardDirection, movementVector.X);
+		CurrentControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
 	}
 	
 }
@@ -95,9 +96,9 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 
 void ACustomPlayerController::Jump()
 {
-	if (ControllerPawn)
+	if (CurrentControllerPawn)
 	{
-		if (APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(ControllerPawn))
+		if (APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(CurrentControllerPawn))
 		{
 			PlayerCharacter->Jump();
 		}
@@ -107,9 +108,9 @@ void ACustomPlayerController::Jump()
 
 void ACustomPlayerController::JumpStop()
 {
-	if (ControllerPawn)
+	if (CurrentControllerPawn)
 	{
-		if (APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(ControllerPawn))
+		if (APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(CurrentControllerPawn))
 		{
 			PlayerCharacter->StopJumping();
 		}
@@ -125,12 +126,21 @@ void ACustomPlayerController::Look(const FInputActionValue& InputValue)
 	// 用于旋转视角角色实时改变面朝方向float
 	//lookLRDirection = lookAxisVector.X;
 
-	if (ControllerPawn)
+	if (CurrentControllerPawn)
 	{
-		ControllerPawn->AddControllerYawInput(lookAxisVector.X);
-		ControllerPawn->AddControllerPitchInput(-lookAxisVector.Y);
+		CurrentControllerPawn->AddControllerYawInput(lookAxisVector.X);
+		CurrentControllerPawn->AddControllerPitchInput(-lookAxisVector.Y);
 	}
 	
+}
+
+void ACustomPlayerController::ObjectInteraction()
+{
+	if (Player)
+	{
+		Debug::Print("111", 5.f, false);
+		Player->ObjectInteraction();
+	}
 }
 
 
@@ -138,8 +148,8 @@ void ACustomPlayerController::ChangeObject(APawn* PawnObject)
 {
 	if (PawnObject)
 	{
-		ControllerPawn = PawnObject;
-		Possess(ControllerPawn);
+		CurrentControllerPawn = PawnObject;
+		Possess(CurrentControllerPawn);
 	}
 }
 
