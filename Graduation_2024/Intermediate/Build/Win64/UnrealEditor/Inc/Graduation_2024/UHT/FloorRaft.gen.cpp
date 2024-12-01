@@ -127,14 +127,14 @@ AFloorRaft::~AFloorRaft() {}
 // End Class AFloorRaft
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AFloorRaft, AFloorRaft::StaticClass, TEXT("AFloorRaft"), &Z_Registration_Info_UClass_AFloorRaft, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AFloorRaft), 3960330969U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_1243457979(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_1243457979(TEXT("/Script/Graduation_2024"),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

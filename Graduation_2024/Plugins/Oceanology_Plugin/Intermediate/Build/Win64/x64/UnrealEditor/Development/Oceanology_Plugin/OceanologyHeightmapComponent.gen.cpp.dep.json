@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugin\\uht\\oceanologyheightmapcomponent.gen.cpp",
+        "Source": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugin\\uht\\oceanologyheightmapcomponent.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\oceanology_plugin\\definitions.oceanology_plugin.h",
-            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\source\\oceanology_plugin\\public\\components\\oceanologyheightmapcomponent.h",
-            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugin\\uht\\oceanologyheightmapcomponent.generated.h"
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\oceanology_plugin\\definitions.oceanology_plugin.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\source\\oceanology_plugin\\public\\components\\oceanologyheightmapcomponent.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugin\\uht\\oceanologyheightmapcomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -22,11 +22,11 @@ AFloorRaft::AFloorRaft(const FObjectInitializer& ObjectInitializer)
 
 	PawnMovementComponent = CreateDefaultSubobject<UCustomFloatingPawnMovement>(TEXT("Floating Pawn Movement"));
 
-	floorRaftCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("FloorRaft Collision"));
-	RootComponent = floorRaftCollision;
-
 	floorRafteMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Archive Mesh"));
-	floorRafteMesh->SetupAttachment(RootComponent);
+	RootComponent = floorRafteMesh;
+
+	floorRaftCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("FloorRaft Collision"));
+	floorRaftCollision->SetupAttachment(RootComponent);
 
 
 	// ´´½¨SpringArm
