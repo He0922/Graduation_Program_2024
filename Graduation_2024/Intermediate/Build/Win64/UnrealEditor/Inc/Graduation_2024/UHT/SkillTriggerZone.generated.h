@@ -1,0 +1,67 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "SkillTriggerZone.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class ACharacter;
+class UPrimitiveComponent;
+struct FHitResult;
+#ifdef GRADUATION_2024_SkillTriggerZone_generated_h
+#error "SkillTriggerZone.generated.h already included, missing '#pragma once' in SkillTriggerZone.h"
+#endif
+#define GRADUATION_2024_SkillTriggerZone_generated_h
+
+#define FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillTriggerZone_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execUpgradeSkillRange); \
+	DECLARE_FUNCTION(execUpgradeSkillDamage); \
+	DECLARE_FUNCTION(execTriggerSkill); \
+	DECLARE_FUNCTION(execOnOverlapEnd); \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
+#define FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillTriggerZone_h_10_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesASkillTriggerZone(); \
+	friend struct Z_Construct_UClass_ASkillTriggerZone_Statics; \
+public: \
+	DECLARE_CLASS(ASkillTriggerZone, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Graduation_2024"), NO_API) \
+	DECLARE_SERIALIZER(ASkillTriggerZone)
+
+
+#define FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillTriggerZone_h_10_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	ASkillTriggerZone(ASkillTriggerZone&&); \
+	ASkillTriggerZone(const ASkillTriggerZone&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ASkillTriggerZone); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASkillTriggerZone); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASkillTriggerZone) \
+	NO_API virtual ~ASkillTriggerZone();
+
+
+#define FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillTriggerZone_h_7_PROLOG
+#define FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillTriggerZone_h_10_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillTriggerZone_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillTriggerZone_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillTriggerZone_h_10_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> GRADUATION_2024_API UClass* StaticClass<class ASkillTriggerZone>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillTriggerZone_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Oceanology_Plugin.1.cpp.obj": [
+			"OceanologyInfiniteOceanActor.cpp.obj",
 			"OceanAudioComponent.gen.cpp.obj",
 			"OceanBuoyancyComponent.gen.cpp.obj",
 			"OceanologyActorHeight.gen.cpp.obj",
@@ -13,9 +14,7 @@
 			"OceanologyFlipbook.gen.cpp.obj",
 			"OceanologyFoam.gen.cpp.obj",
 			"OceanologyFolding.gen.cpp.obj",
-			"OceanologyGerstnerWaveSolverComponent.gen.cpp.obj"
-		],
-		"Module.Oceanology_Plugin.2.cpp.obj": [
+			"OceanologyGerstnerWaveSolverComponent.gen.cpp.obj",
 			"OceanologyGerstnerWaveSummarize.gen.cpp.obj",
 			"OceanologyGGX.gen.cpp.obj",
 			"OceanologyGlobalDisplacement.gen.cpp.obj",
@@ -34,9 +33,7 @@
 			"OceanologyOceanPreset.gen.cpp.obj",
 			"OceanologyOceanPresetResult.gen.cpp.obj",
 			"OceanologyOceanQuadTreeSettings.gen.cpp.obj",
-			"OceanologyProcedural.gen.cpp.obj"
-		],
-		"Module.Oceanology_Plugin.3.cpp.obj": [
+			"OceanologyProcedural.gen.cpp.obj",
 			"OceanologyRefraction.gen.cpp.obj",
 			"OceanologyRVT.gen.cpp.obj",
 			"OceanologySurfaceScattering.gen.cpp.obj",
@@ -48,9 +45,7 @@
 			"OceanologyWaterParentActor.gen.cpp.obj",
 			"OceanologyWaterPreset.gen.cpp.obj",
 			"OceanologyWaterPresetMode.gen.cpp.obj",
-			"OceanologyWaterPresetResult.gen.cpp.obj"
-		],
-		"Module.Oceanology_Plugin.4.cpp.obj": [
+			"OceanologyWaterPresetResult.gen.cpp.obj",
 			"OceanologyWaterProjection.gen.cpp.obj",
 			"OceanologyWaterQuadTreeSettings.gen.cpp.obj",
 			"OceanologyWaterVolumeActor.gen.cpp.obj",
@@ -61,8 +56,7 @@
 			"Oceanology_PluginBPLibrary.gen.cpp.obj",
 			"OceanSwimmingComponent.gen.cpp.obj"
 		],
-		"Module.Oceanology_Plugin.5.cpp.obj": [
-			"OceanologyInfiniteOceanActor.cpp.obj",
+		"Module.Oceanology_Plugin.2.cpp.obj": [
 			"OceanologyLakeActor.cpp.obj",
 			"OceanologyManagerActor.cpp.obj",
 			"OceanologyWaterNiagaraWavesVolume.cpp.obj",

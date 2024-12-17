@@ -2,7 +2,7 @@
 	"BuildId": "33043543",
 	"Modules": 
 	{
-		"Oceanology_Plugin": "UnrealEditor-Oceanology_Plugin.dll",
-		"Oceanology_PluginEditor": "UnrealEditor-Oceanology_PluginEditor.dll"
+		"Oceanology_Plugin": "UnrealEditor-Oceanology_Plugin-0049.dll",
+		"Oceanology_PluginEditor": "UnrealEditor-Oceanology_PluginEditor-0049.dll"
 	}
 }
