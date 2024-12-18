@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_Archival_generated_h
 
-#define FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_UE_Data_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAArchival(); \
 	friend struct Z_Construct_UClass_AArchival_Statics; \
@@ -24,7 +24,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AArchival*>(this); }
 
 
-#define FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_UE_Data_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AArchival(AArchival&&); \
@@ -36,12 +36,12 @@ public: \
 	NO_API virtual ~AArchival();
 
 
-#define FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_14_PROLOG
-#define FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_GENERATED_BODY \
+#define FID_UE_Data_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_14_PROLOG
+#define FID_UE_Data_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_ENHANCED_CONSTRUCTORS \
+	FID_UE_Data_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_INCLASS_NO_PURE_DECLS \
+	FID_UE_Data_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -49,7 +49,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> GRADUATION_2024_API UClass* StaticClass<class AArchival>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h
+#define CURRENT_FILE_ID FID_UE_Data_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_Archival_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
