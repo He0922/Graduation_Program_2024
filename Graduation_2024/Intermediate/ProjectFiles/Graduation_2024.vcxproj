@@ -777,6 +777,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\InterectBlock\Runepaper.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\ArchivalInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
@@ -832,6 +836,7 @@
     <ClInclude Include="..\..\Source\Graduation_2024\Public\GameModeBase\CustomGameModeBase.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\InterectBlock\BlockActor.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\InterectBlock\BlockActorManager.h"/>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\InterectBlock\Runepaper.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\ArchivalInterface.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\CustomPlayerStatusInterface.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerAttributesInterface.h"/>

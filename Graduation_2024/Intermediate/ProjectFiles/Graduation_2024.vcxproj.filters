@@ -579,6 +579,9 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\InterectBlock\BlockActorManager.cpp">
       <Filter>Source\Graduation_2024\Private\InterectBlock</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\InterectBlock\Runepaper.cpp">
+      <Filter>Source\Graduation_2024\Private\InterectBlock</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\Interface">
       <UniqueIdentifier>{8F2F88EB-5B5F-391B-954A-576949F4F98C}</UniqueIdentifier>
     </Filter>
@@ -685,6 +688,9 @@
       <Filter>Source\Graduation_2024\Public\InterectBlock</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\InterectBlock\BlockActorManager.h">
+      <Filter>Source\Graduation_2024\Public\InterectBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\InterectBlock\Runepaper.h">
       <Filter>Source\Graduation_2024\Public\InterectBlock</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\Interface">
