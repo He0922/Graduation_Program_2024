@@ -81,7 +81,7 @@ private:
 	TMap<EBlockType, int> AblockTypeAmount;
 
 	//存储生成的线和三角面
-	TMap<EBlockType, USplineMeshComponent*> BI_Line;
+	TMap<EBlockType, TArray<USplineMeshComponent*>> BI_Line;
 	TMap<EBlockType, UProceduralMeshComponent*> BI_Triangles;
 
 	//节点操作
@@ -100,7 +100,7 @@ private:
 	void OnRemoveActiveBlocks(ABlockActor* blockActor);
 
 	//生成连线，以及网格
-	void InitLineByBlock(EBlockType type);
+	void InitLineByBlock(EBlockType type, bool frame);
 	void InitTriangleByBlock(EBlockType type);
 
 	//清除对应连线以及网格
