@@ -46,34 +46,44 @@ void ABlockActorManager::InitMeshComs()
 //生成SplineMesh组件
 void ABlockActorManager::InitSplineMeshCom(UEnum* EnumPtr, EBlockType type)
 {
-	FString tempMeshComponentName = EnumPtr->GetNameStringByValue((int8)type) + "SplineMeshComponent";
+	//开个临时数组
+	TArray<USplineMeshComponent*> tempTarray;
 
-	//设置组件默认值
-	USplineMeshComponent* splineMeshComponent = NewObject< USplineMeshComponent>(this, *tempMeshComponentName);
-	splineMeshComponent->SetMobility(EComponentMobility::Type::Movable);
-	splineMeshComponent->RegisterComponent();
-	splineMeshComponent->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
-
-	//设置连线属性，网格体， 宽度， 朝前轴
-	splineMeshComponent->SetStartScale(FVector2D(SplineWidth, SplineWidth));
-	splineMeshComponent->SetEndScale(FVector2D(SplineWidth, SplineWidth));
-	splineMeshComponent->SetStaticMesh(nullptr);
-	splineMeshComponent->SetForwardAxis(ForwardAxis);
-
-	//this->AddInstanceComponent(splineMeshComponent);
-
-	//设置对应材质
-	for (auto blockset : blockSettings)
+	//三条线
+	for (int i = 0; i < 3; i++)
 	{
-		if (blockset.blockType == type)
+		FString tempMeshComponentName = EnumPtr->GetNameStringByValue((int8)type) + "SplineMeshComponent" + FString::FromInt(i);
+
+		//设置组件默认值
+		USplineMeshComponent* splineMeshComponent = NewObject< USplineMeshComponent>(this, *tempMeshComponentName);
+		splineMeshComponent->SetMobility(EComponentMobility::Type::Movable);
+		splineMeshComponent->RegisterComponent();
+		splineMeshComponent->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
+
+		//设置连线属性，网格体， 宽度， 朝前轴
+		splineMeshComponent->SetStartScale(FVector2D(SplineWidth, SplineWidth));
+		splineMeshComponent->SetEndScale(FVector2D(SplineWidth, SplineWidth));
+		splineMeshComponent->SetStaticMesh(nullptr);
+		splineMeshComponent->SetForwardAxis(ForwardAxis);
+
+		//this->AddInstanceComponent(splineMeshComponent);
+
+		//设置对应材质
+		for (auto blockset : blockSettings)
 		{
-			splineMeshComponent->SetMaterial(0, blockset.LineMaterial);
-			break;
+			if (blockset.blockType == type)
+			{
+				splineMeshComponent->SetMaterial(0, blockset.LineMaterial);
+				break;
+			}
 		}
+
+		tempTarray.Add(splineMeshComponent);
 	}
 
 	//Map中添加组件
-	BI_Line.Add(type, splineMeshComponent);
+	BI_Line.Add(type, tempTarray);
+	UE_LOG(LogTemp, Warning, TEXT("Init SplineComponent"));
 }
 
 //生成ProceduralMesh组件
@@ -177,10 +187,11 @@ void ABlockActorManager::OnAddActiveBlocks(ABlockActor* blockActor)
 	{
 		if (type.Value == 2)
 		{
-			InitLineByBlock(type.Key);
+			InitLineByBlock(type.Key, false);
 		}
 		else if (type.Value == 3)
 		{
+			InitLineByBlock(type.Key, true);
 			InitTriangleByBlock(type.Key);
 		}
 	}
@@ -204,6 +215,8 @@ void ABlockActorManager::OnRemoveActiveBlocks(ABlockActor* blockActor)
 	}
 	else if (AblockTypeAmount[blockActor->blockType] < 3)
 	{
+		//在三个激活节点以下时，清除生成的边框以及面片
+		ClearLineByType(blockActor->blockType);
 		ClearTriangleByType(blockActor->blockType);
 	}
 
@@ -212,7 +225,7 @@ void ABlockActorManager::OnRemoveActiveBlocks(ABlockActor* blockActor)
 	{
 		if (type.Value == 2)
 		{
-			InitLineByBlock(type.Key);
+			InitLineByBlock(type.Key, false);
 		}
 		else if (type.Value == 3)
 		{
@@ -221,10 +234,10 @@ void ABlockActorManager::OnRemoveActiveBlocks(ABlockActor* blockActor)
 	}
 }
 
-//生成连线
-void ABlockActorManager::InitLineByBlock(EBlockType type)
+//生成连线,利用frame确认是否为边框， 若为边框，则三条线全部生成
+void ABlockActorManager::InitLineByBlock(EBlockType type, bool frame)
 {
-	if (AblockTypeAmount[type] != 2)
+	if (AblockTypeAmount[type] > 3 || AblockTypeAmount[type] < 2)
 	{
 		return;
 	}
@@ -238,17 +251,41 @@ void ABlockActorManager::InitLineByBlock(EBlockType type)
 		{
 			//由于是本地空间，所以需要减去父物体的世界位置
 			PointPos.Add(block->GetInitPosition() - GetActorLocation());
+			UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Pos %s"), *(block->GetInitPosition() - GetActorLocation()).ToString());
 		}
 	}
 
-	BI_Line[type]->SetStaticMesh(staticMesh);
-	BI_Line[type]->SetStartAndEnd(PointPos[0], PointPos[1] - PointPos[0], PointPos[1], PointPos[1] - PointPos[0]);
+	//对相关节点的序号
+	//0,1 1,2 2,0 (%3)
+	if (frame)
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Line %d"), i);
+			int a = i, b = (i + 1) % 3;
+			BI_Line[type][i]->SetStaticMesh(staticMesh);
+			BI_Line[type][i]->SetStartAndEnd(PointPos[a], PointPos[b] - PointPos[a], PointPos[b], PointPos[b] - PointPos[a]);
+			UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Pos A: %s, B: %s"), *(PointPos[a].ToString()), *(PointPos[b].ToString()));
+		}
+	}
+	else
+	{
+		BI_Line[type][0]->SetStaticMesh(staticMesh);
+		BI_Line[type][0]->SetStartAndEnd(PointPos[0], PointPos[1] - PointPos[0], PointPos[1], PointPos[1] - PointPos[0]);
+
+	}
+	//最基本的代码
+	//BI_Line[type][index]->SetStaticMesh(staticMesh);
+	//BI_Line[type][index]->SetStartAndEnd(PointPos[0], PointPos[1] - PointPos[0], PointPos[1], PointPos[1] - PointPos[0]);
 }
 
-//根据类型清除连线
+//根据类型清除连线(仅在触发一条线的情况下使用，默认编号为0
 void ABlockActorManager::ClearLineByType(EBlockType type)
 {
-	BI_Line[type]->SetStaticMesh(nullptr);
+	for (auto line : BI_Line[type])
+	{
+		line->SetStaticMesh(nullptr);
+	}
 }
 
 //生成三角面片
@@ -296,9 +333,12 @@ void ABlockActorManager::ClearTriangleByType(EBlockType type)
 //清除生成的线条以及三角面片
 void ABlockActorManager::ClearAllLineAndTriangle()
 {
-	for (auto line : BI_Line)
+	for (auto lineArray : BI_Line)
 	{
-		line.Value->SetStaticMesh(nullptr);
+		for (auto line : lineArray.Value)
+		{
+			line->SetStaticMesh(nullptr);
+		}
 	}
 
 	for (auto triangle : BI_Triangles)
