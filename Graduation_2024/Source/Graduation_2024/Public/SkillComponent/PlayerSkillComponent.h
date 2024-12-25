@@ -14,6 +14,8 @@ enum class ESkillType : uint8
 	Other
 };
 
+class ARunepaper;
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent),Blueprintable, BlueprintType)
 class GRADUATION_2024_API UPlayerSkillComponent : public UActorComponent
 {
@@ -107,10 +109,15 @@ public:
 	bool GetScanColdState() const { return IFScanIsInCold; }
 #pragma endregion
 
-	//交互节点
+//交互节点相关
 #pragma region AboutInterectBlock
 public:
 	void InterctBlock();
+	void FireRunePaper();
+
+public:
+	UPROPERTY(EditAnywhere, Category = "Fire")
+	TSubclassOf<ARunepaper> Bullet;
 #pragma endregion
 };
 

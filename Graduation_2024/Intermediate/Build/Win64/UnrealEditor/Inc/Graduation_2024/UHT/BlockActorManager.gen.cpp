@@ -24,6 +24,9 @@ GRADUATION_2024_API UClass* Z_Construct_UClass_ABlockActorManager();
 GRADUATION_2024_API UClass* Z_Construct_UClass_ABlockActorManager_NoRegister();
 GRADUATION_2024_API UEnum* Z_Construct_UEnum_Graduation_2024_EBlockType();
 GRADUATION_2024_API UScriptStruct* Z_Construct_UScriptStruct_FBlockSettings();
+GRADUATION_2024_API UScriptStruct* Z_Construct_UScriptStruct_FSpline();
+NIAGARA_API UClass* Z_Construct_UClass_UNiagaraComponent_NoRegister();
+NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
 // End Cross Module References
 
@@ -131,6 +134,57 @@ UScriptStruct* Z_Construct_UScriptStruct_FBlockSettings()
 	return Z_Registration_Info_UScriptStruct_BlockSettings.InnerSingleton;
 }
 // End ScriptStruct FBlockSettings
+
+// Begin ScriptStruct FSpline
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_Spline;
+class UScriptStruct* FSpline::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_Spline.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_Spline.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FSpline, (UObject*)Z_Construct_UPackage__Script_Graduation_2024(), TEXT("Spline"));
+	}
+	return Z_Registration_Info_UScriptStruct_Spline.OuterSingleton;
+}
+template<> GRADUATION_2024_API UScriptStruct* StaticStruct<FSpline>()
+{
+	return FSpline::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FSpline_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/InterectBlock/BlockActorManager.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSpline>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSpline_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_Graduation_2024,
+	nullptr,
+	&NewStructOps,
+	"Spline",
+	nullptr,
+	0,
+	sizeof(FSpline),
+	alignof(FSpline),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FSpline_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FSpline_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FSpline()
+{
+	if (!Z_Registration_Info_UScriptStruct_Spline.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_Spline.InnerSingleton, Z_Construct_UScriptStruct_FSpline_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_Spline.InnerSingleton;
+}
+// End ScriptStruct FSpline
 
 // Begin Class ABlockActorManager Function OnTriangleOnOverlapEnd
 struct Z_Construct_UFunction_ABlockActorManager_OnTriangleOnOverlapEnd_Statics
@@ -366,6 +420,25 @@ struct Z_Construct_UClass_ABlockActorManager_Statics
 		{ "ToolTip", "\xd6\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd7\xb2\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EdgeConnect_MetaData[] = {
+		{ "Category", "Effects" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xa7\xcf\xb5\xcd\xb3\xef\xbf\xbd\xdf\xb6\xcf\xbf\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/InterectBlock/BlockActorManager.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xa7\xcf\xb5\xcd\xb3\xef\xbf\xbd\xdf\xb6\xcf\xbf\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EdgeDisconnection_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "Public/InterectBlock/BlockActorManager.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InterBlockVFX_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/InterectBlock/BlockActorManager.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_blockSettings_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_blockSettings;
@@ -375,6 +448,9 @@ struct Z_Construct_UClass_ABlockActorManager_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_staticMesh;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SplineWidth;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CollisionType;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_EdgeConnect;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_EdgeDisconnection;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InterBlockVFX;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -395,6 +471,9 @@ const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABlockActorManag
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlockActorManager_Statics::NewProp_staticMesh = { "staticMesh", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActorManager, staticMesh), Z_Construct_UClass_UStaticMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_staticMesh_MetaData), NewProp_staticMesh_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABlockActorManager_Statics::NewProp_SplineWidth = { "SplineWidth", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActorManager, SplineWidth), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SplineWidth_MetaData), NewProp_SplineWidth_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABlockActorManager_Statics::NewProp_CollisionType = { "CollisionType", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActorManager, CollisionType), Z_Construct_UEnum_Engine_ECollisionChannel, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollisionType_MetaData), NewProp_CollisionType_MetaData) }; // 756624936
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlockActorManager_Statics::NewProp_EdgeConnect = { "EdgeConnect", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActorManager, EdgeConnect), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EdgeConnect_MetaData), NewProp_EdgeConnect_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlockActorManager_Statics::NewProp_EdgeDisconnection = { "EdgeDisconnection", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActorManager, EdgeDisconnection), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EdgeDisconnection_MetaData), NewProp_EdgeDisconnection_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlockActorManager_Statics::NewProp_InterBlockVFX = { "InterBlockVFX", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActorManager, InterBlockVFX), Z_Construct_UClass_UNiagaraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InterBlockVFX_MetaData), NewProp_InterBlockVFX_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABlockActorManager_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActorManager_Statics::NewProp_blockSettings_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActorManager_Statics::NewProp_blockSettings,
@@ -404,6 +483,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABlockAct
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActorManager_Statics::NewProp_staticMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActorManager_Statics::NewProp_SplineWidth,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActorManager_Statics::NewProp_CollisionType,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActorManager_Statics::NewProp_EdgeConnect,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActorManager_Statics::NewProp_EdgeDisconnection,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActorManager_Statics::NewProp_InterBlockVFX,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABlockActorManager_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABlockActorManager_Statics::DependentSingletons[])() = {
@@ -447,12 +529,13 @@ struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_20
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FBlockSettings::StaticStruct, Z_Construct_UScriptStruct_FBlockSettings_Statics::NewStructOps, TEXT("BlockSettings"), &Z_Registration_Info_UScriptStruct_BlockSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBlockSettings), 2608398037U) },
+		{ FSpline::StaticStruct, Z_Construct_UScriptStruct_FSpline_Statics::NewStructOps, TEXT("Spline"), &Z_Registration_Info_UScriptStruct_Spline, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSpline), 321412002U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABlockActorManager, ABlockActorManager::StaticClass, TEXT("ABlockActorManager"), &Z_Registration_Info_UClass_ABlockActorManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlockActorManager), 520007474U) },
+		{ Z_Construct_UClass_ABlockActorManager, ABlockActorManager::StaticClass, TEXT("ABlockActorManager"), &Z_Registration_Info_UClass_ABlockActorManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlockActorManager), 1878121094U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActorManager_h_1037299156(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActorManager_h_3848936912(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActorManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActorManager_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActorManager_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActorManager_h_Statics::ScriptStructInfo),
 	nullptr, 0);

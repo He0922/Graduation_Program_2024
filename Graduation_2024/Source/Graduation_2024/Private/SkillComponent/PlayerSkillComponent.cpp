@@ -3,6 +3,7 @@
 #include "TimerManager.h"
 #include "Character/Player/PlayerCharacter.h"
 #include "InterectBlock/BlockActor.h"
+#include "InterectBlock/Runepaper.h"
 
 
 DEFINE_LOG_CATEGORY_STATIC(PlayerSkillComponentLog, All, All);
@@ -139,7 +140,11 @@ void UPlayerSkillComponent::OutScanColdState()
 #pragma region Interect Block
 void UPlayerSkillComponent::InterctBlock()
 {
+	FireRunePaper();
+
 	UE_LOG(LogTemp, Display, TEXT("Interct"));
+
+	return;
 
 	FVector CharacterLocation = GetOwner()->GetActorLocation();
 	float Radius = 100.f; // 设置触发器半径
@@ -177,5 +182,13 @@ void UPlayerSkillComponent::InterctBlock()
 
 	// 可选：在调试时可视化球形范围
 	DrawDebugSphere(GetWorld(), CharacterLocation, Radius, 12, FColor::Green, false, 2.0f);
+}
+
+void UPlayerSkillComponent::FireRunePaper()
+{
+	if (Bullet == NULL)
+		return;
+
+	GetWorld()->SpawnActor<ARunepaper>(Bullet, GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation());
 }
 #pragma endregion
