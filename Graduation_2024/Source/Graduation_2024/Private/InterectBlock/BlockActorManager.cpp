@@ -73,6 +73,7 @@ void ABlockActorManager::InitSplineMeshCom(UEnum* EnumPtr, EBlockType type)
 		{
 			if (blockset.blockType == type)
 			{
+				UE_LOG(LogTemp, Warning, TEXT("Material"));
 				splineMeshComponent->SetMaterial(0, blockset.LineMaterial);
 				break;
 			}
