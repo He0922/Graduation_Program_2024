@@ -1,11 +1,19 @@
 #include "InterectBlock/BlockActorManager.h"
+
 #include "Kismet/KismetMathLibrary.h"
 #include "ProceduralMeshComponent.h"
+
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 
 DEFINE_LOG_CATEGORY_STATIC(BlockActorManagerLog, All, All);
 ABlockActorManager::ABlockActorManager()
 {
 	PrimaryActorTick.bCanEverTick = false;
+
+	// 创建粒子组件
+	InterBlockVFX = CreateDefaultSubobject<UNiagaraComponent>(TEXT("RunePaperNiagaraComponent"));
+	InterBlockVFX->SetupAttachment(RootComponent);  // 将粒子组件附加到根组件
 }
 
 void ABlockActorManager::BeginPlay()
@@ -16,9 +24,12 @@ void ABlockActorManager::BeginPlay()
 
 	//初始化网格生成组件
 	InitMeshComs();
+	UE_LOG(BlockActorManagerLog, Warning, TEXT("Actor Pos %s"), *(GetActorLocation().ToString()));
 
 	InitBlockActorsOnScene();
 }
+
+#pragma region Init
 
 void ABlockActorManager::InitMeshComs()
 {
@@ -47,7 +58,9 @@ void ABlockActorManager::InitMeshComs()
 void ABlockActorManager::InitSplineMeshCom(UEnum* EnumPtr, EBlockType type)
 {
 	//开个临时数组
-	TArray<USplineMeshComponent*> tempTarray;
+	//FSpline tempSpline;
+
+	TArray<USplineMeshComponent*> tempSpline;
 
 	//三条线
 	for (int i = 0; i < 3; i++)
@@ -79,12 +92,11 @@ void ABlockActorManager::InitSplineMeshCom(UEnum* EnumPtr, EBlockType type)
 			}
 		}
 
-		tempTarray.Add(splineMeshComponent);
+		tempSpline.Add(splineMeshComponent);
 	}
 
 	//Map中添加组件
-	BI_Line.Add(type, tempTarray);
-	UE_LOG(LogTemp, Warning, TEXT("Init SplineComponent"));
+	BI_Line.Add(type, tempSpline);
 }
 
 //生成ProceduralMesh组件
@@ -145,6 +157,9 @@ void ABlockActorManager::InitBlockActorsOnScene()
 	}
 }
 
+#pragma endregion
+
+#pragma region Active Block
 //刷新节点， 节点类中调用
 void ABlockActorManager::RefreshActiveBlocks(ABlockActor* blockActor, bool IsActive)
 {
@@ -180,7 +195,7 @@ void ABlockActorManager::OnAddActiveBlocks(ABlockActor* blockActor)
 	//大于二时，消除线，
 	if (AblockTypeAmount[blockActor->blockType] > 2)
 	{
-		ClearLineByType(blockActor->blockType);
+		ClearSingleLineByType(blockActor->blockType);
 	}
 
 	//生成线或者网格
@@ -212,12 +227,12 @@ void ABlockActorManager::OnRemoveActiveBlocks(ABlockActor* blockActor)
 	//判断当前数量，来清除生成的连线或者三角面片
 	if (AblockTypeAmount[blockActor->blockType] < 2)
 	{
-		ClearLineByType(blockActor->blockType);
+		ClearSingleLineByType(blockActor->blockType);
 	}
 	else if (AblockTypeAmount[blockActor->blockType] < 3)
 	{
 		//在三个激活节点以下时，清除生成的边框以及面片
-		ClearLineByType(blockActor->blockType);
+		ClearAllLineByType(blockActor->blockType);
 		ClearTriangleByType(blockActor->blockType);
 	}
 
@@ -234,7 +249,9 @@ void ABlockActorManager::OnRemoveActiveBlocks(ABlockActor* blockActor)
 		}
 	}
 }
+#pragma endregion
 
+#pragma region Edge
 //生成连线,利用frame确认是否为边框， 若为边框，则三条线全部生成
 void ABlockActorManager::InitLineByBlock(EBlockType type, bool frame)
 {
@@ -252,7 +269,7 @@ void ABlockActorManager::InitLineByBlock(EBlockType type, bool frame)
 		{
 			//由于是本地空间，所以需要减去父物体的世界位置
 			PointPos.Add(block->GetInitPosition() - GetActorLocation());
-			UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Pos %s"), *(block->GetInitPosition() - GetActorLocation()).ToString());
+			UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Pos %s, Actor Pos %s"), *(block->GetInitPosition().ToString()), *(GetActorLocation().ToString()));
 		}
 	}
 
@@ -262,18 +279,20 @@ void ABlockActorManager::InitLineByBlock(EBlockType type, bool frame)
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Line %d"), i);
 			int a = i, b = (i + 1) % 3;
 			BI_Line[type][i]->SetStaticMesh(staticMesh);
 			BI_Line[type][i]->SetStartAndEnd(PointPos[a], PointPos[b] - PointPos[a], PointPos[b], PointPos[b] - PointPos[a]);
-			UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Pos A: %s, B: %s"), *(PointPos[a].ToString()), *(PointPos[b].ToString()));
 		}
 	}
 	else
 	{
 		BI_Line[type][0]->SetStaticMesh(staticMesh);
 		BI_Line[type][0]->SetStartAndEnd(PointPos[0], PointPos[1] - PointPos[0], PointPos[1], PointPos[1] - PointPos[0]);
+		//BI_Line[type].initPos = (PointPos[0] + PointPos[1]) / 2;
+		UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Pos 0: %s, 1: %s"), *(PointPos[0].ToString()), *(PointPos[1].ToString()));
 
+		//播放生成特效
+		PlayVFX(EdgeConnect, (PointPos[0] + PointPos[1]) / 2);
 	}
 	//最基本的代码
 	//BI_Line[type][index]->SetStaticMesh(staticMesh);
@@ -281,13 +300,21 @@ void ABlockActorManager::InitLineByBlock(EBlockType type, bool frame)
 }
 
 //根据类型清除连线(仅在触发一条线的情况下使用，默认编号为0
-void ABlockActorManager::ClearLineByType(EBlockType type)
+void ABlockActorManager::ClearSingleLineByType(EBlockType type)
+{
+	BI_Line[type][0]->SetStaticMesh(nullptr);
+}
+
+void ABlockActorManager::ClearAllLineByType(EBlockType type)
 {
 	for (auto line : BI_Line[type])
 	{
 		line->SetStaticMesh(nullptr);
 	}
 }
+#pragma endregion
+
+#pragma region Triangle
 
 //生成三角面片
 void ABlockActorManager::InitTriangleByBlock(EBlockType type)
@@ -347,6 +374,22 @@ void ABlockActorManager::ClearAllLineAndTriangle()
 		triangle.Value->ClearAllMeshSections();
 	}
 }
+#pragma endregion
+
+#pragma region VFX
+
+void ABlockActorManager::PlayVFX(UNiagaraSystem* niagara, FVector position)
+{
+	if (!niagara)
+		return;
+
+	//InterBlockVFX->SetRelativeLocation(position);
+	InterBlockVFX->SetAsset(niagara);
+	InterBlockVFX->Activate();
+}
+#pragma endregion
+
+#pragma region Overlap
 
 //重叠开始事件
 void ABlockActorManager::OnTriangleOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* c, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -371,3 +414,4 @@ void ABlockActorManager::OnTriangleOnOverlapEnd(UPrimitiveComponent* OverlappedC
 		HasOverlap = false; // 标记第一次结束重叠
 	}
 }
+#pragma endregion
