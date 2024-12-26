@@ -10,6 +10,8 @@
 
 #include "BlockActorManager.generated.h"
 
+class UNiagaraSystem;
+class UNiagaraComponent;
 //节点参数设置的结构体
 USTRUCT(BlueprintType)
 struct FBlockSettings
@@ -31,6 +33,15 @@ struct FBlockSettings
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "blockSettings")
 	UMaterialInstance* TriangleMaterial;
+};
+
+USTRUCT(BlueprintType)
+struct FSpline
+{
+	GENERATED_USTRUCT_BODY()
+
+	TArray<USplineMeshComponent*> splines;
+	FVector initPos;
 };
 
 DECLARE_TS_MULTICAST_DELEGATE_TwoParams(FRefrashBlock, ABlockActor*, bool);
@@ -70,10 +81,20 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CollisionType")
 	TEnumAsByte <ECollisionChannel> CollisionType;
 
+	//两个特效系统线断开，线连接
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effects")
+	UNiagaraSystem* EdgeConnect;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effects")
+	UNiagaraSystem* EdgeDisconnection;
+
 public:
 	FRefrashBlock refreshBlock;
 
 	void ClearAllLineAndTriangle();
+
+private:
+	UPROPERTY(VisibleAnywhere, Category = "Effects")
+	UNiagaraComponent* InterBlockVFX;
 
 private:
 	//用于存储已经激活的节点，以及对应类型个数
@@ -81,6 +102,7 @@ private:
 	TMap<EBlockType, int> AblockTypeAmount;
 
 	//存储生成的线和三角面
+	//TMap<EBlockType, FSpline> BI_Line;
 	TMap<EBlockType, TArray<USplineMeshComponent*>> BI_Line;
 	TMap<EBlockType, UProceduralMeshComponent*> BI_Triangles;
 
@@ -104,10 +126,13 @@ private:
 	void InitTriangleByBlock(EBlockType type);
 
 	//清除对应连线以及网格
-	void ClearLineByType(EBlockType type);
+	void ClearSingleLineByType(EBlockType type);
+	void ClearAllLineByType(EBlockType type);
 	void ClearTriangleByType(EBlockType type);
 
-	//碰撞相关，防止重复触发
+	void PlayVFX(UNiagaraSystem* niagara, FVector position);
+
+//碰撞相关，防止重复触发
 private:
 	bool HasOverlap = false;
 
