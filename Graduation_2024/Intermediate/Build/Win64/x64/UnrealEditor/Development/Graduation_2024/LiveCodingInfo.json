@@ -22,6 +22,8 @@
 			"PlayerAttributesUW.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
 			"PlayerCharacterMovementComponent.gen.cpp.obj",
+			"PlayerSkillComponent.gen.cpp.obj",
+			"Runepaper.gen.cpp.obj",
 			"Graduation_2024.cpp.obj",
 			"Archival.cpp.obj",
 			"Mayfly.cpp.obj",
@@ -30,6 +32,7 @@
 			"PlayerAIController.cpp.obj",
 			"CustomGameModeBase.cpp.obj",
 			"BlockActor.cpp.obj",
+			"Runepaper.cpp.obj",
 			"ArchivalInterface.cpp.obj",
 			"CustomPlayerStatusInterface.cpp.obj",
 			"PlayerAttributesInterface.cpp.obj",
@@ -38,15 +41,12 @@
 			"PlayerCharacterMovementComponent.cpp.obj",
 			"FloorRaft.cpp.obj",
 			"MyPawn.cpp.obj",
+			"PlayerSkillComponent.cpp.obj",
 			"ArchivalUW.cpp.obj",
 			"PlayerAttributesUW.cpp.obj",
 			"BlockActorManager.gen.cpp.obj",
 			"Graduation_2024.init.gen.cpp.obj",
-			"PlayerSkillComponent.gen.cpp.obj",
-			"Runepaper.gen.cpp.obj",
-			"BlockActorManager.cpp.obj",
-			"Runepaper.cpp.obj",
-			"PlayerSkillComponent.cpp.obj"
+			"BlockActorManager.cpp.obj"
 		]
 	}
 }

@@ -11,6 +11,9 @@ ABlockActorManager::ABlockActorManager()
 {
 	PrimaryActorTick.bCanEverTick = false;
 
+	rootComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("RootComponent"));
+	SetRootComponent(rootComponent);
+
 	// 创建粒子组件
 	InterBlockVFX = CreateDefaultSubobject<UNiagaraComponent>(TEXT("RunePaperNiagaraComponent"));
 	InterBlockVFX->SetupAttachment(RootComponent);  // 将粒子组件附加到根组件
@@ -58,9 +61,7 @@ void ABlockActorManager::InitMeshComs()
 void ABlockActorManager::InitSplineMeshCom(UEnum* EnumPtr, EBlockType type)
 {
 	//开个临时数组
-	//FSpline tempSpline;
-
-	TArray<USplineMeshComponent*> tempSpline;
+	FSpline tempSpline;
 
 	//三条线
 	for (int i = 0; i < 3; i++)
@@ -70,16 +71,15 @@ void ABlockActorManager::InitSplineMeshCom(UEnum* EnumPtr, EBlockType type)
 		//设置组件默认值
 		USplineMeshComponent* splineMeshComponent = NewObject< USplineMeshComponent>(this, *tempMeshComponentName);
 		splineMeshComponent->SetMobility(EComponentMobility::Type::Movable);
+		splineMeshComponent->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 		splineMeshComponent->RegisterComponent();
-		splineMeshComponent->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
 
 		//设置连线属性，网格体， 宽度， 朝前轴
 		splineMeshComponent->SetStartScale(FVector2D(SplineWidth, SplineWidth));
 		splineMeshComponent->SetEndScale(FVector2D(SplineWidth, SplineWidth));
 		splineMeshComponent->SetStaticMesh(nullptr);
 		splineMeshComponent->SetForwardAxis(ForwardAxis);
-
-		//this->AddInstanceComponent(splineMeshComponent);
+		this->AddInstanceComponent(splineMeshComponent);
 
 		//设置对应材质
 		for (auto blockset : blockSettings)
@@ -92,7 +92,7 @@ void ABlockActorManager::InitSplineMeshCom(UEnum* EnumPtr, EBlockType type)
 			}
 		}
 
-		tempSpline.Add(splineMeshComponent);
+		tempSpline.splines.Add(splineMeshComponent);
 	}
 
 	//Map中添加组件
@@ -117,7 +117,7 @@ void ABlockActorManager::InitProceduralMeshCom(UEnum* EnumPtr, EBlockType type)
 	ProceduralMesh->OnComponentBeginOverlap.AddDynamic(this, &ABlockActorManager::OnTriangleOverlapBegin);
 	ProceduralMesh->OnComponentEndOverlap.AddDynamic(this, &ABlockActorManager::OnTriangleOnOverlapEnd);
 
-	ProceduralMesh->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	ProceduralMesh->SetupAttachment(RootComponent);
 	ProceduralMesh->RegisterComponent();
 	this->AddInstanceComponent(ProceduralMesh);
 
@@ -262,13 +262,14 @@ void ABlockActorManager::InitLineByBlock(EBlockType type, bool frame)
 
 	//开个数组塞进去
 	TArray<FVector> PointPos;
+	FVector myActorPos = GetActorLocation();
 
 	for (auto block : AblockActorsOnActive)
 	{
 		if (type == block->blockType)
 		{
 			//由于是本地空间，所以需要减去父物体的世界位置
-			PointPos.Add(block->GetInitPosition() - GetActorLocation());
+			PointPos.Add(block->GetInitPosition() - myActorPos);
 			UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Pos %s, Actor Pos %s"), *(block->GetInitPosition().ToString()), *(GetActorLocation().ToString()));
 		}
 	}
@@ -280,34 +281,32 @@ void ABlockActorManager::InitLineByBlock(EBlockType type, bool frame)
 		for (int i = 0; i < 3; i++)
 		{
 			int a = i, b = (i + 1) % 3;
-			BI_Line[type][i]->SetStaticMesh(staticMesh);
-			BI_Line[type][i]->SetStartAndEnd(PointPos[a], PointPos[b] - PointPos[a], PointPos[b], PointPos[b] - PointPos[a]);
+			BI_Line[type].splines[i]->SetStaticMesh(staticMesh);
+			BI_Line[type].splines[i]->SetStartAndEnd(PointPos[a], PointPos[b] - PointPos[a], PointPos[b], PointPos[b] - PointPos[a]);
 		}
 	}
 	else
 	{
-		BI_Line[type][0]->SetStaticMesh(staticMesh);
-		BI_Line[type][0]->SetStartAndEnd(PointPos[0], PointPos[1] - PointPos[0], PointPos[1], PointPos[1] - PointPos[0]);
-		//BI_Line[type].initPos = (PointPos[0] + PointPos[1]) / 2;
+		BI_Line[type].splines[0]->SetStaticMesh(staticMesh);
+		BI_Line[type].splines[0]->SetStartAndEnd(PointPos[0], PointPos[1] - PointPos[0], PointPos[1], PointPos[1] - PointPos[0]);
 		UE_LOG(BlockActorManagerLog, Warning, TEXT("Init Pos 0: %s, 1: %s"), *(PointPos[0].ToString()), *(PointPos[1].ToString()));
 
-		//播放生成特效
-		PlayVFX(EdgeConnect, (PointPos[0] + PointPos[1]) / 2);
+		//播放生成特效(并更新位置)
+		BI_Line[type].blockPoss = PointPos;
+		PlayVFX(EdgeConnect, type);
 	}
-	//最基本的代码
-	//BI_Line[type][index]->SetStaticMesh(staticMesh);
-	//BI_Line[type][index]->SetStartAndEnd(PointPos[0], PointPos[1] - PointPos[0], PointPos[1], PointPos[1] - PointPos[0]);
 }
 
 //根据类型清除连线(仅在触发一条线的情况下使用，默认编号为0
 void ABlockActorManager::ClearSingleLineByType(EBlockType type)
 {
-	BI_Line[type][0]->SetStaticMesh(nullptr);
+	BI_Line[type].splines[0]->SetStaticMesh(nullptr);
+	PlayVFX(EdgeDisconnection, type);
 }
 
 void ABlockActorManager::ClearAllLineByType(EBlockType type)
 {
-	for (auto line : BI_Line[type])
+	for (auto line : BI_Line[type].splines)
 	{
 		line->SetStaticMesh(nullptr);
 	}
@@ -363,7 +362,7 @@ void ABlockActorManager::ClearAllLineAndTriangle()
 {
 	for (auto lineArray : BI_Line)
 	{
-		for (auto line : lineArray.Value)
+		for (auto line : lineArray.Value.splines)
 		{
 			line->SetStaticMesh(nullptr);
 		}
@@ -378,14 +377,53 @@ void ABlockActorManager::ClearAllLineAndTriangle()
 
 #pragma region VFX
 
-void ABlockActorManager::PlayVFX(UNiagaraSystem* niagara, FVector position)
+void ABlockActorManager::PlayVFX(UNiagaraSystem* niagara, EBlockType type)
 {
 	if (!niagara)
 		return;
 
-	//InterBlockVFX->SetRelativeLocation(position);
+	float distance = FVector::Distance(BI_Line[type].blockPoss[0] , BI_Line[type].blockPoss[1]) / 100.0f;//除100转换格式
+	FVector Initposition = (BI_Line[type].blockPoss[0] + BI_Line[type].blockPoss[1]) / 2 + GetActorLocation();
+
+
 	InterBlockVFX->SetAsset(niagara);
-	InterBlockVFX->Activate();
+	InterBlockVFX->SetVariableFloat(lengthParamter, distance);
+	InterBlockVFX->SetWorldLocation(Initposition);
+	if (IfEdgeRotate)
+	{
+		FVector Direction = BI_Line[type].blockPoss[0] - Initposition;
+		FRotator TargetRotation = Direction.Rotation();
+		// 获取目标位置和当前对象的位置
+		FVector CurrentLocation = InterBlockVFX->GetComponentLocation();
+
+		// 计算目标与当前对象之间的方向向量
+		FVector DirectionToTarget = BI_Line[type].blockPoss[0] - CurrentLocation;
+
+		// 将方向向量转换为旋转，使得 Z 轴指向目标
+		FRotator NewRotation = DirectionToTarget.Rotation();
+
+		// 将旋转调整为使 X 轴指向目标
+		// 如果你希望 X 轴指向目标，而不是 Z 轴，你可以通过修改 Yaw 和 Pitch 来实现
+		FRotator AdjustedRotation = FRotator(NewRotation.Pitch, NewRotation.Yaw, 0.0f);  // 设置 Yaw 和 Pitch 的旋转
+
+		// 旋转时，设置 X 轴朝向目标
+		// 为了确保 X 轴指向目标，我们交换轴的使用：
+		// 将目标的方向向量转换为新的旋转，以使 X 轴指向目标。
+		FVector RightVector = InterBlockVFX->GetRightVector();  // 获取组件的X轴（右向量）
+
+		// 使用右向量来计算正确的旋转
+		FVector AdjustedDirection = DirectionToTarget.GetSafeNormal();
+		FQuat QuatRotation = FQuat::FindBetweenVectors(RightVector, AdjustedDirection);
+		InterBlockVFX->SetWorldRotation(QuatRotation.Rotator());
+		UE_LOG(BlockActorManagerLog, Warning, TEXT("%s"), *QuatRotation.Rotator().ToString());
+
+	}
+	else
+	{
+		InterBlockVFX->SetWorldRotation(EdgeRotate);
+		UE_LOG(BlockActorManagerLog, Warning, TEXT("%s"), *EdgeRotate.ToString());
+	}
+	InterBlockVFX->ActivateSystem();
 }
 #pragma endregion
 
