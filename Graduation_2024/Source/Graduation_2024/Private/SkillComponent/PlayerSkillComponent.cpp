@@ -5,13 +5,11 @@
 #include "InterectBlock/BlockActor.h"
 #include "InterectBlock/Runepaper.h"
 
-
 DEFINE_LOG_CATEGORY_STATIC(PlayerSkillComponentLog, All, All);
 UPlayerSkillComponent::UPlayerSkillComponent()
 {
 	PrimaryComponentTick.bCanEverTick = false;
 }
-
 
 void UPlayerSkillComponent::BeginPlay()
 {

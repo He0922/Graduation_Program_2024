@@ -59,6 +59,9 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	//创建玩家技能组件
 	playerSkillComponent = CreateDefaultSubobject<UPlayerSkillComponent>(TEXT("SkillComponent"));
 
+	// 创建 Timeline 组件
+	CameraTransitionTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("CameraTransitionTimeline"));
+
 	// 初始化玩家状态
 	eplayerStatus = ECustomPlayerStatus::eidle;
 }
@@ -78,7 +81,10 @@ void APlayerCharacter::BeginPlay()
 			subsystem->AddMappingContext(mainMappingContext, 0);
 		}
 	}
-	
+
+	//初始化时间轴方法(关于第三人称转为越肩视角
+	InitTimeLineCurveFunc();
+
 	InitArttributesUW();
 
 }
@@ -128,8 +134,6 @@ void APlayerCharacter::UpdatePlayerStatus(ECustomPlayerStatus newPlayerStatus)
 
 
 #pragma endregion
-
-
 
 
 void APlayerCharacter::NotifyActorBeginOverlap(AActor* OtherActor)
@@ -305,7 +309,6 @@ void APlayerCharacter::ClimbingActionStarted(const FInputActionValue& Value)
 	if (!playerCMC) return;
 
 }
-
 #pragma endregion 
 
 
@@ -339,14 +342,6 @@ void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Att
 		}
 	}
 
-}
-#pragma endregion
-
-#pragma region Property To Skill
-//玩家属性对技能影响
-void APlayerCharacter::OnEnergyEmpty()
-{
-	EndScan();
 }
 #pragma endregion
 
@@ -384,26 +379,6 @@ void APlayerCharacter::InitArchivalUW()
 #pragma endregion
 
 
-#pragma region SKILL
-void APlayerCharacter::StartScan()
-{
-	playerSkillComponent->StartScan();
-	//5000是默认值， 到时候要设置的话， 传到这里就好
-	playerSkillComponent->SetScanDistance(5000);
-}
-
-void APlayerCharacter::EndScan()
-{
-	playerSkillComponent->EndScan();
-}
-
-void APlayerCharacter::InterctBlock()
-{
-	playerSkillComponent->InterctBlock();
-}
-#pragma endregion
-
-
 #pragma region Controller
 void APlayerCharacter::EnablePlayerInput()
 {
@@ -429,4 +404,87 @@ void APlayerCharacter::TeleportTo(EArchiveID ArchivalID)
 {
 }
 
+#pragma endregion
+
+
+#pragma region Property To Skill
+//玩家属性对技能影响
+void APlayerCharacter::OnEnergyEmpty()
+{
+	EndScan();
+}
+#pragma endregion
+
+
+#pragma region SKILL
+void APlayerCharacter::StartScan()
+{
+	playerSkillComponent->StartScan();
+	//5000是默认值， 到时候要设置的话， 传到这里就好
+	playerSkillComponent->SetScanDistance(5000);
+}
+
+void APlayerCharacter::EndScan()
+{
+	playerSkillComponent->EndScan();
+}
+
+void APlayerCharacter::InterctBlock()
+{
+	//ChangeInShoulderView();
+	ChangeOutShoulderView();
+	playerSkillComponent->InterctBlock();
+}
+#pragma endregion
+
+
+#pragma region Shoulder View
+void APlayerCharacter::ChangeInShoulderView()
+{
+	if (CameraTransitionTimeline)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("has CameraTransitionTimeline"));
+		CameraTransitionTimeline->PlayFromStart();  // 开始播放时间线
+	}
+
+	cameraBoom->bUsePawnControlRotation = false;
+}
+
+void APlayerCharacter::ChangeOutShoulderView()
+{
+	if (CameraTransitionTimeline)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("has CameraTransitionTimeline"));
+		CameraTransitionTimeline->ReverseFromEnd();  // 开始播放时间线
+	}
+}
+
+void APlayerCharacter::OnTimelineUpdate(float Value)
+{
+	UE_LOG(LogTemp, Warning, TEXT("%f"), Value);
+	// 根据时间曲线插值更新 相机位置
+	camera->SetRelativeLocation(FMath::Lerp(DefualtCameraPos, TargetCameraPos, Value));
+}
+
+void APlayerCharacter::OnTimelineFinished()
+{
+	UE_LOG(LogTemp, Warning, TEXT("%f"), cameraBoom->TargetArmLength);
+	// 结束时，确保 SpringArm 长度保持最终值
+	camera->SetRelativeLocation(TargetCameraPos);
+}
+
+void APlayerCharacter::InitTimeLineCurveFunc()
+{
+	if (CameraCurve)
+	{
+		DefualtCameraPos = camera->GetRelativeLocation();
+
+		UE_LOG(LogTemp, Warning, TEXT("Succeed"));
+		TimelineProgress.BindUFunction(this, FName("OnTimelineUpdate"));
+		TimelineFinished.BindUFunction(this, FName("OnTimelineFinished"));
+
+		CameraTransitionTimeline->AddInterpFloat(CameraCurve, TimelineProgress);
+		CameraTransitionTimeline->SetTimelineFinishedFunc(TimelineFinished);
+	}
+}
 #pragma endregion

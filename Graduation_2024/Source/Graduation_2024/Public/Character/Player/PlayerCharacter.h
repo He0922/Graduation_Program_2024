@@ -19,6 +19,9 @@
 
 #include "SkillComponent/PlayerSkillComponent.h"
 
+#include "Components/TimelineComponent.h"
+#include "Curves/CurveFloat.h"
+
 
 #include "PlayerCharacter.generated.h"
 
@@ -110,21 +113,6 @@ public:
 #pragma endregion
 
 
-#pragma region Property To Skill
-public:
-	void OnEnergyEmpty();
-#pragma endregion
-
-#pragma region SkillClass
-public:
-	//实现玩家技能接口的定义
-	void StartScan();
-	void EndScan();
-
-	void InterctBlock();
-#pragma endregion
-
-
 // 创建输入映射、输入动作
 #pragma region Player Behavior Control
 public:
@@ -200,15 +188,6 @@ public:
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Movement Component")
 	class UPlayerCharacterMovementComponent* playerCMC;
-
-#pragma endregion
-
-
-	// 创建自定义的角色技能组件变量
-#pragma region SkilComponent
-public:
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Skill Component")
-	class UPlayerSkillComponent* playerSkillComponent;
 
 #pragma endregion
 
@@ -289,6 +268,52 @@ public:
 	FVector archivalLocation;
 
 	void TeleportTo(EArchiveID ArchivalID);
+#pragma endregion
+
+
+// 创建自定义的角色技能组件变量
+#pragma region Property To Skill
+public:
+	void OnEnergyEmpty();
+#pragma endregion
+
+
+#pragma region SkillClass
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Skill Component")
+	class UPlayerSkillComponent* playerSkillComponent;
+
+	//实现玩家技能接口的定义
+	void StartScan();
+	void EndScan();
+
+	void InterctBlock();
+#pragma endregion
+
+
+#pragma region Shoulder View
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
+	UCurveFloat* CameraCurve;  // 用于平滑过渡的曲线
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
+	UTimelineComponent* CameraTransitionTimeline;
+
+	FVector DefualtCameraPos = FVector(0, 0, 0);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
+	FVector TargetCameraPos = FVector(500, 30, 0);
+
+	FOnTimelineFloat TimelineProgress;
+	FOnTimelineEvent TimelineFinished;
+
+	// 动画回调函数
+	UFUNCTION(BlueprintCallable)
+	void OnTimelineUpdate(float Value);
+	void OnTimelineFinished();
+
+	void ChangeInShoulderView();
+	void ChangeOutShoulderView();
+
+	void InitTimeLineCurveFunc();
 #pragma endregion
 
 };
