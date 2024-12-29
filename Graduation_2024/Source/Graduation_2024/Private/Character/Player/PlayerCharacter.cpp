@@ -432,7 +432,7 @@ void APlayerCharacter::EndScan()
 void APlayerCharacter::InterctBlock()
 {
 	//ChangeInShoulderView();
-	ChangeOutShoulderView();
+	//ChangeOutShoulderView();
 	playerSkillComponent->InterctBlock();
 }
 #pragma endregion

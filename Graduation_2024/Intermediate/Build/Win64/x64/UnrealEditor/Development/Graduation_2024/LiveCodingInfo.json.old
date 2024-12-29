@@ -33,7 +33,6 @@
 			"PlayerAIController.cpp.obj",
 			"CustomGameModeBase.cpp.obj",
 			"BlockActor.cpp.obj",
-			"BlockActorManager.cpp.obj",
 			"Runepaper.cpp.obj",
 			"ArchivalInterface.cpp.obj",
 			"CustomPlayerStatusInterface.cpp.obj",
@@ -43,10 +42,11 @@
 			"PlayerCharacterMovementComponent.cpp.obj",
 			"FloorRaft.cpp.obj",
 			"MyPawn.cpp.obj",
+			"PlayerSkillComponent.cpp.obj",
 			"ArchivalUW.cpp.obj",
 			"PlayerAttributesUW.cpp.obj",
 			"PlayerCharacter.cpp.obj",
-			"PlayerSkillComponent.cpp.obj"
+			"BlockActorManager.cpp.obj"
 		]
 	}
 }

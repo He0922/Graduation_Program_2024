@@ -225,8 +225,9 @@ void ABlockActorManager::OnRemoveActiveBlocks(ABlockActor* blockActor)
 	}
 
 	//判断当前数量，来清除生成的连线或者三角面片
-	if (AblockTypeAmount[blockActor->blockType] < 2)
+	if (AblockTypeAmount[blockActor->blockType] == 1)
 	{
+		PlayVFX(EdgeDisconnection, blockActor->blockType);
 		ClearSingleLineByType(blockActor->blockType);
 	}
 	else if (AblockTypeAmount[blockActor->blockType] < 3)
@@ -301,7 +302,6 @@ void ABlockActorManager::InitLineByBlock(EBlockType type, bool frame)
 void ABlockActorManager::ClearSingleLineByType(EBlockType type)
 {
 	BI_Line[type].splines[0]->SetStaticMesh(nullptr);
-	PlayVFX(EdgeDisconnection, type);
 }
 
 void ABlockActorManager::ClearAllLineByType(EBlockType type)
@@ -382,47 +382,21 @@ void ABlockActorManager::PlayVFX(UNiagaraSystem* niagara, EBlockType type)
 	if (!niagara)
 		return;
 
-	float distance = FVector::Distance(BI_Line[type].blockPoss[0] , BI_Line[type].blockPoss[1]) / 100.0f;//除100转换格式
+	float distance = FVector::Distance(BI_Line[type].blockPoss[0] , BI_Line[type].blockPoss[1]) / 100.0f * edgeLengthAdjust;//除100转换格式
+
+	//设置生成位置
 	FVector Initposition = (BI_Line[type].blockPoss[0] + BI_Line[type].blockPoss[1]) / 2 + GetActorLocation();
-
-
 	InterBlockVFX->SetAsset(niagara);
 	InterBlockVFX->SetVariableFloat(lengthParamter, distance);
 	InterBlockVFX->SetWorldLocation(Initposition);
-	if (IfEdgeRotate)
-	{
-		FVector Direction = BI_Line[type].blockPoss[0] - Initposition;
-		FRotator TargetRotation = Direction.Rotation();
-		// 获取目标位置和当前对象的位置
-		FVector CurrentLocation = InterBlockVFX->GetComponentLocation();
 
-		// 计算目标与当前对象之间的方向向量
-		FVector DirectionToTarget = BI_Line[type].blockPoss[0] - CurrentLocation;
+	//设置旋转量
+	FVector Direction = BI_Line[type].blockPoss[0] - InterBlockVFX->GetRelativeLocation();
+	FRotator TargetRotation = Direction.Rotation();
+	TargetRotation.Pitch = 0;
+	TargetRotation.Roll = 0;
+	InterBlockVFX->SetWorldRotation(TargetRotation);
 
-		// 将方向向量转换为旋转，使得 Z 轴指向目标
-		FRotator NewRotation = DirectionToTarget.Rotation();
-
-		// 将旋转调整为使 X 轴指向目标
-		// 如果你希望 X 轴指向目标，而不是 Z 轴，你可以通过修改 Yaw 和 Pitch 来实现
-		FRotator AdjustedRotation = FRotator(NewRotation.Pitch, NewRotation.Yaw, 0.0f);  // 设置 Yaw 和 Pitch 的旋转
-
-		// 旋转时，设置 X 轴朝向目标
-		// 为了确保 X 轴指向目标，我们交换轴的使用：
-		// 将目标的方向向量转换为新的旋转，以使 X 轴指向目标。
-		FVector RightVector = InterBlockVFX->GetRightVector();  // 获取组件的X轴（右向量）
-
-		// 使用右向量来计算正确的旋转
-		FVector AdjustedDirection = DirectionToTarget.GetSafeNormal();
-		FQuat QuatRotation = FQuat::FindBetweenVectors(RightVector, AdjustedDirection);
-		InterBlockVFX->SetWorldRotation(QuatRotation.Rotator());
-		UE_LOG(BlockActorManagerLog, Warning, TEXT("%s"), *QuatRotation.Rotator().ToString());
-
-	}
-	else
-	{
-		InterBlockVFX->SetWorldRotation(EdgeRotate);
-		UE_LOG(BlockActorManagerLog, Warning, TEXT("%s"), *EdgeRotate.ToString());
-	}
 	InterBlockVFX->ActivateSystem();
 }
 #pragma endregion

@@ -81,10 +81,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CollisionType")
 	TEnumAsByte <ECollisionChannel> CollisionType;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effects")
-	FRotator EdgeRotate;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effects")
-	bool IfEdgeRotate;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effects", meta = (ClampMin = "0", ClampMax = "1"))
+	float edgeLengthAdjust = 1.0f;
 
 	//两个特效系统线断开，线连接
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effects")
@@ -94,9 +92,6 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effects")
 	UNiagaraSystem* EdgeDisconnection;
 
-	//面生成
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effects")
-	UNiagaraSystem* triangleInit;
 
 public:
 	FRefrashBlock refreshBlock;
