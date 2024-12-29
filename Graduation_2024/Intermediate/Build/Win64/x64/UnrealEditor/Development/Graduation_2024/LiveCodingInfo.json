@@ -7,12 +7,14 @@
 			"ArchivalUW.gen.cpp.obj",
 			"ArchiveID.gen.cpp.obj",
 			"BlockActor.gen.cpp.obj",
+			"BlockActorManager.gen.cpp.obj",
 			"CustomFloatingPawnMovement.gen.cpp.obj",
 			"CustomGameModeBase.gen.cpp.obj",
 			"CustomPlayerController.gen.cpp.obj",
 			"CustomPlayerStatus.gen.cpp.obj",
 			"CustomPlayerStatusInterface.gen.cpp.obj",
 			"FloorRaft.gen.cpp.obj",
+			"Graduation_2024.init.gen.cpp.obj",
 			"Mayfly.gen.cpp.obj",
 			"MayflyMovementComponent.gen.cpp.obj",
 			"MyPawn.gen.cpp.obj",
@@ -32,6 +34,7 @@
 			"PlayerAIController.cpp.obj",
 			"CustomGameModeBase.cpp.obj",
 			"BlockActor.cpp.obj",
+			"BlockActorManager.cpp.obj",
 			"Runepaper.cpp.obj",
 			"ArchivalInterface.cpp.obj",
 			"CustomPlayerStatusInterface.cpp.obj",
@@ -43,10 +46,7 @@
 			"MyPawn.cpp.obj",
 			"PlayerSkillComponent.cpp.obj",
 			"ArchivalUW.cpp.obj",
-			"PlayerAttributesUW.cpp.obj",
-			"BlockActorManager.gen.cpp.obj",
-			"Graduation_2024.init.gen.cpp.obj",
-			"BlockActorManager.cpp.obj"
+			"PlayerAttributesUW.cpp.obj"
 		]
 	}
 }
