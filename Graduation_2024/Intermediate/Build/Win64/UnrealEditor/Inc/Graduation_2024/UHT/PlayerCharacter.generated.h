@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 struct FInputActionValue;
 #ifdef GRADUATION_2024_PlayerCharacter_generated_h
 #error "PlayerCharacter.generated.h already included, missing '#pragma once' in PlayerCharacter.h"
@@ -19,8 +20,11 @@ struct FInputActionValue;
 	DECLARE_FUNCTION(execOnTimelineUpdate); \
 	DECLARE_FUNCTION(execDisablePlayerInput); \
 	DECLARE_FUNCTION(execEnablePlayerInput); \
+	DECLARE_FUNCTION(execStopInput); \
+	DECLARE_FUNCTION(execStartInput); \
 	DECLARE_FUNCTION(execInitArchivalUW); \
 	DECLARE_FUNCTION(execInitArttributesUW); \
+	DECLARE_FUNCTION(execFaceActor); \
 	DECLARE_FUNCTION(execClimbingActionStarted); \
 	DECLARE_FUNCTION(execObjectInteraction); \
 	DECLARE_FUNCTION(execMoveToTarget);

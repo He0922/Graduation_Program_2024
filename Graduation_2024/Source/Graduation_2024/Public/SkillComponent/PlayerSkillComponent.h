@@ -11,6 +11,7 @@ UENUM(BlueprintType)
 enum class ESkillType : uint8
 {
 	Scan,
+	Inter,
 	Other
 };
 
@@ -41,6 +42,14 @@ private:
 
 	//扫描冷却时间计时器
 	FTimerHandle ScanColdTimeTh;
+
+	//激活的节点后动画的计时器
+	//三个计时器， 一个发射符纸的延时计时，
+	//一个 开始转换视角的延迟计时
+	//一个 回复控制的延迟计时
+	FTimerHandle InterDelayTimer;
+	FTimerHandle InterBackDelayTimer;
+	FTimerHandle ControlDelayTimer;
 #pragma endregion
 
 //玩家属性设置
@@ -112,12 +121,35 @@ public:
 //交互节点相关
 #pragma region AboutInterectBlock
 public:
-	void InterctBlock();
-	void FireRunePaper();
+	void CheckBlock();
+	bool IsActorInView(AActor* Actor);
 
 public:
-	UPROPERTY(EditAnywhere, Category = "Fire")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inter Range")
+	float CheckRadius = 200.0f;//触发器半径
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inter Range")
+	float CheckViewAngle = 45.0f;//检测视野的角度
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RunePaper")
+	float InterDelayTime = 1.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RunePaper")
+	float InterBackDelayTime = 2.0f;
+
+	UPROPERTY(EditAnywhere, Category = "RunePaper")
 	TSubclassOf<ARunepaper> Bullet;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RunePaper")
+	FVector InitPosOffset = FVector(50, 0, 0);
+
+private:
+	AActor* InterBlock;
+
+	void StartInterBlock(AActor* actor);
+	void StopInterBlock();
+	void GetBackControl();
+	void FireRunePaper();
 #pragma endregion
 };
 

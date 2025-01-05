@@ -136,19 +136,14 @@ void UPlayerSkillComponent::OutScanColdState()
 
 //生成一个范围，用于检测内部的可交互节点
 #pragma region Interect Block
-void UPlayerSkillComponent::InterctBlock()
+void UPlayerSkillComponent::CheckBlock()
 {
-	FireRunePaper();
-
-	UE_LOG(LogTemp, Display, TEXT("Interct"));
-
-	return;
+	UE_LOG(LogTemp, Warning, TEXT("Interct"));
 
 	FVector CharacterLocation = GetOwner()->GetActorLocation();
-	float Radius = 100.f; // 设置触发器半径
 
 	// 定义球形碰撞体
-	FCollisionShape CollisionShape = FCollisionShape::MakeSphere(Radius);
+	FCollisionShape CollisionShape = FCollisionShape::MakeSphere(CheckRadius);
 
 	// 进行碰撞检查，返回范围内的所有物体
 	TArray<FHitResult> HitResults;
@@ -163,15 +158,13 @@ void UPlayerSkillComponent::InterctBlock()
 		for (const FHitResult& Hit : HitResults)
 		{
 			AActor* HitActor = Hit.GetActor();
-			if (HitActor)
+			if (IsActorInView(HitActor))
 			{
 				// 这里假设目标物体有一个名为 `Interact` 的方法
 				ABlockActor* Interactable = Cast<ABlockActor>(HitActor);
 				if (Interactable)
 				{
-					UE_LOG(LogTemp, Display, TEXT("InterctBlock"));
-
-					Interactable->InteractionBlock();  // 调用接口中的方法
+					StartInterBlock(Interactable);
 					break;
 				}
 			}
@@ -179,14 +172,77 @@ void UPlayerSkillComponent::InterctBlock()
 	}
 
 	// 可选：在调试时可视化球形范围
-	DrawDebugSphere(GetWorld(), CharacterLocation, Radius, 12, FColor::Green, false, 2.0f);
+	DrawDebugSphere(GetWorld(), CharacterLocation, CheckRadius, 12, FColor::Green, false, 2.0f);
+}
+
+//检查是否在视野范围内
+bool UPlayerSkillComponent::IsActorInView(AActor* Actor)
+{
+	if (!Actor) return false;
+
+	// 获取玩家控制器的视野信息
+	APlayerController* PlayerController = GetWorld()->GetFirstPlayerController();
+	if (!PlayerController) return false;
+
+	FVector PlayerLocation = playerCharacter->GetActorLocation();
+	FVector PlayerForwardVector = playerCharacter->GetActorForwardVector();
+
+	FVector ActorLocation = Actor->GetActorLocation();
+	FVector ToActor = ActorLocation - PlayerLocation;
+
+	// 计算玩家前方的方向与物体方向之间的夹角
+	float DotProduct = FVector::DotProduct(PlayerForwardVector, ToActor.GetSafeNormal());
+
+	// 视角阈值（例如45度为 0.7071的点积值）
+	const float ViewAngleThreshold = FMath::Cos(FMath::DegreesToRadians(CheckViewAngle));  // 视野45度
+
+	return DotProduct > ViewAngleThreshold; // 如果点积大于阈值，则物体在视野范围内
+}
+
+void UPlayerSkillComponent::StartInterBlock(AActor* actor)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Has InterctBlock"));
+
+	InterBlock = actor;
+
+	//让玩家朝向其物体
+	playerCharacter->FaceActor(actor);
+	playerCharacter->ChangeInShoulderView();
+	playerCharacter->StopInput();
+
+	//生成符纸
+	GetWorld()->GetTimerManager().SetTimer(InterDelayTimer, this, &UPlayerSkillComponent::FireRunePaper, InterDelayTime, false, InterDelayTime);
+
+	//并开启另一个计时器来实现状态的转回
+	GetWorld()->GetTimerManager().SetTimer(InterBackDelayTimer, this, &UPlayerSkillComponent::StopInterBlock, InterBackDelayTime, false, InterBackDelayTime);
+}
+
+void UPlayerSkillComponent::StopInterBlock()
+{
+	UE_LOG(LogTemp, Warning, TEXT("StopInterBlock"));
+
+	playerCharacter->ChangeOutShoulderView();
+
+	GetWorld()->GetTimerManager().SetTimer(ControlDelayTimer, this, &UPlayerSkillComponent::GetBackControl, 1.0f, false, 1.0f);
+}
+
+void UPlayerSkillComponent::GetBackControl()
+{
+	playerCharacter->StartInput();
 }
 
 void UPlayerSkillComponent::FireRunePaper()
 {
+	UE_LOG(LogTemp, Warning, TEXT("FireRunePaper"));
+
 	if (Bullet == NULL)
 		return;
 
-	GetWorld()->SpawnActor<ARunepaper>(Bullet, GetOwner()->GetActorLocation(), GetOwner()->GetActorRotation());
+	//计算符纸生成的位置
+	FVector InitPos = GetOwner()->GetActorLocation() + InitPosOffset;
+	// 计算从玩家到目标物体的方向
+	FVector dir = InitPos - InterBlock->GetActorLocation();
+	FRotator DirectionToTarget = (-dir.GetSafeNormal()).Rotation();
+	GetWorld()->SpawnActor<ARunepaper>(Bullet, InitPos, DirectionToTarget);
 }
 #pragma endregion

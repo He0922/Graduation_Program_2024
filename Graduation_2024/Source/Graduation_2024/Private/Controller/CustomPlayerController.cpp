@@ -153,4 +153,15 @@ void ACustomPlayerController::ChangeObject(APawn* PawnObject)
 	}
 }
 
+void ACustomPlayerController::StartInput()
+{
+	EnableInput(this);
+}
+
+void ACustomPlayerController::StopInput()
+{
+	// Ω˚”√ÕÊº“ ‰»Î
+	DisableInput(this);
+}
+
 #pragma endregion

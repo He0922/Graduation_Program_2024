@@ -309,6 +309,21 @@ void APlayerCharacter::ClimbingActionStarted(const FInputActionValue& Value)
 	if (!playerCMC) return;
 
 }
+
+void APlayerCharacter::FaceActor(AActor* TargetActor)
+{
+	if (!TargetActor) return;
+
+	// 计算目标位置与玩家位置的方向
+	FVector DirectionToFace = TargetActor->GetActorLocation() - GetActorLocation();
+	DirectionToFace.Z = 0;  // 保证只在平面上旋转（不需要垂直旋转）
+
+	// 计算目标旋转
+	FRotator TargetRotation = FRotator(0.0f, DirectionToFace.Rotation().Yaw, 0.0f);
+
+	// 旋转玩家到目标物体的方向
+	SetActorRotation(TargetRotation);
+}
 #pragma endregion 
 
 
@@ -380,6 +395,18 @@ void APlayerCharacter::InitArchivalUW()
 
 
 #pragma region Controller
+//玩家启用， 禁用输入
+void APlayerCharacter::StartInput()
+{
+	if (CustomPlayerController) { CustomPlayerController->StartInput(); }
+}
+
+void APlayerCharacter::StopInput()
+{
+	if (CustomPlayerController) { CustomPlayerController->StopInput(); }
+}
+
+
 void APlayerCharacter::EnablePlayerInput()
 {
 	FInputModeGameOnly InputModeGameOnly;
@@ -433,7 +460,7 @@ void APlayerCharacter::InterctBlock()
 {
 	//ChangeInShoulderView();
 	//ChangeOutShoulderView();
-	playerSkillComponent->InterctBlock();
+	playerSkillComponent->CheckBlock();
 }
 #pragma endregion
 
@@ -457,6 +484,8 @@ void APlayerCharacter::ChangeOutShoulderView()
 		UE_LOG(LogTemp, Warning, TEXT("has CameraTransitionTimeline"));
 		CameraTransitionTimeline->ReverseFromEnd();  // 开始播放时间线
 	}
+
+	cameraBoom->bUsePawnControlRotation = true;
 }
 
 void APlayerCharacter::OnTimelineUpdate(float Value)

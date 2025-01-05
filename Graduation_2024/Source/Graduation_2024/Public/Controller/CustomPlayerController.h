@@ -70,4 +70,10 @@ public:
 	// 切换玩家控制对象
 	void ChangeObject(APawn* PawnObject);
 #pragma endregion
+
+#pragma region Player InputController
+public:
+	void StartInput();
+	void StopInput();
+#pragma endregion
 };

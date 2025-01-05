@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCurveFloat_NoRegister();
@@ -140,6 +141,54 @@ DEFINE_FUNCTION(APlayerCharacter::execEnablePlayerInput)
 	P_NATIVE_END;
 }
 // End Class APlayerCharacter Function EnablePlayerInput
+
+// Begin Class APlayerCharacter Function FaceActor
+struct Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics
+{
+	struct PlayerCharacter_eventFaceActor_Parms
+	{
+		AActor* TargetActor;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd7\xaa\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Character/Player/PlayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd7\xaa\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::NewProp_TargetActor = { "TargetActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventFaceActor_Parms, TargetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::NewProp_TargetActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "FaceActor", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::PlayerCharacter_eventFaceActor_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::PlayerCharacter_eventFaceActor_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_APlayerCharacter_FaceActor()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_FaceActor_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APlayerCharacter::execFaceActor)
+{
+	P_GET_OBJECT(AActor,Z_Param_TargetActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FaceActor(Z_Param_TargetActor);
+	P_NATIVE_END;
+}
+// End Class APlayerCharacter Function FaceActor
 
 // Begin Class APlayerCharacter Function InitArchivalUW
 struct Z_Construct_UFunction_APlayerCharacter_InitArchivalUW_Statics
@@ -342,6 +391,70 @@ DEFINE_FUNCTION(APlayerCharacter::execOnTimelineUpdate)
 }
 // End Class APlayerCharacter Function OnTimelineUpdate
 
+// Begin Class APlayerCharacter Function StartInput
+struct Z_Construct_UFunction_APlayerCharacter_StartInput_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc3\xa3\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd(\xef\xbf\xbd\xee\xa3\xac \xef\xbf\xbd\xdc\xb1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd~~~\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Character/Player/PlayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc3\xa3\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd(\xef\xbf\xbd\xee\xa3\xac \xef\xbf\xbd\xdc\xb1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd~~~" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_StartInput_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "StartInput", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_StartInput_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_StartInput_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_APlayerCharacter_StartInput()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_StartInput_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APlayerCharacter::execStartInput)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StartInput();
+	P_NATIVE_END;
+}
+// End Class APlayerCharacter Function StartInput
+
+// Begin Class APlayerCharacter Function StopInput
+struct Z_Construct_UFunction_APlayerCharacter_StopInput_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Character/Player/PlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_StopInput_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "StopInput", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_StopInput_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_StopInput_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_APlayerCharacter_StopInput()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_StopInput_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APlayerCharacter::execStopInput)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopInput();
+	P_NATIVE_END;
+}
+// End Class APlayerCharacter Function StopInput
+
 // Begin Class APlayerCharacter
 void APlayerCharacter::StaticRegisterNativesAPlayerCharacter()
 {
@@ -350,11 +463,14 @@ void APlayerCharacter::StaticRegisterNativesAPlayerCharacter()
 		{ "ClimbingActionStarted", &APlayerCharacter::execClimbingActionStarted },
 		{ "DisablePlayerInput", &APlayerCharacter::execDisablePlayerInput },
 		{ "EnablePlayerInput", &APlayerCharacter::execEnablePlayerInput },
+		{ "FaceActor", &APlayerCharacter::execFaceActor },
 		{ "InitArchivalUW", &APlayerCharacter::execInitArchivalUW },
 		{ "InitArttributesUW", &APlayerCharacter::execInitArttributesUW },
 		{ "MoveToTarget", &APlayerCharacter::execMoveToTarget },
 		{ "ObjectInteraction", &APlayerCharacter::execObjectInteraction },
 		{ "OnTimelineUpdate", &APlayerCharacter::execOnTimelineUpdate },
+		{ "StartInput", &APlayerCharacter::execStartInput },
+		{ "StopInput", &APlayerCharacter::execStopInput },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -571,11 +687,14 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 		{ &Z_Construct_UFunction_APlayerCharacter_ClimbingActionStarted, "ClimbingActionStarted" }, // 167762735
 		{ &Z_Construct_UFunction_APlayerCharacter_DisablePlayerInput, "DisablePlayerInput" }, // 418359345
 		{ &Z_Construct_UFunction_APlayerCharacter_EnablePlayerInput, "EnablePlayerInput" }, // 3279759745
+		{ &Z_Construct_UFunction_APlayerCharacter_FaceActor, "FaceActor" }, // 620876595
 		{ &Z_Construct_UFunction_APlayerCharacter_InitArchivalUW, "InitArchivalUW" }, // 606118510
 		{ &Z_Construct_UFunction_APlayerCharacter_InitArttributesUW, "InitArttributesUW" }, // 1114154882
 		{ &Z_Construct_UFunction_APlayerCharacter_MoveToTarget, "MoveToTarget" }, // 2855293171
 		{ &Z_Construct_UFunction_APlayerCharacter_ObjectInteraction, "ObjectInteraction" }, // 57909195
 		{ &Z_Construct_UFunction_APlayerCharacter_OnTimelineUpdate, "OnTimelineUpdate" }, // 2906371823
+		{ &Z_Construct_UFunction_APlayerCharacter_StartInput, "StartInput" }, // 4087276683
+		{ &Z_Construct_UFunction_APlayerCharacter_StopInput, "StopInput" }, // 2672281633
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -694,10 +813,10 @@ APlayerCharacter::~APlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 641715479U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2577996021U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_2292145227(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_330011002(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

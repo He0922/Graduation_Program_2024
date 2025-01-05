@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerSkillComponent() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 GRADUATION_2024_API UClass* Z_Construct_UClass_ARunepaper_NoRegister();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerSkillComponent();
@@ -41,6 +42,7 @@ struct Z_Construct_UEnum_Graduation_2024_ESkillType_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
 #endif
+		{ "Inter.Name", "ESkillType::Inter" },
 		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
 		{ "Other.Name", "ESkillType::Other" },
 		{ "Scan.Name", "ESkillType::Scan" },
@@ -51,6 +53,7 @@ struct Z_Construct_UEnum_Graduation_2024_ESkillType_Statics
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
 		{ "ESkillType::Scan", (int64)ESkillType::Scan },
+		{ "ESkillType::Inter", (int64)ESkillType::Inter },
 		{ "ESkillType::Other", (int64)ESkillType::Other },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
@@ -332,8 +335,40 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 		{ "ToolTip", "\xc9\xa8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc8\xb4\xca\xb1\xef\xbf\xbd\xef\xbf\xbd" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CheckRadius_MetaData[] = {
+		{ "Category", "Inter Range" },
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CheckViewAngle_MetaData[] = {
+		{ "Category", "Inter Range" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xeb\xbe\xb6\n" },
+#endif
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xeb\xbe\xb6" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InterDelayTime_MetaData[] = {
+		{ "Category", "RunePaper" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd2\xb0\xef\xbf\xbd\xc4\xbd\xc7\xb6\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd2\xb0\xef\xbf\xbd\xc4\xbd\xc7\xb6\xef\xbf\xbd" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InterBackDelayTime_MetaData[] = {
+		{ "Category", "RunePaper" },
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Bullet_MetaData[] = {
-		{ "Category", "Fire" },
+		{ "Category", "RunePaper" },
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InitPosOffset_MetaData[] = {
+		{ "Category", "RunePaper" },
 		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
 	};
 #endif // WITH_METADATA
@@ -341,7 +376,12 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanEnergyCost;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanECFrequency;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanColdTime;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_CheckRadius;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_CheckViewAngle;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InterDelayTime;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InterBackDelayTime;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_Bullet;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InitPosOffset;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -361,13 +401,23 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillCom
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanEnergyCost = { "ScanEnergyCost", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanEnergyCost), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanEnergyCost_MetaData), NewProp_ScanEnergyCost_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanECFrequency = { "ScanECFrequency", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanECFrequency), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanECFrequency_MetaData), NewProp_ScanECFrequency_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanColdTime = { "ScanColdTime", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanColdTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanColdTime_MetaData), NewProp_ScanColdTime_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_CheckRadius = { "CheckRadius", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, CheckRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CheckRadius_MetaData), NewProp_CheckRadius_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_CheckViewAngle = { "CheckViewAngle", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, CheckViewAngle), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CheckViewAngle_MetaData), NewProp_CheckViewAngle_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InterDelayTime = { "InterDelayTime", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, InterDelayTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InterDelayTime_MetaData), NewProp_InterDelayTime_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InterBackDelayTime = { "InterBackDelayTime", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, InterBackDelayTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InterBackDelayTime_MetaData), NewProp_InterBackDelayTime_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_Bullet = { "Bullet", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, Bullet), Z_Construct_UClass_UClass, Z_Construct_UClass_ARunepaper_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Bullet_MetaData), NewProp_Bullet_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InitPosOffset = { "InitPosOffset", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, InitPosOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InitPosOffset_MetaData), NewProp_InitPosOffset_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerSkillComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanDistance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanEnergyCost,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanECFrequency,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanColdTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_CheckRadius,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_CheckViewAngle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InterDelayTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InterBackDelayTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_Bullet,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InitPosOffset,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerSkillComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerSkillComponent_Statics::DependentSingletons[])() = {
@@ -410,13 +460,13 @@ UPlayerSkillComponent::~UPlayerSkillComponent() {}
 struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESkillType_StaticEnum, TEXT("ESkillType"), &Z_Registration_Info_UEnum_ESkillType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1991362591U) },
+		{ ESkillType_StaticEnum, TEXT("ESkillType"), &Z_Registration_Info_UEnum_ESkillType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2243955677U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 1386636278U) },
+		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 1712718214U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_3887870521(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_1546446303(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo));

@@ -47,8 +47,9 @@ void ARunepaper::BeginPlay()
 	check(ProjectileMovementComponent);
 	check(CollisionComponent);
 
-	ProjectileMovementComponent->Velocity = ShotDirection * ProjectileMovementComponent->InitialSpeed;
+	//ProjectileMovementComponent->Velocity = ShotDirection * ProjectileMovementComponent->InitialSpeed;
 	ProjectileMovementComponent->Activate();	//可以飞行了
+	ProjectileMovementComponent->Velocity = ShotDirection * ProjectileMovementComponent->InitialSpeed;
 
 	//忽略owner
 	CollisionComponent->IgnoreActorWhenMoving(GetOwner(), true);

@@ -161,6 +161,10 @@ public:
 
 	UFUNCTION()
 	void ClimbingActionStarted(const FInputActionValue& Value);
+
+	//玩家转向输入的物体
+	UFUNCTION()
+	void FaceActor(AActor* TargetActor);
 #pragma endregion
 
 
@@ -243,6 +247,12 @@ public:
 #pragma region Controller
 	class ACustomPlayerController* CustomPlayerController;
 	
+	//玩家启用， 禁用输入(额， 很暴力~~~
+	UFUNCTION()
+	void StartInput();
+	UFUNCTION()
+	void StopInput();
+
 	UFUNCTION(BlueprintCallable, Category = "Custom Controller Function")
 	void EnablePlayerInput();
 
