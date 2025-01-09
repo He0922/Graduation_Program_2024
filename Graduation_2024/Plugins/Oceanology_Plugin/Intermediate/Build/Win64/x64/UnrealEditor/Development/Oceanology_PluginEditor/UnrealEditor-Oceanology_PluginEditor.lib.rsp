@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-Oceanology_PluginEditor.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_PluginEditor\Module.Oceanology_PluginEditor.cpp.obj"
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_PluginEditor\Default.rc2.res"
-/OUT:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_PluginEditor\UnrealEditor-Oceanology_PluginEditor.lib"
+"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_PluginEditor\Module.Oceanology_PluginEditor.cpp.obj"
+"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_PluginEditor\Default.rc2.res"
+/OUT:"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_PluginEditor\UnrealEditor-Oceanology_PluginEditor.lib"

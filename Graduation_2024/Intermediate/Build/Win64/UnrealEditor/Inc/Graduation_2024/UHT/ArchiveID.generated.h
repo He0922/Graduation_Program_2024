@@ -16,7 +16,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GRADUATION_2024_ArchiveID_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_ArchiveID_h
+#define CURRENT_FILE_ID FID_UEDocument_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Archival_ArchiveID_h
 
 
 #define FOREACH_ENUM_EARCHIVEID(op) \

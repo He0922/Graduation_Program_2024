@@ -27,7 +27,6 @@
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/GameModeBase/CustomGameModeBase.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/InterectBlock/BlockActor.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/InterectBlock/BlockActorManager.cpp"
-#include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/InterectBlock/Runepaper.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Interface/ArchivalInterface.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Interface/CustomPlayerStatusInterface.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Interface/PlayerAttributesInterface.cpp"
