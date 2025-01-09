@@ -97,3 +97,6 @@ Graduation_2024/Intermediate/Build/Win64/x64/UnrealEditor/Development/Graduation
 Graduation_2024/Intermediate/Build/Win64/x64/UnrealEditor/Development/Graduation_2024/UnrealEditor-Graduation_2024.lib.rsp.old
 Graduation_2024/Saved/Logs/Graduation_2024.log
 Graduation_2024/Saved/Telemetry/Telemetry.json
+
+# Ignore ConcurrentLinearAllocator.h
+G:\UE_5.4\Engine\Source\Runtime\Core\Public\Experimental

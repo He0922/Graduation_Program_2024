@@ -1,11 +1,11 @@
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.1.cpp"
-/FI"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Definitions.Oceanology_Plugin.h"
-/Yu"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.1.cpp.obj"
-/sourceDependencies "D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.1.cpp.dep.json"
-@"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Oceanology_Plugin.Shared.rsp"
+"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.1.cpp"
+/FI"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Definitions.Oceanology_Plugin.h"
+/Yu"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.1.cpp.obj"
+/sourceDependencies "G:\UEDocument\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Module.Oceanology_Plugin.1.cpp.dep.json"
+@"G:\UEDocument\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\Oceanology_Plugin\Oceanology_Plugin.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
