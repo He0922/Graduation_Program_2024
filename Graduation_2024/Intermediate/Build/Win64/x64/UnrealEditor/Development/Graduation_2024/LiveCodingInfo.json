@@ -2,6 +2,24 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Graduation_2024.cpp.obj": [
+			"Graduation_2024.cpp.obj",
+			"Archival.cpp.obj",
+			"Mayfly.cpp.obj",
+			"CustomPlayerController.cpp.obj",
+			"PlayerAIController.cpp.obj",
+			"CustomGameModeBase.cpp.obj",
+			"BlockActor.cpp.obj",
+			"BlockActorManager.cpp.obj",
+			"ArchivalInterface.cpp.obj",
+			"CustomPlayerStatusInterface.cpp.obj",
+			"PlayerAttributesInterface.cpp.obj",
+			"CustomFloatingPawnMovement.cpp.obj",
+			"MayflyMovementComponent.cpp.obj",
+			"PlayerCharacterMovementComponent.cpp.obj",
+			"FloorRaft.cpp.obj",
+			"MyPawn.cpp.obj",
+			"ArchivalUW.cpp.obj",
+			"PlayerAttributesUW.cpp.obj",
 			"Archival.gen.cpp.obj",
 			"ArchivalInterface.gen.cpp.obj",
 			"ArchivalUW.gen.cpp.obj",
@@ -26,27 +44,9 @@
 			"PlayerCharacterMovementComponent.gen.cpp.obj",
 			"PlayerSkillComponent.gen.cpp.obj",
 			"Runepaper.gen.cpp.obj",
-			"Graduation_2024.cpp.obj",
-			"Archival.cpp.obj",
-			"Mayfly.cpp.obj",
 			"PlayerCharacter.cpp.obj",
-			"CustomPlayerController.cpp.obj",
-			"PlayerAIController.cpp.obj",
-			"CustomGameModeBase.cpp.obj",
-			"BlockActor.cpp.obj",
-			"BlockActorManager.cpp.obj",
 			"Runepaper.cpp.obj",
-			"ArchivalInterface.cpp.obj",
-			"CustomPlayerStatusInterface.cpp.obj",
-			"PlayerAttributesInterface.cpp.obj",
-			"CustomFloatingPawnMovement.cpp.obj",
-			"MayflyMovementComponent.cpp.obj",
-			"PlayerCharacterMovementComponent.cpp.obj",
-			"FloorRaft.cpp.obj",
-			"MyPawn.cpp.obj",
-			"PlayerSkillComponent.cpp.obj",
-			"ArchivalUW.cpp.obj",
-			"PlayerAttributesUW.cpp.obj"
+			"PlayerSkillComponent.cpp.obj"
 		]
 	}
 }

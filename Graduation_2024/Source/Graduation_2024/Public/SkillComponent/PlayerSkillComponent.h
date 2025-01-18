@@ -6,6 +6,8 @@
 #include "Components/ActorComponent.h"
 #include "PlayerSkillComponent.generated.h"
 
+class UNiagaraSystem;
+
 //技能类型
 UENUM(BlueprintType)
 enum class ESkillType : uint8
@@ -141,7 +143,13 @@ public:
 	TSubclassOf<ARunepaper> Bullet;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RunePaper")
+	FName SocketLocationName = L"FirePos";
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RunePaper")
 	FVector InitPosOffset = FVector(50, 0, 0);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RunePaper")
+	UNiagaraSystem* RunepaperFire;
 
 private:
 	AActor* InterBlock;

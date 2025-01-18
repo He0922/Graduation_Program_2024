@@ -319,7 +319,8 @@ void APlayerCharacter::FaceActor(AActor* TargetActor)
 	DirectionToFace.Z = 0;  // 保证只在平面上旋转（不需要垂直旋转）
 
 	// 计算目标旋转
-	FRotator TargetRotation = FRotator(0.0f, DirectionToFace.Rotation().Yaw, 0.0f);
+	//FRotator TargetRotation = FRotator(0.0f, DirectionToFace.Rotation().Yaw, 0.0f);
+	FRotator TargetRotation = DirectionToFace.Rotation();
 
 	// 旋转玩家到目标物体的方向
 	SetActorRotation(TargetRotation);
@@ -398,12 +399,20 @@ void APlayerCharacter::InitArchivalUW()
 //玩家启用， 禁用输入
 void APlayerCharacter::StartInput()
 {
-	if (CustomPlayerController) { CustomPlayerController->StartInput(); }
+	if (CustomPlayerController) 
+	{
+		CustomPlayerController->StartInput(); 
+		cameraBoom->bUsePawnControlRotation = true;
+	}
 }
 
 void APlayerCharacter::StopInput()
 {
-	if (CustomPlayerController) { CustomPlayerController->StopInput(); }
+	if (CustomPlayerController) 
+	{ 
+		CustomPlayerController->StopInput(); 
+		cameraBoom->bUsePawnControlRotation = false;
+	}
 }
 
 
@@ -474,7 +483,7 @@ void APlayerCharacter::ChangeInShoulderView()
 		CameraTransitionTimeline->PlayFromStart();  // 开始播放时间线
 	}
 
-	cameraBoom->bUsePawnControlRotation = false;
+	//cameraBoom->bUsePawnControlRotation = false;
 }
 
 void APlayerCharacter::ChangeOutShoulderView()
@@ -485,7 +494,7 @@ void APlayerCharacter::ChangeOutShoulderView()
 		CameraTransitionTimeline->ReverseFromEnd();  // 开始播放时间线
 	}
 
-	cameraBoom->bUsePawnControlRotation = true;
+	//cameraBoom->bUsePawnControlRotation = true;
 }
 
 void APlayerCharacter::OnTimelineUpdate(float Value)

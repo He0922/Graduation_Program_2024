@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CRAZYIVY_SMeshData_generated_h
 
-#define FID_UEDocument_Graduation_Program_2024_Graduation_2024_Plugins_CrazyIvy_Source_CrazyIvy_Public_SMeshData_h_20_GENERATED_BODY \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_CrazyIvy_Source_CrazyIvy_Public_SMeshData_h_20_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FTriangle_Statics; \
 	CRAZYIVY_API static class UScriptStruct* StaticStruct();
 
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> CRAZYIVY_API UScriptStruct* StaticStruct<struct FTriangle>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_UEDocument_Graduation_Program_2024_Graduation_2024_Plugins_CrazyIvy_Source_CrazyIvy_Public_SMeshData_h
+#define CURRENT_FILE_ID FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_CrazyIvy_Source_CrazyIvy_Public_SMeshData_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

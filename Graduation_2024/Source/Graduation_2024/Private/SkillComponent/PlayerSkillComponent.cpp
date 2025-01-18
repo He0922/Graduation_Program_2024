@@ -4,6 +4,8 @@
 #include "Character/Player/PlayerCharacter.h"
 #include "InterectBlock/BlockActor.h"
 #include "InterectBlock/Runepaper.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 
 DEFINE_LOG_CATEGORY_STATIC(PlayerSkillComponentLog, All, All);
 UPlayerSkillComponent::UPlayerSkillComponent()
@@ -152,6 +154,8 @@ void UPlayerSkillComponent::CheckBlock()
 
 	bool bHit = GetWorld()->SweepMultiByChannel(HitResults, CharacterLocation, CharacterLocation, FQuat::Identity, ECC_Visibility, CollisionShape, CollisionParams);
 
+	TMap<float, ABlockActor*> blocks;
+
 	if (bHit)
 	{
 		// 处理找到的所有物体
@@ -164,11 +168,40 @@ void UPlayerSkillComponent::CheckBlock()
 				ABlockActor* Interactable = Cast<ABlockActor>(HitActor);
 				if (Interactable)
 				{
-					StartInterBlock(Interactable);
-					break;
+					float length = FVector::Distance(Interactable->GetActorLocation(), GetOwner()->GetActorLocation());
+					blocks.Add(length, Interactable);
+					//StartInterBlock(Interactable);
+					//break;
 				}
 			}
 		}
+	}
+
+	if (blocks.IsEmpty())
+	{
+		return;
+	}
+	else
+	{
+		// 初始化最小距离和最近物品的指针
+		float MinDistance = TNumericLimits<float>::Max();  // 设置为最大值
+		ABlockActor* ClosestBlock = nullptr;
+
+		// 遍历所有的元素
+		for (const TPair<float, ABlockActor*>& Elem : blocks)
+		{
+			float Distance = Elem.Key;  // 这里的 Key 就是距离
+			ABlockActor* BlockActor = Elem.Value; // 物品对应的 ABlockActor*
+
+			// 如果当前的距离更小，更新最小距离和最近物品
+			if (Distance < MinDistance)
+			{
+				MinDistance = Distance;
+				ClosestBlock = BlockActor;
+			}
+		}
+
+		StartInterBlock(ClosestBlock);
 	}
 
 	// 可选：在调试时可视化球形范围
@@ -239,10 +272,15 @@ void UPlayerSkillComponent::FireRunePaper()
 		return;
 
 	//计算符纸生成的位置
-	FVector InitPos = GetOwner()->GetActorLocation() + InitPosOffset;
+	FVector InitPos = playerCharacter->GetMesh()->GetSocketLocation(SocketLocationName);
 	// 计算从玩家到目标物体的方向
 	FVector dir = InitPos - InterBlock->GetActorLocation();
 	FRotator DirectionToTarget = (-dir.GetSafeNormal()).Rotation();
 	GetWorld()->SpawnActor<ARunepaper>(Bullet, InitPos, DirectionToTarget);
+
+	if (RunepaperFire != NULL)
+	{
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), RunepaperFire, InitPos, DirectionToTarget);
+	}
 }
 #pragma endregion

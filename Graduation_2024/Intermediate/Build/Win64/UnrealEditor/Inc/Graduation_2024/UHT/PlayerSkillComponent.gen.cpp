@@ -17,6 +17,7 @@ GRADUATION_2024_API UClass* Z_Construct_UClass_ARunepaper_NoRegister();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerSkillComponent();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerSkillComponent_NoRegister();
 GRADUATION_2024_API UEnum* Z_Construct_UEnum_Graduation_2024_ESkillType();
+NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
 // End Cross Module References
 
@@ -367,7 +368,15 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 		{ "Category", "RunePaper" },
 		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SocketLocationName_MetaData[] = {
+		{ "Category", "RunePaper" },
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InitPosOffset_MetaData[] = {
+		{ "Category", "RunePaper" },
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RunepaperFire_MetaData[] = {
 		{ "Category", "RunePaper" },
 		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
 	};
@@ -381,7 +390,9 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_InterDelayTime;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_InterBackDelayTime;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_Bullet;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_SocketLocationName;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_InitPosOffset;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RunepaperFire;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -406,7 +417,9 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillCom
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InterDelayTime = { "InterDelayTime", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, InterDelayTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InterDelayTime_MetaData), NewProp_InterDelayTime_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InterBackDelayTime = { "InterBackDelayTime", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, InterBackDelayTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InterBackDelayTime_MetaData), NewProp_InterBackDelayTime_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_Bullet = { "Bullet", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, Bullet), Z_Construct_UClass_UClass, Z_Construct_UClass_ARunepaper_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Bullet_MetaData), NewProp_Bullet_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_SocketLocationName = { "SocketLocationName", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, SocketLocationName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SocketLocationName_MetaData), NewProp_SocketLocationName_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InitPosOffset = { "InitPosOffset", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, InitPosOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InitPosOffset_MetaData), NewProp_InitPosOffset_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_RunepaperFire = { "RunepaperFire", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, RunepaperFire), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RunepaperFire_MetaData), NewProp_RunepaperFire_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerSkillComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanDistance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanEnergyCost,
@@ -417,7 +430,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerSk
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InterDelayTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InterBackDelayTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_Bullet,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_SocketLocationName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_InitPosOffset,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_RunepaperFire,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerSkillComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerSkillComponent_Statics::DependentSingletons[])() = {
@@ -457,18 +472,18 @@ UPlayerSkillComponent::~UPlayerSkillComponent() {}
 // End Class UPlayerSkillComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_UEDocument_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ESkillType_StaticEnum, TEXT("ESkillType"), &Z_Registration_Info_UEnum_ESkillType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2243955677U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 1712718214U) },
+		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 1907708241U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEDocument_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_1546446303(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_UEDocument_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEDocument_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_4033850326(TEXT("/Script/Graduation_2024"),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_UEDocument_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEDocument_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

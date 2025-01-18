@@ -69,7 +69,11 @@ void ARunepaper::OnProjectileHit(UPrimitiveComponent* OverlappedComponent, AActo
 	if (!Interactable)
 		return;
 
-	UE_LOG(LogTemp, Display, TEXT("InterctBlock"));
+	if (RunepaperHit != NULL)
+	{
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), RunepaperHit, OtherActor->GetActorLocation(), SweepResult.ImpactNormal.Rotation());
+	}
+	UE_LOG(LogTemp, Display, TEXT("InterctBlockPos, x:%f, y:%f, z:%f"), SweepResult.ImpactPoint.X, SweepResult.ImpactPoint.Y, SweepResult.ImpactPoint.Z);
 	Interactable->InteractionBlock();  // 调用接口中的方法
 	Destroy();
 }

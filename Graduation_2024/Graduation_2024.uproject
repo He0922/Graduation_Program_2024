@@ -43,7 +43,7 @@
 		},
 		{
 			"Name": "TrueHDRIPanel",
-			"Enabled": true,
+			"Enabled": false,
 			"SupportedTargetPlatforms": [
 				"Win64"
 			]
