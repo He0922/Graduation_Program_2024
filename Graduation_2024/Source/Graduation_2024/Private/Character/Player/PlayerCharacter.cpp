@@ -22,6 +22,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
+#include "Components/CapsuleComponent.h"
 
 
 
@@ -36,6 +37,9 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationRoll = false;
 	bUseControllerRotationYaw = false;
+
+
+	CustomCapsuleComponent = GetCapsuleComponent();
 
 	// 创建自定义的CharacterMovementComponent
 	playerCMC = Cast<UPlayerCharacterMovementComponent>(GetCharacterMovement());
@@ -87,6 +91,8 @@ void APlayerCharacter::BeginPlay()
 
 	InitArttributesUW();
 
+	
+
 }
 
 
@@ -96,6 +102,7 @@ void APlayerCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	PrintAttributes(fplayerAttributes.Mapattributes);
+
 	
 }
 
@@ -268,7 +275,7 @@ void APlayerCharacter::MoveToTarget(FVector TargetLocation)
 
 
 void APlayerCharacter::ObjectInteraction()
-{
+{ 
 	if (archivalInteractable)
 	{ 
 		// 刷新玩家状态

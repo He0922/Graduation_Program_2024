@@ -67,6 +67,8 @@ public:
 	virtual void NotifyActorEndOverlap(AActor* OtherActor) override;
 
 	AActor* CollisionActor;
+
+	TArray<AActor*> IgnoreActors;
 #pragma endregion
 
 
@@ -192,6 +194,8 @@ public:
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Movement Component")
 	class UPlayerCharacterMovementComponent* playerCMC;
+
+	class UCapsuleComponent* CustomCapsuleComponent;
 
 #pragma endregion
 
