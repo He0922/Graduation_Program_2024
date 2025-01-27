@@ -8,6 +8,9 @@
 #include "InputActionValue.h"
 
 
+#include "Character/Player/CustomPlayerStatus.h"
+
+
 #include "CustomPlayerController.generated.h"
 
 /**
@@ -34,6 +37,7 @@ public:
 
 	class APlayerCharacter* Player;
 
+	ECustomPlayerStatus PlayerStatus;
 #pragma endregion
 
 

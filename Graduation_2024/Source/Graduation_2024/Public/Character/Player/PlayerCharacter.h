@@ -57,6 +57,8 @@ public:
 	ECustomPlayerStatus eplayerStatus;
 
 	void UpdatePlayerStatus(ECustomPlayerStatus newPlayerStatus);
+
+	ECustomPlayerStatus GetPlayerStatus();
 #pragma endregion
 
 

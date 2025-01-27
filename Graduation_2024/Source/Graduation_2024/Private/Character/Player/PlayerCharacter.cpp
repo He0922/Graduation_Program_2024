@@ -140,6 +140,11 @@ void APlayerCharacter::UpdatePlayerStatus(ECustomPlayerStatus newPlayerStatus)
 }
 
 
+ECustomPlayerStatus APlayerCharacter::GetPlayerStatus()
+{
+	return eplayerStatus;
+}
+
 #pragma endregion
 
 

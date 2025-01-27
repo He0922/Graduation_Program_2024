@@ -42,6 +42,8 @@ void ACustomPlayerController::BeginPlay()
 void ACustomPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	PlayerStatus = Player->GetPlayerStatus();
 }
 
 
@@ -88,7 +90,11 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 	if (CurrentControllerPawn)
 	{
 		CurrentControllerPawn->AddMovementInput(forwardDirection, movementVector.X);
-		CurrentControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
+		if (PlayerStatus != ECustomPlayerStatus::erowing)
+		{
+			CurrentControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
+		}
+		
 	}
 	
 }

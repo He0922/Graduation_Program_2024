@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_CustomPlayerController_generated_h
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACustomPlayerController(); \
 	friend struct Z_Construct_UClass_ACustomPlayerController_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ACustomPlayerController)
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ACustomPlayerController(ACustomPlayerController&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ACustomPlayerController();
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_16_PROLOG
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_19_GENERATED_BODY \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_19_PROLOG
+#define FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_19_INCLASS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_19_ENHANCED_CONSTRUCTORS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_22_INCLASS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
