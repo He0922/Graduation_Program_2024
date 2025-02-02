@@ -69,7 +69,7 @@ void UPlayerSkillComponent::EnergyCost()
 	//若能量减少到0， 则触发玩家类中的OnEnergyEmpty
 	if (playerCharacter->GetEnergy() <= 0)
 	{
-		playerCharacter->OnEnergyEmpty();
+		EndScan();
 	}
 }
 //结束持续扣除

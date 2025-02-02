@@ -37,6 +37,8 @@ void ACustomPlayerController::BeginPlay()
 	CurrentControllerPawn = GetPawn();
 	
 	Player = Cast<APlayerCharacter>(GetPawn());
+
+	playerSkillComponent = Player->playerSkillComponent;
 }
 
 void ACustomPlayerController::Tick(float DeltaTime)
@@ -64,6 +66,12 @@ void ACustomPlayerController::SetupInputComponent()
 		EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::Look);
 		EnhancedInputComponent->BindAction(objectInteraction, ETriggerEvent::Completed, this, &ACustomPlayerController::ObjectInteraction);
 
+		//技能
+		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Started, this, &ACustomPlayerController::StartScan);
+		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Completed, this, &ACustomPlayerController::EndScan);
+		EnhancedInputComponent->BindAction(IterctBlock, ETriggerEvent::Started, this, &ACustomPlayerController::InterctBlock);
+
+
 		Debug::Print("Cast Success EnhancedInputComponent", 5.f, false);
 	}
 }
@@ -87,7 +95,7 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 	const FVector forwardDirection = FRotationMatrix(yawRotation).GetUnitAxis(EAxis::X);
 	const FVector rightDirection = FRotationMatrix(yawRotation).GetUnitAxis(EAxis::Y);
 
-	if (CurrentControllerPawn)
+	/*if (CurrentControllerPawn)
 	{
 		CurrentControllerPawn->AddMovementInput(forwardDirection, movementVector.X);
 		if (PlayerStatus != ECustomPlayerStatus::erowing)
@@ -95,8 +103,25 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 			CurrentControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
 		}
 		
+	}*/
+
+	if (CurrentControllerPawn)
+	{
+		if (PlayerStatus != ECustomPlayerStatus::erowing)
+		{
+			CurrentControllerPawn->AddMovementInput(forwardDirection, movementVector.X);
+			CurrentControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
+		}
+		else
+		{
+			//船要跟着相机转，把那个移动的挪到船的组件上去了~~
+			//然后放在这感觉能少次判断？
+			if (AFloorRaft* floorRaft = Cast<AFloorRaft>(CurrentControllerPawn))
+			{
+				CurrentControllerPawn->AddMovementInput(floorRaft->GetBoatForward(), movementVector.X);
+			}
+		}
 	}
-	
 }
 
 
@@ -168,6 +193,23 @@ void ACustomPlayerController::StopInput()
 {
 	// 禁用玩家输入
 	DisableInput(this);
+}
+
+void ACustomPlayerController::StartScan()
+{
+	playerSkillComponent->StartScan();
+	//5000是默认值， 到时候要设置的话， 传到这里就好
+	playerSkillComponent->SetScanDistance(5000);
+}
+
+void ACustomPlayerController::EndScan()
+{
+	playerSkillComponent->EndScan();
+}
+
+void ACustomPlayerController::InterctBlock()
+{
+	playerSkillComponent->CheckBlock();
 }
 
 #pragma endregion

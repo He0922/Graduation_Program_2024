@@ -38,6 +38,8 @@ public:
 	class APlayerCharacter* Player;
 
 	ECustomPlayerStatus PlayerStatus;
+
+	class UPlayerSkillComponent* playerSkillComponent;
 #pragma endregion
 
 
@@ -56,6 +58,12 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
 	class UInputAction* objectInteraction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input|Action")
+	class UInputAction* ScanAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
+	class UInputAction* IterctBlock;
 #pragma endregion
 
 
@@ -73,6 +81,12 @@ public:
 
 	// 切换玩家控制对象
 	void ChangeObject(APawn* PawnObject);
+
+	//实现玩家技能接口的定义
+	void StartScan();
+	void EndScan();
+
+	void InterctBlock();
 #pragma endregion
 
 #pragma region Player InputController

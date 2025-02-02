@@ -51,6 +51,28 @@ public:
 	class UBoxComponent* floorRaftCollision;
 
 
+#pragma region Movement status
+public:
+	// 目标旋转
+	FRotator TargetRotation;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Movement")
+	float RotationSpeed = 1.0f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Movement")
+	float MovementSpeed = 1.0f;
+
+	//获取船的“朝前向量”，到时候要是模型改过来就直接把这个改成GetForwardVector就行
+	FVector GetBoatForward() { return -floorRafteMesh->GetRightVector(); }
+
+	void FloorRaftMove(float deltaTime);
+
+	// 让船朝向相机
+	void RotateTowardsCamera(float DeltaTime);
+
+#pragma endregion
+
+
 #pragma region PlayerStatusInterface
 
 #pragma endregion

@@ -16,6 +16,7 @@ AFloorRaft::AFloorRaft(const FObjectInitializer& ObjectInitializer)
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	//P x, R y, Y z
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationRoll = false;
 	bUseControllerRotationYaw = false;
@@ -39,6 +40,7 @@ AFloorRaft::AFloorRaft(const FObjectInitializer& ObjectInitializer)
 	camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	camera->SetupAttachment(cameraBoom, USpringArmComponent::SocketName);
 	camera->bUsePawnControlRotation = false;
+
 }
 
 // Called when the game starts or when spawned
@@ -46,21 +48,20 @@ void AFloorRaft::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	
 }
 
 // Called every frame
 void AFloorRaft::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
+	FloorRaftMove(DeltaTime);
 }
 
 // Called to bind functionality to input
 void AFloorRaft::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 
 void AFloorRaft::NotifyActorBeginOverlap(AActor* OtherActor)
@@ -71,6 +72,41 @@ void AFloorRaft::NotifyActorEndOverlap(AActor* OtherActor)
 {
 }
 
+#pragma region Movement
+void AFloorRaft::FloorRaftMove(float deltaTime)
+{
+	if (PawnMovementComponent->Velocity.Size() < 20.0f)
+	{
+		return;
+	}
+
+	// 获取相机的前向向量
+	FVector CameraForward = camera->GetRightVector();
+
+	// 计算目标旋转
+	TargetRotation = CameraForward.Rotation();
+
+	// 缓慢过渡船的旋转
+	RotateTowardsCamera(deltaTime);
+
+	// 控制船的前后移动
+	FVector ForwardMovement = GetActorForwardVector() * MovementSpeed * deltaTime;
+	AddActorWorldOffset(ForwardMovement, true);
+}
+
+// 缓慢过渡船的旋转，使船头朝向相机的方向
+void AFloorRaft::RotateTowardsCamera(float DeltaTime)
+{
+	// 获取当前的船的旋转角度
+	FRotator CurrentRotation = GetActorRotation();
+
+	// 平滑过渡旋转
+	FRotator NewRotation = FMath::RInterpTo(CurrentRotation, TargetRotation, DeltaTime, RotationSpeed);
+
+	// 设置船的新旋转角度
+	SetActorRotation(NewRotation);
+}
+#pragma endregion
 
 
 #pragma region PlayerStatusInterface

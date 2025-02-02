@@ -132,14 +132,14 @@ public:
 	//UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
 	//class UInputAction* jumpAction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
-	class UInputAction* ScanAction;
+	//UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
+	//class UInputAction* ScanAction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
-	class UInputAction* objectInteraction;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	//class UInputAction* objectInteraction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
-	class UInputAction* IterctBlock;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	//class UInputAction* IterctBlock;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	class UInputAction* climbAction;
@@ -287,23 +287,10 @@ public:
 #pragma endregion
 
 
-// 创建自定义的角色技能组件变量
-#pragma region Property To Skill
-public:
-	void OnEnergyEmpty();
-#pragma endregion
-
-
 #pragma region SkillClass
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Skill Component")
 	class UPlayerSkillComponent* playerSkillComponent;
-
-	//实现玩家技能接口的定义
-	void StartScan();
-	void EndScan();
-
-	void InterctBlock();
 #pragma endregion
 
 

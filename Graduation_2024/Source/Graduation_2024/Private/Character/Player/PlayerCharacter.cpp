@@ -91,8 +91,6 @@ void APlayerCharacter::BeginPlay()
 
 	InitArttributesUW();
 
-	
-
 }
 
 
@@ -124,9 +122,9 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		//EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look);
 
 		//技能
-		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Started, this, &APlayerCharacter::StartScan);
-		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Completed, this, &APlayerCharacter::EndScan);
-		EnhancedInputComponent->BindAction(IterctBlock, ETriggerEvent::Started, this, &APlayerCharacter::InterctBlock);
+		//EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Started, this, &APlayerCharacter::StartScan);
+		//EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Completed, this, &APlayerCharacter::EndScan);
+		//EnhancedInputComponent->BindAction(IterctBlock, ETriggerEvent::Started, this, &APlayerCharacter::InterctBlock);
 
 		//交互
 		//EnhancedInputComponent->BindAction(objectInteraction, ETriggerEvent::Completed, this, &APlayerCharacter::ObjectInteraction);
@@ -453,38 +451,6 @@ void APlayerCharacter::TeleportTo(EArchiveID ArchivalID)
 }
 
 #pragma endregion
-
-
-#pragma region Property To Skill
-//玩家属性对技能影响
-void APlayerCharacter::OnEnergyEmpty()
-{
-	EndScan();
-}
-#pragma endregion
-
-
-#pragma region SKILL
-void APlayerCharacter::StartScan()
-{
-	playerSkillComponent->StartScan();
-	//5000是默认值， 到时候要设置的话， 传到这里就好
-	playerSkillComponent->SetScanDistance(5000);
-}
-
-void APlayerCharacter::EndScan()
-{
-	playerSkillComponent->EndScan();
-}
-
-void APlayerCharacter::InterctBlock()
-{
-	//ChangeInShoulderView();
-	//ChangeOutShoulderView();
-	playerSkillComponent->CheckBlock();
-}
-#pragma endregion
-
 
 #pragma region Shoulder View
 void APlayerCharacter::ChangeInShoulderView()
