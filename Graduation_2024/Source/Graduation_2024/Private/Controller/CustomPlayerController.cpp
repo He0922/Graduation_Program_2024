@@ -38,7 +38,10 @@ void ACustomPlayerController::BeginPlay()
 	
 	Player = Cast<APlayerCharacter>(GetPawn());
 
-	playerSkillComponent = Player->playerSkillComponent;
+	if (Player != NULL)
+	{
+		playerSkillComponent = Player->playerSkillComponent;
+	}
 }
 
 void ACustomPlayerController::Tick(float DeltaTime)
@@ -118,7 +121,10 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 			//然后放在这感觉能少次判断？
 			if (AFloorRaft* floorRaft = Cast<AFloorRaft>(CurrentControllerPawn))
 			{
-				CurrentControllerPawn->AddMovementInput(floorRaft->GetBoatForward(), movementVector.X);
+				FVector tempVec = floorRaft->GetBoatForward();
+				tempVec.Z = 0;
+
+				CurrentControllerPawn->AddMovementInput(tempVec, movementVector.X);
 			}
 		}
 	}

@@ -81,7 +81,7 @@ void AFloorRaft::FloorRaftMove(float deltaTime)
 	}
 
 	// 获取相机的前向向量
-	FVector CameraForward = camera->GetRightVector();
+	FVector CameraForward = camera->GetForwardVector();
 
 	// 计算目标旋转
 	TargetRotation = CameraForward.Rotation();
@@ -89,9 +89,13 @@ void AFloorRaft::FloorRaftMove(float deltaTime)
 	// 缓慢过渡船的旋转
 	RotateTowardsCamera(deltaTime);
 
+	FVector tempVec = GetActorForwardVector();
+	tempVec.Z = -sinkForce;
+
 	// 控制船的前后移动
-	FVector ForwardMovement = GetActorForwardVector() * MovementSpeed * deltaTime;
-	AddActorWorldOffset(ForwardMovement, true);
+	FVector ForwardMovement = tempVec * MovementSpeed * deltaTime;
+	//AddActorWorldOffset(ForwardMovement, true);
+	PawnMovementComponent->AddRadialForce(ForwardMovement, 0.2f, MovementSpeed, ERadialImpulseFalloff::RIF_Linear);
 }
 
 // 缓慢过渡船的旋转，使船头朝向相机的方向

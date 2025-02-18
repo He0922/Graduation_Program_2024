@@ -72,6 +72,10 @@ struct Z_Construct_UClass_AFloorRaft_Statics
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "Public/Pawn/FloorRaft.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_sinkForce_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/Pawn/FloorRaft.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PawnMovementComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_cameraBoom;
@@ -80,6 +84,7 @@ struct Z_Construct_UClass_AFloorRaft_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_floorRaftCollision;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RotationSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MovementSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_sinkForce;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -92,8 +97,9 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFloorRaft_Sta
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFloorRaft_Statics::NewProp_camera = { "camera", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorRaft, camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_camera_MetaData), NewProp_camera_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFloorRaft_Statics::NewProp_floorRafteMesh = { "floorRafteMesh", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorRaft, floorRafteMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_floorRafteMesh_MetaData), NewProp_floorRafteMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFloorRaft_Statics::NewProp_floorRaftCollision = { "floorRaftCollision", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorRaft, floorRaftCollision), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_floorRaftCollision_MetaData), NewProp_floorRaftCollision_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFloorRaft_Statics::NewProp_RotationSpeed = { "RotationSpeed", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorRaft, RotationSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotationSpeed_MetaData), NewProp_RotationSpeed_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFloorRaft_Statics::NewProp_MovementSpeed = { "MovementSpeed", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorRaft, MovementSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MovementSpeed_MetaData), NewProp_MovementSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFloorRaft_Statics::NewProp_RotationSpeed = { "RotationSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorRaft, RotationSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotationSpeed_MetaData), NewProp_RotationSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFloorRaft_Statics::NewProp_MovementSpeed = { "MovementSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorRaft, MovementSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MovementSpeed_MetaData), NewProp_MovementSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFloorRaft_Statics::NewProp_sinkForce = { "sinkForce", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AFloorRaft, sinkForce), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_sinkForce_MetaData), NewProp_sinkForce_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFloorRaft_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorRaft_Statics::NewProp_PawnMovementComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorRaft_Statics::NewProp_cameraBoom,
@@ -102,6 +108,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFloorRaf
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorRaft_Statics::NewProp_floorRaftCollision,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorRaft_Statics::NewProp_RotationSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorRaft_Statics::NewProp_MovementSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorRaft_Statics::NewProp_sinkForce,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AFloorRaft_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AFloorRaft_Statics::DependentSingletons[])() = {
@@ -144,10 +151,10 @@ AFloorRaft::~AFloorRaft() {}
 struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AFloorRaft, AFloorRaft::StaticClass, TEXT("AFloorRaft"), &Z_Registration_Info_UClass_AFloorRaft, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AFloorRaft), 3672717900U) },
+		{ Z_Construct_UClass_AFloorRaft, AFloorRaft::StaticClass, TEXT("AFloorRaft"), &Z_Registration_Info_UClass_AFloorRaft, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AFloorRaft), 4155982972U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_1337066189(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_3988877774(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_FloorRaft_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

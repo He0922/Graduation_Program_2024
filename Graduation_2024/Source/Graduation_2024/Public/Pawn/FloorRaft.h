@@ -56,14 +56,17 @@ public:
 	// 目标旋转
 	FRotator TargetRotation;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float RotationSpeed = 1.0f;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float MovementSpeed = 1.0f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float sinkForce = 10.0f;
+
 	//获取船的“朝前向量”，到时候要是模型改过来就直接把这个改成GetForwardVector就行
-	FVector GetBoatForward() { return -floorRafteMesh->GetRightVector(); }
+	FVector GetBoatForward() {return floorRafteMesh->GetForwardVector(); }
 
 	void FloorRaftMove(float deltaTime);
 
