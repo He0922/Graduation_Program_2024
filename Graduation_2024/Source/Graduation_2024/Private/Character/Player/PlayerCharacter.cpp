@@ -23,6 +23,7 @@
 #include "Camera/CameraComponent.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/BoxComponent.h"
 
 
 
@@ -37,7 +38,6 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationRoll = false;
 	bUseControllerRotationYaw = false;
-
 
 	CustomCapsuleComponent = GetCapsuleComponent();
 
@@ -303,12 +303,14 @@ void APlayerCharacter::ObjectInteraction()
 			DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 			CustomPlayerController->ChangeObject(this);
 			UpdatePlayerStatus(ECustomPlayerStatus::eidle);
+			SetRaftCollider(false);
 		}
 		else 
 		{
 			UpdatePlayerStatus(ECustomPlayerStatus::erowing);
 			CustomPlayerController->ChangeObject(floorRaftObject);
 			AttachToActor(floorRaftObject, FAttachmentTransformRules::SnapToTargetIncludingScale);
+			SetRaftCollider(true);
 		}
 		
 	}
@@ -444,6 +446,39 @@ void APlayerCharacter::DisablePlayerInput()
 }
 #pragma endregion
 
+#pragma region Raft Simulation
+void APlayerCharacter::SetRaftCollider(bool IfUse)
+{
+	if (IfUse)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Raft"));
+
+		CustomRaftComponent = NewObject<UBoxComponent>(this);
+		CustomRaftComponent->SetMobility(EComponentMobility::Type::Movable);
+		CustomRaftComponent->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+
+		// 设置 BoxComponent 的大小 (例如 100x100x100 单位)
+		CustomRaftComponent->SetBoxExtent(FVector(400.0f, 80.0f, 40.0f));
+		// 设置碰撞预设为 "WorldDynamic"
+		CustomRaftComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);  // 启用碰撞
+		CustomRaftComponent->SetCollisionObjectType(ECollisionChannel::ECC_WorldDynamic);
+
+		// 设置碰撞响应，只有 PhysicsBody 为 "阻挡"，其他为 "忽略"
+		//CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_OverlapAll_Deprecated, ECollisionResponse::ECR_Ignore);
+		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_PhysicsBody, ECollisionResponse::ECR_Block);
+		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Visibility, ECollisionResponse::ECR_Ignore);
+		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Camera, ECollisionResponse::ECR_Ignore);
+		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
+
+		CustomRaftComponent->RegisterComponent();  // 注册组件，使其在游戏中有效
+		this->AddInstanceComponent(CustomRaftComponent);
+	}
+	else if(CustomRaftComponent)
+	{
+		CustomRaftComponent->DestroyComponent();
+	}
+}
+#pragma endregion
 
 #pragma region Archival
 void APlayerCharacter::TeleportTo(EArchiveID ArchivalID)

@@ -1216,7 +1216,15 @@
             "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\rendercore\\public\\rendergraphfwd.h",
             "d:\\ue\\ue5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\primitivecomponent.generated.h",
             "d:\\ue\\ue5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
-            "d:\\ue\\ue5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\capsulecomponent.generated.h"
+            "d:\\ue\\ue5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\capsulecomponent.generated.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\public\\showflags.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\public\\showflagsvalues.inl",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\public\\showflagsvalues.inl",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\public\\showflagsvalues.inl",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\public\\showflagsvalues.inl",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\public\\showflagsvalues.inl",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

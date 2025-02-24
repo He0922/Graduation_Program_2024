@@ -196,7 +196,6 @@ public:
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Movement Component")
 	class UPlayerCharacterMovementComponent* playerCMC;
-
 	class UCapsuleComponent* CustomCapsuleComponent;
 
 #pragma endregion
@@ -266,6 +265,13 @@ public:
 	void DisablePlayerInput();
 #pragma endregion
 
+#pragma region Raft Simulation
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Raft Colider")
+	class UBoxComponent* CustomRaftComponent;
+
+	void SetRaftCollider(bool IfUse);
+#pragma endregion
 
 #pragma region Archival
 public:
