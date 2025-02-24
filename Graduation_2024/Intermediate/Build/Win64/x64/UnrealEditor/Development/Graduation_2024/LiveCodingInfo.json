@@ -42,11 +42,11 @@
 			"CustomFloatingPawnMovement.cpp.obj",
 			"MayflyMovementComponent.cpp.obj",
 			"PlayerCharacterMovementComponent.cpp.obj",
-			"FloorRaft.cpp.obj",
 			"MyPawn.cpp.obj",
 			"PlayerSkillComponent.cpp.obj",
 			"ArchivalUW.cpp.obj",
-			"PlayerAttributesUW.cpp.obj"
+			"PlayerAttributesUW.cpp.obj",
+			"FloorRaft.cpp.obj"
 		]
 	}
 }

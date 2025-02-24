@@ -23,6 +23,7 @@ AFloorRaft::AFloorRaft(const FObjectInitializer& ObjectInitializer)
 
 	PawnMovementComponent = CreateDefaultSubobject<UCustomFloatingPawnMovement>(TEXT("Floating Pawn Movement"));
 
+
 	floorRafteMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Archive Mesh"));
 	RootComponent = floorRafteMesh;
 
@@ -75,8 +76,10 @@ void AFloorRaft::NotifyActorEndOverlap(AActor* OtherActor)
 #pragma region Movement
 void AFloorRaft::FloorRaftMove(float deltaTime)
 {
-	if (PawnMovementComponent->Velocity.Size() < 20.0f)
+	if (PawnMovementComponent->Velocity.Size() < 200.0f)
 	{
+		PawnMovementComponent->Velocity = FMath::VInterpTo(PawnMovementComponent->Velocity, FVector::ZeroVector, deltaTime, 0.2f);
+
 		return;
 	}
 
@@ -104,6 +107,7 @@ void AFloorRaft::RotateTowardsCamera(float DeltaTime)
 	// 获取当前的船的旋转角度
 	FRotator CurrentRotation = GetActorRotation();
 
+	CurrentRotation.Pitch = 0;
 	// 平滑过渡旋转
 	FRotator NewRotation = FMath::RInterpTo(CurrentRotation, TargetRotation, DeltaTime, RotationSpeed);
 
