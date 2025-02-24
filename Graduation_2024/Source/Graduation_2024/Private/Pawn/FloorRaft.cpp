@@ -78,8 +78,6 @@ void AFloorRaft::FloorRaftMove(float deltaTime)
 {
 	if (PawnMovementComponent->Velocity.Size() < 200.0f)
 	{
-		PawnMovementComponent->Velocity = FMath::VInterpTo(PawnMovementComponent->Velocity, FVector::ZeroVector, deltaTime, 0.2f);
-
 		return;
 	}
 

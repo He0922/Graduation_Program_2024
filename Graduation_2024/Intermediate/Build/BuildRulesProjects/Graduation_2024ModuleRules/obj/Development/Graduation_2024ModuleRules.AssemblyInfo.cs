@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Graduation_2024ModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+520ab7e18adac7b1745aedf5124fb5df85a57b17")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd55e29f7c8917c0309b462797815d96e4f05d38")]
 [assembly: System.Reflection.AssemblyProductAttribute("Graduation_2024ModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Graduation_2024ModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
