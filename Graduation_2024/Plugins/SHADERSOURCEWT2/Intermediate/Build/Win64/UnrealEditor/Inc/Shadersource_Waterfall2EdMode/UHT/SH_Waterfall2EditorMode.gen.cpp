@@ -29,10 +29,14 @@ struct Z_Construct_UClass_USH_Waterfall2EditorMode_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/* Waterfall Tool 2 Editor Mode */" },
+#endif
 		{ "IncludePath", "EdMode/SH_Waterfall2EditorMode.h" },
 		{ "ModuleRelativePath", "Public/EdMode/SH_Waterfall2EditorMode.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Waterfall Tool 2 Editor Mode" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -77,14 +81,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USH_Waterfall2EditorMode);
 // End Class USH_Waterfall2EditorMode
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2EdMode_Public_EdMode_SH_Waterfall2EditorMode_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2EdMode_Public_EdMode_SH_Waterfall2EditorMode_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USH_Waterfall2EditorMode, USH_Waterfall2EditorMode::StaticClass, TEXT("USH_Waterfall2EditorMode"), &Z_Registration_Info_UClass_USH_Waterfall2EditorMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_Waterfall2EditorMode), 412629096U) },
+		{ Z_Construct_UClass_USH_Waterfall2EditorMode, USH_Waterfall2EditorMode::StaticClass, TEXT("USH_Waterfall2EditorMode"), &Z_Registration_Info_UClass_USH_Waterfall2EditorMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_Waterfall2EditorMode), 1149136643U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2EdMode_Public_EdMode_SH_Waterfall2EditorMode_h_770278239(TEXT("/Script/Shadersource_Waterfall2EdMode"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2EdMode_Public_EdMode_SH_Waterfall2EditorMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2EdMode_Public_EdMode_SH_Waterfall2EditorMode_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2EdMode_Public_EdMode_SH_Waterfall2EditorMode_h_2003829939(TEXT("/Script/Shadersource_Waterfall2EdMode"),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2EdMode_Public_EdMode_SH_Waterfall2EditorMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2EdMode_Public_EdMode_SH_Waterfall2EditorMode_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -36,11 +36,15 @@ struct Z_Construct_UClass_ASH_Waterfall2_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/* The main Waterfall actor for SHADERSOURCE Waterfall Tool 2. */" },
+#endif
 		{ "DisplayName", "SHADERSOURCE Waterfall 2" },
 		{ "IncludePath", "Actors/SH_Waterfall2.h" },
 		{ "ModuleRelativePath", "Public/Actors/SH_Waterfall2.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The main Waterfall actor for SHADERSOURCE Waterfall Tool 2." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RootComp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -142,9 +146,13 @@ struct Z_Construct_UClass_ASH_Waterfall2_Statics
 #endif // WITH_EDITORONLY_DATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bShowDynamicMeshesInGame_MetaData[] = {
 		{ "Category", "WaterfallSettings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "//If this is true, the dynamic meshes will be visible in game, if false the static mesh will be visible in game\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Actors/SH_Waterfall2.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "If this is true, the dynamic meshes will be visible in game, if false the static mesh will be visible in game" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RootComp;
@@ -256,14 +264,14 @@ ASH_Waterfall2::~ASH_Waterfall2() {}
 // End Class ASH_Waterfall2
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Actors_SH_Waterfall2_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Actors_SH_Waterfall2_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASH_Waterfall2, ASH_Waterfall2::StaticClass, TEXT("ASH_Waterfall2"), &Z_Registration_Info_UClass_ASH_Waterfall2, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASH_Waterfall2), 1979911765U) },
+		{ Z_Construct_UClass_ASH_Waterfall2, ASH_Waterfall2::StaticClass, TEXT("ASH_Waterfall2"), &Z_Registration_Info_UClass_ASH_Waterfall2, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASH_Waterfall2), 4148802199U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Actors_SH_Waterfall2_h_1115142560(TEXT("/Script/Shadersource_Waterfall2Runtime"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Actors_SH_Waterfall2_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Actors_SH_Waterfall2_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Actors_SH_Waterfall2_h_1834787430(TEXT("/Script/Shadersource_Waterfall2Runtime"),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Actors_SH_Waterfall2_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Actors_SH_Waterfall2_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

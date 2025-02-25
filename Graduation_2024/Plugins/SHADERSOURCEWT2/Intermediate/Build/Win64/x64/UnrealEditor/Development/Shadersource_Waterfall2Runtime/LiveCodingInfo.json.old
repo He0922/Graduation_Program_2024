@@ -1,0 +1,30 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Shadersource_Waterfall2Runtime.cpp.obj": [
+			"ISH_WaterfallFxComponent.gen.cpp.obj",
+			"Shadersource_Waterfall2Runtime.init.gen.cpp.obj",
+			"SH_Waterfall2.gen.cpp.obj",
+			"SH_WaterfallGenerationEnums.gen.cpp.obj",
+			"SH_WaterfallMeshComponent.gen.cpp.obj",
+			"SH_WaterfallPathComponent.gen.cpp.obj",
+			"SH_WaterfallSettingsComponent.gen.cpp.obj",
+			"SH_WaterfallSFXComponent.gen.cpp.obj",
+			"SH_WaterfallTool2Statics.gen.cpp.obj",
+			"SH_WaterfallVFXComponent.gen.cpp.obj",
+			"SH_Waterfall2.cpp.obj",
+			"ISH_WaterfallFxComponent.cpp.obj",
+			"SH_WaterfallSFXComponent.cpp.obj",
+			"SH_WaterfallVFXComponent.cpp.obj",
+			"SH_WaterfallMeshComponent.cpp.obj",
+			"SH_WaterfallPathComponent.cpp.obj",
+			"SH_WaterfallSettingsComponent.cpp.obj",
+			"SH_WaterfallBuilder.cpp.obj",
+			"SH_WaterfallBuilder_Mesh.cpp.obj",
+			"SH_WaterfallBuilder_Path.cpp.obj",
+			"SH_WaterfallBuilder_Static.cpp.obj",
+			"Shadersource_Waterfall2Runtime.cpp.obj",
+			"SH_WaterfallTool2Statics.cpp.obj"
+		]
+	}
+}

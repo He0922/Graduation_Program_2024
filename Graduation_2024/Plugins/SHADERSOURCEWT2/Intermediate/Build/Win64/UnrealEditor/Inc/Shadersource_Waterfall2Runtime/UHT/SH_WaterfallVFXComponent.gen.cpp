@@ -310,19 +310,27 @@ struct Z_Construct_UClass_USH_WaterfallVFXComponent_Statics
 		{ "BlueprintSpawnableComponent", "" },
 		{ "BlueprintType", "true" },
 		{ "ClassGroupNames", "SHADERSOURCE" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/* A custom Niagara component that stores the path and point indexes of the parent waterfall. */" },
+#endif
 		{ "DisplayName", "SH Waterfall VFX Component" },
 		{ "HideCategories", "Object Physics Collision Mobility VirtualTexture" },
 		{ "IncludePath", "Components/SH_WaterfallVFXComponent.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/Components/SH_WaterfallVFXComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "A custom Niagara component that stores the path and point indexes of the parent waterfall." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PointData_MetaData[] = {
 		{ "Category", "Waterfall" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*Points that will be passed to \"SpawnPositions\" variable in UpdateParticleSystemParams()\n\x09Note: These points are expected to be in World Space. They will be converted to local when set.*/" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/SH_WaterfallVFXComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Points that will be passed to \"SpawnPositions\" variable in UpdateParticleSystemParams()\n       Note: These points are expected to be in World Space. They will be converted to local when set." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_VFXBoundsBox_MetaData[] = {
 		{ "Category", "Waterfall" },
@@ -399,18 +407,18 @@ USH_WaterfallVFXComponent::~USH_WaterfallVFXComponent() {}
 // End Class USH_WaterfallVFXComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FSH_VfxPointData::StaticStruct, Z_Construct_UScriptStruct_FSH_VfxPointData_Statics::NewStructOps, TEXT("SH_VfxPointData"), &Z_Registration_Info_UScriptStruct_SH_VfxPointData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSH_VfxPointData), 3379544252U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USH_WaterfallVFXComponent, USH_WaterfallVFXComponent::StaticClass, TEXT("USH_WaterfallVFXComponent"), &Z_Registration_Info_UClass_USH_WaterfallVFXComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_WaterfallVFXComponent), 1406193687U) },
+		{ Z_Construct_UClass_USH_WaterfallVFXComponent, USH_WaterfallVFXComponent::StaticClass, TEXT("USH_WaterfallVFXComponent"), &Z_Registration_Info_UClass_USH_WaterfallVFXComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_WaterfallVFXComponent), 800348428U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_3734294337(TEXT("/Script/Shadersource_Waterfall2Runtime"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_2804844127(TEXT("/Script/Shadersource_Waterfall2Runtime"),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_Components_SH_WaterfallVFXComponent_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

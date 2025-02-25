@@ -35,9 +35,13 @@ struct Z_Construct_UEnum_Shadersource_Waterfall2Runtime_ESH_MeshGenerationType_S
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/* The different mesh types. */" },
+#endif
 		{ "ModuleRelativePath", "Public/EditorComponents/SH_WaterfallGenerationEnums.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The different mesh types." },
+#endif
 		{ "W2_MG_All.Hidden", "" },
 		{ "W2_MG_All.Name", "ESH_MeshGenerationType::W2_MG_All" },
 		{ "W2_MG_Cross.DisplayName", "Plane" },
@@ -101,9 +105,13 @@ struct Z_Construct_UEnum_Shadersource_Waterfall2Runtime_ESH_W2_Interpolation_Sta
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/* General Interp Type */" },
+#endif
 		{ "ModuleRelativePath", "Public/EditorComponents/SH_WaterfallGenerationEnums.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "General Interp Type" },
+#endif
 		{ "W2_IN_Cubic.DisplayName", "Cubic" },
 		{ "W2_IN_Cubic.Name", "ESH_W2_Interpolation::W2_IN_Cubic" },
 		{ "W2_IN_Linear.DisplayName", "Linear" },
@@ -159,9 +167,13 @@ struct Z_Construct_UEnum_Shadersource_Waterfall2Runtime_ESH_MeshProjectionType_S
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/* Used in the create mesh buffers functions. */" },
+#endif
 		{ "ModuleRelativePath", "Public/EditorComponents/SH_WaterfallGenerationEnums.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Used in the create mesh buffers functions." },
+#endif
 		{ "W2_MP_Both.Comment", "/* Vertices are nudged away from any impact point, and then nudged towards the  impact point. */" },
 		{ "W2_MP_Both.DisplayName", "Both" },
 		{ "W2_MP_Both.Name", "ESH_MeshProjectionType::W2_MP_Both" },
@@ -207,19 +219,19 @@ UEnum* Z_Construct_UEnum_Shadersource_Waterfall2Runtime_ESH_MeshProjectionType()
 // End Enum ESH_MeshProjectionType
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallGenerationEnums_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallGenerationEnums_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESH_MeshGenerationType_StaticEnum, TEXT("ESH_MeshGenerationType"), &Z_Registration_Info_UEnum_ESH_MeshGenerationType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1443085438U) },
+		{ ESH_MeshGenerationType_StaticEnum, TEXT("ESH_MeshGenerationType"), &Z_Registration_Info_UEnum_ESH_MeshGenerationType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 406542764U) },
 #if WITH_EDITORONLY_DATA
-		{ ESH_W2_Interpolation_StaticEnum, TEXT("ESH_W2_Interpolation"), &Z_Registration_Info_UEnum_ESH_W2_Interpolation, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2310353831U) },
-		{ ESH_MeshProjectionType_StaticEnum, TEXT("ESH_MeshProjectionType"), &Z_Registration_Info_UEnum_ESH_MeshProjectionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3869276318U) },
+		{ ESH_W2_Interpolation_StaticEnum, TEXT("ESH_W2_Interpolation"), &Z_Registration_Info_UEnum_ESH_W2_Interpolation, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 458548596U) },
+		{ ESH_MeshProjectionType_StaticEnum, TEXT("ESH_MeshProjectionType"), &Z_Registration_Info_UEnum_ESH_MeshProjectionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3283005238U) },
 #endif // WITH_EDITORONLY_DATA
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallGenerationEnums_h_2977821154(TEXT("/Script/Shadersource_Waterfall2Runtime"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallGenerationEnums_h_105872736(TEXT("/Script/Shadersource_Waterfall2Runtime"),
 	nullptr, 0,
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallGenerationEnums_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallGenerationEnums_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallGenerationEnums_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallGenerationEnums_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

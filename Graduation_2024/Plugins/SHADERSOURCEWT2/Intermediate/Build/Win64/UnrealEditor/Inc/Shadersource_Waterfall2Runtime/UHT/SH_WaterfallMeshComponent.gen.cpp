@@ -30,11 +30,15 @@ struct Z_Construct_UClass_USH_WaterfallMeshComponent_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/* A Dynamic Mesh Component used for generating the meshes in the Editor Mode.\n* Currently this is not avaialble at runtime. */" },
+#endif
 		{ "HideCategories", "LOD LOD Mobility Trigger" },
 		{ "IncludePath", "EditorComponents/SH_WaterfallMeshComponent.h" },
 		{ "ModuleRelativePath", "Public/EditorComponents/SH_WaterfallMeshComponent.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "A Dynamic Mesh Component used for generating the meshes in the Editor Mode.\n* Currently this is not avaialble at runtime." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MeshType_MetaData[] = {
 		{ "Category", "Waterfall" },
@@ -51,7 +55,7 @@ struct Z_Construct_UClass_USH_WaterfallMeshComponent_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_USH_WaterfallMeshComponent_Statics::NewProp_MeshType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_USH_WaterfallMeshComponent_Statics::NewProp_MeshType = { "MeshType", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USH_WaterfallMeshComponent, MeshType), Z_Construct_UEnum_Shadersource_Waterfall2Runtime_ESH_MeshGenerationType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeshType_MetaData), NewProp_MeshType_MetaData) }; // 1443085438
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_USH_WaterfallMeshComponent_Statics::NewProp_MeshType = { "MeshType", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USH_WaterfallMeshComponent, MeshType), Z_Construct_UEnum_Shadersource_Waterfall2Runtime_ESH_MeshGenerationType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeshType_MetaData), NewProp_MeshType_MetaData) }; // 406542764
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USH_WaterfallMeshComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USH_WaterfallMeshComponent_Statics::NewProp_MeshType_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USH_WaterfallMeshComponent_Statics::NewProp_MeshType,
@@ -95,14 +99,14 @@ USH_WaterfallMeshComponent::~USH_WaterfallMeshComponent() {}
 // End Class USH_WaterfallMeshComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallMeshComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallMeshComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USH_WaterfallMeshComponent, USH_WaterfallMeshComponent::StaticClass, TEXT("USH_WaterfallMeshComponent"), &Z_Registration_Info_UClass_USH_WaterfallMeshComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_WaterfallMeshComponent), 1404307232U) },
+		{ Z_Construct_UClass_USH_WaterfallMeshComponent, USH_WaterfallMeshComponent::StaticClass, TEXT("USH_WaterfallMeshComponent"), &Z_Registration_Info_UClass_USH_WaterfallMeshComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_WaterfallMeshComponent), 3638985394U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallMeshComponent_h_2228143768(TEXT("/Script/Shadersource_Waterfall2Runtime"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallMeshComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_Shadersource_WaterfallTool2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallMeshComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallMeshComponent_h_502326138(TEXT("/Script/Shadersource_Waterfall2Runtime"),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallMeshComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Plugins_SHADERSOURCEWT2_Source_Shadersource_Waterfall2Runtime_Public_EditorComponents_SH_WaterfallMeshComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
