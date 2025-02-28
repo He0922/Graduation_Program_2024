@@ -85,6 +85,23 @@ void ACustomPlayerController::SetupInputComponent()
 #pragma region Player Action Function
 void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 {
+	if (!Player->playerCMC) return;
+
+	if (Player->playerCMC->IsClimbing())
+	{
+		HandleClimbMovementInput(InputValue);
+	}
+	else
+	{
+		HandleGroundMovementInput(InputValue);
+	}
+
+	
+}
+
+
+void ACustomPlayerController::HandleGroundMovementInput(const FInputActionValue& InputValue)
+{
 	// 获取玩家输入方向
 	const FVector2D movementVector = InputValue.Get<FVector2D>();
 
@@ -105,7 +122,7 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 		{
 			CurrentControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
 		}
-		
+
 	}*/
 
 	if (CurrentControllerPawn)
@@ -127,6 +144,29 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 				CurrentControllerPawn->AddMovementInput(tempVec, movementVector.X);
 			}
 		}
+	}
+}
+
+
+void ACustomPlayerController::HandleClimbMovementInput(const FInputActionValue& InputValue)
+{
+	// 获取玩家输入方向
+	const FVector2D movementVector = InputValue.Get<FVector2D>();
+
+	const FVector ForwardDirection = FVector::CrossProduct(
+		-Player->playerCMC->GetClimbableSurfaceNormal(),
+		Player->GetActorRightVector()
+	);
+
+	const FVector RightDirection = FVector::CrossProduct(
+		-Player->playerCMC->GetClimbableSurfaceNormal(),
+		-Player->GetActorUpVector()
+	);
+
+	if (PlayerStatus != ECustomPlayerStatus::erowing)
+	{
+		CurrentControllerPawn->AddMovementInput(ForwardDirection, movementVector.X);
+		CurrentControllerPawn->AddMovementInput(RightDirection, movementVector.Y);
 	}
 }
 

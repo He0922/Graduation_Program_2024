@@ -74,6 +74,10 @@ public:
 public:
 	void Move(const FInputActionValue& InputValue);
 
+	void HandleGroundMovementInput(const FInputActionValue& InputValue);
+
+	void HandleClimbMovementInput(const FInputActionValue& InputValue);
+
 	void Jump();
 
 	void JumpStop();
