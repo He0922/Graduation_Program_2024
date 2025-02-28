@@ -14,8 +14,60 @@ ENGINE_API UClass* Z_Construct_UClass_UCharacterMovementComponent();
 ENGINE_API UEnum* Z_Construct_UEnum_Engine_EObjectTypeQuery();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerCharacterMovementComponent();
 GRADUATION_2024_API UClass* Z_Construct_UClass_UPlayerCharacterMovementComponent_NoRegister();
+GRADUATION_2024_API UEnum* Z_Construct_UEnum_Graduation_2024_ECustomMovementMode();
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
 // End Cross Module References
+
+// Begin Enum ECustomMovementMode
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_ECustomMovementMode;
+static UEnum* ECustomMovementMode_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_ECustomMovementMode.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_ECustomMovementMode.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Graduation_2024_ECustomMovementMode, (UObject*)Z_Construct_UPackage__Script_Graduation_2024(), TEXT("ECustomMovementMode"));
+	}
+	return Z_Registration_Info_UEnum_ECustomMovementMode.OuterSingleton;
+}
+template<> GRADUATION_2024_API UEnum* StaticEnum<ECustomMovementMode::Type>()
+{
+	return ECustomMovementMode_StaticEnum();
+}
+struct Z_Construct_UEnum_Graduation_2024_ECustomMovementMode_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/MovementComponent/PlayerCharacterMovementComponent.h" },
+		{ "MOVE_Climb.DisplayName", "Climb Mode" },
+		{ "MOVE_Climb.Name", "ECustomMovementMode::MOVE_Climb" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "ECustomMovementMode::MOVE_Climb", (int64)ECustomMovementMode::MOVE_Climb },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Graduation_2024_ECustomMovementMode_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_Graduation_2024,
+	nullptr,
+	"ECustomMovementMode",
+	"ECustomMovementMode::Type",
+	Z_Construct_UEnum_Graduation_2024_ECustomMovementMode_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_Graduation_2024_ECustomMovementMode_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::Namespaced,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_Graduation_2024_ECustomMovementMode_Statics::Enum_MetaDataParams), Z_Construct_UEnum_Graduation_2024_ECustomMovementMode_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_Graduation_2024_ECustomMovementMode()
+{
+	if (!Z_Registration_Info_UEnum_ECustomMovementMode.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_ECustomMovementMode.InnerSingleton, Z_Construct_UEnum_Graduation_2024_ECustomMovementMode_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_ECustomMovementMode.InnerSingleton;
+}
+// End Enum ECustomMovementMode
 
 // Begin Class UPlayerCharacterMovementComponent
 void UPlayerCharacterMovementComponent::StaticRegisterNativesUPlayerCharacterMovementComponent()
@@ -145,13 +197,16 @@ UPlayerCharacterMovementComponent::~UPlayerCharacterMovementComponent() {}
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics
 {
+	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
+		{ ECustomMovementMode_StaticEnum, TEXT("ECustomMovementMode"), &Z_Registration_Info_UEnum_ECustomMovementMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1900158893U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UPlayerCharacterMovementComponent, UPlayerCharacterMovementComponent::StaticClass, TEXT("UPlayerCharacterMovementComponent"), &Z_Registration_Info_UClass_UPlayerCharacterMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerCharacterMovementComponent), 2815544921U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_1847463529(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_3128987587(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

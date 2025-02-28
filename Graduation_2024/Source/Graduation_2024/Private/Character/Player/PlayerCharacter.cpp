@@ -128,6 +128,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 		//½»»¥
 		//EnhancedInputComponent->BindAction(objectInteraction, ETriggerEvent::Completed, this, &APlayerCharacter::ObjectInteraction);
+
 	}
 }
 
@@ -316,11 +317,7 @@ void APlayerCharacter::ObjectInteraction()
 	}
 }
 
-void APlayerCharacter::ClimbingActionStarted(const FInputActionValue& Value)
-{
-	if (!playerCMC) return;
 
-}
 
 void APlayerCharacter::FaceActor(AActor* TargetActor)
 {

@@ -8,6 +8,16 @@
 
 
 
+UENUM(BlueprintType)
+namespace ECustomMovementMode
+{
+	enum Type
+	{
+		MOVE_Climb UMETA(DisplayName = "Climb Mode")
+	};
+}
+
+
 /**
  * 
  */
@@ -15,7 +25,7 @@ UCLASS()
 class GRADUATION_2024_API UPlayerCharacterMovementComponent : public UCharacterMovementComponent
 {
 	GENERATED_BODY()
-	
+	 
 protected:
 	virtual void BeginPlay() override;
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -40,17 +50,19 @@ public:
 
 #pragma region ClimbCore
 public:
-	bool CapsuleTraceClimbableSurface();
+	bool ClimbableCapsuleTraceSurface();
 
-	FHitResult TraceFormEyeHeight(float TraceDistance, float TraceStartOffset);
+	FHitResult TraceFormEyeHeight(float TraceDistance, float TraceStartOffset = 0.f);
 
-	bool IsClimbing() const;
+	bool CanStartClimbing();
+
 #pragma endregion
 
 
 #pragma region ClimbCoreVariable
 	// ½ºÄÒÌå×·×Ù¼ì²â½á¹û
-	TArray<FHitResult> CapsuleTraceClimbableSurfaceTracedResults;
+	TArray<FHitResult> ClimbableCapsuleTraceSurfaceTracedResults;
+
 #pragma endregion
 
 
@@ -74,5 +86,7 @@ public:
 #pragma endregion
 
 public:
+	void ToggleClimbing(bool bEnableClimb);
+	bool IsClimbing() const;
 
 };

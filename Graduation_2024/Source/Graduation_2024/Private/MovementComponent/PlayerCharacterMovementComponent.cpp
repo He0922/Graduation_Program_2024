@@ -16,8 +16,8 @@ void UPlayerCharacterMovementComponent::TickComponent(float DeltaTime, ELevelTic
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	CapsuleTraceClimbableSurface();
-	TraceFormEyeHeight(100.f, 0.f);
+	//Debug::PrintBool("Capsule Trace No Collision: ", ClimbableCapsuleTraceSurfaceTracedResults.IsEmpty(), 0.f,false);
+	//Debug::PrintBool("Eye Trace Has Blocking: ", TraceFormEyeHeight(100.f).bBlockingHit, 0.f, false);
 }
 
 
@@ -91,14 +91,49 @@ FHitResult UPlayerCharacterMovementComponent::DoLineTraceSingleByObject(const FV
 #pragma endregion
 
 
+
 #pragma region ClimbCore
-
-
-
-bool UPlayerCharacterMovementComponent::CapsuleTraceClimbableSurface()
+void UPlayerCharacterMovementComponent::ToggleClimbing(bool bEnableClimb)
 {
+	if (bEnableClimb)
+	{
+		if (CanStartClimbing())
+		{
+			// Enter the climb state
+			Debug::Print("Can Start Climbing", 5.f, false);
+		}
+		else
+		{
+			Debug::Print("Can NOT Start Climbing", 5.f, false);
+		}
+	}
+	else
+	{
+		// stop climbing
+	}
+}
 
 
+bool UPlayerCharacterMovementComponent::CanStartClimbing()
+{
+	if (IsFalling()) return false;
+	if (!ClimbableCapsuleTraceSurface()) return false;
+	// 若眼部射线没有阻挡撞击，则判断无法攀爬
+	if (!TraceFormEyeHeight(100.f).bBlockingHit)return false;
+
+	return true;
+}
+
+
+bool UPlayerCharacterMovementComponent::IsClimbing() const
+{
+	return MovementMode == MOVE_Custom && CustomMovementMode == ECustomMovementMode::MOVE_Climb;
+}
+
+
+// 追踪可攀爬表面，如果可攀爬返回true
+bool UPlayerCharacterMovementComponent::ClimbableCapsuleTraceSurface()
+{
 	// 获取移动组件的位置并进行位置偏移量设置
 	const FVector StartOffset = UpdatedComponent->GetForwardVector() * 30.f;
 	// 确定胶囊体起始位置
@@ -106,10 +141,10 @@ bool UPlayerCharacterMovementComponent::CapsuleTraceClimbableSurface()
 	// 确定胶囊体结束位置
 	const FVector End = Start + UpdatedComponent->GetForwardVector();
 
-	CapsuleTraceClimbableSurfaceTracedResults = DoCapsuleTraceMultiByObject(Start, End, true);
+	ClimbableCapsuleTraceSurfaceTracedResults = DoCapsuleTraceMultiByObject(Start, End, true,true);
 
-	// 判断该数组是否为空，为空代表未检测到任何可攀爬表面
-	return CapsuleTraceClimbableSurfaceTracedResults.IsEmpty();
+	// 判断该数组是否为空，为空代表未检测到任何可攀爬表面,需要取反，因为需要判断，如果为空无法攀爬，返回flase
+	return !ClimbableCapsuleTraceSurfaceTracedResults.IsEmpty();
 }
 
 
@@ -120,6 +155,8 @@ FHitResult UPlayerCharacterMovementComponent::TraceFormEyeHeight(float TraceDist
 	const FVector Start = ComponentLocation + EyeHeightOffset;
 	const FVector End = Start + UpdatedComponent->GetForwardVector() * TraceDistance;
 
-	return DoLineTraceSingleByObject(Start, End, true);
+	return DoLineTraceSingleByObject(Start, End, true,true);
 }
+
+
 #pragma endregion
