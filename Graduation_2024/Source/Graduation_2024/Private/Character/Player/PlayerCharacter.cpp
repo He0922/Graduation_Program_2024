@@ -57,7 +57,7 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	// 创建Camera
 	camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	camera->SetupAttachment(cameraBoom, USpringArmComponent::SocketName);
-	camera->bUsePawnControlRotation = false;
+	camera->bUsePawnControlRotation = true;
 
 
 	//创建玩家技能组件

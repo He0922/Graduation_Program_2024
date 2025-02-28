@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugineditor\\uht\\oceanology_plugineditor.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\oceanology_plugineditor\\definitions.oceanology_plugineditor.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

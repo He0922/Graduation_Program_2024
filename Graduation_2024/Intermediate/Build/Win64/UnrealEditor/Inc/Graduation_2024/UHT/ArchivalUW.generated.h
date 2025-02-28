@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_ArchivalUW_generated_h
 
-#define FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUArchivalUW(); \
 	friend struct Z_Construct_UClass_UArchivalUW_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UArchivalUW)
 
 
-#define FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UArchivalUW(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UArchivalUW();
 
 
-#define FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_12_PROLOG
-#define FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_GENERATED_BODY \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_12_PROLOG
+#define FID_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_INCLASS_NO_PURE_DECLS \
-	FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> GRADUATION_2024_API UClass* StaticClass<class UArchivalUW>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h
+#define CURRENT_FILE_ID FID_Graduation_2024_Source_Graduation_2024_Public_UI_Archival_ArchivalUW_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

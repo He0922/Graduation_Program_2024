@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugin\\uht\\oceanologyfoam.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\oceanology_plugin\\definitions.oceanology_plugin.h",
+            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\source\\oceanology_plugin\\public\\structs\\oceanologyfoam.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
+            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugin\\uht\\oceanologyfoam.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

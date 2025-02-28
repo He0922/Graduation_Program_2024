@@ -114,6 +114,36 @@
     <None Include="..\..\Plugins\Oceanology_Plugin\Shaders\Private\OceanologyWaterMeshVertexFactory.ush">
       <Filter>Plugins\Oceanology_Plugin\Shaders\Private</Filter>
     </None>
+    <Filter Include="Plugins\SHADERSOURCEWT2">
+      <UniqueIdentifier>{C5BE2832-AF8A-35C7-952C-87D61D78269A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Shadersource_WaterfallTool2.uplugin">
+      <Filter>Plugins\SHADERSOURCEWT2</Filter>
+    </None>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Resources">
+      <UniqueIdentifier>{5CFB9935-29B8-389A-A8FB-DACE893CD989}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Resources\DropDown.png">
+      <Filter>Plugins\SHADERSOURCEWT2\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Resources\Icon128.png">
+      <Filter>Plugins\SHADERSOURCEWT2\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Resources\SHADERSOURCE_Icon128.png">
+      <Filter>Plugins\SHADERSOURCEWT2\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Resources\ShaderSource_Logo_Background.png">
+      <Filter>Plugins\SHADERSOURCEWT2\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Resources\WaterfallTool2_Banner.png">
+      <Filter>Plugins\SHADERSOURCEWT2\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Resources\WaterfallTool2_Banner_Background.png">
+      <Filter>Plugins\SHADERSOURCEWT2\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Resources\WFT2_Icon.png">
+      <Filter>Plugins\SHADERSOURCEWT2\Resources</Filter>
+    </None>
     <Filter Include="Plugins\Oceanology_Plugin\Source">
       <UniqueIdentifier>{38570648-7F60-30A5-B7CC-E2ACD2E345B2}</UniqueIdentifier>
     </Filter>
@@ -518,6 +548,252 @@
     </ClInclude>
     <ClInclude Include="..\..\Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Utils\OceanologyWaterUtils.h">
       <Filter>Plugins\Oceanology_Plugin\Source\Oceanology_Plugin\Public\Utils</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source">
+      <UniqueIdentifier>{B5504552-1A16-35EB-AD73-DEF6D1E7A259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode">
+      <UniqueIdentifier>{84665928-B51B-3254-913F-51CFA574E326}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Shadersource_Waterfall2EdMode.Build.cs">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode</Filter>
+    </None>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private">
+      <UniqueIdentifier>{E0FEE10B-287E-3B5C-B76D-6713D427FBFF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Shadersource_Waterfall2EdModeModule.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details">
+      <UniqueIdentifier>{50B5FB62-BC8A-3671-9303-AEE5E486BA73}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details\SH_Details_Waterfall2.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details\SH_Details_WaterfallEdit.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details\SH_Details_WaterfallMeshComp.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details\SH_Details_WaterfallSelection.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details\SH_PathCompVisualiser.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Details</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\EdMode">
+      <UniqueIdentifier>{F36E3FEF-454F-3773-8B05-705329DB6059}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\EdMode\SH_Settings_WaterfallSelection.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\EdMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\EdMode\SH_Waterfall2EditorMode.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\EdMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\EdMode\SH_Waterfall2EditorModeStyle.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\EdMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\EdMode\SH_Waterfall2EditorModeToolkit.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\EdMode</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Settings">
+      <UniqueIdentifier>{7455379F-D141-3658-9FBF-EC1668F4A45F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Settings\SH_Waterfall2Settings.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Settings</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Slate">
+      <UniqueIdentifier>{9557E17D-AADE-3319-9B55-351EEAB40E87}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Slate\SH_W2_PlacementAssetEntry.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Slate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Slate\SSH_FxDisplay.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Slate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Slate\SSH_FxPathDisplay.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Slate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Slate\SSH_FxPointDisplay.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Private\Slate</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public">
+      <UniqueIdentifier>{4EE9CCF6-F68E-330E-ADEA-F751C59A6369}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Shadersource_Waterfall2EdModeModule.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details">
+      <UniqueIdentifier>{6902F836-7FE9-3058-A0CB-B5D4CE7DC055}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details\SH_Details_Waterfall2.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details\SH_Details_WaterfallEdit.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details\SH_Details_WaterfallMeshComp.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details\SH_Details_WaterfallSelection.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details\SH_PathCompVisualiser.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Details</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\EdMode">
+      <UniqueIdentifier>{7DFFDA7C-6F22-3655-8716-8B7D2B446C8E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\EdMode\SH_Settings_WaterfallSelection.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\EdMode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\EdMode\SH_Waterfall2EditorMode.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\EdMode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\EdMode\SH_Waterfall2EditorModeStyle.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\EdMode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\EdMode\SH_Waterfall2EditorModeToolkit.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\EdMode</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Settings">
+      <UniqueIdentifier>{4D53B083-5BC4-3657-99F6-52676DA88781}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Settings\SH_Waterfall2Settings.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Settings</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Slate">
+      <UniqueIdentifier>{20D79F73-FDF4-324B-8EAC-10C1D41DDA24}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Slate\SH_W2_PlacementAssetEntry.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Slate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Slate\SSH_FxDisplay.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Slate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Slate\SSH_FxPathDisplay.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Slate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Slate\SSH_FxPointDisplay.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2EdMode\Public\Slate</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime">
+      <UniqueIdentifier>{5B6839FB-E03A-3D15-8D3C-436189696549}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Shadersource_Waterfall2Runtime.Build.cs">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime</Filter>
+    </None>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private">
+      <UniqueIdentifier>{9DFBEAE5-ED52-3397-B6D2-C7F5289CB181}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Shadersource_Waterfall2Runtime.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\SH_WaterfallTool2Statics.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Actors">
+      <UniqueIdentifier>{26F8F6F2-E1A2-3D5C-8AB9-9065A2C63933}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Actors\SH_Waterfall2.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Actors</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Components">
+      <UniqueIdentifier>{6E58D751-531C-38D8-AE3D-1B80354BD778}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Components\ISH_WaterfallFxComponent.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Components\SH_WaterfallSFXComponent.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Components\SH_WaterfallVFXComponent.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Components</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\EditorComponents">
+      <UniqueIdentifier>{981B921E-30DF-3A55-A6FA-5A037B21A744}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\EditorComponents\SH_WaterfallMeshComponent.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\EditorComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\EditorComponents\SH_WaterfallPathComponent.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\EditorComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\EditorComponents\SH_WaterfallSettingsComponent.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\EditorComponents</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Generation">
+      <UniqueIdentifier>{449A14F4-CF04-3779-87F1-3376BF477F06}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Generation\SH_WaterfallBuilder.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Generation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Generation\SH_WaterfallBuilder_Mesh.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Generation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Generation\SH_WaterfallBuilder_Path.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Generation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Generation\SH_WaterfallBuilder_Static.cpp">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Private\Generation</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public">
+      <UniqueIdentifier>{8A502C4E-39F8-34B7-9873-1A3E139F9DD3}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Shadersource_Waterfall2Runtime.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\SH_WaterfallTool2Statics.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Actors">
+      <UniqueIdentifier>{95B8F043-69B0-332D-943F-9352BA15A8E1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Actors\SH_Waterfall2.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Actors</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Components">
+      <UniqueIdentifier>{F70086AC-D5E4-30E3-BB09-5C53A9A74B08}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Components\ISH_WaterfallFxComponent.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Components\SH_WaterfallSFXComponent.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Components\SH_WaterfallVFXComponent.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Components</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\EditorComponents">
+      <UniqueIdentifier>{1FA28788-2C65-3CBF-948F-9CFF739B0003}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\EditorComponents\SH_WaterfallGenerationEnums.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\EditorComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\EditorComponents\SH_WaterfallMeshComponent.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\EditorComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\EditorComponents\SH_WaterfallPathComponent.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\EditorComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\EditorComponents\SH_WaterfallSettingsComponent.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\EditorComponents</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Generation">
+      <UniqueIdentifier>{8178B461-4ECD-3601-8097-BBC58351FE2A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Generation\SH_WaterfallBuilder.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Generation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Generation\SH_WaterfallBuilder_Mesh.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Generation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Generation\SH_WaterfallBuilder_Path.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Generation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Generation\SH_WaterfallBuilder_Static.h">
+      <Filter>Plugins\SHADERSOURCEWT2\Source\Shadersource_Waterfall2Runtime\Public\Generation</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024">
       <UniqueIdentifier>{D61DB97D-D968-3767-8A74-3557811C3E23}</UniqueIdentifier>
