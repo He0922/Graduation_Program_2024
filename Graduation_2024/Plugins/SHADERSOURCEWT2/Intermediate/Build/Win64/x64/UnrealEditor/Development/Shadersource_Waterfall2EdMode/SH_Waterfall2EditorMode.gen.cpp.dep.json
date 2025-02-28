@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2edmode\\uht\\sh_waterfall2editormode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\shadersource_waterfall2edmode\\definitions.shadersource_waterfall2edmode.h",
+            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2edmode\\public\\edmode\\sh_waterfall2editormode.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\editor\\unrealed\\public\\tools\\defaultedmode.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\editor\\unrealed\\public\\tools\\legacyedmodewidgethelpers.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\editor\\unrealed\\public\\tools\\legacyedmodeinterfaces.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\legacyedmodeinterfaces.generated.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\editor\\unrealed\\public\\tools\\uedmode.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\uedmode.generated.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\legacyedmodewidgethelpers.generated.h",
+            "d:\\unreal_engine5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\defaultedmode.generated.h",
+            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2edmode\\uht\\sh_waterfall2editormode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

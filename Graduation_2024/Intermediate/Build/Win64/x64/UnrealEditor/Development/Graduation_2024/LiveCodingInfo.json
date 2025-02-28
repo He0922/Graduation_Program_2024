@@ -29,7 +29,6 @@
 			"Graduation_2024.cpp.obj",
 			"Archival.cpp.obj",
 			"Mayfly.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"CustomPlayerController.cpp.obj",
 			"PlayerAIController.cpp.obj",
 			"CustomGameModeBase.cpp.obj",
@@ -46,7 +45,8 @@
 			"MyPawn.cpp.obj",
 			"PlayerSkillComponent.cpp.obj",
 			"ArchivalUW.cpp.obj",
-			"PlayerAttributesUW.cpp.obj"
+			"PlayerAttributesUW.cpp.obj",
+			"PlayerCharacter.cpp.obj"
 		]
 	}
 }
