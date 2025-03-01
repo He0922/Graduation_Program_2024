@@ -22,6 +22,7 @@
 			"PlayerAttributesInterface.gen.cpp.obj",
 			"PlayerAttributesUW.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
+			"PlayerCharacterMovementComponent.gen.cpp.obj",
 			"PlayerSkillComponent.gen.cpp.obj",
 			"Runepaper.gen.cpp.obj",
 			"Graduation_2024.cpp.obj",
@@ -46,7 +47,6 @@
 			"PlayerAttributesUW.cpp.obj",
 			"Graduation_2024.init.gen.cpp.obj",
 			"PlayerAnimInstance.gen.cpp.obj",
-			"PlayerCharacterMovementComponent.gen.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
 			"PlayerCharacterMovementComponent.cpp.obj"
 		]

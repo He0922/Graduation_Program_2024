@@ -42,4 +42,12 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
 	bool bIsFalling;
 	void GetIsFalling();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
+	bool bIsClimbing;
+	void GetIsClimbing();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
+	FVector ClimbVelocity;
+	void GetClimbVelocity();
 };

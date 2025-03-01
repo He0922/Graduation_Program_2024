@@ -6,6 +6,7 @@
 #include "../DebugHelper.h"
 
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "Components/CapsuleComponent.h"
 
 void UPlayerCharacterMovementComponent::BeginPlay()
@@ -226,8 +227,9 @@ void UPlayerCharacterMovementComponent::PhysClimb(float deltaTime, int32 Iterati
 	ClimbableCapsuleTraceSurface();
 	ProcessClimbaleSurfaceInfo();
 
+
 	/*检查是否停止攀爬*/
-	if (CheckShouldStopClimbing())
+	if (CheckShouldStopClimbing() || CheckHasReachedFloor())
 	{
 		StopClimbing();
 	}
@@ -263,6 +265,15 @@ void UPlayerCharacterMovementComponent::PhysClimb(float deltaTime, int32 Iterati
 
 	/*捕捉运动到可攀爬的表面*/
 	SnapMovementToClimbableSurfaces(deltaTime);
+
+	if (CheckHasReachedLedge())
+	{
+		Debug::Print("Ledge Reached", 0.f, false, FColor::Black);
+	}
+	else
+	{
+		Debug::Print("Ledge Not Reached", 0.f, false, FColor::Red);
+	}
 }
 
 
@@ -294,6 +305,31 @@ bool UPlayerCharacterMovementComponent::CheckShouldStopClimbing()
 	if (DegreeDiff <= 60.f)
 	{
 		return true;
+	}
+
+	return false;
+}
+
+
+bool UPlayerCharacterMovementComponent::CheckHasReachedFloor()
+{
+	const FVector DownVector = -UpdatedComponent->GetUpVector();
+	const FVector StartOffset = DownVector * 50.f;
+	const FVector Start = UpdatedComponent->GetComponentLocation() + StartOffset;
+	const FVector End = Start + DownVector;
+
+	TArray<FHitResult> PossibleFloorHits = DoCapsuleTraceMultiByObject(Start, End);
+
+	if (PossibleFloorHits.IsEmpty())return false;
+
+	for (const FHitResult& PossibleFloorHit : PossibleFloorHits)
+	{
+		const bool bFloorReached = FVector::Parallel(-PossibleFloorHit.ImpactNormal, FVector::UpVector) && GetUnrotatedClimbVelocity().Z < -10.f;
+
+		if (bFloorReached)
+		{
+			return true;
+		}
 	}
 
 	return false;
@@ -334,19 +370,25 @@ void UPlayerCharacterMovementComponent::SnapMovementToClimbableSurfaces(float De
 }
 
 
-void UPlayerCharacterMovementComponent::PlayClimbMontage(UAnimMontage* MontageToPlay)
+bool UPlayerCharacterMovementComponent::CheckHasReachedLedge()
 {
-	if (!MontageToPlay) return;
-	if (!OwningPlayerAnimInstance)return;
-	if (OwningPlayerAnimInstance->IsAnyMontagePlaying())return;
+	FHitResult LedgetHitResult = TraceFormEyeHeight(100.f, 50.f);
 
-	OwningPlayerAnimInstance->Montage_Play(MontageToPlay);
-}
+	if (!LedgetHitResult.bBlockingHit)
+	{
+		const FVector WalkableSurfaceTraceStart = LedgetHitResult.TraceEnd;
 
+		const FVector DownVector = -UpdatedComponent->GetUpVector();
+		const FVector WalkableSurfaceTraceEnd = WalkableSurfaceTraceStart + DownVector * 100.f;
 
-void UPlayerCharacterMovementComponent::OnClimbMontageEnded(UAnimMontage* Montage, bool bInterrupted)
-{
-	Debug::Print("Climb Montage Ended", 5.f, false,FColor::Red);
+		FHitResult WalkableSurfaceHitResult = DoLineTraceSingleByObject(WalkableSurfaceTraceStart, WalkableSurfaceTraceEnd, true);
+
+		if (WalkableSurfaceHitResult.bBlockingHit && GetUnrotatedClimbVelocity().Z > 10.f)
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 
@@ -366,7 +408,7 @@ bool UPlayerCharacterMovementComponent::ClimbableCapsuleTraceSurface()
 	// 确定胶囊体结束位置
 	const FVector End = Start + UpdatedComponent->GetForwardVector();
 
-	ClimbableCapsuleTraceSurfaceTracedResults = DoCapsuleTraceMultiByObject(Start, End, true);
+	ClimbableCapsuleTraceSurfaceTracedResults = DoCapsuleTraceMultiByObject(Start, End);
 
 	// 判断该数组是否为空，为空代表未检测到任何可攀爬表面,需要取反，因为需要判断，如果为空无法攀爬，返回flase
 	return !ClimbableCapsuleTraceSurfaceTracedResults.IsEmpty();
@@ -381,6 +423,31 @@ FHitResult UPlayerCharacterMovementComponent::TraceFormEyeHeight(float TraceDist
 	const FVector End = Start + UpdatedComponent->GetForwardVector() * TraceDistance;
 
 	return DoLineTraceSingleByObject(Start, End);
+}
+
+
+void UPlayerCharacterMovementComponent::PlayClimbMontage(UAnimMontage* MontageToPlay)
+{
+	if (!MontageToPlay) return;
+	if (!OwningPlayerAnimInstance)return;
+	if (OwningPlayerAnimInstance->IsAnyMontagePlaying())return;
+
+	OwningPlayerAnimInstance->Montage_Play(MontageToPlay);
+}
+
+
+void UPlayerCharacterMovementComponent::OnClimbMontageEnded(UAnimMontage* Montage, bool bInterrupted)
+{
+	if (Montage == IdleToClimbMontage)
+	{
+		StartClimbing();
+	}
+}
+
+
+FVector UPlayerCharacterMovementComponent::GetUnrotatedClimbVelocity() const
+{
+	return UKismetMathLibrary::Quat_UnrotateVector(UpdatedComponent->GetComponentQuat(), Velocity);
 }
 
 #pragma endregion

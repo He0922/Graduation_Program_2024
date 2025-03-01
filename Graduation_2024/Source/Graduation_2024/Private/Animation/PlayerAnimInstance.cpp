@@ -30,6 +30,8 @@ void UPlayerAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	GetAirSpeed();
 	GetShouldMove();
 	GetIsFalling();
+	GetIsClimbing();
+	GetClimbVelocity();
 }
 
 
@@ -55,4 +57,16 @@ void UPlayerAnimInstance::GetShouldMove()
 void UPlayerAnimInstance::GetIsFalling()
 {
 	bIsFalling = PlayerCMC->IsFalling();
+}
+
+
+void UPlayerAnimInstance::GetIsClimbing()
+{
+	bIsClimbing = PlayerCMC->IsClimbing();
+}
+
+
+void UPlayerAnimInstance::GetClimbVelocity()
+{
+	ClimbVelocity = PlayerCMC->GetUnrotatedClimbVelocity();
 }
