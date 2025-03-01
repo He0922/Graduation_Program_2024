@@ -14,10 +14,12 @@
 			"CustomPlayerStatus.gen.cpp.obj",
 			"CustomPlayerStatusInterface.gen.cpp.obj",
 			"FloorRaft.gen.cpp.obj",
+			"Graduation_2024.init.gen.cpp.obj",
 			"Mayfly.gen.cpp.obj",
 			"MayflyMovementComponent.gen.cpp.obj",
 			"MyPawn.gen.cpp.obj",
 			"PlayerAIController.gen.cpp.obj",
+			"PlayerAnimInstance.gen.cpp.obj",
 			"PlayerAttributes.gen.cpp.obj",
 			"PlayerAttributesInterface.gen.cpp.obj",
 			"PlayerAttributesUW.gen.cpp.obj",
@@ -26,6 +28,7 @@
 			"PlayerSkillComponent.gen.cpp.obj",
 			"Runepaper.gen.cpp.obj",
 			"Graduation_2024.cpp.obj",
+			"PlayerAnimInstance.cpp.obj",
 			"Archival.cpp.obj",
 			"Mayfly.cpp.obj",
 			"PlayerCharacter.cpp.obj",
@@ -40,15 +43,12 @@
 			"PlayerAttributesInterface.cpp.obj",
 			"CustomFloatingPawnMovement.cpp.obj",
 			"MayflyMovementComponent.cpp.obj",
+			"PlayerCharacterMovementComponent.cpp.obj",
 			"FloorRaft.cpp.obj",
 			"MyPawn.cpp.obj",
 			"PlayerSkillComponent.cpp.obj",
 			"ArchivalUW.cpp.obj",
-			"PlayerAttributesUW.cpp.obj",
-			"Graduation_2024.init.gen.cpp.obj",
-			"PlayerAnimInstance.gen.cpp.obj",
-			"PlayerAnimInstance.cpp.obj",
-			"PlayerCharacterMovementComponent.cpp.obj"
+			"PlayerAttributesUW.cpp.obj"
 		]
 	}
 }
