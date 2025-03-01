@@ -28,6 +28,7 @@
 			"Archival.cpp.obj",
 			"Mayfly.cpp.obj",
 			"PlayerCharacter.cpp.obj",
+			"CustomPlayerController.cpp.obj",
 			"PlayerAIController.cpp.obj",
 			"CustomGameModeBase.cpp.obj",
 			"BlockActor.cpp.obj",
@@ -44,8 +45,9 @@
 			"ArchivalUW.cpp.obj",
 			"PlayerAttributesUW.cpp.obj",
 			"Graduation_2024.init.gen.cpp.obj",
+			"PlayerAnimInstance.gen.cpp.obj",
 			"PlayerCharacterMovementComponent.gen.cpp.obj",
-			"CustomPlayerController.cpp.obj",
+			"PlayerAnimInstance.cpp.obj",
 			"PlayerCharacterMovementComponent.cpp.obj"
 		]
 	}

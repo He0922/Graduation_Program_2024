@@ -25,6 +25,7 @@
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Source/Graduation_2024/Private/Archival/Archival.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Source/Graduation_2024/Private/Character/Mayfly.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Source/Graduation_2024/Private/Character/Player/PlayerCharacter.cpp"
+#include "E:/UE5/Project/Graduation_2024/Graduation_2024/Source/Graduation_2024/Private/Controller/CustomPlayerController.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Source/Graduation_2024/Private/Controller/PlayerAIController.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Source/Graduation_2024/Private/GameModeBase/CustomGameModeBase.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Source/Graduation_2024/Private/InterectBlock/BlockActor.cpp"

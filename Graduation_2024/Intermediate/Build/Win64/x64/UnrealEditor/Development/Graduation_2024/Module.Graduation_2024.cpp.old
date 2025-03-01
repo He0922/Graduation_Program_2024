@@ -19,6 +19,7 @@
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Intermediate/Build/Win64/UnrealEditor/Inc/Graduation_2024/UHT/PlayerAttributesInterface.gen.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Intermediate/Build/Win64/UnrealEditor/Inc/Graduation_2024/UHT/PlayerAttributesUW.gen.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Intermediate/Build/Win64/UnrealEditor/Inc/Graduation_2024/UHT/PlayerCharacter.gen.cpp"
+#include "E:/UE5/Project/Graduation_2024/Graduation_2024/Intermediate/Build/Win64/UnrealEditor/Inc/Graduation_2024/UHT/PlayerCharacterMovementComponent.gen.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Intermediate/Build/Win64/UnrealEditor/Inc/Graduation_2024/UHT/PlayerSkillComponent.gen.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Intermediate/Build/Win64/UnrealEditor/Inc/Graduation_2024/UHT/Runepaper.gen.cpp"
 #include "E:/UE5/Project/Graduation_2024/Graduation_2024/Source/Graduation_2024/Graduation_2024.cpp"

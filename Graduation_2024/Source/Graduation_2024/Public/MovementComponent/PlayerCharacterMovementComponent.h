@@ -88,6 +88,11 @@ public:
 	FQuat GetClimbRotation(float DeltaTime);
 
 	void SnapMovementToClimbableSurfaces(float DeltaTime);
+
+	void PlayClimbMontage(UAnimMontage* MontageToPlay);
+
+	UFUNCTION()
+	void OnClimbMontageEnded(UAnimMontage* Montage, bool bInterrupted);
 #pragma endregion
 
 
@@ -99,7 +104,8 @@ public:
 
 	FVector CurrentClimbableSurfaceNormal;
 
-
+	UPROPERTY()
+	class UAnimInstance* OwningPlayerAnimInstance;
 #pragma endregion
 
 
@@ -129,6 +135,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Movement: Climbing")
 	float MaxClimbAcceleration = 300.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Movement: Climbing|Montage")
+	class UAnimMontage* IdleToClimbMontage;
 #pragma endregion
 
 public:

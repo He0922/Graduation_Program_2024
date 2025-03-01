@@ -13,6 +13,13 @@ void UPlayerCharacterMovementComponent::BeginPlay()
 	Super::BeginPlay();
 
 	Player = Cast<APlayerCharacter>(this->GetOwner());
+	OwningPlayerAnimInstance = Player->GetMesh()->GetAnimInstance();
+
+	if (OwningPlayerAnimInstance)
+	{
+		OwningPlayerAnimInstance->OnMontageEnded.AddDynamic(this, &UPlayerCharacterMovementComponent::OnClimbMontageEnded);
+		OwningPlayerAnimInstance->OnMontageBlendingOut.AddDynamic(this, &UPlayerCharacterMovementComponent::OnClimbMontageEnded);
+	}
 }
 
 
@@ -169,6 +176,7 @@ void UPlayerCharacterMovementComponent::ToggleClimbing(bool bEnableClimb)
 			// Enter the climb state
 			Debug::Print("Can Start Climbing", 5.f, false);
 			StartClimbing();
+			PlayClimbMontage(IdleToClimbMontage);
 		}
 		else
 		{
@@ -326,6 +334,22 @@ void UPlayerCharacterMovementComponent::SnapMovementToClimbableSurfaces(float De
 }
 
 
+void UPlayerCharacterMovementComponent::PlayClimbMontage(UAnimMontage* MontageToPlay)
+{
+	if (!MontageToPlay) return;
+	if (!OwningPlayerAnimInstance)return;
+	if (OwningPlayerAnimInstance->IsAnyMontagePlaying())return;
+
+	OwningPlayerAnimInstance->Montage_Play(MontageToPlay);
+}
+
+
+void UPlayerCharacterMovementComponent::OnClimbMontageEnded(UAnimMontage* Montage, bool bInterrupted)
+{
+	Debug::Print("Climb Montage Ended", 5.f, false,FColor::Red);
+}
+
+
 bool UPlayerCharacterMovementComponent::IsClimbing() const
 {
 	return MovementMode == MOVE_Custom && CustomMovementMode == ECustomMovementMode::MOVE_Climb;
@@ -358,6 +382,5 @@ FHitResult UPlayerCharacterMovementComponent::TraceFormEyeHeight(float TraceDist
 
 	return DoLineTraceSingleByObject(Start, End);
 }
-
 
 #pragma endregion
