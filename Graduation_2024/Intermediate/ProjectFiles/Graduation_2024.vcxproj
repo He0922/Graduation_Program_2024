@@ -959,6 +959,10 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\Graduation_2024\Graduation_2024.h"/>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Animation\PlayerAnimInstance.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_5)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Archival\Archival.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_5)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
@@ -1039,6 +1043,7 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_5)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Animation\PlayerAnimInstance.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Archival\Archival.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Archival\ArchiveID.h"/>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Mayfly.h"/>

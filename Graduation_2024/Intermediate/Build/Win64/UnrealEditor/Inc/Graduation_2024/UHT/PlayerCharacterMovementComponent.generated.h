@@ -9,12 +9,17 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UAnimMontage;
 #ifdef GRADUATION_2024_PlayerCharacterMovementComponent_generated_h
 #error "PlayerCharacterMovementComponent.generated.h already included, missing '#pragma once' in PlayerCharacterMovementComponent.h"
 #endif
 #define GRADUATION_2024_PlayerCharacterMovementComponent_generated_h
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnClimbMontageEnded);
+
+
+#define FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_27_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlayerCharacterMovementComponent(); \
 	friend struct Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics; \
@@ -23,7 +28,7 @@ public: \
 	DECLARE_SERIALIZER(UPlayerCharacterMovementComponent)
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_27_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPlayerCharacterMovementComponent(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +42,13 @@ public: \
 	NO_API virtual ~UPlayerCharacterMovementComponent();
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_14_PROLOG
-#define FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_17_GENERATED_BODY \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_24_PROLOG
+#define FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_27_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_27_INCLASS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_27_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -53,4 +59,6 @@ template<> GRADUATION_2024_API UClass* StaticClass<class UPlayerCharacterMovemen
 #define CURRENT_FILE_ID FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h
 
 
+#define FOREACH_ENUM_ECUSTOMMOVEMENTMODE(op) \
+	op(ECustomMovementMode::MOVE_Climb) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

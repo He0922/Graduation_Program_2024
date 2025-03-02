@@ -8,6 +8,16 @@
 
 
 
+UENUM(BlueprintType)
+namespace ECustomMovementMode
+{
+	enum Type
+	{
+		MOVE_Climb UMETA(DisplayName = "Climb Mode")
+	};
+}
+
+
 /**
  * 
  */
@@ -15,10 +25,31 @@ UCLASS()
 class GRADUATION_2024_API UPlayerCharacterMovementComponent : public UCharacterMovementComponent
 {
 	GENERATED_BODY()
-	
+
+
 protected:
 	virtual void BeginPlay() override;
+
+
+#pragma region OverridenFunction
+protected:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	virtual void OnMovementModeChanged(EMovementMode PreviousMovementMode, uint8 PreviousCustomMode) override;
+
+	virtual void PhysCustom(float deltaTime, int32 Iterations) override;
+
+	virtual float GetMaxSpeed() const override;
+
+	virtual float GetMaxAcceleration() const override;
+
+	virtual FVector ConstrainAnimRootMotionVelocity(const FVector& RootMotionVelocity, const FVector& CurrentVelocity) const override;
+#pragma endregion
+
+
+
+public:
+	class APlayerCharacter* Player;
 
 
 #pragma region ClimbTrace
@@ -40,17 +71,47 @@ public:
 
 #pragma region ClimbCore
 public:
-	bool CapsuleTraceClimbableSurface();
+	bool ClimbableCapsuleTraceSurface();
 
-	FHitResult TraceFormEyeHeight(float TraceDistance, float TraceStartOffset);
+	FHitResult TraceFormEyeHeight(float TraceDistance, float TraceStartOffset = 0.f);
 
-	bool IsClimbing() const;
+	bool CanStartClimbing();
+
+	void StartClimbing();
+
+	void StopClimbing();
+
+	void PhysClimb(float deltaTime, int32 Iterations);
+
+	void ProcessClimbaleSurfaceInfo();
+
+	bool CheckShouldStopClimbing();
+
+	bool CheckHasReachedFloor();
+
+	FQuat GetClimbRotation(float DeltaTime);
+
+	void SnapMovementToClimbableSurfaces(float DeltaTime);
+
+	bool CheckHasReachedLedge();
+
+	void PlayClimbMontage(UAnimMontage* MontageToPlay);
+
+	UFUNCTION()
+	void OnClimbMontageEnded(UAnimMontage* Montage, bool bInterrupted);
 #pragma endregion
 
 
 #pragma region ClimbCoreVariable
 	// ½ºÄÒÌå×·×Ù¼ì²â½á¹û
-	TArray<FHitResult> CapsuleTraceClimbableSurfaceTracedResults;
+	TArray<FHitResult> ClimbableCapsuleTraceSurfaceTracedResults;
+
+	FVector CurrentClimbableSurfaceLocation;
+
+	FVector CurrentClimbableSurfaceNormal;
+
+	UPROPERTY()
+	class UAnimInstance* OwningPlayerAnimInstance;
 #pragma endregion
 
 
@@ -71,8 +132,28 @@ public:
 	// ½ºÄÒÌå°ë¸ß
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Character Movement: Climbing")
 	float ClibCapsuleTraceHalfHeight = 72.f;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Character Movement: Climbing")
+	float MaxBreakClimbDeceleration = 400.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Movement: Climbing")
+	float MaxClimbSpeed = 100.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Movement: Climbing")
+	float MaxClimbAcceleration = 300.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Movement: Climbing|Montage")
+	class UAnimMontage* IdleToClimbMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Movement: Climbing|Montage")
+	class UAnimMontage* ClimbToTopMontage;
 #pragma endregion
 
 public:
+	void ToggleClimbing(bool bEnableClimb);
+	bool IsClimbing() const;
 
+	FORCEINLINE FVector GetClimbableSurfaceNormal() const { return CurrentClimbableSurfaceNormal; }
+
+	FVector GetUnrotatedClimbVelocity() const;
 };

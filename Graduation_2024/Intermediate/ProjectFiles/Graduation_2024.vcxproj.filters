@@ -813,6 +813,12 @@
     <Filter Include="Source\Graduation_2024\Private">
       <UniqueIdentifier>{883D0E7F-4A91-3CA5-B7AB-CB8C5B02766C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Graduation_2024\Private\Animation">
+      <UniqueIdentifier>{7755EF72-961B-3EC2-9E4F-6EA921BAA970}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Animation\PlayerAnimInstance.cpp">
+      <Filter>Source\Graduation_2024\Private\Animation</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\Archival">
       <UniqueIdentifier>{74EED535-F968-3755-975F-F06E07D2CAAE}</UniqueIdentifier>
     </Filter>
@@ -915,6 +921,12 @@
     <Filter Include="Source\Graduation_2024\Public">
       <UniqueIdentifier>{AF1DB00F-51B8-3DD0-B7E1-EEBA9F130934}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Graduation_2024\Public\Animation">
+      <UniqueIdentifier>{CBEA3ADB-9AA9-386C-87EB-B516F095A36C}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Animation\PlayerAnimInstance.h">
+      <Filter>Source\Graduation_2024\Public\Animation</Filter>
+    </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\Archival">
       <UniqueIdentifier>{A04C1590-2FF7-3A37-A88C-24813DD71E87}</UniqueIdentifier>
     </Filter>

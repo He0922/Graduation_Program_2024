@@ -6,7 +6,7 @@
 #include "Pawn/FloorRaft.h"
 #include "Pawn/MyPawn.h"
 #include "../DebugHelper.h"
-
+#include "MovementComponent/PlayerCharacterMovementComponent.h"
 
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
@@ -74,6 +74,8 @@ void ACustomPlayerController::SetupInputComponent()
 		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Completed, this, &ACustomPlayerController::EndScan);
 		EnhancedInputComponent->BindAction(IterctBlock, ETriggerEvent::Started, this, &ACustomPlayerController::InterctBlock);
 
+		EnhancedInputComponent->BindAction(climbAction, ETriggerEvent::Started, this, &ACustomPlayerController::ClimbingActionStarted);
+
 
 		Debug::Print("Cast Success EnhancedInputComponent", 5.f, false);
 	}
@@ -83,8 +85,23 @@ void ACustomPlayerController::SetupInputComponent()
 #pragma region Player Action Function
 void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 {
-	Debug::Print(GetPawn()->GetName(), 0.f, false);
-	Debug::Print("Move Action", 0.f, false);
+	if (!Player->playerCMC) return;
+
+	if (Player->playerCMC->IsClimbing())
+	{
+		HandleClimbMovementInput(InputValue);
+	}
+	else
+	{
+		HandleGroundMovementInput(InputValue);
+	}
+
+	
+}
+
+
+void ACustomPlayerController::HandleGroundMovementInput(const FInputActionValue& InputValue)
+{
 	// 获取玩家输入方向
 	const FVector2D movementVector = InputValue.Get<FVector2D>();
 
@@ -105,7 +122,7 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 		{
 			CurrentControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
 		}
-		
+
 	}*/
 
 	if (CurrentControllerPawn)
@@ -127,6 +144,29 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 				CurrentControllerPawn->AddMovementInput(tempVec, movementVector.X);
 			}
 		}
+	}
+}
+
+
+void ACustomPlayerController::HandleClimbMovementInput(const FInputActionValue& InputValue)
+{
+	// 获取玩家输入方向
+	const FVector2D movementVector = InputValue.Get<FVector2D>();
+
+	const FVector ForwardDirection = FVector::CrossProduct(
+		-Player->playerCMC->GetClimbableSurfaceNormal(),
+		Player->GetActorRightVector()
+	);
+
+	const FVector RightDirection = FVector::CrossProduct(
+		-Player->playerCMC->GetClimbableSurfaceNormal(),
+		-Player->GetActorUpVector()
+	);
+
+	if (PlayerStatus != ECustomPlayerStatus::erowing)
+	{
+		CurrentControllerPawn->AddMovementInput(ForwardDirection, movementVector.X);
+		CurrentControllerPawn->AddMovementInput(RightDirection, movementVector.Y);
 	}
 }
 
@@ -175,7 +215,7 @@ void ACustomPlayerController::ObjectInteraction()
 {
 	if (Player)
 	{
-		Debug::Print("111", 5.f, false);
+		Debug::Print("Interactive", 5.f, false);
 		Player->ObjectInteraction();
 	}
 }
@@ -190,16 +230,36 @@ void ACustomPlayerController::ChangeObject(APawn* PawnObject)
 	}
 }
 
+
+void ACustomPlayerController::ClimbingActionStarted(const FInputActionValue& Value)
+{
+	if (!Player->playerCMC) return;
+	
+
+	if (!Player->playerCMC->IsClimbing())
+	{
+		Player->playerCMC->ToggleClimbing(true);
+	}
+	else
+	{
+		Player->playerCMC->ToggleClimbing(false);
+	}
+	
+}
+
+
 void ACustomPlayerController::StartInput()
 {
 	EnableInput(this);
 }
+
 
 void ACustomPlayerController::StopInput()
 {
 	// 禁用玩家输入
 	DisableInput(this);
 }
+
 
 void ACustomPlayerController::StartScan()
 {
@@ -208,10 +268,12 @@ void ACustomPlayerController::StartScan()
 	playerSkillComponent->SetScanDistance(5000);
 }
 
+
 void ACustomPlayerController::EndScan()
 {
 	playerSkillComponent->EndScan();
 }
+
 
 void ACustomPlayerController::InterctBlock()
 {

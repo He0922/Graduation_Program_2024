@@ -141,8 +141,8 @@ public:
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	//class UInputAction* IterctBlock;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
-	class UInputAction* climbAction;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	//class UInputAction* climbAction;
 
 #pragma endregion
 
@@ -163,8 +163,6 @@ public:
 	UFUNCTION()
 	void ObjectInteraction();
 
-	UFUNCTION()
-	void ClimbingActionStarted(const FInputActionValue& Value);
 
 	//玩家转向输入的物体
 	UFUNCTION()
@@ -325,6 +323,12 @@ public:
 	void InitTimeLineCurveFunc();
 #pragma endregion
 
+
+#pragma region Forceinline
+	public:
+		FORCEINLINE class UPlayerCharacterMovementComponent* GetPlayerCMC() const { return playerCMC; }
+
+#pragma endregion
 };
 
 
