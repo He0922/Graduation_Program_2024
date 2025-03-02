@@ -206,6 +206,10 @@ struct Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics
 		{ "Category", "Character Movement: Climbing|Montage" },
 		{ "ModuleRelativePath", "Public/MovementComponent/PlayerCharacterMovementComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ClimbToTopMontage_MetaData[] = {
+		{ "Category", "Character Movement: Climbing|Montage" },
+		{ "ModuleRelativePath", "Public/MovementComponent/PlayerCharacterMovementComponent.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OwningPlayerAnimInstance;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CapsuleTraceClimbableSurfaceTraceTypes_Inner;
@@ -218,6 +222,7 @@ struct Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxClimbSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxClimbAcceleration;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_IdleToClimbMontage;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ClimbToTopMontage;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -240,6 +245,7 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerCharacte
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_MaxClimbSpeed = { "MaxClimbSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerCharacterMovementComponent, MaxClimbSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxClimbSpeed_MetaData), NewProp_MaxClimbSpeed_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_MaxClimbAcceleration = { "MaxClimbAcceleration", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerCharacterMovementComponent, MaxClimbAcceleration), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxClimbAcceleration_MetaData), NewProp_MaxClimbAcceleration_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_IdleToClimbMontage = { "IdleToClimbMontage", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerCharacterMovementComponent, IdleToClimbMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IdleToClimbMontage_MetaData), NewProp_IdleToClimbMontage_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_ClimbToTopMontage = { "ClimbToTopMontage", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerCharacterMovementComponent, ClimbToTopMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ClimbToTopMontage_MetaData), NewProp_ClimbToTopMontage_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_OwningPlayerAnimInstance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_CapsuleTraceClimbableSurfaceTraceTypes_Inner,
@@ -252,6 +258,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerCh
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_MaxClimbSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_MaxClimbAcceleration,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_IdleToClimbMontage,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::NewProp_ClimbToTopMontage,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerCharacterMovementComponent_Statics::DependentSingletons[])() = {
@@ -298,10 +305,10 @@ struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_M
 		{ ECustomMovementMode_StaticEnum, TEXT("ECustomMovementMode"), &Z_Registration_Info_UEnum_ECustomMovementMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1900158893U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerCharacterMovementComponent, UPlayerCharacterMovementComponent::StaticClass, TEXT("UPlayerCharacterMovementComponent"), &Z_Registration_Info_UClass_UPlayerCharacterMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerCharacterMovementComponent), 197021557U) },
+		{ Z_Construct_UClass_UPlayerCharacterMovementComponent, UPlayerCharacterMovementComponent::StaticClass, TEXT("UPlayerCharacterMovementComponent"), &Z_Registration_Info_UClass_UPlayerCharacterMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerCharacterMovementComponent), 259049525U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_1760642040(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_1026131486(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_MovementComponent_PlayerCharacterMovementComponent_h_Statics::EnumInfo));

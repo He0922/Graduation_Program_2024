@@ -42,6 +42,8 @@ protected:
 	virtual float GetMaxSpeed() const override;
 
 	virtual float GetMaxAcceleration() const override;
+
+	virtual FVector ConstrainAnimRootMotionVelocity(const FVector& RootMotionVelocity, const FVector& CurrentVelocity) const override;
 #pragma endregion
 
 
@@ -142,6 +144,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Movement: Climbing|Montage")
 	class UAnimMontage* IdleToClimbMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Movement: Climbing|Montage")
+	class UAnimMontage* ClimbToTopMontage;
 #pragma endregion
 
 public:

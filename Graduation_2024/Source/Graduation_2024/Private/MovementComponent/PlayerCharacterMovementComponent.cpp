@@ -93,6 +93,22 @@ float UPlayerCharacterMovementComponent::GetMaxAcceleration() const
 		return Super::GetMaxAcceleration();
 	}
 }
+
+
+FVector UPlayerCharacterMovementComponent::ConstrainAnimRootMotionVelocity(const FVector& RootMotionVelocity, const FVector& CurrentVelocity) const
+{
+	const bool bIsPlayingRMMontage =
+		IsFalling() && OwningPlayerAnimInstance && OwningPlayerAnimInstance->IsAnyMontagePlaying();
+
+	if (bIsPlayingRMMontage)
+	{
+		return RootMotionVelocity;
+	}
+	else
+	{
+		return Super::ConstrainAnimRootMotionVelocity(RootMotionVelocity, CurrentVelocity);
+	}
+}
 #pragma endregion
 
 
@@ -268,12 +284,10 @@ void UPlayerCharacterMovementComponent::PhysClimb(float deltaTime, int32 Iterati
 
 	if (CheckHasReachedLedge())
 	{
-		Debug::Print("Ledge Reached", 0.f, false, FColor::Black);
+		StopClimbing();
+		PlayClimbMontage(ClimbToTopMontage);
 	}
-	else
-	{
-		Debug::Print("Ledge Not Reached", 0.f, false, FColor::Red);
-	}
+
 }
 
 
@@ -381,7 +395,7 @@ bool UPlayerCharacterMovementComponent::CheckHasReachedLedge()
 		const FVector DownVector = -UpdatedComponent->GetUpVector();
 		const FVector WalkableSurfaceTraceEnd = WalkableSurfaceTraceStart + DownVector * 100.f;
 
-		FHitResult WalkableSurfaceHitResult = DoLineTraceSingleByObject(WalkableSurfaceTraceStart, WalkableSurfaceTraceEnd, true);
+		FHitResult WalkableSurfaceHitResult = DoLineTraceSingleByObject(WalkableSurfaceTraceStart, WalkableSurfaceTraceEnd);
 
 		if (WalkableSurfaceHitResult.bBlockingHit && GetUnrotatedClimbVelocity().Z > 10.f)
 		{
@@ -441,6 +455,10 @@ void UPlayerCharacterMovementComponent::OnClimbMontageEnded(UAnimMontage* Montag
 	if (Montage == IdleToClimbMontage)
 	{
 		StartClimbing();
+	}
+	else
+	{
+		SetMovementMode(MOVE_Walking);
 	}
 }
 
