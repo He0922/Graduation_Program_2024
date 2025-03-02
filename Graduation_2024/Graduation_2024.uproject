@@ -51,6 +51,10 @@
 		{
 			"Name": "HDRIBackdrop",
 			"Enabled": true
+		},
+		{
+			"Name": "ConsoleVariables",
+			"Enabled": true
 		}
 	]
 }
