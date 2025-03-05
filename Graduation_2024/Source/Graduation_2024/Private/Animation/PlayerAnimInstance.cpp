@@ -6,7 +6,7 @@
 
 #include "Character/Player/PlayerCharacter.h"
 #include "MovementComponent/PlayerCharacterMovementComponent.h"
-
+#include "Pawn/FloorRaft.h"
 
 void UPlayerAnimInstance::NativeInitializeAnimation()
 {
@@ -18,6 +18,8 @@ void UPlayerAnimInstance::NativeInitializeAnimation()
 	{
 		PlayerCMC = Player->GetPlayerCMC();
 	}
+
+	
 }
 
 void UPlayerAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
@@ -26,16 +28,23 @@ void UPlayerAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 	if (!Player || !PlayerCMC)return;
 
-	GetFroundSpeed();
+	FloorRaft = Cast<AFloorRaft>(Player->CollisionActor);
+	if (FloorRaft)
+	{
+		GetRowlingSpeed();
+	}
+
+	GetGroundSpeed();
 	GetAirSpeed();
 	GetShouldMove();
 	GetIsFalling();
 	GetIsClimbing();
 	GetClimbVelocity();
+	GetPlayerCurrentStatus();
 }
 
 
-void UPlayerAnimInstance::GetFroundSpeed()
+void UPlayerAnimInstance::GetGroundSpeed()
 {
 	GroundSpeed = UKismetMathLibrary::VSizeXY(Player->GetVelocity());
 	
@@ -69,4 +78,16 @@ void UPlayerAnimInstance::GetIsClimbing()
 void UPlayerAnimInstance::GetClimbVelocity()
 {
 	ClimbVelocity = PlayerCMC->GetUnrotatedClimbVelocity();
+}
+
+
+void UPlayerAnimInstance::GetPlayerCurrentStatus()
+{
+	PlayerCurrentStatus = Player->GetPlayerStatus();
+}
+
+
+void UPlayerAnimInstance::GetRowlingSpeed()
+{
+	RowlingSpeed = FloorRaft->GetFloorRaftSpeed();
 }

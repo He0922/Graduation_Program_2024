@@ -50,6 +50,7 @@ void ACustomPlayerController::Tick(float DeltaTime)
 
 	PlayerStatus = Player->GetPlayerStatus();
 
+
 	Debug::Print("Current Control: " + CurrentControllerPawn->GetName(), 0.f, false, FColor::Green);
 }
 

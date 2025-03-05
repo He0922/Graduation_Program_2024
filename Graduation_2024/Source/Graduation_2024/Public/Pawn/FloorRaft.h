@@ -51,6 +51,9 @@ public:
 	class UBoxComponent* floorRaftCollision;
 
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FloorRaft Player Stand Location")
+	class UStaticMeshComponent* PlayerStandLocation;
+
 #pragma region Movement status
 public:
 	// 目标旋转
@@ -72,6 +75,9 @@ public:
 
 	// 让船朝向相机
 	void RotateTowardsCamera(float DeltaTime);
+
+	float FloorRaftSpeed;
+	float GetFloorRaftSpeed();
 
 #pragma endregion
 

@@ -45,7 +45,7 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	playerCMC = Cast<UPlayerCharacterMovementComponent>(GetCharacterMovement());
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 500.f, 0.f);
 	GetCharacterMovement()->MaxWalkSpeed = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed);
-	GetCharacterMovement()->bUseControllerDesiredRotation = true;
+	GetCharacterMovement()->bUseControllerDesiredRotation = false;
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 
 	// ´´½¨SpringArm
@@ -104,7 +104,7 @@ void APlayerCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	PrintAttributes(fplayerAttributes.Mapattributes);
-
+	
 	
 }
 
@@ -311,7 +311,8 @@ void APlayerCharacter::ObjectInteraction(APawn* ControllerCurrentControlObject)
 		Debug::Print("Walk 2 Rowing", 5.f, false);
 		UpdatePlayerStatus(ECustomPlayerStatus::erowing);
 		CustomPlayerController->ChangeObject(floorRaftObject);
-		AttachToActor(floorRaftObject, FAttachmentTransformRules::SnapToTargetIncludingScale);
+		AttachToComponent(floorRaftObject->PlayerStandLocation, FAttachmentTransformRules::SnapToTargetIncludingScale);
+
 		SetRaftCollider(true);
 	}
 
