@@ -142,13 +142,6 @@ public:
 	UFUNCTION()
 	void ObjectInteraction(APawn* ControllerCurrentControlObject);
 
-	UFUNCTION()
-	void Walking2Rowing();
-
-	UFUNCTION()
-	void Rowing2Walking();
-
-
 	//玩家转向输入的物体
 	UFUNCTION()
 	void FaceActor(AActor* TargetActor);

@@ -323,53 +323,8 @@ void APlayerCharacter::ObjectInteraction(APawn* ControllerCurrentControlObject)
 		CustomPlayerController->ChangeObject(this);
 		SetRaftCollider(false);
 	}
-		
-
-	
-
-	/*if (AFloorRaft* floorRaftObject = Cast<AFloorRaft>(CollisionActor))
-	{
-		if (eplayerStatus == ECustomPlayerStatus::erowing)
-		{
-			Debug::Print("Walk 2 Rowing", 5.f, false);
-			DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-			CustomPlayerController->ChangeObject(this);
-			UpdatePlayerStatus(ECustomPlayerStatus::eidle);
-			SetRaftCollider(false);
-		}
-		else 
-		{
-			Debug::Print("Rowing 2 walkd", 5.f, false);
-			UpdatePlayerStatus(ECustomPlayerStatus::erowing);
-			CustomPlayerController->ChangeObject(floorRaftObject);
-			AttachToActor(floorRaftObject, FAttachmentTransformRules::SnapToTargetIncludingScale);
-			SetRaftCollider(true);
-			
-		}
-		
-	}*/
-
 	
 }
-
-void APlayerCharacter::Walking2Rowing()
-{
-	Debug::Print("Walk 2 Rowing", 5.f, false);
-	//DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	//CustomPlayerController->ChangeObject(this);
-	//UpdatePlayerStatus(ECustomPlayerStatus::eidle);
-	//SetRaftCollider(false);
-}
-
-void APlayerCharacter::Rowing2Walking()
-{
-	Debug::Print("Rowing 2 walkd", 5.f, false);
-	/*UpdatePlayerStatus(ECustomPlayerStatus::erowing);
-	CustomPlayerController->ChangeObject(floorRaftObject);
-	AttachToActor(floorRaftObject, FAttachmentTransformRules::SnapToTargetIncludingScale);
-	SetRaftCollider(true);*/
-}
-
 
 
 void APlayerCharacter::FaceActor(AActor* TargetActor)

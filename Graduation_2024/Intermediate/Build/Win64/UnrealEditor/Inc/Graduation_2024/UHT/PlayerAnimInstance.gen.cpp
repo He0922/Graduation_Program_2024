@@ -159,19 +159,14 @@ UPlayerAnimInstance::~UPlayerAnimInstance() {}
 // End Class UPlayerAnimInstance
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UPlayerAnimInstance, UPlayerAnimInstance::StaticClass, TEXT("UPlayerAnimInstance"), &Z_Registration_Info_UClass_UPlayerAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAnimInstance), 3620322278U) },
 	};
 };
-<<<<<<< Updated upstream
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_3648230224(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo),
-=======
 static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_2089375235(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo),
->>>>>>> Stashed changes
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
