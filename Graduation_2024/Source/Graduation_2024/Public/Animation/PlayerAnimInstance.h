@@ -36,7 +36,7 @@ public:
 	void GetAirSpeed();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
-	bool bSHouldMove;
+	bool bShouldMove;
 	void GetShouldMove();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)

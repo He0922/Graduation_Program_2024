@@ -50,7 +50,7 @@ void UPlayerAnimInstance::GetAirSpeed()
 
 void UPlayerAnimInstance::GetShouldMove()
 {
-	bSHouldMove = PlayerCMC->GetCurrentAcceleration().Size() > 0 && GroundSpeed > 5.f && !bIsFalling;
+	bShouldMove = PlayerCMC->GetCurrentAcceleration().Size() > 0 && GroundSpeed > 5.f && !bIsFalling;
 }
 
 

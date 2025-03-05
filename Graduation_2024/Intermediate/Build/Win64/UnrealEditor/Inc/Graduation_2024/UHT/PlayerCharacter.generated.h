@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
+class APawn;
 #ifdef GRADUATION_2024_PlayerCharacter_generated_h
 #error "PlayerCharacter.generated.h already included, missing '#pragma once' in PlayerCharacter.h"
 #endif
@@ -24,6 +25,8 @@ class AActor;
 	DECLARE_FUNCTION(execInitArchivalUW); \
 	DECLARE_FUNCTION(execInitArttributesUW); \
 	DECLARE_FUNCTION(execFaceActor); \
+	DECLARE_FUNCTION(execRowing2Walking); \
+	DECLARE_FUNCTION(execWalking2Rowing); \
 	DECLARE_FUNCTION(execObjectInteraction); \
 	DECLARE_FUNCTION(execMoveToTarget);
 

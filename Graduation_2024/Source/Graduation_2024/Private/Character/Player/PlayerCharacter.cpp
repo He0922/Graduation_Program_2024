@@ -54,6 +54,10 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	cameraBoom->TargetArmLength = 500.f;
 	cameraBoom->bUsePawnControlRotation = true;
 
+	// 这是SpringArm的偏移量，位于角色的肩膀位置
+	FVector CameraboomShoulderOffset = FVector(0.f, 50.f, 50.f);
+	cameraBoom->SetRelativeLocation(CameraboomShoulderOffset);
+
 	// 创建Camera
 	camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	camera->SetupAttachment(cameraBoom, USpringArmComponent::SocketName);
@@ -278,29 +282,56 @@ void APlayerCharacter::MoveToTarget(FVector TargetLocation)
 //}
 
 
-void APlayerCharacter::ObjectInteraction()
+void APlayerCharacter::ObjectInteraction(APawn* ControllerCurrentControlObject)
 { 
-	if (archivalInteractable)
-	{ 
-		// 刷新玩家状态
-		archivalInteractable->RefreshPlayerStatus();
-		// 获取存储点ID
-		collisionArchiveID = archivalInteractable->GetArchiveID();
-		// 获取存储点位置
-		archivalLocation = archivalInteractable->GetPlayerStandLocation();
-		// 检查并存入存储点ID
-		if (!unlockedArchivalPointsIDArray.Contains(collisionArchiveID)) { unlockedArchivalPointsIDArray.Add(collisionArchiveID); }
-		// 检查并存入存储点位置
-		if (!unlockedArchivalPointsLocationArray.Contains(archivalLocation)) { unlockedArchivalPointsLocationArray.Add(archivalLocation); }
-		
-		InitArchivalUW();
-		UAIBlueprintHelperLibrary::SimpleMoveToLocation(CustomPlayerController, archivalPlayerStandLocation);
+	
+	if (APlayerCharacter* Player = Cast<APlayerCharacter>(ControllerCurrentControlObject))
+	{
+		Debug::Print("Controller's Current Control Player", 5.f, false);
+		if (archivalInteractable)
+		{
+			// 刷新玩家状态
+			archivalInteractable->RefreshPlayerStatus();
+			// 获取存储点ID
+			collisionArchiveID = archivalInteractable->GetArchiveID();
+			// 获取存储点位置
+			archivalLocation = archivalInteractable->GetPlayerStandLocation();
+			// 检查并存入存储点ID
+			if (!unlockedArchivalPointsIDArray.Contains(collisionArchiveID)) { unlockedArchivalPointsIDArray.Add(collisionArchiveID); }
+			// 检查并存入存储点位置
+			if (!unlockedArchivalPointsLocationArray.Contains(archivalLocation)) { unlockedArchivalPointsLocationArray.Add(archivalLocation); }
+
+			InitArchivalUW();
+			UAIBlueprintHelperLibrary::SimpleMoveToLocation(CustomPlayerController, archivalPlayerStandLocation);
+		}
 	}
 
 	if (AFloorRaft* floorRaftObject = Cast<AFloorRaft>(CollisionActor))
 	{
+		Debug::Print("Walk 2 Rowing", 5.f, false);
+		UpdatePlayerStatus(ECustomPlayerStatus::erowing);
+		CustomPlayerController->ChangeObject(floorRaftObject);
+		AttachToActor(floorRaftObject, FAttachmentTransformRules::SnapToTargetIncludingScale);
+		SetRaftCollider(true);
+	}
+
+	if (AFloorRaft* floorRaftObject = Cast<AFloorRaft>(ControllerCurrentControlObject))
+	{
+		Debug::Print("Rowing 2 Walk", 5.f, false);
+		UpdatePlayerStatus(ECustomPlayerStatus::eidle);
+		DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+		CustomPlayerController->ChangeObject(this);
+		SetRaftCollider(false);
+	}
+		
+
+	
+
+	/*if (AFloorRaft* floorRaftObject = Cast<AFloorRaft>(CollisionActor))
+	{
 		if (eplayerStatus == ECustomPlayerStatus::erowing)
 		{
+			Debug::Print("Walk 2 Rowing", 5.f, false);
 			DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 			CustomPlayerController->ChangeObject(this);
 			UpdatePlayerStatus(ECustomPlayerStatus::eidle);
@@ -308,13 +339,35 @@ void APlayerCharacter::ObjectInteraction()
 		}
 		else 
 		{
+			Debug::Print("Rowing 2 walkd", 5.f, false);
 			UpdatePlayerStatus(ECustomPlayerStatus::erowing);
 			CustomPlayerController->ChangeObject(floorRaftObject);
 			AttachToActor(floorRaftObject, FAttachmentTransformRules::SnapToTargetIncludingScale);
 			SetRaftCollider(true);
+			
 		}
 		
-	}
+	}*/
+
+	
+}
+
+void APlayerCharacter::Walking2Rowing()
+{
+	Debug::Print("Walk 2 Rowing", 5.f, false);
+	//DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	//CustomPlayerController->ChangeObject(this);
+	//UpdatePlayerStatus(ECustomPlayerStatus::eidle);
+	//SetRaftCollider(false);
+}
+
+void APlayerCharacter::Rowing2Walking()
+{
+	Debug::Print("Rowing 2 walkd", 5.f, false);
+	/*UpdatePlayerStatus(ECustomPlayerStatus::erowing);
+	CustomPlayerController->ChangeObject(floorRaftObject);
+	AttachToActor(floorRaftObject, FAttachmentTransformRules::SnapToTargetIncludingScale);
+	SetRaftCollider(true);*/
 }
 
 
