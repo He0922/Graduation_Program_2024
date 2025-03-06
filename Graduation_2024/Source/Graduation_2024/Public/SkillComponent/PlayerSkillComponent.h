@@ -159,5 +159,16 @@ private:
 	void GetBackControl();
 	void FireRunePaper();
 #pragma endregion
-};
 
+//打铁花相关
+public:
+	UFUNCTION(BlueprintCallable, Category = "Skills")
+	void PerformConeShockwave();
+
+private:
+	bool bIsShockwaveOnCooldown = false;
+	float ShockwaveCooldownTime = 5.0f;
+
+	FTimerHandle ShockwaveCooldownTimerHandle;
+	void ResetShockwaveCooldown();
+};

@@ -79,6 +79,8 @@ void ACustomPlayerController::SetupInputComponent()
 
 		EnhancedInputComponent->BindAction(climbAction, ETriggerEvent::Started, this, &ACustomPlayerController::ClimbingActionStarted);
 
+		EnhancedInputComponent->BindAction(ShockwaveAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::ActivateShockWave);
+
 
 		Debug::Print("Cast Success EnhancedInputComponent", 5.f, false);
 	}
@@ -279,4 +281,11 @@ void ACustomPlayerController::InterctBlock()
 	playerSkillComponent->CheckBlock();
 }
 
+void ACustomPlayerController::ActivateShockWave()
+{
+	if (playerSkillComponent)
+	{
+		playerSkillComponent->PerformConeShockwave();
+	}
+}
 #pragma endregion
