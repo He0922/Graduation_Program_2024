@@ -37,6 +37,7 @@ public:
 
 	class APlayerCharacter* Player;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Variables")
 	ECustomPlayerStatus PlayerStatus;
 
 	class UPlayerSkillComponent* playerSkillComponent;

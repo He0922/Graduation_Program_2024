@@ -123,27 +123,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
 	class UInputMappingContext* mainMappingContext;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
-	//class UInputAction* moveAction;
-
-	//UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
-	//class UInputAction* lookAction;
-
-	//UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
-	//class UInputAction* jumpAction;
-
-	//UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
-	//class UInputAction* ScanAction;
-
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
-	//class UInputAction* objectInteraction;
-
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
-	//class UInputAction* IterctBlock;
-
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
-	//class UInputAction* climbAction;
-
 #pragma endregion
 
 
@@ -161,8 +140,7 @@ public:
 	//void Look(const FInputActionValue& Value);
 
 	UFUNCTION()
-	void ObjectInteraction();
-
+	void ObjectInteraction(APawn* ControllerCurrentControlObject);
 
 	//玩家转向输入的物体
 	UFUNCTION()

@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
+
+#include "../Character/Player/CustomPlayerStatus.h"
+
 #include "PlayerAnimInstance.generated.h"
 
 /**
@@ -26,17 +29,20 @@ private:
 	UPROPERTY()
 	class UPlayerCharacterMovementComponent* PlayerCMC;
 
+	UPROPERTY()
+	class AFloorRaft* FloorRaft;
+
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
 	float GroundSpeed;
-	void GetFroundSpeed();
+	void GetGroundSpeed();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
 	float AirSpeed;
 	void GetAirSpeed();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
-	bool bSHouldMove;
+	bool bShouldMove;
 	void GetShouldMove();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
@@ -50,4 +56,12 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
 	FVector ClimbVelocity;
 	void GetClimbVelocity();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
+	ECustomPlayerStatus PlayerCurrentStatus;
+	void GetPlayerCurrentStatus();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
+	float RowlingSpeed;
+	void GetRowlingSpeed();
 };

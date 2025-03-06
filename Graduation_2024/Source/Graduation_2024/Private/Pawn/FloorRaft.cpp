@@ -6,6 +6,8 @@
 #include "Components/BoxComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+#include "Components/SphereComponent.h"
+#include "Kismet/KismetMathLibrary.h"
 
 #include "../DebugHelper.h"
 #include "MovementComponent/CustomFloatingPawnMovement.h"
@@ -30,6 +32,8 @@ AFloorRaft::AFloorRaft(const FObjectInitializer& ObjectInitializer)
 	floorRaftCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("FloorRaft Collision"));
 	floorRaftCollision->SetupAttachment(RootComponent);
 
+	PlayerStandLocation = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("FloorRaft Player Stand Location"));
+	PlayerStandLocation->SetupAttachment(RootComponent);
 
 	// 创建SpringArm
 	cameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -111,6 +115,13 @@ void AFloorRaft::RotateTowardsCamera(float DeltaTime)
 
 	// 设置船的新旋转角度
 	SetActorRotation(NewRotation);
+}
+
+
+float AFloorRaft::GetFloorRaftSpeed()
+{
+	FloorRaftSpeed = PawnMovementComponent->Velocity.Size();
+	return FloorRaftSpeed;
 }
 #pragma endregion
 

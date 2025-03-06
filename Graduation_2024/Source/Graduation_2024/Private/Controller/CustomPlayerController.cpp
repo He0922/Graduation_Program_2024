@@ -49,6 +49,9 @@ void ACustomPlayerController::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	PlayerStatus = Player->GetPlayerStatus();
+
+
+	Debug::Print("Current Control: " + CurrentControllerPawn->GetName(), 0.f, false, FColor::Green);
 }
 
 
@@ -213,11 +216,7 @@ void ACustomPlayerController::Look(const FInputActionValue& InputValue)
 
 void ACustomPlayerController::ObjectInteraction()
 {
-	if (Player)
-	{
-		Debug::Print("Interactive", 5.f, false);
-		Player->ObjectInteraction();
-	}
+	Player->ObjectInteraction(CurrentControllerPawn);
 }
 
 
