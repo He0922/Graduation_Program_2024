@@ -16,7 +16,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GRADUATION_2024_CustomPlayerStatus_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_CustomPlayerStatus_h
+#define CURRENT_FILE_ID FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_CustomPlayerStatus_h
 
 
 #define FOREACH_ENUM_ECUSTOMPLAYERSTATUS(op) \
