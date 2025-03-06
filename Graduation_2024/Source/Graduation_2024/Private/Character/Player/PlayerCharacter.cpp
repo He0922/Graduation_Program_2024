@@ -412,7 +412,6 @@ void APlayerCharacter::InitArchivalUW()
 }
 #pragma endregion
 
-
 #pragma region Controller
 //玩家启用， 禁用输入
 void APlayerCharacter::StartInput()
@@ -542,6 +541,75 @@ void APlayerCharacter::InitTimeLineCurveFunc()
 
 		CameraTransitionTimeline->AddInterpFloat(CameraCurve, TimelineProgress);
 		CameraTransitionTimeline->SetTimelineFinishedFunc(TimelineFinished);
+	}
+}
+#pragma endregion
+
+#pragma region TraceLine
+void APlayerCharacter::PerformLineTrace()
+{
+	// 获取玩家控制器
+	APlayerController* PlayerController = Cast<APlayerController>(GetController());
+	if (!PlayerController) return;
+
+	// 获取屏幕中心坐标
+	int32 ViewportSizeX, ViewportSizeY;
+	PlayerController->GetViewportSize(ViewportSizeX, ViewportSizeY);
+	FVector2D ScreenCenter = FVector2D(ViewportSizeX * 0.5f, ViewportSizeY * 0.5f);
+
+	// 计算摄像机位置和方向
+	FVector CameraLocation;
+	FVector CameraDirection;
+	PlayerController->DeprojectScreenPositionToWorld(
+		ScreenCenter.X,
+		ScreenCenter.Y,
+		CameraLocation,
+		CameraDirection
+	);
+
+	// 计算射线终点
+	FVector TraceStart = CameraLocation;
+	FVector TraceEnd = CameraLocation + (CameraDirection * TraceDistance);
+
+	// 执行射线检测
+	FHitResult HitResult;
+	FCollisionQueryParams TraceParams(FName(TEXT("LineTrace")), true, this);
+	TraceParams.bReturnPhysicalMaterial = true; // 是否返回物理材质
+
+	bool bHit = GetWorld()->LineTraceSingleByChannel(
+		HitResult,
+		TraceStart,
+		TraceEnd,
+		ECC_Visibility, // 碰撞通道（可自定义）
+		TraceParams
+	);
+
+	// 处理命中结果
+	if (bHit)
+	{
+		AActor* HitActor = HitResult.GetActor();
+		FVector HitLocation = HitResult.Location;
+		FVector HitNormal = HitResult.Normal;
+
+		// 输出调试信息
+		UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *HitActor->GetName());
+		UE_LOG(LogTemp, Warning, TEXT("Hit Location: %s"), *HitLocation.ToString());
+	}
+
+	// 可视化调试射线
+	if (bDrawDebugLine)
+	{
+		FColor DebugColor = bHit ? FColor::Green : FColor::Red;
+		DrawDebugLine(
+			GetWorld(),
+			TraceStart,
+			TraceEnd,
+			DebugColor,
+			false, // 是否持久显示
+			2.f,   // 显示时长（秒）
+			0,      // 深度优先级
+			2.f     // 线宽
+		);
 	}
 }
 #pragma endregion

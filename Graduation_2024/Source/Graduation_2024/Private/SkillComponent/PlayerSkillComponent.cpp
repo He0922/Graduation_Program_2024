@@ -19,11 +19,26 @@ void UPlayerSkillComponent::BeginPlay()
 
 	//得到玩家类
 	playerCharacter = Cast<APlayerCharacter>(GetOwner());
+
+	nowSkillType = ESkillType::Common;
 }
 
 void UPlayerSkillComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+}
+
+void UPlayerSkillComponent::SwitchSkill(int32 Direction)
+{
+	const int32 CurrentIndex = static_cast<int32>(nowSkillType);
+	const int32 NumEnumValues = static_cast<int32>(ESkillType::Count);
+
+	// 计算新索引并取模确保循环
+	int32 NewIndex = (CurrentIndex + Direction + NumEnumValues) % NumEnumValues;
+	nowSkillType = static_cast<ESkillType>(NewIndex);
+
+	// 触发武器切换逻辑（例如更新UI或装备武器）
+	UE_LOG(LogTemp, Warning, TEXT("Switched to skill: %d"), NewIndex);
 }
 
 #pragma region Cold Time
@@ -36,7 +51,7 @@ void UPlayerSkillComponent::SetColdTimerHandle(ESkillType skillType)
 			InScanColdState();
 			GetWorld()->GetTimerManager().SetTimer(ScanColdTimeTh, this,  &UPlayerSkillComponent::OutScanColdState, 1.0f, false, ScanColdTime);
 			break;
-		case ESkillType::Other:
+		case ESkillType::KickFire:
 			break;
 		default:
 			break;
@@ -44,7 +59,6 @@ void UPlayerSkillComponent::SetColdTimerHandle(ESkillType skillType)
 }
 
 #pragma endregion
-
 
 //能量减少
 #pragma region CostEnergy
@@ -191,13 +205,13 @@ void UPlayerSkillComponent::CheckBlock()
 		for (const TPair<float, ABlockActor*>& Elem : blocks)
 		{
 			float Distance = Elem.Key;  // 这里的 Key 就是距离
-			ABlockActor* BlockActor = Elem.Value; // 物品对应的 ABlockActor*
+			ABlockActor* BlockActor_temp = Elem.Value; // 物品对应的 ABlockActor*
 
 			// 如果当前的距离更小，更新最小距离和最近物品
 			if (Distance < MinDistance)
 			{
 				MinDistance = Distance;
-				ClosestBlock = BlockActor;
+				ClosestBlock = BlockActor_temp;
 			}
 		}
 
@@ -230,6 +244,126 @@ bool UPlayerSkillComponent::IsActorInView(AActor* Actor)
 	const float ViewAngleThreshold = FMath::Cos(FMath::DegreesToRadians(CheckViewAngle));  // 视野45度
 
 	return DotProduct > ViewAngleThreshold; // 如果点积大于阈值，则物体在视野范围内
+}
+
+void UPlayerSkillComponent::StartLineTrace()
+{
+	// 立即执行一次检测
+	PerformLineTrace();
+
+	// 启动定时器，按间隔重复检测
+	GetWorld()->GetTimerManager().SetTimer(
+		TraceTimerHandle,
+		this,
+		&UPlayerSkillComponent::PerformLineTrace,
+		TraceInterval,
+		true // 是否循环
+	);
+}
+
+void UPlayerSkillComponent::StopLineTrace()
+{
+	SetBlockActor(false);
+	// 关闭定时器
+	GetWorld()->GetTimerManager().ClearTimer(TraceTimerHandle);
+}
+
+void UPlayerSkillComponent::PerformLineTrace()
+{
+	//防止因玩家原因报错
+	if (!playerCharacter)
+		return;
+
+	APlayerController* PlayerController = Cast<APlayerController>(playerCharacter->GetController());
+	if (!PlayerController) 
+		return;
+
+	// 获取屏幕中心坐标
+	int32 ViewportSizeX, ViewportSizeY;
+	PlayerController->GetViewportSize(ViewportSizeX, ViewportSizeY);
+	FVector2D ScreenCenter = FVector2D(ViewportSizeX * 0.5f, ViewportSizeY * 0.5f);
+
+	// 计算射线起点和方向
+	FVector CameraLocation;
+	FVector CameraDirection;
+	PlayerController->DeprojectScreenPositionToWorld(
+		ScreenCenter.X,
+		ScreenCenter.Y,
+		CameraLocation,
+		CameraDirection
+	);
+
+	FVector TraceStart = CameraLocation;
+	FVector TraceEnd = CameraLocation + (CameraDirection * TraceDistance);
+
+	// 执行射线检测
+	FHitResult HitResult;
+	FCollisionQueryParams TraceParams(FName(TEXT("LineTrace")), true, playerCharacter);
+	TraceParams.AddIgnoredActor(playerCharacter); // 忽略自身
+
+	bool bHit = GetWorld()->LineTraceSingleByChannel(
+		HitResult,
+		TraceStart,
+		TraceEnd,
+		ECC_Visibility,
+		TraceParams
+	);
+
+	// 处理命中结果
+	if (bHit)
+	{
+		AActor* HitActor = HitResult.GetActor();
+		ABlockActor* Interactable = Cast<ABlockActor>(HitActor);
+		if (Interactable)
+		{
+			BlockActor = Interactable;
+			SetBlockActor(true);
+			//更改模板值
+			// 示例：实时更新UI或高亮目标
+			UE_LOG(LogTemp, Warning, TEXT("Hitting Actor: %s"), *HitActor->GetName());
+		}
+		else
+		{
+			SetBlockActor(false);
+		}
+	}
+	else
+	{
+		SetBlockActor(false);
+	}
+
+	// 调试可视化
+	if (bDrawDebugLine)
+	{
+		FColor DebugColor = bHit ? FColor::Green : FColor::Red;
+		DrawDebugLine(
+			GetWorld(),
+			TraceStart,
+			TraceEnd,
+			DebugColor,
+			false,
+			0.f,  // 每帧绘制，不持久
+			0,
+			2.f
+		);
+	}
+}
+
+void UPlayerSkillComponent::SetBlockActor(bool IfSettoHas)
+{
+	if (IfSettoHas)
+	{
+		BlockActor->SetHighlight(true);
+	}
+	else
+	{
+		if (BlockActor)
+		{
+			BlockActor->SetHighlight(false);
+		}
+
+		BlockActor = NULL;
+	}
 }
 
 void UPlayerSkillComponent::StartInterBlock(AActor* actor)
@@ -268,13 +402,13 @@ void UPlayerSkillComponent::FireRunePaper()
 {
 	UE_LOG(LogTemp, Warning, TEXT("FireRunePaper"));
 
-	if (Bullet == NULL)
+	if (Bullet == NULL || BlockActor == NULL)
 		return;
 
 	//计算符纸生成的位置
 	FVector InitPos = playerCharacter->GetMesh()->GetSocketLocation(SocketLocationName);
 	// 计算从玩家到目标物体的方向
-	FVector dir = InitPos - InterBlock->GetActorLocation();
+	FVector dir = InitPos - BlockActor->GetActorLocation();
 	FRotator DirectionToTarget = (-dir.GetSafeNormal()).Rotation();
 	GetWorld()->SpawnActor<ARunepaper>(Bullet, InitPos, DirectionToTarget);
 

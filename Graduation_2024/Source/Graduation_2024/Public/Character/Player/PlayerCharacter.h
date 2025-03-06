@@ -307,6 +307,19 @@ public:
 		FORCEINLINE class UPlayerCharacterMovementComponent* GetPlayerCMC() const { return playerCMC; }
 
 #pragma endregion
+
+#pragma region TraceLine
+	public:
+		//调试射线可视化
+		UPROPERTY(EditDefaultsOnly, Category = "Debug")
+		bool bDrawDebugLine = true;
+
+		// 射线检测距离
+		UPROPERTY(EditDefaultsOnly, Category = "Debug")
+		float TraceDistance = 10000.f;
+
+		void PerformLineTrace();
+#pragma endregion
 };
 
 

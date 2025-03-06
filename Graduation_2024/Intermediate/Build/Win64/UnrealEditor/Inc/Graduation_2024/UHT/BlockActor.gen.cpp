@@ -282,6 +282,10 @@ struct Z_Construct_UClass_ABlockActor_Statics
 		{ "ToolTip", "\xc4\xac\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xce\xaa\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xda\xb5\xef\xbf\xbd" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StencilValue_MetaData[] = {
+		{ "Category", "StencilIndex" },
+		{ "ModuleRelativePath", "Public/InterectBlock/BlockActor.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InitPosition_MetaData[] = {
 		{ "Category", "InitPosition" },
 #if !UE_BUILD_SHIPPING
@@ -313,6 +317,7 @@ struct Z_Construct_UClass_ABlockActor_Statics
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_blockType;
 	static void NewProp_ISActive_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ISActive;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_StencilValue;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_InitPosition;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BlockMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractionBox;
@@ -335,6 +340,7 @@ void Z_Construct_UClass_ABlockActor_Statics::NewProp_ISActive_SetBit(void* Obj)
 	((ABlockActor*)Obj)->ISActive = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABlockActor_Statics::NewProp_ISActive = { "ISActive", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABlockActor), &Z_Construct_UClass_ABlockActor_Statics::NewProp_ISActive_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ISActive_MetaData), NewProp_ISActive_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABlockActor_Statics::NewProp_StencilValue = { "StencilValue", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActor, StencilValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StencilValue_MetaData), NewProp_StencilValue_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABlockActor_Statics::NewProp_InitPosition = { "InitPosition", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActor, InitPosition), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InitPosition_MetaData), NewProp_InitPosition_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlockActor_Statics::NewProp_BlockMesh = { "BlockMesh", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActor, BlockMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlockMesh_MetaData), NewProp_BlockMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABlockActor_Statics::NewProp_InteractionBox = { "InteractionBox", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABlockActor, InteractionBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionBox_MetaData), NewProp_InteractionBox_MetaData) };
@@ -342,6 +348,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABlockAct
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActor_Statics::NewProp_blockType_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActor_Statics::NewProp_blockType,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActor_Statics::NewProp_ISActive,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActor_Statics::NewProp_StencilValue,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActor_Statics::NewProp_InitPosition,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActor_Statics::NewProp_BlockMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABlockActor_Statics::NewProp_InteractionBox,
@@ -384,18 +391,18 @@ ABlockActor::~ABlockActor() {}
 // End Class ABlockActor
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EBlockType_StaticEnum, TEXT("EBlockType"), &Z_Registration_Info_UEnum_EBlockType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 261377382U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABlockActor, ABlockActor::StaticClass, TEXT("ABlockActor"), &Z_Registration_Info_UClass_ABlockActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlockActor), 3895157013U) },
+		{ Z_Construct_UClass_ABlockActor, ABlockActor::StaticClass, TEXT("ABlockActor"), &Z_Registration_Info_UClass_ABlockActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABlockActor), 3153716038U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_117807970(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_804119515(TEXT("/Script/Graduation_2024"),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_InterectBlock_BlockActor_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

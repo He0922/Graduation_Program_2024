@@ -12,9 +12,11 @@ class UNiagaraSystem;
 UENUM(BlueprintType)
 enum class ESkillType : uint8
 {
+	Common,
 	Scan,
 	Inter,
-	Other
+	KickFire,
+	Count
 };
 
 class ARunepaper;
@@ -37,6 +39,15 @@ protected:
 	//玩家获取
 	class APlayerCharacter* playerCharacter;
 
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	ESkillType nowSkillType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	UNiagaraSystem* SkillChangVFX;
+
+	void SwitchSkill(int32 Direction);
+
 //冷却时间
 #pragma region Cold Time
 private:
@@ -52,6 +63,8 @@ private:
 	FTimerHandle InterDelayTimer;
 	FTimerHandle InterBackDelayTimer;
 	FTimerHandle ControlDelayTimer;
+
+	FTimerHandle TraceTimerHandle; // 射线定时器
 #pragma endregion
 
 //玩家属性设置
@@ -126,6 +139,10 @@ public:
 	void CheckBlock();
 	bool IsActorInView(AActor* Actor);
 
+	void StartLineTrace();
+	void StopLineTrace();
+
+	void FireRunePaper();
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inter Range")
 	float CheckRadius = 200.0f;//触发器半径
@@ -151,13 +168,30 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RunePaper")
 	UNiagaraSystem* RunepaperFire;
 
+	// 射线检测距离
+	UPROPERTY(EditDefaultsOnly, Category = "Debug")
+	float TraceDistance = 10000.f;
+
+	// 调试射线可视化
+	UPROPERTY(EditDefaultsOnly, Category = "Debug")
+	bool bDrawDebugLine = true;
+
+	// 射线检测间隔（秒）
+	UPROPERTY(EditAnywhere, Category = "Debug")
+	float TraceInterval = 0.1f;
+
 private:
 	AActor* InterBlock;
+
+	class ABlockActor* BlockActor;
+	void SetBlockActor(bool IfSettoHas);
+
 
 	void StartInterBlock(AActor* actor);
 	void StopInterBlock();
 	void GetBackControl();
-	void FireRunePaper();
+	//void FireRunePaper();
+	void PerformLineTrace();
 #pragma endregion
 };
 
