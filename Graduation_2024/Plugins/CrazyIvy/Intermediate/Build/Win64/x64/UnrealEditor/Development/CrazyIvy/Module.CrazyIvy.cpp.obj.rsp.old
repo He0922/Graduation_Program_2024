@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 "D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp"
 /FI"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
 /FI"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Definitions.CrazyIvy.h"
@@ -6,6 +7,16 @@
 /Fo"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.obj"
 /sourceDependencies "D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.dep.json"
 @"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\CrazyIvy.Shared.rsp"
+=======
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp"
+/FI"E:\UE5\Project\Graduation_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Definitions.CrazyIvy.h"
+/Yu"E:\UE5\Project\Graduation_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"E:\UE5\Project\Graduation_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.obj"
+/sourceDependencies "E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.dep.json"
+@"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\CrazyIvy.Shared.rsp"
+>>>>>>> Stashed changes
 /Zc:inline
 /nologo
 /Oi

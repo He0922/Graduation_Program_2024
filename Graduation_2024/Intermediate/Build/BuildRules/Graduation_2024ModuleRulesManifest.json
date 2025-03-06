@@ -1,13 +1,13 @@
 {
 	"SourceFiles": [
-		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Source\\Graduation_2024\\Graduation_2024.Build.cs",
-		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Plugins\\CrazyIvy\\Source\\CrazyIvy\\CrazyIvy.Build.cs",
-		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Plugins\\Oceanology_Plugin\\Source\\Oceanology_PluginEditor\\Oceanology_PluginEditor.Build.cs",
-		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Plugins\\Oceanology_Plugin\\Source\\Oceanology_Plugin\\Oceanology_Plugin.Build.cs",
-		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Plugins\\SHADERSOURCEWT2\\Source\\Shadersource_Waterfall2EdMode\\Shadersource_Waterfall2EdMode.Build.cs",
-		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Plugins\\SHADERSOURCEWT2\\Source\\Shadersource_Waterfall2Runtime\\Shadersource_Waterfall2Runtime.Build.cs",
-		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Source\\Graduation_2024.Target.cs",
-		"E:\\UE5\\Project\\Graduation_2024\\Graduation_2024\\Source\\Graduation_2024Editor.Target.cs"
+		"D:\\Graduation_project\\Graduation_Program_2024\\Graduation_2024\\Source\\Graduation_2024\\Graduation_2024.Build.cs",
+		"D:\\Graduation_project\\Graduation_Program_2024\\Graduation_2024\\Plugins\\CrazyIvy\\Source\\CrazyIvy\\CrazyIvy.Build.cs",
+		"D:\\Graduation_project\\Graduation_Program_2024\\Graduation_2024\\Plugins\\Oceanology_Plugin\\Source\\Oceanology_PluginEditor\\Oceanology_PluginEditor.Build.cs",
+		"D:\\Graduation_project\\Graduation_Program_2024\\Graduation_2024\\Plugins\\Oceanology_Plugin\\Source\\Oceanology_Plugin\\Oceanology_Plugin.Build.cs",
+		"D:\\Graduation_project\\Graduation_Program_2024\\Graduation_2024\\Plugins\\SHADERSOURCEWT2\\Source\\Shadersource_Waterfall2EdMode\\Shadersource_Waterfall2EdMode.Build.cs",
+		"D:\\Graduation_project\\Graduation_Program_2024\\Graduation_2024\\Plugins\\SHADERSOURCEWT2\\Source\\Shadersource_Waterfall2Runtime\\Shadersource_Waterfall2Runtime.Build.cs",
+		"D:\\Graduation_project\\Graduation_Program_2024\\Graduation_2024\\Source\\Graduation_2024.Target.cs",
+		"D:\\Graduation_project\\Graduation_Program_2024\\Graduation_2024\\Source\\Graduation_2024Editor.Target.cs"
 	],
 	"EngineVersion": "5.4.4"
 }

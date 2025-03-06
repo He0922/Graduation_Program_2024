@@ -15,7 +15,6 @@ COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
-ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCurveFloat_NoRegister();
@@ -265,10 +264,6 @@ DEFINE_FUNCTION(APlayerCharacter::execMoveToTarget)
 // Begin Class APlayerCharacter Function ObjectInteraction
 struct Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics
 {
-	struct PlayerCharacter_eventObjectInteraction_Parms
-	{
-		APawn* ControllerCurrentControlObject;
-	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
@@ -280,17 +275,9 @@ struct Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics
 #endif
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ControllerCurrentControlObject;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::NewProp_ControllerCurrentControlObject = { "ControllerCurrentControlObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventObjectInteraction_Parms, ControllerCurrentControlObject), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::NewProp_ControllerCurrentControlObject,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "ObjectInteraction", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::PlayerCharacter_eventObjectInteraction_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::PlayerCharacter_eventObjectInteraction_Parms) < MAX_uint16);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "ObjectInteraction", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_ObjectInteraction_Statics::Function_MetaDataParams) };
 UFunction* Z_Construct_UFunction_APlayerCharacter_ObjectInteraction()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -302,10 +289,9 @@ UFunction* Z_Construct_UFunction_APlayerCharacter_ObjectInteraction()
 }
 DEFINE_FUNCTION(APlayerCharacter::execObjectInteraction)
 {
-	P_GET_OBJECT(APawn,Z_Param_ControllerCurrentControlObject);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->ObjectInteraction(Z_Param_ControllerCurrentControlObject);
+	P_THIS->ObjectInteraction();
 	P_NATIVE_END;
 }
 // End Class APlayerCharacter Function ObjectInteraction
@@ -636,7 +622,7 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 		{ &Z_Construct_UFunction_APlayerCharacter_InitArchivalUW, "InitArchivalUW" }, // 606118510
 		{ &Z_Construct_UFunction_APlayerCharacter_InitArttributesUW, "InitArttributesUW" }, // 1114154882
 		{ &Z_Construct_UFunction_APlayerCharacter_MoveToTarget, "MoveToTarget" }, // 2855293171
-		{ &Z_Construct_UFunction_APlayerCharacter_ObjectInteraction, "ObjectInteraction" }, // 15726530
+		{ &Z_Construct_UFunction_APlayerCharacter_ObjectInteraction, "ObjectInteraction" }, // 57909195
 		{ &Z_Construct_UFunction_APlayerCharacter_OnTimelineUpdate, "OnTimelineUpdate" }, // 2906371823
 		{ &Z_Construct_UFunction_APlayerCharacter_StartInput, "StartInput" }, // 4087276683
 		{ &Z_Construct_UFunction_APlayerCharacter_StopInput, "StopInput" }, // 2672281633
@@ -749,14 +735,14 @@ APlayerCharacter::~APlayerCharacter() {}
 // End Class APlayerCharacter
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 696243552U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 610581670U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_1216829901(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_2003212099(TEXT("/Script/Graduation_2024"),
+	Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

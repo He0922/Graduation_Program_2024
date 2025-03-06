@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 "D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Module.Shadersource_Waterfall2EdMode.cpp"
 /FI"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
 /FI"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Definitions.Shadersource_Waterfall2EdMode.h"
@@ -6,6 +7,16 @@
 /Fo"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Module.Shadersource_Waterfall2EdMode.cpp.obj"
 /sourceDependencies "D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Module.Shadersource_Waterfall2EdMode.cpp.dep.json"
 @"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Shadersource_Waterfall2EdMode.Shared.rsp"
+=======
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Module.Shadersource_Waterfall2EdMode.cpp"
+/FI"E:\UE5\Project\Graduation_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Definitions.Shadersource_Waterfall2EdMode.h"
+/Yu"E:\UE5\Project\Graduation_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"E:\UE5\Project\Graduation_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Module.Shadersource_Waterfall2EdMode.cpp.obj"
+/sourceDependencies "E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Module.Shadersource_Waterfall2EdMode.cpp.dep.json"
+@"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Shadersource_Waterfall2EdMode.Shared.rsp"
+>>>>>>> Stashed changes
 /Zc:inline
 /nologo
 /Oi

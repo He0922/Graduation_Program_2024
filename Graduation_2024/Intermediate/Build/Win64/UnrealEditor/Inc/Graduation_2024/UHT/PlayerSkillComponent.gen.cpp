@@ -244,6 +244,36 @@ DEFINE_FUNCTION(UPlayerSkillComponent::execGetScanDistance)
 }
 // End Class UPlayerSkillComponent Function GetScanDistance
 
+// Begin Class UPlayerSkillComponent Function PerformConeShockwave
+struct Z_Construct_UFunction_UPlayerSkillComponent_PerformConeShockwave_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Skills" },
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerSkillComponent_PerformConeShockwave_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerSkillComponent, nullptr, "PerformConeShockwave", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerSkillComponent_PerformConeShockwave_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerSkillComponent_PerformConeShockwave_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPlayerSkillComponent_PerformConeShockwave()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerSkillComponent_PerformConeShockwave_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayerSkillComponent::execPerformConeShockwave)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PerformConeShockwave();
+	P_NATIVE_END;
+}
+// End Class UPlayerSkillComponent Function PerformConeShockwave
+
 // Begin Class UPlayerSkillComponent Function StartScan
 struct Z_Construct_UFunction_UPlayerSkillComponent_StartScan_Statics
 {
@@ -282,6 +312,7 @@ void UPlayerSkillComponent::StaticRegisterNativesUPlayerSkillComponent()
 		{ "GetPlayerNowEnergy", &UPlayerSkillComponent::execGetPlayerNowEnergy },
 		{ "GetScanColdState", &UPlayerSkillComponent::execGetScanColdState },
 		{ "GetScanDistance", &UPlayerSkillComponent::execGetScanDistance },
+		{ "PerformConeShockwave", &UPlayerSkillComponent::execPerformConeShockwave },
 		{ "StartScan", &UPlayerSkillComponent::execStartScan },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -400,6 +431,7 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 		{ &Z_Construct_UFunction_UPlayerSkillComponent_GetPlayerNowEnergy, "GetPlayerNowEnergy" }, // 4036743481
 		{ &Z_Construct_UFunction_UPlayerSkillComponent_GetScanColdState, "GetScanColdState" }, // 1862270726
 		{ &Z_Construct_UFunction_UPlayerSkillComponent_GetScanDistance, "GetScanDistance" }, // 2075880884
+		{ &Z_Construct_UFunction_UPlayerSkillComponent_PerformConeShockwave, "PerformConeShockwave" }, // 19926018
 		{ &Z_Construct_UFunction_UPlayerSkillComponent_StartScan, "StartScan" }, // 3570409872
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -472,18 +504,18 @@ UPlayerSkillComponent::~UPlayerSkillComponent() {}
 // End Class UPlayerSkillComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ESkillType_StaticEnum, TEXT("ESkillType"), &Z_Registration_Info_UEnum_ESkillType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2243955677U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 1907708241U) },
+		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 176814330U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_4033850326(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_3444759618(TEXT("/Script/Graduation_2024"),
+	Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_project_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
