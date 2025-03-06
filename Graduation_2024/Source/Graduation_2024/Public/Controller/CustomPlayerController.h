@@ -68,9 +68,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
 	class UInputAction* climbAction;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
-	class UInputAction* ShockwaveAction;
 #pragma endregion
 
 
@@ -100,8 +97,6 @@ public:
 	void InterctBlock();
 
 	void ClimbingActionStarted(const FInputActionValue& Value);
-
-	void ActivateShockWave();
 #pragma endregion
 
 #pragma region Player InputController

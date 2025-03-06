@@ -1,14 +1,11 @@
-"D:\Graduation_project\Graduation_Program_2024\Graduation_2024\Source\Graduation_2024\Private\Character\Player\PlayerCharacter.cpp"
-/external:W0
-/external:I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\INCLUDE"
-/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"
-/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
-/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
-/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"D:\Graduation_project\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Definitions.Graduation_2024.h"
-/Fo"D:\Graduation_project\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\SingleFile\PlayerCharacter.cpp.obj"
-/sourceDependencies "D:\Graduation_project\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\SingleFile\PlayerCharacter.cpp.dep.json"
-@"D:\Graduation_project\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Graduation_2024.Shared.rsp"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\UnrealEditor\Inc\Graduation_2024\UHT\ArchiveID.gen.cpp"
+/FI"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Definitions.Graduation_2024.h"
+/Yu"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\ArchiveID.gen.cpp.obj"
+/sourceDependencies "D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\ArchiveID.gen.cpp.dep.json"
+@"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Graduation_2024.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

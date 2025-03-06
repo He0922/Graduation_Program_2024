@@ -7,7 +7,6 @@
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
 
-
 DEFINE_LOG_CATEGORY_STATIC(PlayerSkillComponentLog, All, All);
 UPlayerSkillComponent::UPlayerSkillComponent()
 {
@@ -283,94 +282,5 @@ void UPlayerSkillComponent::FireRunePaper()
 	{
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), RunepaperFire, InitPos, DirectionToTarget);
 	}
-}
-
-// 打铁花冷却
-void UPlayerSkillComponent::ResetShockwaveCooldown()
-{
-	bIsShockwaveOnCooldown = false;
-	UE_LOG(PlayerSkillComponentLog, Warning, TEXT("Shockwave cooldown ended!"));
-}
-
-void UPlayerSkillComponent::PerformConeShockwave()
-{
-	if (!playerCharacter)
-	{
-		UE_LOG(PlayerSkillComponentLog, Warning, TEXT("Player Character not found")); //查找玩家是否存在
-		return;
-	}
-
-	if(bIsShockwaveOnCooldown)
-	{
-		UE_LOG(PlayerSkillComponentLog, Warning, TEXT("Shockwave is on cooldown!"));
-		return;
-	}
-
-	bIsShockwaveOnCooldown = true;
-	GetWorld()->GetTimerManager().SetTimer(ShockwaveCooldownTimerHandle, this, &UPlayerSkillComponent::ResetShockwaveCooldown, ShockwaveCooldownTime, false);
-
-	FVector ShockwaveOrigin = playerCharacter->GetActorLocation();
-	FVector ForwardVector = playerCharacter->GetActorForwardVector();
-
-	float ConeAngle = 45.0f; //圆锥半角
-	float MaxDistance = 500.0f; //最大距离
-	float ShockwaveStrength = 10000.0f; // 冲击力大小
-	int NumRays = 30; //用于锥形检测的射线数量
-	float ShockwaveDamage = 30.0f; // 造成的伤害(暂时留一个 万一后面需要)
-	
-	TArray<AActor*> HitActors; //存储检测到的物体
-
-	//锥形射线检测
-	for (int i = 0; i < NumRays; ++i)
-	{
-		float Angle = FMath::RandRange(-ConeAngle, ConeAngle); //生成随机角度
-		FRotator RotOffset(0.0f, Angle, 0.0f); //旋转角度
-		FVector RayDirection = RotOffset.RotateVector(ForwardVector); //旋转方向
-		FVector EndLocation = ShockwaveOrigin + (RayDirection * MaxDistance); //终点
-		
-		FHitResult HitResult;
-		FCollisionQueryParams Params;
-		Params.AddIgnoredActor(playerCharacter);
-
-		bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, ShockwaveOrigin, EndLocation, ECC_Visibility, Params); //检查范围内是否击中物品
-		if (bHit && HitResult.GetActor())
-		{
-			AActor* HitActor = HitResult.GetActor();
-			if (HitActor -> ActorHasTag("Destructible") || HitActor -> ActorHasTag("Enemy"))
-			{
-				HitActors.AddUnique(HitActor);
-			}
-		}
-
-		DrawDebugLine(GetWorld(), ShockwaveOrigin, EndLocation, FColor::Red, false, 0.5f, 0, 1.0f);
-	}
-
-	for(AActor* TargetActor : HitActors)
-	{
-		UPrimitiveComponent* TargetComponent = TargetActor->FindComponentByClass<UPrimitiveComponent>();
-		if (!TargetComponent) continue;
-
-		FVector DirectionToTarget = (TargetActor->GetActorLocation() - ShockwaveOrigin).GetSafeNormal();
-
-		//仅对于带有'Destructible'的物体施加冲击力
-		if (TargetActor->ActorHasTag("Destructible") && TargetComponent->IsSimulatingPhysics())
-		{
-			TargetComponent->AddImpulse(DirectionToTarget * ShockwaveStrength);
-		}
-
-		//敌人效果影响（以防万一,预留）
-		if (TargetActor -> ActorHasTag("Enemy"))
-		{
-			//伤害没给
-
-			if (TargetComponent->IsSimulatingPhysics())
-			{
-				TargetComponent->AddImpulse(DirectionToTarget * ShockwaveOrigin * 0.5f);
-			}
-		}
-	}
-
-	DrawDebugCone(GetWorld(), ShockwaveOrigin, ForwardVector, MaxDistance, FMath::DegreesToRadians(ConeAngle), FMath::DegreesToRadians(ConeAngle), 12, FColor::Blue, false, 1.0f);
-
 }
 #pragma endregion
