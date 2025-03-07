@@ -15,6 +15,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GRADUATION_2024_PlayerSkillComponent_generated_h
 
 #define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execPerformConeShockwave); \
 	DECLARE_FUNCTION(execGetScanColdState); \
 	DECLARE_FUNCTION(execGetScanDistance); \
 	DECLARE_FUNCTION(execGetPlayerNowEnergy); \

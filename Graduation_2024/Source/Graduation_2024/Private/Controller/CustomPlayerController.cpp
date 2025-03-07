@@ -262,12 +262,15 @@ void ACustomPlayerController::StopInput()
 
 void ACustomPlayerController::OnMouseLeftButtonPressed(const FInputActionValue& Value)
 {
+	if (!playerSkillComponent) return;
+
 	switch (playerSkillComponent->nowSkillType)
 	{
 		case ESkillType::Inter:
 			playerSkillComponent->FireRunePaper();
 			break;
 		case ESkillType::KickFire:
+			playerSkillComponent->PerformConeShockwave();
 			break;
 		default:
 			break;
@@ -276,6 +279,8 @@ void ACustomPlayerController::OnMouseLeftButtonPressed(const FInputActionValue& 
 
 void ACustomPlayerController::OnRightMousePressed(const FInputActionValue& Value)
 {
+	if (!playerSkillComponent) return;
+
 	switch (playerSkillComponent->nowSkillType)
 	{
 		case ESkillType::Scan:
@@ -296,6 +301,8 @@ void ACustomPlayerController::OnRightMousePressed(const FInputActionValue& Value
 
 void ACustomPlayerController::OnRightMouseReleased(const FInputActionValue& Value)
 {
+	if (!playerSkillComponent) return;
+
 	switch (playerSkillComponent->nowSkillType)
 	{
 		case ESkillType::Scan:

@@ -7,6 +7,10 @@
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
 
+#include "DrawDebugHelpers.h" 
+#include "Components/PrimitiveComponent.h" 
+#include "GeometryCollection/GeometryCollectionComponent.h"
+
 DEFINE_LOG_CATEGORY_STATIC(PlayerSkillComponentLog, All, All);
 UPlayerSkillComponent::UPlayerSkillComponent()
 {
@@ -416,5 +420,86 @@ void UPlayerSkillComponent::FireRunePaper()
 	{
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), RunepaperFire, InitPos, DirectionToTarget);
 	}
+}
+#pragma endregion
+
+#pragma region Shockwave
+void UPlayerSkillComponent::ResetShockwaveCooldown()
+{
+	bIsShockwaveOnCooldown = false;
+	UE_LOG(PlayerSkillComponentLog, Warning, TEXT("Shockwave cooldown ended!"));
+}
+
+void UPlayerSkillComponent::PerformConeShockwave()
+{
+	if (!playerCharacter)
+	{
+		UE_LOG(PlayerSkillComponentLog, Warning, TEXT("Player Character not found")); 
+		return;
+	}
+
+	if (bIsShockwaveOnCooldown)
+	{
+		UE_LOG(PlayerSkillComponentLog, Warning, TEXT("Shockwave is on cooldown!"));
+		return;
+	}
+
+	bIsShockwaveOnCooldown = true;
+	GetWorld()->GetTimerManager().SetTimer(ShockwaveCooldownTimerHandle, this, &UPlayerSkillComponent::ResetShockwaveCooldown, ShockwaveCooldownTime, false);
+
+	FVector ShockwaveOrigin = playerCharacter->GetActorLocation();
+	FVector ForwardVector = playerCharacter->GetActorForwardVector();
+
+	float ConeAngle = 45.0f; 
+	float MaxDistance = 500.0f;
+	float ShockwaveStrength = 10000.0f;
+	int NumRays = 30;
+	float ShockwaveDamage = 30.0f; 
+
+	TArray<AActor*> HitActors;
+
+	for (int i = 0; i < NumRays; ++i)
+	{
+		float Angle = FMath::RandRange(-ConeAngle, ConeAngle);
+		FRotator RotOffset(0.0f, Angle, 0.0f); 
+		FVector RayDirection = RotOffset.RotateVector(ForwardVector); 
+		FVector EndLocation = ShockwaveOrigin + (RayDirection * MaxDistance); 
+
+		FHitResult HitResult;
+		FCollisionQueryParams Params;
+		Params.AddIgnoredActor(playerCharacter);
+
+		bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, ShockwaveOrigin, EndLocation, ECC_Visibility, Params); 
+		if (bHit && HitResult.GetActor())
+		{
+			AActor* HitActor = HitResult.GetActor();
+			HitActors.AddUnique(HitActor);
+		}
+
+		DrawDebugLine(GetWorld(), ShockwaveOrigin, EndLocation, FColor::Red, false, 0.5f, 0, 1.0f);
+	}
+
+	for (AActor* TargetActor : HitActors)
+	{
+		UPrimitiveComponent* TargetComponent = TargetActor->FindComponentByClass<UPrimitiveComponent>();
+		if (!TargetComponent)
+		{
+			UGeometryCollectionComponent* GCComponent = TargetActor->FindComponentByClass<UGeometryCollectionComponent>();
+			if (GCComponent)
+			{
+				UE_LOG(PlayerSkillComponentLog, Warning, TEXT("Applying radial impulse to GC: %s"), *TargetActor->GetName());
+				GCComponent->AddRadialImpulse(ShockwaveOrigin, 500.0f, ShockwaveStrength, ERadialImpulseFalloff::RIF_Linear, true);
+				continue;
+			}
+			UE_LOG(PlayerSkillComponentLog, Warning, TEXT("No PrimitiveComponent found on: %s"), *TargetActor->GetName());
+			continue;
+		}
+		FVector DirectionToTarget = (TargetActor->GetActorLocation() - ShockwaveOrigin).GetSafeNormal();
+		TargetComponent->AddImpulse(DirectionToTarget * ShockwaveStrength, NAME_None, true);
+		UE_LOG(PlayerSkillComponentLog, Warning, TEXT("Applying impulse to: %s"), *TargetActor->GetName())
+	}
+
+	DrawDebugCone(GetWorld(), ShockwaveOrigin, ForwardVector, MaxDistance, FMath::DegreesToRadians(ConeAngle), FMath::DegreesToRadians(ConeAngle), 12, FColor::Blue, false, 1.0f);
+
 }
 #pragma endregion

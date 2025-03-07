@@ -298,6 +298,8 @@ public:
 	void ChangeInShoulderView();
 	void ChangeOutShoulderView();
 
+private:
+	float CurrentTime = 1;
 	void InitTimeLineCurveFunc();
 #pragma endregion
 

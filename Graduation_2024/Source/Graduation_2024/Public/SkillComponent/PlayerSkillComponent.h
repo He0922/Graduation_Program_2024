@@ -65,6 +65,8 @@ private:
 	FTimerHandle ControlDelayTimer;
 
 	FTimerHandle TraceTimerHandle; // 射线定时器
+
+	FTimerHandle ShockwaveCooldownTimerHandle;
 #pragma endregion
 
 //玩家属性设置
@@ -192,6 +194,18 @@ private:
 	void GetBackControl();
 	//void FireRunePaper();
 	void PerformLineTrace();
+#pragma endregion
+
+#pragma region Shockwave
+public:
+	UFUNCTION(BlueprintCallable, Category = "Skills")
+	void PerformConeShockwave();
+
+	float ShockwaveCooldownTime = 5.0f;
+
+private:
+	bool bIsShockwaveOnCooldown = false;
+	void ResetShockwaveCooldown();
 #pragma endregion
 };
 

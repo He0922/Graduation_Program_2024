@@ -498,7 +498,10 @@ void APlayerCharacter::ChangeInShoulderView()
 	if (CameraTransitionTimeline)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("has CameraTransitionTimeline"));
-		CameraTransitionTimeline->PlayFromStart();  // 开始播放时间线
+
+		CurrentTime = CameraTransitionTimeline->GetPlaybackPosition();
+		CameraTransitionTimeline->SetPlaybackPosition(CurrentTime, false);
+		CameraTransitionTimeline->Play();
 	}
 
 	//cameraBoom->bUsePawnControlRotation = false;
@@ -509,7 +512,10 @@ void APlayerCharacter::ChangeOutShoulderView()
 	if (CameraTransitionTimeline)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("has CameraTransitionTimeline"));
-		CameraTransitionTimeline->ReverseFromEnd();  // 开始播放时间线
+
+		CurrentTime = CameraTransitionTimeline->GetPlaybackPosition();
+		CameraTransitionTimeline->SetPlaybackPosition(CurrentTime,false);
+		CameraTransitionTimeline->Reverse();
 	}
 
 	//cameraBoom->bUsePawnControlRotation = true;
