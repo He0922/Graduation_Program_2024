@@ -11,8 +11,10 @@ enum class ECustomPlayerStatus : uint8
 	emove UMETA(DisplayName = "Move"),
 	erun UMETA(DisplayName = "Run"),
 	ejump UMETA(DisplayName = "Jump"),
+	edodge UMETA(DisplayName = "Dodge"),
 	eattack UMETA(DisplayName = "Attack"),
 	erowing UMETA(DisplayName = "Rowing"),
-	eclimbing UMETA(DisplayName = "Climbing")
+	eclimbing UMETA(DisplayName = "Climbing"),
+	efalling UMETA(DisplayName = "Falling")
 };
 

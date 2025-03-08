@@ -222,6 +222,7 @@ bool UPlayerCharacterMovementComponent::CanStartClimbing()
 void UPlayerCharacterMovementComponent::StartClimbing()
 {
 	SetMovementMode(MOVE_Custom, ECustomMovementMode::MOVE_Climb);
+
 }
 
 
