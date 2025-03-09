@@ -143,7 +143,7 @@ public:
 	void ObjectInteraction(APawn* ControllerCurrentControlObject);
 
 	//玩家转向输入的物体
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void FaceActor(AActor* TargetActor);
 #pragma endregion
 
@@ -206,7 +206,7 @@ public:
 	TSubclassOf<UPlayerAttributesUW> playerAttributesUWClass;
 
 	//// 人物属性UI对象
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, Category = "UW|AttributesUW")
 	class UPlayerAttributesUW* playerAttributesUW;
 
 
@@ -219,7 +219,7 @@ public:
 	TSubclassOf<UArchivalUW> archivalUWClass;
 
 	//// 存储点UI对象
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, Category = "UW|ArchivalUW")
 	class UArchivalUW* archivalUW;
 
 #pragma endregion
@@ -298,8 +298,6 @@ public:
 	void ChangeInShoulderView();
 	void ChangeOutShoulderView();
 
-private:
-	float CurrentTime = 1;
 	void InitTimeLineCurveFunc();
 #pragma endregion
 
@@ -308,19 +306,6 @@ private:
 	public:
 		FORCEINLINE class UPlayerCharacterMovementComponent* GetPlayerCMC() const { return playerCMC; }
 
-#pragma endregion
-
-#pragma region TraceLine
-	public:
-		//调试射线可视化
-		UPROPERTY(EditDefaultsOnly, Category = "Debug")
-		bool bDrawDebugLine = true;
-
-		// 射线检测距离
-		UPROPERTY(EditDefaultsOnly, Category = "Debug")
-		float TraceDistance = 10000.f;
-
-		void PerformLineTrace();
 #pragma endregion
 };
 

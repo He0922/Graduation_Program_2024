@@ -8,22 +8,7 @@ public class Graduation_2024 : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] 
-		{ 
-			"Core", 
-			"CoreUObject", 
-			"Engine", 
-			"InputCore", 
-			"EnhancedInput", 
-			"ProceduralMeshComponent", 
-			"AIModule", 
-			"NavigationSystem", 
-			"Niagara",
-            "PhysicsCore", 
-			"Chaos", 
-			"ChaosSolverEngine", 
-			"GeometryCollectionEngine"
-        });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "ProceduralMeshComponent", "AIModule", "NavigationSystem", "Niagara" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

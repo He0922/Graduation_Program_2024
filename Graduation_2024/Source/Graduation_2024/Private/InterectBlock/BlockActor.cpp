@@ -38,8 +38,6 @@ void ABlockActor::BeginPlay()
 
     InteractionBox->OnComponentBeginOverlap.AddDynamic(this, &ABlockActor::OnOverlapBegin);
     InteractionBox->OnComponentEndOverlap.AddDynamic(this, &ABlockActor::OnOverlapEnd);
-
-    SetHighlight(false);
 }
 
 //初始化节点,材质，以及自身管理类
@@ -102,19 +100,4 @@ void ABlockActor::InteractionBlock()
     //设置当前状态，并调用节点管理类，的刷新节点，将自身传入
     SetNowState();
     myBlockActorManager->refreshBlock.Broadcast(this, ISActive);
-}
-
-void ABlockActor::SetHighlight(bool bEnable)
-{
-    if (BlockMesh)
-    {
-        // 启用/禁用自定义深度渲染
-        BlockMesh->SetRenderCustomDepth(bEnable);
-
-        // 设置模板值（仅在启用时生效）
-        if (bEnable)
-        {
-            BlockMesh->SetCustomDepthStencilValue(StencilValue);
-        }
-    }
 }

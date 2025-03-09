@@ -29,8 +29,6 @@ void UPlayerCharacterMovementComponent::TickComponent(float DeltaTime, ELevelTic
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	CanClimbDownLedge();
-
 	//Debug::PrintBool("Capsule Trace No Collision: ", ClimbableCapsuleTraceSurfaceTracedResults.IsEmpty(), 0.f,false);
 	//Debug::PrintBool("Eye Trace Has Blocking: ", TraceFormEyeHeight(100.f).bBlockingHit, 0.f, false);
 }
@@ -197,13 +195,9 @@ void UPlayerCharacterMovementComponent::ToggleClimbing(bool bEnableClimb)
 			StartClimbing();
 			PlayClimbMontage(IdleToClimbMontage);
 		}
-		else if(CanClimbDownLedge())
-		{
-			Debug::Print("Can Climb Down", 5.f, false);
-		}
 		else
 		{
-			Debug::Print("Can NOT Climb Down", 5.f, false);
+			Debug::Print("Can NOT Start Climbing", 5.f, false);
 		}
 	}
 	else
@@ -225,37 +219,9 @@ bool UPlayerCharacterMovementComponent::CanStartClimbing()
 }
 
 
-bool UPlayerCharacterMovementComponent::CanClimbDownLedge()
-{
-	if (IsFalling()) return false;
-	
-	const FVector ComponentLocation = UpdatedComponent->GetComponentLocation();
-	const FVector ComponentForward = UpdatedComponent->GetForwardVector();
-	const FVector DownVector = -UpdatedComponent->GetUpVector();
-
-	const FVector WalkableSurfaceTracesStart = ComponentLocation + ComponentForward * ClimbDownWalkableSurfaceTraceOffset;
-	const FVector WalkableSurfaceTracesEnd = WalkableSurfaceTracesStart + DownVector * 100.f;
-
-	FHitResult WalkableSurfaceHit =  DoLineTraceSingleByObject(WalkableSurfaceTracesStart, WalkableSurfaceTracesEnd, true);
-
-	const FVector LedgeTraceStart = WalkableSurfaceHit.TraceStart + ComponentForward * ClimbDownLedgeTraceOffset;
-	const FVector LedgeTraceEnd = LedgeTraceStart + DownVector * 300.f;
-
-	FHitResult LedgeTraceHit = DoLineTraceSingleByObject(LedgeTraceStart, LedgeTraceEnd,true);
-
-	if (WalkableSurfaceHit.bBlockingHit && !LedgeTraceHit.bBlockingHit)
-	{
-		return true;
-	}
-
-	return false;
-}
-
-
 void UPlayerCharacterMovementComponent::StartClimbing()
 {
 	SetMovementMode(MOVE_Custom, ECustomMovementMode::MOVE_Climb);
-
 }
 
 

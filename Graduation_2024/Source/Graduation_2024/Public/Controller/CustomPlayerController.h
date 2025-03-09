@@ -60,18 +60,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
 	class UInputAction* objectInteraction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input|Action")
+	class UInputAction* ScanAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
+	class UInputAction* IterctBlock;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
 	class UInputAction* climbAction;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
-	class UInputAction* MouseLeftButtonAction;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
-	class UInputAction* MouseRightButtonAction;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
-	class UInputAction* MouseWheelUpAction;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
-	class UInputAction* MouseWheelDownAction;
 #pragma endregion
 
 
@@ -91,18 +87,16 @@ public:
 
 	void ObjectInteraction();
 
-	void ClimbingActionStarted(const FInputActionValue& Value);
-
 	// 切换玩家控制对象
 	void ChangeObject(APawn* PawnObject);
 
-	//控制玩家释放技能
-	void OnMouseLeftButtonPressed(const FInputActionValue& Value);
-	void OnRightMousePressed(const FInputActionValue& Value);
-	void OnRightMouseReleased(const FInputActionValue& Value);
+	//实现玩家技能接口的定义
+	void StartScan();
+	void EndScan();
 
-	void OnMouseWheelUp(const FInputActionValue& Value);
-	void OnMouseWheelDown(const FInputActionValue& Value);
+	void InterctBlock();
+
+	void ClimbingActionStarted(const FInputActionValue& Value);
 #pragma endregion
 
 #pragma region Player InputController

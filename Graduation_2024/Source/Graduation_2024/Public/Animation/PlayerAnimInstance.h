@@ -41,7 +41,7 @@ public:
 	float AirSpeed;
 	void GetAirSpeed();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
+	UPROPERTY(VIsibleAnywhere, BlueprintReadOnly, Category = Reference)
 	bool bShouldMove;
 	void GetShouldMove();
 
@@ -64,4 +64,6 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
 	float RowlingSpeed;
 	void GetRowlingSpeed();
+
+
 };
