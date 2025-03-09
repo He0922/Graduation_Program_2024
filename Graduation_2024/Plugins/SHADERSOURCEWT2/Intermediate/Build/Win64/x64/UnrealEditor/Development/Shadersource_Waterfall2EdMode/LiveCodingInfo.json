@@ -2,6 +2,10 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Shadersource_Waterfall2EdMode.cpp.obj": [
+			"Shadersource_Waterfall2EdMode.init.gen.cpp.obj",
+			"SH_Settings_WaterfallSelection.gen.cpp.obj",
+			"SH_Waterfall2EditorMode.gen.cpp.obj",
+			"SH_Waterfall2Settings.gen.cpp.obj",
 			"SH_Details_Waterfall2.cpp.obj",
 			"SH_Details_WaterfallEdit.cpp.obj",
 			"SH_Details_WaterfallMeshComp.cpp.obj",
@@ -16,11 +20,7 @@
 			"SH_W2_PlacementAssetEntry.cpp.obj",
 			"SSH_FxDisplay.cpp.obj",
 			"SSH_FxPathDisplay.cpp.obj",
-			"SSH_FxPointDisplay.cpp.obj",
-			"Shadersource_Waterfall2EdMode.init.gen.cpp.obj",
-			"SH_Settings_WaterfallSelection.gen.cpp.obj",
-			"SH_Waterfall2EditorMode.gen.cpp.obj",
-			"SH_Waterfall2Settings.gen.cpp.obj"
+			"SSH_FxPointDisplay.cpp.obj"
 		]
 	}
 }
