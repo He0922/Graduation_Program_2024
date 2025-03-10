@@ -262,9 +262,13 @@ void ACustomPlayerController::StopInput()
 
 void ACustomPlayerController::StartScan()
 {
+	Player->MontageToPlay(Player->ScanToMontage);
+
 	playerSkillComponent->StartScan();
 	//5000是默认值， 到时候要设置的话， 传到这里就好
 	playerSkillComponent->SetScanDistance(5000);
+
+
 }
 
 
@@ -278,5 +282,6 @@ void ACustomPlayerController::InterctBlock()
 {
 	playerSkillComponent->CheckBlock();
 }
-
 #pragma endregion
+
+

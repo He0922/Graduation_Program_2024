@@ -95,6 +95,8 @@ void APlayerCharacter::BeginPlay()
 
 	InitArttributesUW();
 
+	// 获取玩家动画实例
+	PlayerAnimInstance = GetMesh()->GetAnimInstance();
 }
 
 
@@ -544,4 +546,22 @@ void APlayerCharacter::InitTimeLineCurveFunc()
 		CameraTransitionTimeline->SetTimelineFinishedFunc(TimelineFinished);
 	}
 }
+
+#pragma endregion
+
+
+#pragma region Player Anim Function
+void APlayerCharacter::MontageToPlay(UAnimMontage* MontageToPlay)
+{
+	Debug::Print("111", 5.f, false);
+	if (!MontageToPlay) return;
+	Debug::Print("222", 5.f, false);
+ 	if (!PlayerAnimInstance)return;
+	Debug::Print("333", 5.f, false);
+ 	if (PlayerAnimInstance->IsAnyMontagePlaying())return;
+ 
+	Debug::Print("Play Scan Montage", 5.f, false);
+ 	PlayerAnimInstance->Montage_Play(MontageToPlay);
+}
+
 #pragma endregion

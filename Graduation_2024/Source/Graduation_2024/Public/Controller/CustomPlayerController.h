@@ -92,6 +92,7 @@ public:
 
 	//实现玩家技能接口的定义
 	void StartScan();
+	
 	void EndScan();
 
 	void InterctBlock();
@@ -104,4 +105,9 @@ public:
 	void StartInput();
 	void StopInput();
 #pragma endregion
+
+
+
+
+
 };

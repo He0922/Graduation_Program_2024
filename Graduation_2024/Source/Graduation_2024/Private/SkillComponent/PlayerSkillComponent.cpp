@@ -93,6 +93,7 @@ void UPlayerSkillComponent::StartScan()
 		return;
 	}
 
+
 	UE_LOG(PlayerSkillComponentLog, Display, TEXT("StartScan"));
 
 	//设置当前能量扣除值
