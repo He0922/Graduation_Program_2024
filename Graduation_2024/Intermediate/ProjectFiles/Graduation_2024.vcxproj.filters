@@ -828,8 +828,17 @@
     <Filter Include="Source\Graduation_2024\Private\Character">
       <UniqueIdentifier>{3BC88B6A-7416-30E4-8BCB-90BFEF6B7D0F}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\BlackWuChang.cpp">
+      <Filter>Source\Graduation_2024\Private\Character</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\Mayfly.cpp">
       <Filter>Source\Graduation_2024\Private\Character</Filter>
+    </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\Character\BlackWuChang">
+      <UniqueIdentifier>{8E596A51-5C88-3BFC-9640-690A57EDB78F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Character\BlackWuChang\BlackWuChangAnimInstance.cpp">
+      <Filter>Source\Graduation_2024\Private\Character\BlackWuChang</Filter>
     </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\Character\Player">
       <UniqueIdentifier>{1BD796B2-BBDD-3804-9D5D-071D64991EBA}</UniqueIdentifier>
@@ -918,6 +927,12 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\UI\Attributes\PlayerAttributesUW.cpp">
       <Filter>Source\Graduation_2024\Private\UI\Attributes</Filter>
     </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\UI\Conversation">
+      <UniqueIdentifier>{3A356476-AF8B-3BCA-9A33-338C28095A12}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\UI\Conversation\ConversationUW.cpp">
+      <Filter>Source\Graduation_2024\Private\UI\Conversation</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Public">
       <UniqueIdentifier>{AF1DB00F-51B8-3DD0-B7E1-EEBA9F130934}</UniqueIdentifier>
     </Filter>
@@ -939,8 +954,17 @@
     <Filter Include="Source\Graduation_2024\Public\Character">
       <UniqueIdentifier>{596C9BBB-4227-3B13-961C-69E2837CFCB1}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\BlackWuChang.h">
+      <Filter>Source\Graduation_2024\Public\Character</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\Mayfly.h">
       <Filter>Source\Graduation_2024\Public\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\Character\BlackWuChang">
+      <UniqueIdentifier>{6CBD52DB-1372-3BAA-9EB2-207F87522FA9}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Character\BlackWuChang\BlackWuChangAnimInstance.h">
+      <Filter>Source\Graduation_2024\Public\Character\BlackWuChang</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\Character\Player">
       <UniqueIdentifier>{D3A83718-9FBA-32DD-A490-627E87F72AAF}</UniqueIdentifier>
@@ -1034,6 +1058,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\UI\Attributes\PlayerAttributesUW.h">
       <Filter>Source\Graduation_2024\Public\UI\Attributes</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\UI\Conversation">
+      <UniqueIdentifier>{A505FE48-9C31-3B6D-A24C-76231AF64CA4}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\UI\Conversation\ConversationUW.h">
+      <Filter>Source\Graduation_2024\Public\UI\Conversation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

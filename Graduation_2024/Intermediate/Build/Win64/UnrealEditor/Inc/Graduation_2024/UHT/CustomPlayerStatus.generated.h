@@ -24,11 +24,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ECustomPlayerStatus::emove) \
 	op(ECustomPlayerStatus::erun) \
 	op(ECustomPlayerStatus::ejump) \
-	op(ECustomPlayerStatus::edodge) \
 	op(ECustomPlayerStatus::eattack) \
 	op(ECustomPlayerStatus::erowing) \
-	op(ECustomPlayerStatus::eclimbing) \
-	op(ECustomPlayerStatus::efalling) 
+	op(ECustomPlayerStatus::eclimbing) 
 
 enum class ECustomPlayerStatus : uint8;
 template<> struct TIsUEnumClass<ECustomPlayerStatus> { enum { Value = true }; };

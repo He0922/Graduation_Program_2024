@@ -37,10 +37,6 @@ struct Z_Construct_UEnum_Graduation_2024_ECustomPlayerStatus_Statics
 		{ "eattack.Name", "ECustomPlayerStatus::eattack" },
 		{ "eclimbing.DisplayName", "Climbing" },
 		{ "eclimbing.Name", "ECustomPlayerStatus::eclimbing" },
-		{ "edodge.DisplayName", "Dodge" },
-		{ "edodge.Name", "ECustomPlayerStatus::edodge" },
-		{ "efalling.DisplayName", "Falling" },
-		{ "efalling.Name", "ECustomPlayerStatus::efalling" },
 		{ "eidle.DisplayName", "Idle" },
 		{ "eidle.Name", "ECustomPlayerStatus::eidle" },
 		{ "ejump.DisplayName", "Jump" },
@@ -59,11 +55,9 @@ struct Z_Construct_UEnum_Graduation_2024_ECustomPlayerStatus_Statics
 		{ "ECustomPlayerStatus::emove", (int64)ECustomPlayerStatus::emove },
 		{ "ECustomPlayerStatus::erun", (int64)ECustomPlayerStatus::erun },
 		{ "ECustomPlayerStatus::ejump", (int64)ECustomPlayerStatus::ejump },
-		{ "ECustomPlayerStatus::edodge", (int64)ECustomPlayerStatus::edodge },
 		{ "ECustomPlayerStatus::eattack", (int64)ECustomPlayerStatus::eattack },
 		{ "ECustomPlayerStatus::erowing", (int64)ECustomPlayerStatus::erowing },
 		{ "ECustomPlayerStatus::eclimbing", (int64)ECustomPlayerStatus::eclimbing },
-		{ "ECustomPlayerStatus::efalling", (int64)ECustomPlayerStatus::efalling },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -93,10 +87,10 @@ UEnum* Z_Construct_UEnum_Graduation_2024_ECustomPlayerStatus()
 struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_CustomPlayerStatus_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ECustomPlayerStatus_StaticEnum, TEXT("ECustomPlayerStatus"), &Z_Registration_Info_UEnum_ECustomPlayerStatus, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3629499586U) },
+		{ ECustomPlayerStatus_StaticEnum, TEXT("ECustomPlayerStatus"), &Z_Registration_Info_UEnum_ECustomPlayerStatus, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1372204461U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_CustomPlayerStatus_h_2535439317(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_CustomPlayerStatus_h_1478606403(TEXT("/Script/Graduation_2024"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_CustomPlayerStatus_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_CustomPlayerStatus_h_Statics::EnumInfo));

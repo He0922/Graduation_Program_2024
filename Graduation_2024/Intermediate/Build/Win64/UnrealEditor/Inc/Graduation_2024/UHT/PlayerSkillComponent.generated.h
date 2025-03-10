@@ -14,8 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_PlayerSkillComponent_generated_h
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execPerformConeShockwave); \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetScanColdState); \
 	DECLARE_FUNCTION(execGetScanDistance); \
 	DECLARE_FUNCTION(execGetPlayerNowEnergy); \
@@ -23,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execStartScan);
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_27_INCLASS_NO_PURE_DECLS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlayerSkillComponent(); \
 	friend struct Z_Construct_UClass_UPlayerSkillComponent_Statics; \
@@ -32,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(UPlayerSkillComponent)
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_27_ENHANCED_CONSTRUCTORS \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPlayerSkillComponent(UPlayerSkillComponent&&); \
@@ -44,13 +43,13 @@ public: \
 	NO_API virtual ~UPlayerSkillComponent();
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_24_PROLOG
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_27_GENERATED_BODY \
+#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_22_PROLOG
+#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_27_INCLASS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_27_ENHANCED_CONSTRUCTORS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_INCLASS_NO_PURE_DECLS \
+	FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -62,11 +61,9 @@ template<> GRADUATION_2024_API UClass* StaticClass<class UPlayerSkillComponent>(
 
 
 #define FOREACH_ENUM_ESKILLTYPE(op) \
-	op(ESkillType::Common) \
 	op(ESkillType::Scan) \
 	op(ESkillType::Inter) \
-	op(ESkillType::KickFire) \
-	op(ESkillType::Count) 
+	op(ESkillType::Other) 
 
 enum class ESkillType : uint8;
 template<> struct TIsUEnumClass<ESkillType> { enum { Value = true }; };
