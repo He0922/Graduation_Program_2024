@@ -302,9 +302,26 @@ public:
 #pragma endregion
 
 
+#pragma region Player Anim BPVariables
+public:
+	UPROPERTY()
+	class UAnimInstance* PlayerAnimInstance;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Anim: Montage")
+	class UAnimMontage* ScanToMontage;
+#pragma endregion
+
+
+#pragma region Player Anim Function
+public:
+	UFUNCTION(BlueprintCallable, Category = "Custom Function")
+	void MontageToPlay(UAnimMontage* MonteageToPlay);
+#pragma endregion
+
+
 #pragma region Forceinline
-	public:
-		FORCEINLINE class UPlayerCharacterMovementComponent* GetPlayerCMC() const { return playerCMC; }
+public:
+	FORCEINLINE class UPlayerCharacterMovementComponent* GetPlayerCMC() const { return playerCMC; }
 
 #pragma endregion
 };

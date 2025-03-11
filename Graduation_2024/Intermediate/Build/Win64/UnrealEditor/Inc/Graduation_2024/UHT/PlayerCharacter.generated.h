@@ -11,12 +11,14 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 class APawn;
+class UAnimMontage;
 #ifdef GRADUATION_2024_PlayerCharacter_generated_h
 #error "PlayerCharacter.generated.h already included, missing '#pragma once' in PlayerCharacter.h"
 #endif
 #define GRADUATION_2024_PlayerCharacter_generated_h
 
 #define FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execMontageToPlay); \
 	DECLARE_FUNCTION(execOnTimelineUpdate); \
 	DECLARE_FUNCTION(execDisablePlayerInput); \
 	DECLARE_FUNCTION(execEnablePlayerInput); \
