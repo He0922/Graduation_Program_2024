@@ -72,13 +72,17 @@ void ACustomPlayerController::SetupInputComponent()
 		EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::Look);
 		EnhancedInputComponent->BindAction(objectInteraction, ETriggerEvent::Completed, this, &ACustomPlayerController::ObjectInteraction);
 
-		//技能
-		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Started, this, &ACustomPlayerController::StartScan);
-		EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Completed, this, &ACustomPlayerController::EndScan);
-		EnhancedInputComponent->BindAction(IterctBlock, ETriggerEvent::Started, this, &ACustomPlayerController::InterctBlock);
-
 		EnhancedInputComponent->BindAction(climbAction, ETriggerEvent::Started, this, &ACustomPlayerController::ClimbingActionStarted);
 
+		//技能
+		EnhancedInputComponent->BindAction(MouseLeftButtonAction, ETriggerEvent::Started, this, &ACustomPlayerController::OnMouseLeftButtonPressed);
+		EnhancedInputComponent->BindAction(MouseRightButtonAction, ETriggerEvent::Started, this, &ACustomPlayerController::OnRightMousePressed);
+		EnhancedInputComponent->BindAction(MouseRightButtonAction, ETriggerEvent::Completed, this, &ACustomPlayerController::OnRightMouseReleased);
+		EnhancedInputComponent->BindAction(MouseWheelUpAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnMouseWheelUp);
+		EnhancedInputComponent->BindAction(MouseWheelDownAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnMouseWheelDown);
+
+		//背包
+		EnhancedInputComponent->BindAction(OpenPackageAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::OpenPackage);
 
 		Debug::Print("Cast Success EnhancedInputComponent", 5.f, false);
 	}
@@ -260,27 +264,78 @@ void ACustomPlayerController::StopInput()
 }
 
 
-void ACustomPlayerController::StartScan()
+void ACustomPlayerController::OnMouseLeftButtonPressed(const FInputActionValue& Value)
 {
-	Player->MontageToPlay(Player->ScanToMontage);
+	if (!playerSkillComponent) return;
 
-	playerSkillComponent->StartScan();
-	//5000是默认值， 到时候要设置的话， 传到这里就好
-	playerSkillComponent->SetScanDistance(5000);
-
-
+	switch (playerSkillComponent->nowSkillType)
+	{
+	case ESkillType::Inter:
+		playerSkillComponent->FireRunePaper();
+		break;
+	case ESkillType::KickFire:
+		playerSkillComponent->PerformConeShockwave();
+		break;
+	default:
+		break;
+	}
 }
 
-
-void ACustomPlayerController::EndScan()
+void ACustomPlayerController::OnRightMousePressed(const FInputActionValue& Value)
 {
-	playerSkillComponent->EndScan();
+	if (!playerSkillComponent) return;
+
+	switch (playerSkillComponent->nowSkillType)
+	{
+	case ESkillType::Scan:
+		playerSkillComponent->StartScan();
+		//5000是默认值， 到时候要设置的话， 传到这里就好
+		playerSkillComponent->SetScanDistance(5000);
+		break;
+	case ESkillType::Inter:
+		playerSkillComponent->StartLineTrace();
+		Player->ChangeInShoulderView();
+		break;
+	case ESkillType::KickFire:
+		break;
+	default:
+		break;
+	}
 }
 
-
-void ACustomPlayerController::InterctBlock()
+void ACustomPlayerController::OnRightMouseReleased(const FInputActionValue& Value)
 {
-	playerSkillComponent->CheckBlock();
+	if (!playerSkillComponent) return;
+
+	switch (playerSkillComponent->nowSkillType)
+	{
+	case ESkillType::Scan:
+		playerSkillComponent->EndScan();
+		break;
+	case ESkillType::Inter:
+		playerSkillComponent->StopLineTrace();
+		Player->ChangeOutShoulderView();
+		break;
+	case ESkillType::KickFire:
+		break;
+	default:
+		break;
+	}
+}
+
+void ACustomPlayerController::OnMouseWheelUp(const FInputActionValue& Value)
+{
+	playerSkillComponent->SwitchSkill(1);
+}
+
+void ACustomPlayerController::OnMouseWheelDown(const FInputActionValue& Value)
+{
+	playerSkillComponent->SwitchSkill(-1);
+}
+
+void ACustomPlayerController::OpenPackage()
+{
+	//Player->ToggleInventory();
 }
 #pragma endregion
 

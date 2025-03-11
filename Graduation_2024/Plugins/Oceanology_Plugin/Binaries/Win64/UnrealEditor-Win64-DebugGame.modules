@@ -1,0 +1,8 @@
+{
+	"BuildId": "33043543",
+	"Modules": 
+	{
+		"Oceanology_Plugin": "UnrealEditor-Oceanology_Plugin-Win64-DebugGame.dll",
+		"Oceanology_PluginEditor": "UnrealEditor-Oceanology_PluginEditor-Win64-DebugGame.dll"
+	}
+}

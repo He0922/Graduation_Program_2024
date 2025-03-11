@@ -14,10 +14,14 @@ enum class ESkillType : uint8
 {
 	Scan,
 	Inter,
-	Other
+	KickFire,
+	Count
 };
 
 class ARunepaper;
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FStartScan);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FEndScan);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent),Blueprintable, BlueprintType)
 class GRADUATION_2024_API UPlayerSkillComponent : public UActorComponent
@@ -37,6 +41,15 @@ protected:
 	//玩家获取
 	class APlayerCharacter* playerCharacter;
 
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	ESkillType nowSkillType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	UNiagaraSystem* SkillChangVFX;
+
+	void SwitchSkill(int32 Direction);
+
 //冷却时间
 #pragma region Cold Time
 private:
@@ -52,6 +65,10 @@ private:
 	FTimerHandle InterDelayTimer;
 	FTimerHandle InterBackDelayTimer;
 	FTimerHandle ControlDelayTimer;
+
+	FTimerHandle TraceTimerHandle; // 射线定时器
+
+	FTimerHandle ShockwaveCooldownTimerHandle;
 #pragma endregion
 
 //玩家属性设置
@@ -64,6 +81,7 @@ private:
 
 	//设置当前扣除能量的值
 	float nowEnergyCostAmount = 0;
+	bool BeScan;
 
 #pragma endregion
 
@@ -116,16 +134,30 @@ public:
 	void InScanColdState();
 	void OutScanColdState();
 
+	// 事件调度器（暴露给蓝图）
+	UPROPERTY(BlueprintAssignable, Category = "Event")
+	FStartScan StartScanEvent;
+
+	UPROPERTY(BlueprintAssignable, Category = "Event")
+	FStartScan EndScanEvent;
+
+	UFUNCTION(BlueprintCallable)
+	bool GetNowScanState() const { return BeScan; }
+
 	UFUNCTION(BlueprintCallable)
 	bool GetScanColdState() const { return IFScanIsInCold; }
 #pragma endregion
 
-//交互节点相关
+	//交互节点相关
 #pragma region AboutInterectBlock
 public:
 	void CheckBlock();
 	bool IsActorInView(AActor* Actor);
 
+	void StartLineTrace();
+	void StopLineTrace();
+
+	void FireRunePaper();
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inter Range")
 	float CheckRadius = 200.0f;//触发器半径
@@ -151,13 +183,42 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RunePaper")
 	UNiagaraSystem* RunepaperFire;
 
+	// 射线检测距离
+	UPROPERTY(EditDefaultsOnly, Category = "Debug")
+	float TraceDistance = 10000.f;
+
+	// 调试射线可视化
+	UPROPERTY(EditDefaultsOnly, Category = "Debug")
+	bool bDrawDebugLine = true;
+
+	// 射线检测间隔（秒）
+	UPROPERTY(EditAnywhere, Category = "Debug")
+	float TraceInterval = 0.1f;
+
 private:
 	AActor* InterBlock;
+
+	class ABlockActor* BlockActor;
+	void SetBlockActor(bool IfSettoHas);
+
 
 	void StartInterBlock(AActor* actor);
 	void StopInterBlock();
 	void GetBackControl();
-	void FireRunePaper();
+	//void FireRunePaper();
+	void PerformLineTrace();
+#pragma endregion
+
+#pragma region Shockwave
+public:
+	UFUNCTION(BlueprintCallable, Category = "Skills")
+	void PerformConeShockwave();
+
+	float ShockwaveCooldownTime = 5.0f;
+
+private:
+	bool bIsShockwaveOnCooldown = false;
+	void ResetShockwaveCooldown();
 #pragma endregion
 };
 

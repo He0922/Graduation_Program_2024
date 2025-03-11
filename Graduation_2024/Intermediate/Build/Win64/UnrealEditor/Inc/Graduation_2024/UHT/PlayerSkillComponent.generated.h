@@ -14,15 +14,25 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_PlayerSkillComponent_generated_h
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_23_DELEGATE \
+GRADUATION_2024_API void FStartScan_DelegateWrapper(const FMulticastScriptDelegate& StartScan);
+
+
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_24_DELEGATE \
+GRADUATION_2024_API void FEndScan_DelegateWrapper(const FMulticastScriptDelegate& EndScan);
+
+
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execPerformConeShockwave); \
 	DECLARE_FUNCTION(execGetScanColdState); \
+	DECLARE_FUNCTION(execGetNowScanState); \
 	DECLARE_FUNCTION(execGetScanDistance); \
 	DECLARE_FUNCTION(execGetPlayerNowEnergy); \
 	DECLARE_FUNCTION(execEndScan); \
 	DECLARE_FUNCTION(execStartScan);
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_INCLASS_NO_PURE_DECLS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_29_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlayerSkillComponent(); \
 	friend struct Z_Construct_UClass_UPlayerSkillComponent_Statics; \
@@ -31,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(UPlayerSkillComponent)
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_ENHANCED_CONSTRUCTORS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPlayerSkillComponent(UPlayerSkillComponent&&); \
@@ -43,13 +53,13 @@ public: \
 	NO_API virtual ~UPlayerSkillComponent();
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_22_PROLOG
-#define FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_GENERATED_BODY \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_26_PROLOG
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_29_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_INCLASS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_25_ENHANCED_CONSTRUCTORS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_29_INCLASS_NO_PURE_DECLS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,13 +67,14 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> GRADUATION_2024_API UClass* StaticClass<class UPlayerSkillComponent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h
+#define CURRENT_FILE_ID FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h
 
 
 #define FOREACH_ENUM_ESKILLTYPE(op) \
 	op(ESkillType::Scan) \
 	op(ESkillType::Inter) \
-	op(ESkillType::Other) 
+	op(ESkillType::KickFire) \
+	op(ESkillType::Count) 
 
 enum class ESkillType : uint8;
 template<> struct TIsUEnumClass<ESkillType> { enum { Value = true }; };

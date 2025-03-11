@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\crazyivy\\intermediate\\build\\win64\\unrealeditor\\inc\\crazyivy\\uht\\crazyivy.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\crazyivy\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\crazyivy\\definitions.crazyivy.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

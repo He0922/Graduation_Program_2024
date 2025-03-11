@@ -1,60 +1,55 @@
 {
-	"FileVersion": 3,
-	"EngineAssociation": "5.4",
-	"Category": "",
-	"Description": "",
-	"Modules": [
-		{
-			"Name": "Graduation_2024",
-			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine",
-				"UMG",
-				"AIModule"
-			]
-		}
-	],
-	"Plugins": [
-		{
-			"Name": "ModelingToolsEditorMode",
-			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
-			]
-		},
-		{
-			"Name": "ProceduralMeshComponent",
-			"Enabled": true
-		},
-		{
-			"Name": "Oceanology_Plugin",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/c05ddfb639ac41a9b93f619803e2e3f2"
-		},
-		{
-			"Name": "CrazyIvy",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/971d1e04329945cb8c6028fa5578287c"
-		},
-		{
-			"Name": "Water",
-			"Enabled": true
-		},
-		{
-			"Name": "TrueHDRIPanel",
-			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"Win64"
-			]
-		},
-		{
-			"Name": "HDRIBackdrop",
-			"Enabled": true
-		},
-		{
-			"Name": "ConsoleVariables",
-			"Enabled": true
-		}
-	]
+  "FileVersion": 3,
+  "EngineAssociation": "5.4",
+  "Category": "",
+  "Description": "",
+  "Modules": [
+    {
+      "Name": "Graduation_2024",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "ModelingToolsEditorMode",
+      "Enabled": true
+    },
+    {
+      "Name": "ProceduralMeshComponent",
+      "Enabled": true
+    },
+    {
+      "Name": "Oceanology_Plugin",
+      "Enabled": true
+    },
+    {
+      "Name": "CrazyIvy",
+      "Enabled": true
+    },
+    {
+      "Name": "Water",
+      "Enabled": true
+    },
+    {
+      "Name": "TrueHDRIPanel",
+      "Enabled": false
+    },
+    {
+      "Name": "HDRIBackdrop",
+      "Enabled": true
+    },
+    {
+      "Name": "ConsoleVariables",
+      "Enabled": true
+    },
+    {
+      "Name": "VisualStudioTools",
+      "Enabled": true
+    }
+  ],
+  "TargetPlatforms": [],
+  "AdditionalRootDirectories": [],
+  "AdditionalPluginDirectories": [],
+  "EpicSampleNameHash": ""
 }

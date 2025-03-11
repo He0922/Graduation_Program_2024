@@ -38,6 +38,9 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BlockType")
     bool ISActive = false;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BlockType")
+    int StencilValue = 1;
+
     //节点初始化，由节点管理类调用
     void InitBlock(UMaterialInstance* DefualtBlockMaterial, UMaterialInstance* ActiveBlockMaterial, ABlockActorManager* myBlockactorManager);
 
@@ -50,6 +53,8 @@ public:
 
     //得到世界空间下的生成位置
     FVector GetInitPosition() const { return InitPosition + GetActorLocation(); }
+
+    void SetHighlight(bool bEnable);
 
 protected:
     // Called every frame

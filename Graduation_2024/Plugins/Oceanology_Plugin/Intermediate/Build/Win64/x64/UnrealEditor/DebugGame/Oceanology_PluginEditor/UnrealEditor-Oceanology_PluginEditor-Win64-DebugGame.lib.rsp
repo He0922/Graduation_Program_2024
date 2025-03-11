@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Oceanology_PluginEditor-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Oceanology_PluginEditor\Module.Oceanology_PluginEditor.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Oceanology_PluginEditor\OceanologyLakePresetFactory.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Oceanology_PluginEditor\OceanologyMaterialToStructConverterActor.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Oceanology_PluginEditor\OceanologyOceanPresetFactory.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Oceanology_PluginEditor\Oceanology_PluginEditor.init.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Oceanology_PluginEditor\Default.rc2.res"
+/OUT:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\Oceanology_Plugin\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Oceanology_PluginEditor\UnrealEditor-Oceanology_PluginEditor-Win64-DebugGame.lib"
