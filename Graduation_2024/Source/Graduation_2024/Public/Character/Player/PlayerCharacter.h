@@ -13,6 +13,10 @@
 #include "UI/Attributes/PlayerAttributesUW.h"
 #include "UI/Archival/ArchivalUW.h"
 
+#include "Inventory/Widget/PackageWidget.h"
+#include "Inventory/InventoryComponent.h"
+
+
 #include "Interface/PlayerAttributesInterface.h"
 #include "Interface/ArchivalInterface.h"
 
@@ -319,6 +323,26 @@ public:
 		float TraceDistance = 10000.f;
 
 		void PerformLineTrace();
+#pragma endregion
+
+#pragma region Inventory System
+public:
+	UFUNCTION(BlueprintCallable)
+	class UInventoryComponent* GetInventoryComponent() const { return InventoryComponent; }
+
+	void ToggleInventory();
+
+protected:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UInventoryComponent* InventoryComponent;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	float TileSize = 50.f;
+
+private:
+	TSubclassOf<UPackageWidget> InventoryWidgetClass;
+
 #pragma endregion
 
 #pragma region Player Anim BPVariables

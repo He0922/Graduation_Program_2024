@@ -12,6 +12,7 @@
 #include "Controller/PlayerAIController.h"
 #include "Controller/CustomPlayerController.h"
 
+#include "Inventory/Item/ItemActor.h"
 
 // Component .h
 #include "MovementComponent/PlayerCharacterMovementComponent.h"
@@ -69,6 +70,9 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 
 	// 创建 Timeline 组件
 	CameraTransitionTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("CameraTransitionTimeline"));
+
+	//Inventory组件
+	InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("InventoryComponent"));
 
 	// 初始化玩家状态
 	eplayerStatus = ECustomPlayerStatus::eidle;
@@ -614,6 +618,47 @@ void APlayerCharacter::PerformLineTrace()
 			0,      // 深度优先级
 			2.f     // 线宽
 		);
+	}
+}
+#pragma endregion
+
+#pragma region Inventory System
+void APlayerCharacter::ToggleInventory()
+{
+	// Toggle Inventory Widget
+	//APlayerController* playerController = Cast<APlayerController>(this->GetController());
+
+	UE_LOG(LogTemp, Warning, TEXT("Package"));
+
+
+	if (InventoryComponent->PackageWidget == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Null Widget"));
+	}
+
+	if (InventoryComponent->PackageWidget != nullptr)
+	{
+		if (InventoryComponent->PackageWidget->IsInViewport())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Open Package"));
+
+			InventoryComponent->PackageWidget->RemoveFromParent();
+			CustomPlayerController->SetInputMode(FInputModeGameOnly());
+			CustomPlayerController->bShowMouseCursor = false;
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Close Package"));
+			FInputModeGameAndUI InputMode;
+			InputMode.SetWidgetToFocus(InventoryComponent->PackageWidget->TakeWidget());
+			InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+			InputMode.SetHideCursorDuringCapture(false);
+			InventoryComponent->PackageWidget->AddToViewport();
+			CustomPlayerController->SetInputMode(InputMode);
+			InventoryComponent->PackageWidget->ItemDatas = InventoryComponent->ItemDatas;
+			InventoryComponent->PackageWidget->OpenPackageFunc();
+			CustomPlayerController->bShowMouseCursor = true;
+		}
 	}
 }
 #pragma endregion

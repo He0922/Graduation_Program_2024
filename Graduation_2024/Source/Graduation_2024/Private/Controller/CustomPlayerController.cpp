@@ -82,7 +82,7 @@ void ACustomPlayerController::SetupInputComponent()
 		EnhancedInputComponent->BindAction(MouseWheelDownAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnMouseWheelDown);
 
 		//±³°ü
-		EnhancedInputComponent->BindAction(OpenPackageAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::OpenPackage);
+		EnhancedInputComponent->BindAction(OpenPackageAction, ETriggerEvent::Started, this, &ACustomPlayerController::OpenPackage);
 
 		Debug::Print("Cast Success EnhancedInputComponent", 5.f, false);
 	}
@@ -335,7 +335,7 @@ void ACustomPlayerController::OnMouseWheelDown(const FInputActionValue& Value)
 
 void ACustomPlayerController::OpenPackage()
 {
-	//Player->ToggleInventory();
+	Player->ToggleInventory();
 }
 #pragma endregion
 

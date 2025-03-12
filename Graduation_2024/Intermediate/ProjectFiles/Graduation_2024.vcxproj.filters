@@ -885,6 +885,27 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Interface\PlayerAttributesInterface.cpp">
       <Filter>Source\Graduation_2024\Private\Interface</Filter>
     </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\Inventory">
+      <UniqueIdentifier>{216604AC-76B8-373A-9212-7F6BBA228F22}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Inventory\InventoryComponent.cpp">
+      <Filter>Source\Graduation_2024\Private\Inventory</Filter>
+    </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\Inventory\Item">
+      <UniqueIdentifier>{977C969F-304E-39E0-A784-646D818179A1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Inventory\Item\ItemActor.cpp">
+      <Filter>Source\Graduation_2024\Private\Inventory\Item</Filter>
+    </ClCompile>
+    <Filter Include="Source\Graduation_2024\Private\Inventory\Widget">
+      <UniqueIdentifier>{38891799-F627-3C42-87E1-C7529E4A72B4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Inventory\Widget\ItemWidget.cpp">
+      <Filter>Source\Graduation_2024\Private\Inventory\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Inventory\Widget\PackageWidget.cpp">
+      <Filter>Source\Graduation_2024\Private\Inventory\Widget</Filter>
+    </ClCompile>
     <Filter Include="Source\Graduation_2024\Private\MovementComponent">
       <UniqueIdentifier>{65826948-B0FA-3A24-8321-D587A6A5E35C}</UniqueIdentifier>
     </Filter>
@@ -1016,6 +1037,27 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Interface\PlayerAttributesInterface.h">
       <Filter>Source\Graduation_2024\Public\Interface</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\Inventory">
+      <UniqueIdentifier>{166CDB23-14AC-3E0F-824E-AAFA6E520334}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Inventory\InventoryComponent.h">
+      <Filter>Source\Graduation_2024\Public\Inventory</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\Inventory\Item">
+      <UniqueIdentifier>{22A7163E-45DA-37B6-9D95-F14C09920343}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Inventory\Item\ItemActor.h">
+      <Filter>Source\Graduation_2024\Public\Inventory\Item</Filter>
+    </ClInclude>
+    <Filter Include="Source\Graduation_2024\Public\Inventory\Widget">
+      <UniqueIdentifier>{2077E1E5-B6C1-37B0-B7CF-E389BCF38931}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Inventory\Widget\ItemWidget.h">
+      <Filter>Source\Graduation_2024\Public\Inventory\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Inventory\Widget\PackageWidget.h">
+      <Filter>Source\Graduation_2024\Public\Inventory\Widget</Filter>
     </ClInclude>
     <Filter Include="Source\Graduation_2024\Public\MovementComponent">
       <UniqueIdentifier>{6A951C4A-902C-3B1E-8D9E-9CE2C421574A}</UniqueIdentifier>
