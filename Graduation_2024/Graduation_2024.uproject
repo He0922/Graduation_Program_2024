@@ -25,11 +25,13 @@
 		},
 		{
 			"Name": "Oceanology_Plugin",
-			"Enabled": true
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/c05ddfb639ac41a9b93f619803e2e3f2"
 		},
 		{
 			"Name": "CrazyIvy",
-			"Enabled": true
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/971d1e04329945cb8c6028fa5578287c"
 		},
 		{
 			"Name": "Water",
@@ -50,6 +52,11 @@
 		{
 			"Name": "SkeletalMeshModelingTools",
 			"Enabled": true
+		},
+		{
+			"Name": "Shadersource_WaterfallTool2",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/38242dcaef3047dbbe29f2886e0ff016"
 		}
 	]
 }
