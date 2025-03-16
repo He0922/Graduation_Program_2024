@@ -77,6 +77,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
 	class UInputAction* OpenPackageAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
+	class UInputAction* PickUpAction;
 #pragma endregion
 
 
@@ -108,6 +111,8 @@ public:
 	void OnNum1Pressed(const FInputActionValue& Value);
 	void OnNum2Pressed(const FInputActionValue& Value);
 	void OnNum3Pressed(const FInputActionValue& Value);
+
+	void PickUp(const FInputActionValue& Value);
 
 	void OpenPackage();
 #pragma endregion

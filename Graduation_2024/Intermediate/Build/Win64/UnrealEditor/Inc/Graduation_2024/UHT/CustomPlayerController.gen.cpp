@@ -91,6 +91,10 @@ struct Z_Construct_UClass_ACustomPlayerController_Statics
 		{ "Category", "Input|Action" },
 		{ "ModuleRelativePath", "Public/Controller/CustomPlayerController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PickUpAction_MetaData[] = {
+		{ "Category", "Input|Action" },
+		{ "ModuleRelativePath", "Public/Controller/CustomPlayerController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_PlayerStatus_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_PlayerStatus;
@@ -106,6 +110,7 @@ struct Z_Construct_UClass_ACustomPlayerController_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Num2Action;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Num3Action;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OpenPackageAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PickUpAction;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -127,6 +132,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerC
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num2Action = { "Num2Action", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, Num2Action), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Num2Action_MetaData), NewProp_Num2Action_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num3Action = { "Num3Action", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, Num3Action), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Num3Action_MetaData), NewProp_Num3Action_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_OpenPackageAction = { "OpenPackageAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, OpenPackageAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OpenPackageAction_MetaData), NewProp_OpenPackageAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_PickUpAction = { "PickUpAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, PickUpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickUpAction_MetaData), NewProp_PickUpAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACustomPlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_PlayerStatus_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_PlayerStatus,
@@ -142,6 +148,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACustomPl
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num2Action,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num3Action,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_OpenPackageAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_PickUpAction,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACustomPlayerController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACustomPlayerController_Statics::DependentSingletons[])() = {
@@ -184,10 +191,10 @@ ACustomPlayerController::~ACustomPlayerController() {}
 struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACustomPlayerController, ACustomPlayerController::StaticClass, TEXT("ACustomPlayerController"), &Z_Registration_Info_UClass_ACustomPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACustomPlayerController), 2111869607U) },
+		{ Z_Construct_UClass_ACustomPlayerController, ACustomPlayerController::StaticClass, TEXT("ACustomPlayerController"), &Z_Registration_Info_UClass_ACustomPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACustomPlayerController), 1755726484U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_3542560153(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_3007297192(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

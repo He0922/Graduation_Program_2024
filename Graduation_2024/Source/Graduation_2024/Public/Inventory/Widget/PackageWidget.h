@@ -25,7 +25,11 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Event")
 	void OnOpenPackage();
 
-	//UFUNCTION(BlueprintImplementableEvent, Category = "Event1")
 	void OpenPackageFunc();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Event")
+	void OnClosePackage();
+
+	void ClosePackageFunc();
 
 };

@@ -7,3 +7,8 @@ void UPackageWidget::OpenPackageFunc()
 {
 	OnOpenPackage();
 }
+
+void UPackageWidget::ClosePackageFunc()
+{
+	OnClosePackage();
+}

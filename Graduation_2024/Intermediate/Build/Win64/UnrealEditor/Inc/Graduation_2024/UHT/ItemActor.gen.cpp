@@ -17,9 +17,36 @@ ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 GRADUATION_2024_API UClass* Z_Construct_UClass_AItemActor();
 GRADUATION_2024_API UClass* Z_Construct_UClass_AItemActor_NoRegister();
+GRADUATION_2024_API UFunction* Z_Construct_UDelegateFunction_Graduation_2024_PickUp__DelegateSignature();
 GRADUATION_2024_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
 // End Cross Module References
+
+// Begin Delegate FPickUp
+struct Z_Construct_UDelegateFunction_Graduation_2024_PickUp__DelegateSignature_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Inventory/Item/ItemActor.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_Graduation_2024_PickUp__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_Graduation_2024, nullptr, "PickUp__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_Graduation_2024_PickUp__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_Graduation_2024_PickUp__DelegateSignature_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UDelegateFunction_Graduation_2024_PickUp__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_Graduation_2024_PickUp__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FPickUp_DelegateWrapper(const FMulticastScriptDelegate& PickUp)
+{
+	PickUp.ProcessMulticastDelegate<UObject>(NULL);
+}
+// End Delegate FPickUp
 
 // Begin ScriptStruct FItemData
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ItemData;
@@ -118,6 +145,40 @@ UScriptStruct* Z_Construct_UScriptStruct_FItemData()
 }
 // End ScriptStruct FItemData
 
+// Begin Class AItemActor Function OnPickUpItem
+static FName NAME_AItemActor_OnPickUpItem = FName(TEXT("OnPickUpItem"));
+void AItemActor::OnPickUpItem()
+{
+	ProcessEvent(FindFunctionChecked(NAME_AItemActor_OnPickUpItem),NULL);
+}
+struct Z_Construct_UFunction_AItemActor_OnPickUpItem_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Event" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//// \xef\xbf\xbd\xc2\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc2\xb6\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcd\xbc\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Inventory/Item/ItemActor.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "/ \xef\xbf\xbd\xc2\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc2\xb6\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcd\xbc\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AItemActor_OnPickUpItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AItemActor, nullptr, "OnPickUpItem", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AItemActor_OnPickUpItem_Statics::Function_MetaDataParams), Z_Construct_UFunction_AItemActor_OnPickUpItem_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AItemActor_OnPickUpItem()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AItemActor_OnPickUpItem_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class AItemActor Function OnPickUpItem
+
 // Begin Class AItemActor
 void AItemActor::StaticRegisterNativesAItemActor()
 {
@@ -143,6 +204,10 @@ struct Z_Construct_UClass_AItemActor_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Inventory/Item/ItemActor.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CanBePickUp_MetaData[] = {
+		{ "Category", "ItemActor" },
+		{ "ModuleRelativePath", "Public/Inventory/Item/ItemActor.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InteractionBox_MetaData[] = {
 		{ "Category", "ItemActor" },
 #if !UE_BUILD_SHIPPING
@@ -157,20 +222,32 @@ struct Z_Construct_UClass_AItemActor_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_item;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ItemMesh;
+	static void NewProp_CanBePickUp_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_CanBePickUp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractionBox;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AItemActor_OnPickUpItem, "OnPickUpItem" }, // 3709138692
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AItemActor>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AItemActor_Statics::NewProp_item = { "item", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemActor, item), Z_Construct_UScriptStruct_FItemData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_item_MetaData), NewProp_item_MetaData) }; // 653370232
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItemActor_Statics::NewProp_ItemMesh = { "ItemMesh", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemActor, ItemMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemMesh_MetaData), NewProp_ItemMesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItemActor_Statics::NewProp_ItemMesh = { "ItemMesh", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemActor, ItemMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemMesh_MetaData), NewProp_ItemMesh_MetaData) };
+void Z_Construct_UClass_AItemActor_Statics::NewProp_CanBePickUp_SetBit(void* Obj)
+{
+	((AItemActor*)Obj)->CanBePickUp = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AItemActor_Statics::NewProp_CanBePickUp = { "CanBePickUp", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AItemActor), &Z_Construct_UClass_AItemActor_Statics::NewProp_CanBePickUp_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CanBePickUp_MetaData), NewProp_CanBePickUp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItemActor_Statics::NewProp_InteractionBox = { "InteractionBox", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemActor, InteractionBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionBox_MetaData), NewProp_InteractionBox_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AItemActor_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemActor_Statics::NewProp_item,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemActor_Statics::NewProp_ItemMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemActor_Statics::NewProp_CanBePickUp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemActor_Statics::NewProp_InteractionBox,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AItemActor_Statics::PropPointers) < 2048);
@@ -184,11 +261,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AItemActor_Statics::Cla
 	"Engine",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_AItemActor_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AItemActor_Statics::PropPointers),
 	0,
 	0x009000A4u,
@@ -217,10 +294,10 @@ struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_20
 		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_ItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 653370232U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AItemActor, AItemActor::StaticClass, TEXT("AItemActor"), &Z_Registration_Info_UClass_AItemActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AItemActor), 1631430099U) },
+		{ Z_Construct_UClass_AItemActor, AItemActor::StaticClass, TEXT("AItemActor"), &Z_Registration_Info_UClass_AItemActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AItemActor), 235918746U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Item_ItemActor_h_613873374(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Item_ItemActor_h_226666705(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Item_ItemActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Item_ItemActor_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Item_ItemActor_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Item_ItemActor_h_Statics::ScriptStructInfo),
 	nullptr, 0);

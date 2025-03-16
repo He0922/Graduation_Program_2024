@@ -16,3 +16,8 @@ AItemActor::AItemActor()
     InteractionBox->SetupAttachment(RootComponent);
     InteractionBox->SetCollisionProfileName(TEXT("Trigger"));
 }
+
+void AItemActor::PickUpFunc()
+{
+    OnPickUpItem();
+}
