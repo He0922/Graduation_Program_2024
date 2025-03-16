@@ -18,6 +18,34 @@ UMG_API UClass* Z_Construct_UClass_UUserWidget();
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
 // End Cross Module References
 
+// Begin Class UPackageWidget Function OnClosePackage
+static FName NAME_UPackageWidget_OnClosePackage = FName(TEXT("OnClosePackage"));
+void UPackageWidget::OnClosePackage()
+{
+	ProcessEvent(FindFunctionChecked(NAME_UPackageWidget_OnClosePackage),NULL);
+}
+struct Z_Construct_UFunction_UPackageWidget_OnClosePackage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Event" },
+		{ "ModuleRelativePath", "Public/Inventory/Widget/PackageWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPackageWidget_OnClosePackage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPackageWidget, nullptr, "OnClosePackage", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPackageWidget_OnClosePackage_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPackageWidget_OnClosePackage_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPackageWidget_OnClosePackage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPackageWidget_OnClosePackage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class UPackageWidget Function OnClosePackage
+
 // Begin Class UPackageWidget Function OnOpenPackage
 static FName NAME_UPackageWidget_OnOpenPackage = FName(TEXT("OnOpenPackage"));
 void UPackageWidget::OnOpenPackage()
@@ -86,6 +114,7 @@ struct Z_Construct_UClass_UPackageWidget_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UPackageWidget_OnClosePackage, "OnClosePackage" }, // 1739662781
 		{ &Z_Construct_UFunction_UPackageWidget_OnOpenPackage, "OnOpenPackage" }, // 1010021413
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -142,10 +171,10 @@ UPackageWidget::~UPackageWidget() {}
 struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Widget_PackageWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPackageWidget, UPackageWidget::StaticClass, TEXT("UPackageWidget"), &Z_Registration_Info_UClass_UPackageWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPackageWidget), 2007777250U) },
+		{ Z_Construct_UClass_UPackageWidget, UPackageWidget::StaticClass, TEXT("UPackageWidget"), &Z_Registration_Info_UClass_UPackageWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPackageWidget), 2795967542U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Widget_PackageWidget_h_1757541064(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Widget_PackageWidget_h_729326320(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Widget_PackageWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Inventory_Widget_PackageWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

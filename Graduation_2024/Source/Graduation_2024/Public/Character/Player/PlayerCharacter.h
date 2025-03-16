@@ -332,6 +332,8 @@ public:
 
 	void ToggleInventory();
 
+	void PickUpItem();
+
 protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

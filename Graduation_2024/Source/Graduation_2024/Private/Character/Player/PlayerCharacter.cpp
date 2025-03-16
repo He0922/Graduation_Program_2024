@@ -642,6 +642,7 @@ void APlayerCharacter::ToggleInventory()
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Open Package"));
 
+			InventoryComponent->PackageWidget->ClosePackageFunc();
 			InventoryComponent->PackageWidget->RemoveFromParent();
 			CustomPlayerController->SetInputMode(FInputModeGameOnly());
 			CustomPlayerController->bShowMouseCursor = false;
@@ -658,6 +659,33 @@ void APlayerCharacter::ToggleInventory()
 			InventoryComponent->PackageWidget->ItemDatas = InventoryComponent->ItemDatas;
 			InventoryComponent->PackageWidget->OpenPackageFunc();
 			CustomPlayerController->bShowMouseCursor = true;
+		}
+	}
+}
+void APlayerCharacter::PickUpItem()
+{
+	// 定义球形碰撞体
+	FCollisionShape CollisionShape = FCollisionShape::MakeSphere(200.0f);
+
+	// 进行碰撞检查，返回范围内的所有物体
+	TArray<FHitResult> HitResults;
+	FCollisionQueryParams CollisionParams;
+	CollisionParams.AddIgnoredActor(GetOwner()); // 忽略自身
+
+	bool bHit = GetWorld()->SweepMultiByChannel(HitResults, GetActorLocation(), GetActorLocation(), FQuat::Identity, ECC_Visibility, CollisionShape, CollisionParams);
+
+	if (bHit)
+	{
+		// 处理找到的所有物体
+		for (const FHitResult& Hit : HitResults)
+		{
+			AActor* HitActor = Hit.GetActor();
+			//Item拾取
+			if (AItemActor* item = Cast<AItemActor>(HitActor))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Pick Item"));
+				item->PickUpFunc();
+			}
 		}
 	}
 }

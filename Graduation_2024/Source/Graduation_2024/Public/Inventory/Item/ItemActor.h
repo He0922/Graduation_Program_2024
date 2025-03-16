@@ -5,6 +5,8 @@
 #include "GameFramework/Actor.h"
 #include "ItemActor.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FPickUp);
+
 USTRUCT(BlueprintType)
 struct FItemData
 {
@@ -43,11 +45,19 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 	FItemData item;
 
-
-protected:
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class UStaticMeshComponent* ItemMesh;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool CanBePickUp;
+
+	//// 事件调度器（暴露给蓝图）
+	UFUNCTION(BlueprintImplementableEvent, Category = "Event")
+	void OnPickUpItem();
+
+	void PickUpFunc();
+
+protected:
 	// 用于互动的碰撞组件
 	UPROPERTY(VisibleAnywhere)
 	class UBoxComponent* InteractionBox;

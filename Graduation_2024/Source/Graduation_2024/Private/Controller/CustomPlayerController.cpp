@@ -84,6 +84,7 @@ void ACustomPlayerController::SetupInputComponent()
 
 		//±³°ü
 		EnhancedInputComponent->BindAction(OpenPackageAction, ETriggerEvent::Started, this, &ACustomPlayerController::OpenPackage);
+		EnhancedInputComponent->BindAction(PickUpAction, ETriggerEvent::Started, this, &ACustomPlayerController::PickUp);
 
 		Debug::Print("Cast Success EnhancedInputComponent", 5.f, false);
 	}
@@ -295,6 +296,11 @@ void ACustomPlayerController::OnNum2Pressed(const FInputActionValue& Value)
 void ACustomPlayerController::OnNum3Pressed(const FInputActionValue& Value)
 {
 	playerSkillComponent->ChooseSkill(3);
+}
+
+void ACustomPlayerController::PickUp(const FInputActionValue& Value)
+{
+	Player->PickUpItem();
 }
 
 void ACustomPlayerController::OnRightMousePressed(const FInputActionValue& Value)
