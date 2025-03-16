@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Shadersource_Waterfall2EdMode-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Shadersource_Waterfall2EdMode\Module.Shadersource_Waterfall2EdMode.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Shadersource_Waterfall2EdMode\Shadersource_Waterfall2EdMode.init.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Shadersource_Waterfall2EdMode\SH_Settings_WaterfallSelection.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Shadersource_Waterfall2EdMode\SH_Waterfall2EditorMode.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Shadersource_Waterfall2EdMode\SH_Waterfall2Settings.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Shadersource_Waterfall2EdMode\Default.rc2.res"
+/OUT:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\Shadersource_Waterfall2EdMode\UnrealEditor-Shadersource_Waterfall2EdMode-Win64-DebugGame.lib"

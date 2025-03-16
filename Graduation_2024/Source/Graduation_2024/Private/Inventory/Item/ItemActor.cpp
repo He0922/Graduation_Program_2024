@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
+#include "Inventory/Item/ItemActor.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/BoxComponent.h"
 
-#include "Inventory/Item/ItemActor.h"
 AItemActor::AItemActor()
 {
     PrimaryActorTick.bCanEverTick = false;

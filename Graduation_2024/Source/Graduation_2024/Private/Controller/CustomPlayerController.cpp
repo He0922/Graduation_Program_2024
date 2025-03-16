@@ -78,8 +78,9 @@ void ACustomPlayerController::SetupInputComponent()
 		EnhancedInputComponent->BindAction(MouseLeftButtonAction, ETriggerEvent::Started, this, &ACustomPlayerController::OnMouseLeftButtonPressed);
 		EnhancedInputComponent->BindAction(MouseRightButtonAction, ETriggerEvent::Started, this, &ACustomPlayerController::OnRightMousePressed);
 		EnhancedInputComponent->BindAction(MouseRightButtonAction, ETriggerEvent::Completed, this, &ACustomPlayerController::OnRightMouseReleased);
-		EnhancedInputComponent->BindAction(MouseWheelUpAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnMouseWheelUp);
-		EnhancedInputComponent->BindAction(MouseWheelDownAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnMouseWheelDown);
+		EnhancedInputComponent->BindAction(Num1Action, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnNum1Pressed);
+		EnhancedInputComponent->BindAction(Num2Action, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnNum2Pressed);
+		EnhancedInputComponent->BindAction(Num3Action, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnNum3Pressed);
 
 		//±³°ü
 		EnhancedInputComponent->BindAction(OpenPackageAction, ETriggerEvent::Started, this, &ACustomPlayerController::OpenPackage);
@@ -281,6 +282,21 @@ void ACustomPlayerController::OnMouseLeftButtonPressed(const FInputActionValue& 
 	}
 }
 
+void ACustomPlayerController::OnNum1Pressed(const FInputActionValue& Value)
+{
+	playerSkillComponent->ChooseSkill(1);
+}
+
+void ACustomPlayerController::OnNum2Pressed(const FInputActionValue& Value)
+{
+	playerSkillComponent->ChooseSkill(2);
+}
+
+void ACustomPlayerController::OnNum3Pressed(const FInputActionValue& Value)
+{
+	playerSkillComponent->ChooseSkill(3);
+}
+
 void ACustomPlayerController::OnRightMousePressed(const FInputActionValue& Value)
 {
 	if (!playerSkillComponent) return;
@@ -323,15 +339,15 @@ void ACustomPlayerController::OnRightMouseReleased(const FInputActionValue& Valu
 	}
 }
 
-void ACustomPlayerController::OnMouseWheelUp(const FInputActionValue& Value)
-{
-	playerSkillComponent->SwitchSkill(1);
-}
-
-void ACustomPlayerController::OnMouseWheelDown(const FInputActionValue& Value)
-{
-	playerSkillComponent->SwitchSkill(-1);
-}
+//void ACustomPlayerController::OnMouseWheelUp(const FInputActionValue& Value)
+//{
+//	playerSkillComponent->SwitchSkill(1);
+//}
+//
+//void ACustomPlayerController::OnMouseWheelDown(const FInputActionValue& Value)
+//{
+//	playerSkillComponent->SwitchSkill(-1);
+//}
 
 void ACustomPlayerController::OpenPackage()
 {

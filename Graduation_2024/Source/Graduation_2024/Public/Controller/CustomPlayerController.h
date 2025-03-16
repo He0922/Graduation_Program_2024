@@ -69,9 +69,11 @@ public:
 	class UInputAction* MouseRightButtonAction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
-	class UInputAction* MouseWheelUpAction;
+	class UInputAction* Num1Action;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
-	class UInputAction* MouseWheelDownAction;
+	class UInputAction* Num2Action;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
+	class UInputAction* Num3Action;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input|Action")
 	class UInputAction* OpenPackageAction;
@@ -103,9 +105,9 @@ public:
 	void OnMouseLeftButtonPressed(const FInputActionValue& Value);
 	void OnRightMousePressed(const FInputActionValue& Value);
 	void OnRightMouseReleased(const FInputActionValue& Value);
-
-	void OnMouseWheelUp(const FInputActionValue& Value);
-	void OnMouseWheelDown(const FInputActionValue& Value);
+	void OnNum1Pressed(const FInputActionValue& Value);
+	void OnNum2Pressed(const FInputActionValue& Value);
+	void OnNum3Pressed(const FInputActionValue& Value);
 
 	void OpenPackage();
 #pragma endregion

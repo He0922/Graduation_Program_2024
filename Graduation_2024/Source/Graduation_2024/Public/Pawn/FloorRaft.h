@@ -76,6 +76,8 @@ public:
 	// ÈÃ´¬³¯ÏòÏà»ú
 	void RotateTowardsCamera(float DeltaTime);
 
+	void MoveForward(float deltaTime);
+
 	float FloorRaftSpeed;
 	float GetFloorRaftSpeed();
 
