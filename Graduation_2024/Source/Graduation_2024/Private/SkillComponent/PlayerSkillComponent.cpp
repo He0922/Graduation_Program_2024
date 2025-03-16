@@ -24,7 +24,7 @@ void UPlayerSkillComponent::BeginPlay()
 	//得到玩家类
 	playerCharacter = Cast<APlayerCharacter>(GetOwner());
 
-	nowSkillType = ESkillType::Scan;
+	nowSkillType = ESkillType::Common;
 }
 
 void UPlayerSkillComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -43,6 +43,11 @@ void UPlayerSkillComponent::SwitchSkill(int32 Direction)
 
 	// 触发武器切换逻辑（例如更新UI或装备武器）
 	UE_LOG(LogTemp, Warning, TEXT("Switched to skill: %d"), NewIndex);
+}
+
+void UPlayerSkillComponent::ChooseSkill(int32 Direction)
+{
+	nowSkillType = static_cast<ESkillType>(Direction);
 }
 
 #pragma region Cold Time
@@ -107,10 +112,10 @@ float UPlayerSkillComponent::GetPlayerNowEnergy()
 //开始扫描
 void UPlayerSkillComponent::StartScan()
 {
-	//if (IFScanIsInCold)
-	//{
-	//	return;
-	//}
+	if (IFScanIsInCold)
+	{
+		return;
+	}
 
 	StartScanEvent.Broadcast();
 
@@ -125,10 +130,10 @@ void UPlayerSkillComponent::StartScan()
 //结束扫描
 void UPlayerSkillComponent::EndScan()
 {
-	//if (IFScanIsInCold)
-	//{
-	//	return;
-	//}
+	if (IFScanIsInCold)
+	{
+		return;
+	}
 
 	EndScanEvent.Broadcast();
 

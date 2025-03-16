@@ -12,6 +12,7 @@ class UNiagaraSystem;
 UENUM(BlueprintType)
 enum class ESkillType : uint8
 {
+	Common,
 	Scan,
 	Inter,
 	KickFire,
@@ -49,6 +50,8 @@ public:
 	UNiagaraSystem* SkillChangVFX;
 
 	void SwitchSkill(int32 Direction);
+
+	void ChooseSkill(int32 Direction);
 
 //¿‰»¥ ±º‰
 #pragma region Cold Time

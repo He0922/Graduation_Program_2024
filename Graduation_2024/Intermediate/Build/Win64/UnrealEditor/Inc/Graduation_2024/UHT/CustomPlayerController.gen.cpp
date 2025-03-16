@@ -75,11 +75,15 @@ struct Z_Construct_UClass_ACustomPlayerController_Statics
 		{ "Category", "Input|Action" },
 		{ "ModuleRelativePath", "Public/Controller/CustomPlayerController.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MouseWheelUpAction_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Num1Action_MetaData[] = {
 		{ "Category", "Input|Action" },
 		{ "ModuleRelativePath", "Public/Controller/CustomPlayerController.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MouseWheelDownAction_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Num2Action_MetaData[] = {
+		{ "Category", "Input|Action" },
+		{ "ModuleRelativePath", "Public/Controller/CustomPlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Num3Action_MetaData[] = {
 		{ "Category", "Input|Action" },
 		{ "ModuleRelativePath", "Public/Controller/CustomPlayerController.h" },
 	};
@@ -98,8 +102,9 @@ struct Z_Construct_UClass_ACustomPlayerController_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_climbAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MouseLeftButtonAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MouseRightButtonAction;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MouseWheelUpAction;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MouseWheelDownAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Num1Action;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Num2Action;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Num3Action;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OpenPackageAction;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -118,8 +123,9 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerC
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_climbAction = { "climbAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, climbAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_climbAction_MetaData), NewProp_climbAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_MouseLeftButtonAction = { "MouseLeftButtonAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, MouseLeftButtonAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MouseLeftButtonAction_MetaData), NewProp_MouseLeftButtonAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_MouseRightButtonAction = { "MouseRightButtonAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, MouseRightButtonAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MouseRightButtonAction_MetaData), NewProp_MouseRightButtonAction_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_MouseWheelUpAction = { "MouseWheelUpAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, MouseWheelUpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MouseWheelUpAction_MetaData), NewProp_MouseWheelUpAction_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_MouseWheelDownAction = { "MouseWheelDownAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, MouseWheelDownAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MouseWheelDownAction_MetaData), NewProp_MouseWheelDownAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num1Action = { "Num1Action", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, Num1Action), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Num1Action_MetaData), NewProp_Num1Action_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num2Action = { "Num2Action", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, Num2Action), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Num2Action_MetaData), NewProp_Num2Action_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num3Action = { "Num3Action", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, Num3Action), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Num3Action_MetaData), NewProp_Num3Action_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_OpenPackageAction = { "OpenPackageAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACustomPlayerController, OpenPackageAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OpenPackageAction_MetaData), NewProp_OpenPackageAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACustomPlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_PlayerStatus_Underlying,
@@ -132,8 +138,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACustomPl
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_climbAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_MouseLeftButtonAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_MouseRightButtonAction,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_MouseWheelUpAction,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_MouseWheelDownAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num1Action,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num2Action,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_Num3Action,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACustomPlayerController_Statics::NewProp_OpenPackageAction,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACustomPlayerController_Statics::PropPointers) < 2048);
@@ -177,10 +184,10 @@ ACustomPlayerController::~ACustomPlayerController() {}
 struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACustomPlayerController, ACustomPlayerController::StaticClass, TEXT("ACustomPlayerController"), &Z_Registration_Info_UClass_ACustomPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACustomPlayerController), 2532339088U) },
+		{ Z_Construct_UClass_ACustomPlayerController, ACustomPlayerController::StaticClass, TEXT("ACustomPlayerController"), &Z_Registration_Info_UClass_ACustomPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACustomPlayerController), 2111869607U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_13964384(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_3542560153(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Controller_CustomPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
