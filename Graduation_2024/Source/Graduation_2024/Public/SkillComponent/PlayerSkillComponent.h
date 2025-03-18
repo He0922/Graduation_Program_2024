@@ -42,16 +42,27 @@ protected:
 	//玩家获取
 	class APlayerCharacter* playerCharacter;
 
+#pragma region ChangeSkill
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
 	ESkillType nowSkillType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
-	UNiagaraSystem* SkillChangVFX;
+	UNiagaraSystem* ToScanSkillVFX;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	UNiagaraSystem* ToInterSkillVFX;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	UNiagaraSystem* ToKickFireSkillVFX;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	FVector ChangeSkillEffectPos = FVector(0, 0, 75);;
+
 
 	void SwitchSkill(int32 Direction);
 
 	void ChooseSkill(int32 Direction);
+
+
+#pragma endregion
 
 //冷却时间
 #pragma region Cold Time

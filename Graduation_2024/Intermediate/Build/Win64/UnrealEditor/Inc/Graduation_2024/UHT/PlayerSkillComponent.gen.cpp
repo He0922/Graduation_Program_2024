@@ -442,7 +442,19 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 		{ "Category", "SkillType" },
 		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SkillChangVFX_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ToScanSkillVFX_MetaData[] = {
+		{ "Category", "SkillType" },
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ToInterSkillVFX_MetaData[] = {
+		{ "Category", "SkillType" },
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ToKickFireSkillVFX_MetaData[] = {
+		{ "Category", "SkillType" },
+		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ChangeSkillEffectPos_MetaData[] = {
 		{ "Category", "SkillType" },
 		{ "ModuleRelativePath", "Public/SkillComponent/PlayerSkillComponent.h" },
 	};
@@ -571,7 +583,10 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_nowSkillType_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_nowSkillType;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_SkillChangVFX;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ToScanSkillVFX;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ToInterSkillVFX;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ToKickFireSkillVFX;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ChangeSkillEffectPos;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanDistance;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanEnergyCost;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ScanECFrequency;
@@ -609,7 +624,10 @@ struct Z_Construct_UClass_UPlayerSkillComponent_Statics
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_nowSkillType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_nowSkillType = { "nowSkillType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, nowSkillType), Z_Construct_UEnum_Graduation_2024_ESkillType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_nowSkillType_MetaData), NewProp_nowSkillType_MetaData) }; // 77657115
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_SkillChangVFX = { "SkillChangVFX", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, SkillChangVFX), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SkillChangVFX_MetaData), NewProp_SkillChangVFX_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ToScanSkillVFX = { "ToScanSkillVFX", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ToScanSkillVFX), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToScanSkillVFX_MetaData), NewProp_ToScanSkillVFX_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ToInterSkillVFX = { "ToInterSkillVFX", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ToInterSkillVFX), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToInterSkillVFX_MetaData), NewProp_ToInterSkillVFX_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ToKickFireSkillVFX = { "ToKickFireSkillVFX", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ToKickFireSkillVFX), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToKickFireSkillVFX_MetaData), NewProp_ToKickFireSkillVFX_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ChangeSkillEffectPos = { "ChangeSkillEffectPos", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ChangeSkillEffectPos), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChangeSkillEffectPos_MetaData), NewProp_ChangeSkillEffectPos_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanDistance = { "ScanDistance", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanDistance_MetaData), NewProp_ScanDistance_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanEnergyCost = { "ScanEnergyCost", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanEnergyCost), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanEnergyCost_MetaData), NewProp_ScanEnergyCost_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanECFrequency = { "ScanECFrequency", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerSkillComponent, ScanECFrequency), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScanECFrequency_MetaData), NewProp_ScanECFrequency_MetaData) };
@@ -634,7 +652,10 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerSkillCom
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerSkillComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_nowSkillType_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_nowSkillType,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_SkillChangVFX,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ToScanSkillVFX,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ToInterSkillVFX,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ToKickFireSkillVFX,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ChangeSkillEffectPos,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanDistance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanEnergyCost,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerSkillComponent_Statics::NewProp_ScanECFrequency,
@@ -697,10 +718,10 @@ struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_20
 		{ ESkillType_StaticEnum, TEXT("ESkillType"), &Z_Registration_Info_UEnum_ESkillType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 77657115U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 1874973680U) },
+		{ Z_Construct_UClass_UPlayerSkillComponent, UPlayerSkillComponent::StaticClass, TEXT("UPlayerSkillComponent"), &Z_Registration_Info_UClass_UPlayerSkillComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSkillComponent), 1074901760U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_3206657925(TEXT("/Script/Graduation_2024"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_1166063128(TEXT("/Script/Graduation_2024"),
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_SkillComponent_PlayerSkillComponent_h_Statics::EnumInfo));

@@ -47,7 +47,35 @@ void UPlayerSkillComponent::SwitchSkill(int32 Direction)
 
 void UPlayerSkillComponent::ChooseSkill(int32 Direction)
 {
+	if (nowSkillType == static_cast<ESkillType>(Direction))
+	{
+		return;
+	}
+
 	nowSkillType = static_cast<ESkillType>(Direction);
+
+	FVector initpos = playerCharacter->GetActorLocation() + playerCharacter->GetActorForwardVector() * ChangeSkillEffectPos;
+	FRotator rotater = playerCharacter->GetActorRotation();
+
+	if (!(ToScanSkillVFX && ToInterSkillVFX && ToKickFireSkillVFX))
+	{
+		return;
+	}
+
+	switch (nowSkillType)
+	{
+		case ESkillType::Scan:
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ToScanSkillVFX, initpos, rotater);
+			break;
+		case ESkillType::Inter:
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ToInterSkillVFX, initpos, rotater);
+			break;
+		case ESkillType::KickFire:
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ToKickFireSkillVFX, initpos, rotater);
+			break;
+		default:
+			break;
+	}
 }
 
 #pragma region Cold Time
