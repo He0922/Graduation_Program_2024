@@ -47,10 +47,13 @@ void UPlayerSkillComponent::SwitchSkill(int32 Direction)
 
 void UPlayerSkillComponent::ChooseSkill(int32 Direction)
 {
-	if (nowSkillType == static_cast<ESkillType>(Direction))
+	if (nowSkillType == static_cast<ESkillType>(Direction) || InChangeSkillColdTime)
 	{
 		return;
 	}
+
+	InChangeSkillColdTime = true;
+	GetWorld()->GetTimerManager().SetTimer(ChangeSkillColdTimeTh, this, &UPlayerSkillComponent::SetChangeSkillColdTimeState, ChangeSkillColdTime, false, ChangeSkillColdTime);
 
 	nowSkillType = static_cast<ESkillType>(Direction);
 
@@ -76,6 +79,11 @@ void UPlayerSkillComponent::ChooseSkill(int32 Direction)
 		default:
 			break;
 	}
+}
+
+void UPlayerSkillComponent::SetChangeSkillColdTimeState()
+{
+	InChangeSkillColdTime = false;
 }
 
 #pragma region Cold Time
