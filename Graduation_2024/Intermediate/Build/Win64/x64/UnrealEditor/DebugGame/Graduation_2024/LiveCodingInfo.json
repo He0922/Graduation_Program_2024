@@ -39,6 +39,7 @@
 			"BlackWuChangAnimInstance.cpp.obj",
 			"Mayfly.cpp.obj",
 			"PlayerCharacter.cpp.obj",
+			"CustomPlayerController.cpp.obj",
 			"PlayerAIController.cpp.obj",
 			"CustomGameModeBase.cpp.obj",
 			"BlockActor.cpp.obj",
@@ -61,7 +62,6 @@
 			"ConversationUW.cpp.obj",
 			"Graduation_2024.init.gen.cpp.obj",
 			"PlayerSkillComponent.gen.cpp.obj",
-			"CustomPlayerController.cpp.obj",
 			"PlayerSkillComponent.cpp.obj"
 		]
 	}

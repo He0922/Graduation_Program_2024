@@ -47,19 +47,28 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
 	ESkillType nowSkillType;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ChangeSkill")
+	float ChangeSkillColdTime = 0.5f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ChangeSkill")
 	UNiagaraSystem* ToScanSkillVFX;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ChangeSkill")
 	UNiagaraSystem* ToInterSkillVFX;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ChangeSkill")
 	UNiagaraSystem* ToKickFireSkillVFX;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SkillType")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ChangeSkill")
 	FVector ChangeSkillEffectPos = FVector(0, 0, 75);;
 
 
 	void SwitchSkill(int32 Direction);
 
 	void ChooseSkill(int32 Direction);
+
+private:
+	bool InChangeSkillColdTime;
+	void SetChangeSkillColdTimeState();
+	//«–ªªººƒ‹¿‰»¥
+	FTimerHandle ChangeSkillColdTimeTh;
 
 
 #pragma endregion

@@ -17,6 +17,7 @@
 			"CustomPlayerStatus.gen.cpp.obj",
 			"CustomPlayerStatusInterface.gen.cpp.obj",
 			"FloorRaft.gen.cpp.obj",
+			"Graduation_2024.init.gen.cpp.obj",
 			"InventoryComponent.gen.cpp.obj",
 			"ItemActor.gen.cpp.obj",
 			"ItemWidget.gen.cpp.obj",
@@ -31,6 +32,7 @@
 			"PlayerAttributesUW.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
 			"PlayerCharacterMovementComponent.gen.cpp.obj",
+			"PlayerSkillComponent.gen.cpp.obj",
 			"Runepaper.gen.cpp.obj",
 			"Graduation_2024.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
@@ -60,8 +62,6 @@
 			"ArchivalUW.cpp.obj",
 			"PlayerAttributesUW.cpp.obj",
 			"ConversationUW.cpp.obj",
-			"Graduation_2024.init.gen.cpp.obj",
-			"PlayerSkillComponent.gen.cpp.obj",
 			"PlayerSkillComponent.cpp.obj"
 		]
 	}
