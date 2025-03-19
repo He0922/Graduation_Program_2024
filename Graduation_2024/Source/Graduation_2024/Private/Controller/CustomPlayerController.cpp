@@ -78,9 +78,9 @@ void ACustomPlayerController::SetupInputComponent()
 		EnhancedInputComponent->BindAction(MouseLeftButtonAction, ETriggerEvent::Started, this, &ACustomPlayerController::OnMouseLeftButtonPressed);
 		EnhancedInputComponent->BindAction(MouseRightButtonAction, ETriggerEvent::Started, this, &ACustomPlayerController::OnRightMousePressed);
 		EnhancedInputComponent->BindAction(MouseRightButtonAction, ETriggerEvent::Completed, this, &ACustomPlayerController::OnRightMouseReleased);
-		EnhancedInputComponent->BindAction(Num1Action, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnNum1Pressed);
-		EnhancedInputComponent->BindAction(Num2Action, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnNum2Pressed);
-		EnhancedInputComponent->BindAction(Num3Action, ETriggerEvent::Triggered, this, &ACustomPlayerController::OnNum3Pressed);
+		EnhancedInputComponent->BindAction(Num1Action, ETriggerEvent::Started, this, &ACustomPlayerController::OnNum1Pressed);
+		EnhancedInputComponent->BindAction(Num2Action, ETriggerEvent::Started, this, &ACustomPlayerController::OnNum2Pressed);
+		EnhancedInputComponent->BindAction(Num3Action, ETriggerEvent::Started, this, &ACustomPlayerController::OnNum3Pressed);
 
 		//±³°ü
 		EnhancedInputComponent->BindAction(OpenPackageAction, ETriggerEvent::Started, this, &ACustomPlayerController::OpenPackage);
