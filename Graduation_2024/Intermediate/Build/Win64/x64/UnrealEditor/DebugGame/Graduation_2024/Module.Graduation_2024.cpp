@@ -36,6 +36,7 @@
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Character/BlackWuChang/BlackWuChangAnimInstance.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Character/Mayfly.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Character/Player/PlayerCharacter.cpp"
+#include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Controller/CustomPlayerController.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/Controller/PlayerAIController.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/GameModeBase/CustomGameModeBase.cpp"
 #include "D:/UE/Programes/Graduation_Program_2024/Graduation_2024/Source/Graduation_2024/Private/InterectBlock/BlockActor.cpp"
