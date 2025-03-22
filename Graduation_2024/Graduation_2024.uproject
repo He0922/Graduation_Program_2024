@@ -57,6 +57,10 @@
 			"Name": "Shadersource_WaterfallTool2",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/38242dcaef3047dbbe29f2886e0ff016"
+		},
+		{
+			"Name": "ApexDestruction",
+			"Enabled": true
 		}
 	]
 }
