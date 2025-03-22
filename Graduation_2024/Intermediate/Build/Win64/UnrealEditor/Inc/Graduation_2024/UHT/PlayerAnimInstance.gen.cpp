@@ -56,6 +56,10 @@ struct Z_Construct_UClass_UPlayerAnimInstance_Statics
 		{ "Category", "Reference" },
 		{ "ModuleRelativePath", "Public/Animation/PlayerAnimInstance.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GroundDirection_MetaData[] = {
+		{ "Category", "Reference" },
+		{ "ModuleRelativePath", "Public/Animation/PlayerAnimInstance.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AirSpeed_MetaData[] = {
 		{ "Category", "Reference" },
 		{ "ModuleRelativePath", "Public/Animation/PlayerAnimInstance.h" },
@@ -89,6 +93,7 @@ struct Z_Construct_UClass_UPlayerAnimInstance_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerCMC;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FloorRaft;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_GroundSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_GroundDirection;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_AirSpeed;
 	static void NewProp_bShouldMove_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShouldMove;
@@ -111,6 +116,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerAnimIns
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_PlayerCMC = { "PlayerCMC", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, PlayerCMC), Z_Construct_UClass_UPlayerCharacterMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerCMC_MetaData), NewProp_PlayerCMC_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_FloorRaft = { "FloorRaft", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, FloorRaft), Z_Construct_UClass_AFloorRaft_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FloorRaft_MetaData), NewProp_FloorRaft_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_GroundSpeed = { "GroundSpeed", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, GroundSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GroundSpeed_MetaData), NewProp_GroundSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_GroundDirection = { "GroundDirection", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, GroundDirection), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GroundDirection_MetaData), NewProp_GroundDirection_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_AirSpeed = { "AirSpeed", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, AirSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AirSpeed_MetaData), NewProp_AirSpeed_MetaData) };
 void Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_bShouldMove_SetBit(void* Obj)
 {
@@ -136,6 +142,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerAn
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_PlayerCMC,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_FloorRaft,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_GroundSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_GroundDirection,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_AirSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_bShouldMove,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_bIsFalling,
@@ -184,14 +191,14 @@ UPlayerAnimInstance::~UPlayerAnimInstance() {}
 // End Class UPlayerAnimInstance
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics
+struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerAnimInstance, UPlayerAnimInstance::StaticClass, TEXT("UPlayerAnimInstance"), &Z_Registration_Info_UClass_UPlayerAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAnimInstance), 2722037989U) },
+		{ Z_Construct_UClass_UPlayerAnimInstance, UPlayerAnimInstance::StaticClass, TEXT("UPlayerAnimInstance"), &Z_Registration_Info_UClass_UPlayerAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAnimInstance), 4021427885U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_3152702979(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_3780234139(TEXT("/Script/Graduation_2024"),
+	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

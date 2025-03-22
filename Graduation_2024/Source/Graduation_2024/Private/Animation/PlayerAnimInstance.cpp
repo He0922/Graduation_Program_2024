@@ -35,6 +35,7 @@ void UPlayerAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	}
 
 	GetGroundSpeed();
+	GetGroundDirection();
 	GetAirSpeed();
 	GetShouldMove();
 	GetIsFalling();
@@ -48,6 +49,17 @@ void UPlayerAnimInstance::GetGroundSpeed()
 {
 	GroundSpeed = UKismetMathLibrary::VSizeXY(Player->GetVelocity());
 	
+}
+
+
+float UPlayerAnimInstance::GetGroundDirection()
+{
+	FRotator PlayerRotation = Player->GetActorRotation();
+	FVector PlayVelocity = Player->GetVelocity();
+
+	GroundDirection = CalculateDirection(PlayVelocity, PlayerRotation);
+
+	return GroundDirection;
 }
 
 
