@@ -38,6 +38,10 @@ public:
 	void GetGroundSpeed();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
+	float GroundDirection;
+	float GetGroundDirection();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
 	float AirSpeed;
 	void GetAirSpeed();
 
