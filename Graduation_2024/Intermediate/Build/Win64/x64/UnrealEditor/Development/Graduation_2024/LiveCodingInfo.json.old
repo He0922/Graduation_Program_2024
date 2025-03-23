@@ -2,7 +2,6 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Graduation_2024.cpp.obj": [
-			"PackageWidget.gen.cpp.obj",
 			"Graduation_2024.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
 			"Archival.cpp.obj",
@@ -19,6 +18,10 @@
 			"ArchivalInterface.cpp.obj",
 			"CustomPlayerStatusInterface.cpp.obj",
 			"PlayerAttributesInterface.cpp.obj",
+			"InventoryComponent.cpp.obj",
+			"ItemActor.cpp.obj",
+			"ItemWidget.cpp.obj",
+			"PackageWidget.cpp.obj",
 			"CustomFloatingPawnMovement.cpp.obj",
 			"MayflyMovementComponent.cpp.obj",
 			"PlayerCharacterMovementComponent.cpp.obj",
@@ -50,6 +53,7 @@
 			"Mayfly.gen.cpp.obj",
 			"MayflyMovementComponent.gen.cpp.obj",
 			"MyPawn.gen.cpp.obj",
+			"PackageWidget.gen.cpp.obj",
 			"PlayerAIController.gen.cpp.obj",
 			"PlayerAnimInstance.gen.cpp.obj",
 			"PlayerAttributes.gen.cpp.obj",
@@ -58,11 +62,7 @@
 			"PlayerCharacter.gen.cpp.obj",
 			"PlayerCharacterMovementComponent.gen.cpp.obj",
 			"PlayerSkillComponent.gen.cpp.obj",
-			"Runepaper.gen.cpp.obj",
-			"InventoryComponent.cpp.obj",
-			"ItemActor.cpp.obj",
-			"ItemWidget.cpp.obj",
-			"PackageWidget.cpp.obj"
+			"Runepaper.gen.cpp.obj"
 		]
 	}
 }
