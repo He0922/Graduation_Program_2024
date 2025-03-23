@@ -31,7 +31,7 @@ void UPlayerAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	FloorRaft = Cast<AFloorRaft>(Player->CollisionActor);
 	if (FloorRaft)
 	{
-		GetRowlingSpeed();
+		GetRowlingState();
 	}
 
 	GetGroundSpeed();
@@ -99,7 +99,17 @@ void UPlayerAnimInstance::GetPlayerCurrentStatus()
 }
 
 
-void UPlayerAnimInstance::GetRowlingSpeed()
+void UPlayerAnimInstance::GetRowlingState()
 {
-	RowlingSpeed = FloorRaft->GetFloorRaftSpeed();
+	RowlingState = FloorRaft->GetFloorRaftSpeed();
+}
+
+void UPlayerAnimInstance::OnStartAddRowForceNotify()
+{
+	FloorRaft->StartAddRowForce();
+}
+
+void UPlayerAnimInstance::OnStopAddRowForceNotify()
+{
+	FloorRaft->StopAddRowForce();
 }

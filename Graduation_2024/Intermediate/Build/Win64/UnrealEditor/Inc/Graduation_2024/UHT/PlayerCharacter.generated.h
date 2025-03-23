@@ -18,7 +18,7 @@ class UInventoryComponent;
 #endif
 #define GRADUATION_2024_PlayerCharacter_generated_h
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execMontageToPlay); \
 	DECLARE_FUNCTION(execGetInventoryComponent); \
 	DECLARE_FUNCTION(execOnTimelineUpdate); \
@@ -33,7 +33,7 @@ class UInventoryComponent;
 	DECLARE_FUNCTION(execMoveToTarget);
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_INCLASS_NO_PURE_DECLS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -43,7 +43,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<APlayerCharacter*>(this); }
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_ENHANCED_CONSTRUCTORS \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APlayerCharacter(APlayerCharacter&&); \
@@ -55,13 +55,13 @@ public: \
 	NO_API virtual ~APlayerCharacter();
 
 
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_37_PROLOG
-#define FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_GENERATED_BODY \
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_37_PROLOG
+#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_INCLASS_NO_PURE_DECLS \
-	FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_ENHANCED_CONSTRUCTORS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_INCLASS_NO_PURE_DECLS \
+	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h_40_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -69,7 +69,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> GRADUATION_2024_API UClass* StaticClass<class APlayerCharacter>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h
+#define CURRENT_FILE_ID FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Player_PlayerCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -8,5 +8,8 @@
 /NODEFAULTLIB
 "D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.obj"
 "D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CrazyIvy\Module.CrazyIvy.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CrazyIvy\CrazyIvy.init.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CrazyIvy\IvyGeneratorBase.gen.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CrazyIvy\SMeshData.gen.cpp.obj"
 "D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CrazyIvy\Default.rc2.res"
 /OUT:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CrazyIvy\UnrealEditor-CrazyIvy-Win64-DebugGame.lib"

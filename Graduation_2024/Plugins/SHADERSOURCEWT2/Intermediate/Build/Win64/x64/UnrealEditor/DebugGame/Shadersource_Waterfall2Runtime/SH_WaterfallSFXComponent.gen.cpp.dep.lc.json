@@ -1,0 +1,28 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2runtime\\uht\\sh_waterfallsfxcomponent.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\shadersource_waterfall2runtime\\definitions.shadersource_waterfall2runtime.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2runtime\\public\\components\\sh_waterfallsfxcomponent.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\audiocomponent.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\public\\audio\\soundparametercontrollerinterface.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundparametercontrollerinterface.generated.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\audioextensions\\public\\iaudioparametertransmitter.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\audiomixer\\public\\quartz\\audiomixerquantizedcommands.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\audiomixer\\public\\quartz\\audiomixerclock.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\audiomixer\\public\\quartz\\quartzmetronome.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\sound\\quartzsubscription.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\sound\\quartzsubscriptiontoken.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\core\\public\\containers\\consumeallmpmcqueue.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\audiocomponent.generated.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2runtime\\public\\components\\ish_waterfallfxcomponent.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2runtime\\uht\\ish_waterfallfxcomponent.generated.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2runtime\\uht\\sh_waterfallsfxcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

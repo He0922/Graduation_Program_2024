@@ -66,8 +66,12 @@ public:
 	void GetPlayerCurrentStatus();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
-	float RowlingSpeed;
-	void GetRowlingSpeed();
+	float RowlingState;
+	void GetRowlingState();
 
+	UFUNCTION(BlueprintCallable, Category = "Animation")
+	void OnStartAddRowForceNotify();
+	UFUNCTION(BlueprintCallable, Category = "Animation")
+	void OnStopAddRowForceNotify();
 
 };

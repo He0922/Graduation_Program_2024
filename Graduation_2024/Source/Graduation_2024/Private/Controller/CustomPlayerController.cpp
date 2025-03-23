@@ -143,14 +143,21 @@ void ACustomPlayerController::HandleGroundMovementInput(const FInputActionValue&
 		}
 		else
 		{
-			//船要跟着相机转，把那个移动的挪到船的组件上去了~~
-			//然后放在这感觉能少次判断？
 			if (AFloorRaft* floorRaft = Cast<AFloorRaft>(CurrentControllerPawn))
 			{
+				if (movementVector.X > 0.1f)
+				{
+					floorRaft->StartRow();
+				}
+				else
+				{
+					floorRaft->StopRow();
+				}
+
 				FVector tempVec = floorRaft->GetBoatForward();
 				tempVec.Z = 0;
 
-				CurrentControllerPawn->AddMovementInput(tempVec, movementVector.X);
+				//CurrentControllerPawn->AddMovementInput(tempVec, movementVector.X);
 			}
 		}
 	}
@@ -307,6 +314,8 @@ void ACustomPlayerController::OnRightMousePressed(const FInputActionValue& Value
 {
 	if (!playerSkillComponent) return;
 
+	playerSkillComponent->IsInSkill = true;
+
 	switch (playerSkillComponent->nowSkillType)
 	{
 	case ESkillType::Scan:
@@ -328,6 +337,8 @@ void ACustomPlayerController::OnRightMousePressed(const FInputActionValue& Value
 void ACustomPlayerController::OnRightMouseReleased(const FInputActionValue& Value)
 {
 	if (!playerSkillComponent) return;
+
+	playerSkillComponent->IsInSkill = false;
 
 	switch (playerSkillComponent->nowSkillType)
 	{

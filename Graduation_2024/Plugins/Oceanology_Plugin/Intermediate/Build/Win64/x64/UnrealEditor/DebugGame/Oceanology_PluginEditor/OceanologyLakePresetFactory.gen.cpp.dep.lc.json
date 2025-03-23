@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugineditor\\uht\\oceanologylakepresetfactory.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\oceanology_plugineditor\\definitions.oceanology_plugineditor.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\source\\oceanology_plugineditor\\public\\dataasset\\oceanologylakepresetfactory.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugineditor\\uht\\oceanologylakepresetfactory.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

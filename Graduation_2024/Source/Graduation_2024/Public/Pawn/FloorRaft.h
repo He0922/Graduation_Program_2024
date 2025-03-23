@@ -7,6 +7,7 @@
 #include "Character/Player/CustomPlayerStatus.h"
 #include "InputActionValue.h"
 #include "Interface/CustomPlayerStatusInterface.h"
+#include "Components/TimelineComponent.h"
 
 #include "FloorRaft.generated.h"
 
@@ -54,6 +55,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FloorRaft Player Stand Location")
 	class UStaticMeshComponent* PlayerStandLocation;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Timeline")
+	UTimelineComponent* TimelineComponent;
+
 #pragma region Movement status
 public:
 	// 目标旋转
@@ -64,9 +68,14 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float MovementSpeed = 1.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float RotateMinSpeed = 500.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float sinkForce = 10.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	UCurveFloat* DecelerationCurve;
 
 	//获取船的“朝前向量”，到时候要是模型改过来就直接把这个改成GetForwardVector就行
 	FVector GetBoatForward() {return floorRafteMesh->GetForwardVector(); }
@@ -76,10 +85,35 @@ public:
 	// 让船朝向相机
 	void RotateTowardsCamera(float DeltaTime);
 
-	void MoveForward(float deltaTime);
+	UPROPERTY(EditAnywhere, Category = "Curve")
+	UCurveFloat* FloatCurve;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float RowAnimeState;
 
 	float FloorRaftSpeed;
 	float GetFloorRaftSpeed();
+
+	UFUNCTION(BlueprintCallable, Category = "Animation")
+	void StartAddRowForce() { IfAddRowForce = true; }
+	UFUNCTION(BlueprintCallable, Category = "Animation")
+	void StopAddRowForce() { IfAddRowForce = false; }
+
+	void StartRow();
+	void StopRow();
+
+private:
+	bool IfAddRowForce;
+	float CurrentTime;
+	bool IfHasStartRow;
+
+	FOnTimelineFloat OnTimelineUpdate;
+
+	UFUNCTION()
+	void OnCurveUpdate(float Value);
+
+	void MoveForward(float deltaTime = 0.1f);
+
 
 #pragma endregion
 

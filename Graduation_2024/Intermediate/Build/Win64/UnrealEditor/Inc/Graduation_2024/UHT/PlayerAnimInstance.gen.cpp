@@ -22,9 +22,75 @@ GRADUATION_2024_API UEnum* Z_Construct_UEnum_Graduation_2024_ECustomPlayerStatus
 UPackage* Z_Construct_UPackage__Script_Graduation_2024();
 // End Cross Module References
 
+// Begin Class UPlayerAnimInstance Function OnStartAddRowForceNotify
+struct Z_Construct_UFunction_UPlayerAnimInstance_OnStartAddRowForceNotify_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Animation" },
+		{ "ModuleRelativePath", "Public/Animation/PlayerAnimInstance.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerAnimInstance_OnStartAddRowForceNotify_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerAnimInstance, nullptr, "OnStartAddRowForceNotify", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerAnimInstance_OnStartAddRowForceNotify_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerAnimInstance_OnStartAddRowForceNotify_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPlayerAnimInstance_OnStartAddRowForceNotify()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerAnimInstance_OnStartAddRowForceNotify_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayerAnimInstance::execOnStartAddRowForceNotify)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnStartAddRowForceNotify();
+	P_NATIVE_END;
+}
+// End Class UPlayerAnimInstance Function OnStartAddRowForceNotify
+
+// Begin Class UPlayerAnimInstance Function OnStopAddRowForceNotify
+struct Z_Construct_UFunction_UPlayerAnimInstance_OnStopAddRowForceNotify_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Animation" },
+		{ "ModuleRelativePath", "Public/Animation/PlayerAnimInstance.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerAnimInstance_OnStopAddRowForceNotify_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerAnimInstance, nullptr, "OnStopAddRowForceNotify", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerAnimInstance_OnStopAddRowForceNotify_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerAnimInstance_OnStopAddRowForceNotify_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPlayerAnimInstance_OnStopAddRowForceNotify()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerAnimInstance_OnStopAddRowForceNotify_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayerAnimInstance::execOnStopAddRowForceNotify)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnStopAddRowForceNotify();
+	P_NATIVE_END;
+}
+// End Class UPlayerAnimInstance Function OnStopAddRowForceNotify
+
 // Begin Class UPlayerAnimInstance
 void UPlayerAnimInstance::StaticRegisterNativesUPlayerAnimInstance()
 {
+	UClass* Class = UPlayerAnimInstance::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnStartAddRowForceNotify", &UPlayerAnimInstance::execOnStartAddRowForceNotify },
+		{ "OnStopAddRowForceNotify", &UPlayerAnimInstance::execOnStopAddRowForceNotify },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UPlayerAnimInstance);
 UClass* Z_Construct_UClass_UPlayerAnimInstance_NoRegister()
@@ -84,7 +150,7 @@ struct Z_Construct_UClass_UPlayerAnimInstance_Statics
 		{ "Category", "Reference" },
 		{ "ModuleRelativePath", "Public/Animation/PlayerAnimInstance.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RowlingSpeed_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RowlingState_MetaData[] = {
 		{ "Category", "Reference" },
 		{ "ModuleRelativePath", "Public/Animation/PlayerAnimInstance.h" },
 	};
@@ -104,9 +170,14 @@ struct Z_Construct_UClass_UPlayerAnimInstance_Statics
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ClimbVelocity;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_PlayerCurrentStatus_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_PlayerCurrentStatus;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_RowlingSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_RowlingState;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UPlayerAnimInstance_OnStartAddRowForceNotify, "OnStartAddRowForceNotify" }, // 3444394216
+		{ &Z_Construct_UFunction_UPlayerAnimInstance_OnStopAddRowForceNotify, "OnStopAddRowForceNotify" }, // 2839056301
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UPlayerAnimInstance>::IsAbstract,
 	};
@@ -136,7 +207,7 @@ const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPlayerAnimInsta
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_ClimbVelocity = { "ClimbVelocity", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, ClimbVelocity), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ClimbVelocity_MetaData), NewProp_ClimbVelocity_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_PlayerCurrentStatus_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_PlayerCurrentStatus = { "PlayerCurrentStatus", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, PlayerCurrentStatus), Z_Construct_UEnum_Graduation_2024_ECustomPlayerStatus, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerCurrentStatus_MetaData), NewProp_PlayerCurrentStatus_MetaData) }; // 1372204461
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_RowlingSpeed = { "RowlingSpeed", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, RowlingSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RowlingSpeed_MetaData), NewProp_RowlingSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_RowlingState = { "RowlingState", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, RowlingState), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RowlingState_MetaData), NewProp_RowlingState_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerAnimInstance_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_Player,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_PlayerCMC,
@@ -150,7 +221,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerAn
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_ClimbVelocity,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_PlayerCurrentStatus_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_PlayerCurrentStatus,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_RowlingSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_RowlingState,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerAnimInstance_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerAnimInstance_Statics::DependentSingletons[])() = {
@@ -163,11 +234,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPlayerAnimInstance_Sta
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UPlayerAnimInstance_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerAnimInstance_Statics::PropPointers),
 	0,
 	0x009000A8u,
@@ -191,14 +262,14 @@ UPlayerAnimInstance::~UPlayerAnimInstance() {}
 // End Class UPlayerAnimInstance
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerAnimInstance, UPlayerAnimInstance::StaticClass, TEXT("UPlayerAnimInstance"), &Z_Registration_Info_UClass_UPlayerAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAnimInstance), 4021427885U) },
+		{ Z_Construct_UClass_UPlayerAnimInstance, UPlayerAnimInstance::StaticClass, TEXT("UPlayerAnimInstance"), &Z_Registration_Info_UClass_UPlayerAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAnimInstance), 2470649203U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_3780234139(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_2231212898(TEXT("/Script/Graduation_2024"),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Animation_PlayerAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
