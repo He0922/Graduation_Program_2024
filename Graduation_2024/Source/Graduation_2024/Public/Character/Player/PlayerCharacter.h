@@ -193,6 +193,11 @@ public:
 #pragma endregion
 
 
+#pragma region Timel
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "TimeLine")
+	UTimelineComponent* TimelineComponent;
+#pragma endregion
+
 #pragma region Debug Print
 	// 打印人物属性内容
 	void PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes);
@@ -251,6 +256,8 @@ public:
 	class UBoxComponent* CustomRaftComponent;
 
 	void SetRaftCollider(bool IfUse);
+
+	void AddRowForce(float value);
 #pragma endregion
 
 #pragma region Archival
@@ -281,11 +288,10 @@ public:
 
 
 #pragma region Shoulder View
+	float CurrentTime;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
 	UCurveFloat* CameraCurve;  // 用于平滑过渡的曲线
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
-	UTimelineComponent* CameraTransitionTimeline;
 
 	FVector DefualtCameraPos = FVector(0, 0, 0);
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")

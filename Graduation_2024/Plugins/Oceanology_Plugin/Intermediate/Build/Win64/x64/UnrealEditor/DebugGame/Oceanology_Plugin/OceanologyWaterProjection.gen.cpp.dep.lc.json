@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugin\\uht\\oceanologywaterprojection.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\oceanology_plugin\\definitions.oceanology_plugin.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\source\\oceanology_plugin\\public\\structs\\oceanologywaterprojection.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\oceanology_plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\oceanology_plugin\\uht\\oceanologywaterprojection.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

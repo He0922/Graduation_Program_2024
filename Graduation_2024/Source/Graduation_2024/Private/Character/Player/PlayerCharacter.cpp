@@ -69,7 +69,7 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	playerSkillComponent = CreateDefaultSubobject<UPlayerSkillComponent>(TEXT("SkillComponent"));
 
 	// 创建 Timeline 组件
-	CameraTransitionTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("CameraTransitionTimeline"));
+	TimelineComponent = CreateDefaultSubobject<UTimelineComponent>(TEXT("TimelineComponent"));
 
 	//Inventory组件
 	InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("InventoryComponent"));
@@ -490,6 +490,10 @@ void APlayerCharacter::SetRaftCollider(bool IfUse)
 		CustomRaftComponent->DestroyComponent();
 	}
 }
+void APlayerCharacter::AddRowForce(float value)
+{
+
+}
 #pragma endregion
 
 #pragma region Archival
@@ -502,21 +506,21 @@ void APlayerCharacter::TeleportTo(EArchiveID ArchivalID)
 #pragma region Shoulder View
 void APlayerCharacter::ChangeInShoulderView()
 {
-	if (CameraTransitionTimeline)
+	if (TimelineComponent)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("has CameraTransitionTimeline"));
-		CameraTransitionTimeline->PlayFromStart();  // 开始播放时间线
+		CurrentTime = TimelineComponent->GetPlaybackPosition();
+		TimelineComponent->SetPlaybackPosition(CurrentTime, false);
+		TimelineComponent->Play();
 	}
-
-	//cameraBoom->bUsePawnControlRotation = false;
 }
 
 void APlayerCharacter::ChangeOutShoulderView()
 {
-	if (CameraTransitionTimeline)
+	if (TimelineComponent)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("has CameraTransitionTimeline"));
-		CameraTransitionTimeline->ReverseFromEnd();  // 开始播放时间线
+		CurrentTime = TimelineComponent->GetPlaybackPosition();
+		TimelineComponent->SetPlaybackPosition(CurrentTime, false);
+		TimelineComponent->Reverse();
 	}
 
 	//cameraBoom->bUsePawnControlRotation = true;
@@ -524,15 +528,11 @@ void APlayerCharacter::ChangeOutShoulderView()
 
 void APlayerCharacter::OnTimelineUpdate(float Value)
 {
-	UE_LOG(LogTemp, Warning, TEXT("%f"), Value);
-	// 根据时间曲线插值更新 相机位置
 	camera->SetRelativeLocation(FMath::Lerp(DefualtCameraPos, TargetCameraPos, Value));
 }
 
 void APlayerCharacter::OnTimelineFinished()
 {
-	UE_LOG(LogTemp, Warning, TEXT("%f"), cameraBoom->TargetArmLength);
-	// 结束时，确保 SpringArm 长度保持最终值
 	camera->SetRelativeLocation(TargetCameraPos);
 }
 
@@ -546,8 +546,8 @@ void APlayerCharacter::InitTimeLineCurveFunc()
 		TimelineProgress.BindUFunction(this, FName("OnTimelineUpdate"));
 		TimelineFinished.BindUFunction(this, FName("OnTimelineFinished"));
 
-		CameraTransitionTimeline->AddInterpFloat(CameraCurve, TimelineProgress);
-		CameraTransitionTimeline->SetTimelineFinishedFunc(TimelineFinished);
+		TimelineComponent->AddInterpFloat(CameraCurve, TimelineProgress);
+		TimelineComponent->SetTimelineFinishedFunc(TimelineFinished);
 	}
 }
 

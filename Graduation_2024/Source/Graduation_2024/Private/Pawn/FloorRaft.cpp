@@ -8,6 +8,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/SphereComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Components/TimelineComponent.h"
 
 #include "../DebugHelper.h"
 #include "MovementComponent/CustomFloatingPawnMovement.h"
@@ -46,13 +47,20 @@ AFloorRaft::AFloorRaft(const FObjectInitializer& ObjectInitializer)
 	camera->SetupAttachment(cameraBoom, USpringArmComponent::SocketName);
 	camera->bUsePawnControlRotation = false;
 
+	// 创建 Timeline 组件
+	TimelineComponent = CreateDefaultSubobject<UTimelineComponent>(TEXT("TimelineComponent"));
+
 }
 
 // Called when the game starts or when spawned
 void AFloorRaft::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	UE_LOG(LogTemp, Warning, TEXT("InitRaftTimeLine"));
+
+	OnTimelineUpdate.BindUFunction(this, FName("OnCurveUpdate"));
+	// 添加曲线到时间轴
+	TimelineComponent->AddInterpFloat(FloatCurve, OnTimelineUpdate);
 }
 
 // Called every frame
@@ -61,6 +69,11 @@ void AFloorRaft::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	
 	FloorRaftMove(DeltaTime);
+
+	if (IfAddRowForce)
+	{
+		MoveForward(DeltaTime);
+	}
 }
 
 // Called to bind functionality to input
@@ -80,36 +93,34 @@ void AFloorRaft::NotifyActorEndOverlap(AActor* OtherActor)
 #pragma region Movement
 void AFloorRaft::FloorRaftMove(float deltaTime)
 {
-	if (PawnMovementComponent->Velocity.Size() < 200.0f)
+	if (PawnMovementComponent->Velocity.Size() < RotateMinSpeed)
 	{
 		return;
 	}
 
-	// 获取相机的前向向量
 	FVector CameraForward = camera->GetForwardVector();
-
-	// 计算目标旋转
 	TargetRotation = CameraForward.Rotation();
 
-	// 缓慢过渡船的旋转
 	RotateTowardsCamera(deltaTime);
-
-
-	MoveForward(deltaTime);
 }
 
 // 缓慢过渡船的旋转，使船头朝向相机的方向
 void AFloorRaft::RotateTowardsCamera(float DeltaTime)
 {
-	// 获取当前的船的旋转角度
 	FRotator CurrentRotation = GetActorRotation();
 
-	CurrentRotation.Pitch = 0;
-	// 平滑过渡旋转
+	TargetRotation.Pitch = CurrentRotation.Pitch;
+	TargetRotation.Roll = CurrentRotation.Roll;
+	RotationSpeed *= FMath::Min(1, PawnMovementComponent->Velocity.Size() / RotateMinSpeed);
 	FRotator NewRotation = FMath::RInterpTo(CurrentRotation, TargetRotation, DeltaTime, RotationSpeed);
 
-	// 设置船的新旋转角度
 	SetActorRotation(NewRotation);
+}
+
+void AFloorRaft::OnCurveUpdate(float Value)
+{
+	RowAnimeState = Value;
+	UE_LOG(LogTemp, Warning, TEXT("RowState"));
 }
 
 void AFloorRaft::MoveForward(float deltaTime)
@@ -119,15 +130,37 @@ void AFloorRaft::MoveForward(float deltaTime)
 
 	// 控制船的前后移动
 	FVector ForwardMovement = tempVec * MovementSpeed * deltaTime;
-	//AddActorWorldOffset(ForwardMovement, true);
-	PawnMovementComponent->AddRadialForce(ForwardMovement, 0.2f, MovementSpeed, ERadialImpulseFalloff::RIF_Linear);
+	AddMovementInput(ForwardMovement, MovementSpeed);
 }
-
 
 float AFloorRaft::GetFloorRaftSpeed()
 {
-	FloorRaftSpeed = PawnMovementComponent->Velocity.Size();
+	//FloorRaftSpeed = PawnMovementComponent->Velocity.Size();
+	FloorRaftSpeed = RowAnimeState;
 	return FloorRaftSpeed;
+}
+
+void AFloorRaft::StartRow()
+{
+	if (IfHasStartRow)
+		return;
+
+	CurrentTime = TimelineComponent->GetPlaybackPosition();
+	TimelineComponent->SetPlaybackPosition(CurrentTime, false);
+	TimelineComponent->Play();
+
+	IfHasStartRow = true;
+}
+void AFloorRaft::StopRow()
+{
+	if (!IfHasStartRow)
+		return;
+
+	CurrentTime = TimelineComponent->GetPlaybackPosition();
+	TimelineComponent->SetPlaybackPosition(CurrentTime, false);
+	TimelineComponent->Reverse();
+
+	IfHasStartRow = false;
 }
 #pragma endregion
 

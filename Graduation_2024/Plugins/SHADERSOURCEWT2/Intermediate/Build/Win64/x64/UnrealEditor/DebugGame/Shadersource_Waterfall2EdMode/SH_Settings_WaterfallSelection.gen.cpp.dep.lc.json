@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2edmode\\uht\\sh_settings_waterfallselection.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\shadersource_waterfall2edmode\\definitions.shadersource_waterfall2edmode.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2edmode\\public\\edmode\\sh_settings_waterfallselection.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\serialization\\testundeclaredscriptstructobjectreferences.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
+            "d:\\ue\\ue5\\ue_5.4\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2edmode\\uht\\sh_settings_waterfallselection.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -59,6 +59,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ChangeSkill")
 	FVector ChangeSkillEffectPos = FVector(0, 0, 75);;
 
+	bool IsInSkill;
 
 	void SwitchSkill(int32 Direction);
 

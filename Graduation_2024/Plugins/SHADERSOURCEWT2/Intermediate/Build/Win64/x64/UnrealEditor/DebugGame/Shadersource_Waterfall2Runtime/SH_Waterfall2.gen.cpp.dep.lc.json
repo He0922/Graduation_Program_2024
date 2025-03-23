@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2runtime\\uht\\sh_waterfall2.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\shadersource_waterfall2runtime\\definitions.shadersource_waterfall2runtime.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2runtime\\public\\actors\\sh_waterfall2.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2runtime\\public\\editorcomponents\\sh_waterfallgenerationenums.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2runtime\\uht\\sh_waterfallgenerationenums.generated.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2runtime\\public\\generation\\sh_waterfallbuilder_path.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2runtime\\public\\generation\\sh_waterfallbuilder.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2runtime\\public\\generation\\sh_waterfallbuilder_mesh.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2runtime\\public\\generation\\sh_waterfallbuilder_static.h",
+            "d:\\ue\\programes\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2runtime\\uht\\sh_waterfall2.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -47,7 +47,7 @@ void UPlayerSkillComponent::SwitchSkill(int32 Direction)
 
 void UPlayerSkillComponent::ChooseSkill(int32 Direction)
 {
-	if (nowSkillType == static_cast<ESkillType>(Direction) || InChangeSkillColdTime)
+	if (nowSkillType == static_cast<ESkillType>(Direction) || InChangeSkillColdTime || IsInSkill)
 	{
 		return;
 	}
