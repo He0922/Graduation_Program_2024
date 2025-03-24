@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_MyPawn_generated_h
 
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyPawn(); \
 	friend struct Z_Construct_UClass_AMyPawn_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(AMyPawn)
 
 
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyPawn(AMyPawn&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~AMyPawn();
 
 
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_9_PROLOG
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_GENERATED_BODY \
+#define FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_9_PROLOG
+#define FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_ENHANCED_CONSTRUCTORS \
+	FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_INCLASS_NO_PURE_DECLS \
+	FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> GRADUATION_2024_API UClass* StaticClass<class AMyPawn>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h
+#define CURRENT_FILE_ID FID_BS_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Pawn_MyPawn_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

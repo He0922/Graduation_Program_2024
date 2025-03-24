@@ -8,5 +8,8 @@
 /NODEFAULTLIB
 "E:\UE5\Project\Graduation_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.obj"
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\CrazyIvy.init.gen.cpp.obj"
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\IvyGeneratorBase.gen.cpp.obj"
+"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\SMeshData.gen.cpp.obj"
 "E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Default.rc2.res"
 /OUT:"E:\UE5\Project\Graduation_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\UnrealEditor-CrazyIvy.lib"
