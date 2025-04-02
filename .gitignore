@@ -1,6 +1,13 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+# Rider files
+.idea/
+*.iml
+*.DotSettings.user
+*.sln.DotSettings
+DerivedDataCache/**/*
+
 # Compiled Object files
 *.slo
 *.lo
