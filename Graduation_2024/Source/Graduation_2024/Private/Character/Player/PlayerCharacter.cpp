@@ -475,20 +475,17 @@ void APlayerCharacter::SetRaftCollider(bool IfUse)
 		CustomRaftComponent->SetMobility(EComponentMobility::Type::Movable);
 		CustomRaftComponent->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 
-		// ���� BoxComponent �Ĵ�С (���� 100x100x100 ��λ)
 		CustomRaftComponent->SetBoxExtent(FVector(400.0f, 80.0f, 40.0f));
-		// ������ײԤ��Ϊ "WorldDynamic"
-		CustomRaftComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);  // ������ײ
+		CustomRaftComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 		CustomRaftComponent->SetCollisionObjectType(ECollisionChannel::ECC_WorldDynamic);
 
-		// ������ײ��Ӧ��ֻ�� PhysicsBody Ϊ "�赲"������Ϊ "����"
 		//CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_OverlapAll_Deprecated, ECollisionResponse::ECR_Ignore);
 		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_PhysicsBody, ECollisionResponse::ECR_Block);
 		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Visibility, ECollisionResponse::ECR_Ignore);
 		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Camera, ECollisionResponse::ECR_Ignore);
 		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
 
-		CustomRaftComponent->RegisterComponent();  // ע�������ʹ������Ϸ����Ч
+		CustomRaftComponent->RegisterComponent(); 
 		this->AddInstanceComponent(CustomRaftComponent);
 	}
 	else if(CustomRaftComponent)
@@ -528,8 +525,6 @@ void APlayerCharacter::ChangeOutShoulderView()
 		TimelineComponent->SetPlaybackPosition(CurrentTime, false);
 		TimelineComponent->Reverse();
 	}
-
-	//cameraBoom->bUsePawnControlRotation = true;
 }
 
 void APlayerCharacter::OnTimelineUpdate(float Value)
@@ -562,16 +557,13 @@ void APlayerCharacter::InitTimeLineCurveFunc()
 #pragma region TraceLine
 void APlayerCharacter::PerformLineTrace()
 {
-	// ��ȡ��ҿ�����
 	APlayerController* PlayerController = Cast<APlayerController>(GetController());
 	if (!PlayerController) return;
 
-	// ��ȡ��Ļ��������
 	int32 ViewportSizeX, ViewportSizeY;
 	PlayerController->GetViewportSize(ViewportSizeX, ViewportSizeY);
 	FVector2D ScreenCenter = FVector2D(ViewportSizeX * 0.5f, ViewportSizeY * 0.5f);
 
-	// ���������λ�úͷ���
 	FVector CameraLocation;
 	FVector CameraDirection;
 	PlayerController->DeprojectScreenPositionToWorld(
@@ -581,36 +573,31 @@ void APlayerCharacter::PerformLineTrace()
 		CameraDirection
 	);
 
-	// ���������յ�
 	FVector TraceStart = CameraLocation;
 	FVector TraceEnd = CameraLocation + (CameraDirection * TraceDistance);
 
-	// ִ�����߼��
 	FHitResult HitResult;
 	FCollisionQueryParams TraceParams(FName(TEXT("LineTrace")), true, this);
-	TraceParams.bReturnPhysicalMaterial = true; // �Ƿ񷵻���������
+	TraceParams.bReturnPhysicalMaterial = true; 
 
 	bool bHit = GetWorld()->LineTraceSingleByChannel(
 		HitResult,
 		TraceStart,
 		TraceEnd,
-		ECC_Visibility, // ��ײͨ�������Զ��壩
+		ECC_Visibility,
 		TraceParams
 	);
 
-	// �������н��
 	if (bHit)
 	{
 		AActor* HitActor = HitResult.GetActor();
 		FVector HitLocation = HitResult.Location;
 		FVector HitNormal = HitResult.Normal;
 
-		// ���������Ϣ
 		UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *HitActor->GetName());
 		UE_LOG(LogTemp, Warning, TEXT("Hit Location: %s"), *HitLocation.ToString());
 	}
 
-	// ���ӻ���������
 	if (bDrawDebugLine)
 	{
 		FColor DebugColor = bHit ? FColor::Green : FColor::Red;
@@ -619,10 +606,10 @@ void APlayerCharacter::PerformLineTrace()
 			TraceStart,
 			TraceEnd,
 			DebugColor,
-			false, // �Ƿ�־���ʾ
-			2.f,   // ��ʾʱ�����룩
-			0,      // ������ȼ�
-			2.f     // �߿�
+			false, 
+			2.f,   
+			0,     
+			2.f    
 		);
 	}
 }
@@ -670,23 +657,20 @@ void APlayerCharacter::ToggleInventory()
 }
 void APlayerCharacter::PickUpItem()
 {
-	// ����������ײ��
 	FCollisionShape CollisionShape = FCollisionShape::MakeSphere(200.0f);
 
-	// ������ײ��飬���ط�Χ�ڵ���������
 	TArray<FHitResult> HitResults;
 	FCollisionQueryParams CollisionParams;
-	CollisionParams.AddIgnoredActor(GetOwner()); // ��������
+	CollisionParams.AddIgnoredActor(GetOwner()); 
 
 	bool bHit = GetWorld()->SweepMultiByChannel(HitResults, GetActorLocation(), GetActorLocation(), FQuat::Identity, ECC_Visibility, CollisionShape, CollisionParams);
 
 	if (bHit)
 	{
-		// �����ҵ�����������
 		for (const FHitResult& Hit : HitResults)
 		{
 			AActor* HitActor = Hit.GetActor();
-			//Itemʰȡ
+			//Item
 			if (AItemActor* item = Cast<AItemActor>(HitActor))
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Pick Item"));

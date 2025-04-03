@@ -68,7 +68,6 @@ public:
 
 #pragma region Collision
 public:
-	// ��дCollision��ײ�¼�����
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 	virtual void NotifyActorEndOverlap(AActor* OtherActor) override;
 
@@ -80,7 +79,6 @@ public:
 
 #pragma region Player Attributes Interface
 public:
-	// ������Ա���
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerHealthMax;
 
@@ -100,7 +98,6 @@ public:
 	float playerMoveSpeed;
 
 
-	// ʵ��������ԽӿڵĶ���
 	virtual float GetHealth_MAX() const override;
 	virtual void SetHealth_MAX(float MaxHealth) override;
 
@@ -121,7 +118,6 @@ public:
 #pragma endregion
 
 
-// ��������ӳ�䡢���붯��
 #pragma region Player Behavior Control
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
@@ -132,32 +128,27 @@ public:
 
 #pragma region Player Behavior Control Function
 public:
-	//// ���ڿ������ǰ�������ƶ�
 	//UFUNCTION()
 	//void Move(const FInputActionValue& Value);
 
 	UFUNCTION()
 	void MoveToTarget(FVector TargetLocation);
 
-	//// ���ڿ�������ӽ���ת
 	//UFUNCTION()
 	//void Look(const FInputActionValue& Value);
 
 	UFUNCTION()
 	void ObjectInteraction(APawn* ControllerCurrentControlObject);
 
-	//���ת�����������
 	UFUNCTION(BlueprintCallable)
 	void FaceActor(AActor* TargetActor);
 #pragma endregion
 
 
 #pragma region Player Behavior Control Value
-	// �ƶ���ǰ�����ҷ����float
 	float moveFBDirection;
 	float moveLRDirection;
 
-	// �ӽǵ����ҷ����float
 	float lookLRDirection;
 #pragma endregion
 
@@ -171,7 +162,6 @@ public:
 #pragma endregion
 
 
-// �����Զ���Ľ�ɫ�ƶ��������
 #pragma region MovementComponent
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Movement Component")
@@ -183,11 +173,9 @@ public:
 
 #pragma region Player Attribute
 public:
-	// �������Խṹ��
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attribute")
 	FPlayerAttributes fplayerAttributes;
 
-	// ��������ö��
 	UPROPERTY()
 	EPlayerAttributes eplayerAttributes;
 #pragma endregion
@@ -199,27 +187,21 @@ public:
 #pragma endregion
 
 #pragma region Debug Print
-	// ��ӡ������������
 	void PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes);
 #pragma endregion
 
 
 #pragma region UI
-// ����״̬UI
 public:
 	UFUNCTION()
 	int InitArttributesUW();
 
-	// ��UE��ͼ��ָ����������UI����ͼ����
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW|AttributesUW")
 	TSubclassOf<UPlayerAttributesUW> playerAttributesUWClass;
-
-	//// ��������UI����
 	UPROPERTY(BlueprintReadWrite, Category = "UW|AttributesUW")
 	class UPlayerAttributesUW* playerAttributesUW;
 
 
-// �洢��UI
 public:
 	UFUNCTION()
 	void InitArchivalUW();
@@ -227,7 +209,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW|ArchivalUW")
 	TSubclassOf<UArchivalUW> archivalUWClass;
 
-	//// �洢��UI����
 	UPROPERTY(BlueprintReadWrite, Category = "UW|ArchivalUW")
 	class UArchivalUW* archivalUW;
 
@@ -237,7 +218,6 @@ public:
 #pragma region Controller
 	class ACustomPlayerController* CustomPlayerController;
 	
-	//������ã� ��������(� �ܱ���~~~
 	UFUNCTION()
 	void StartInput();
 	UFUNCTION()
@@ -252,6 +232,8 @@ public:
 
 #pragma region Raft Simulation
 public:
+	class AFloorRaft* floorRaft;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Raft Colider")
 	class UBoxComponent* CustomRaftComponent;
 
@@ -291,7 +273,7 @@ public:
 	float CurrentTime;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
-	UCurveFloat* CameraCurve;  // ����ƽ�����ɵ�����
+	UCurveFloat* CameraCurve;
 
 	FVector DefualtCameraPos = FVector(0, 0, 0);
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
@@ -300,7 +282,6 @@ public:
 	FOnTimelineFloat TimelineProgress;
 	FOnTimelineEvent TimelineFinished;
 
-	// �����ص�����
 	UFUNCTION(BlueprintCallable)
 	void OnTimelineUpdate(float Value);
 	void OnTimelineFinished();
@@ -320,11 +301,9 @@ public:
 
 #pragma region TraceLine
 	public:
-		//�������߿��ӻ�
 		UPROPERTY(EditDefaultsOnly, Category = "Debug")
 		bool bDrawDebugLine = true;
 
-		// ���߼�����
 		UPROPERTY(EditDefaultsOnly, Category = "Debug")
 		float TraceDistance = 10000.f;
 
