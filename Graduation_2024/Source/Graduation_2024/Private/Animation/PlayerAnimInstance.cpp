@@ -28,8 +28,7 @@ void UPlayerAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 	if (!Player || !PlayerCMC)return;
 
-	FloorRaft = Cast<AFloorRaft>(Player->CollisionActor);
-	if (FloorRaft)
+	if (Player->floorRaft)
 	{
 		GetRowlingState();
 	}
@@ -101,15 +100,15 @@ void UPlayerAnimInstance::GetPlayerCurrentStatus()
 
 void UPlayerAnimInstance::GetRowlingState()
 {
-	RowlingState = FloorRaft->GetFloorRaftSpeed();
+	RowlingState = Player->floorRaft->GetFloorRaftSpeed();
 }
 
 void UPlayerAnimInstance::OnStartAddRowForceNotify()
 {
-	FloorRaft->StartAddRowForce();
+	Player->floorRaft->StartAddRowForce();
 }
 
 void UPlayerAnimInstance::OnStopAddRowForceNotify()
 {
-	FloorRaft->StopAddRowForce();
+	Player->floorRaft->StopAddRowForce();
 }

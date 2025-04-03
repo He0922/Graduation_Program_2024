@@ -25,11 +25,12 @@
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/BoxComponent.h"
-
+#include "Misc/MapErrors.h"
+#include "Rendering/RenderCommandPipes.h"
 
 
 // Sets default values
-// ¼Ì³Ğ×Ô¶¨ÒåµÄ½ÇÉ«ÒÆ¶¯×é¼ş
+// ï¿½Ì³ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ä½ï¿½É«ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½
 APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 	:Super(ObjectInitializer.SetDefaultSubobjectClass<UPlayerCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
 {
@@ -42,40 +43,45 @@ APlayerCharacter::APlayerCharacter(const FObjectInitializer& ObjectInitializer)
 
 	CustomCapsuleComponent = GetCapsuleComponent();
 
-	// ´´½¨×Ô¶¨ÒåµÄCharacterMovementComponent
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½CharacterMovementComponent
 	playerCMC = Cast<UPlayerCharacterMovementComponent>(GetCharacterMovement());
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 500.f, 0.f);
 	GetCharacterMovement()->MaxWalkSpeed = fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::emoveSpeed);
 	GetCharacterMovement()->bUseControllerDesiredRotation = false;
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 
-	// ´´½¨SpringArm
+	// ï¿½ï¿½ï¿½ï¿½SpringArm
 	cameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	cameraBoom->SetupAttachment(RootComponent);
 	cameraBoom->TargetArmLength = 500.f;
 	cameraBoom->bUsePawnControlRotation = true;
 
-	// ÕâÊÇSpringArmµÄÆ«ÒÆÁ¿£¬Î»ÓÚ½ÇÉ«µÄ¼ç°òÎ»ÖÃ
+	// ï¿½ï¿½ï¿½ï¿½SpringArmï¿½ï¿½Æ«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ú½ï¿½É«ï¿½Ä¼ï¿½ï¿½Î»ï¿½ï¿½
 	FVector CameraboomShoulderOffset = FVector(0.f, 50.f, 50.f);
 	cameraBoom->SetRelativeLocation(CameraboomShoulderOffset);
 
-	// ´´½¨Camera
+	// ï¿½ï¿½ï¿½ï¿½Camera
 	camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	camera->SetupAttachment(cameraBoom, USpringArmComponent::SocketName);
 	camera->bUsePawnControlRotation = false;
 
 
-	//´´½¨Íæ¼Ò¼¼ÄÜ×é¼ş
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	playerSkillComponent = CreateDefaultSubobject<UPlayerSkillComponent>(TEXT("SkillComponent"));
 
-	// ´´½¨ Timeline ×é¼ş
+	// ï¿½ï¿½ï¿½ï¿½ Timeline ï¿½ï¿½ï¿½
 	TimelineComponent = CreateDefaultSubobject<UTimelineComponent>(TEXT("TimelineComponent"));
 
-	//Inventory×é¼ş
+	//Inventoryï¿½ï¿½ï¿½
 	InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("InventoryComponent"));
 
-	// ³õÊ¼»¯Íæ¼Ò×´Ì¬
+	// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
 	eplayerStatus = ECustomPlayerStatus::eidle;
+
+	//åˆ›å»ºMayflyç›®æ ‡ä½ç½®ç»„ä»¶
+	MayflyLocation = CreateDefaultSubobject<USceneComponent>(TEXT("MayflyLocation"));
+	MayflyLocation->SetupAttachment(this->GetMesh());
+	MayflyLocation->ComponentTags.Add("MayflyLocation");
 }
 
 
@@ -84,7 +90,7 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// EnhancedInputÀàĞÍ×ª»»ÒÔ¼°MappingContextµÄ°ó¶¨
+	// EnhancedInputï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½Ô¼ï¿½MappingContextï¿½Ä°ï¿½
 	CustomPlayerController = Cast<ACustomPlayerController>(Controller);
 	if (CustomPlayerController)
 	{
@@ -94,12 +100,12 @@ void APlayerCharacter::BeginPlay()
 		}
 	}
 
-	//³õÊ¼»¯Ê±¼äÖá·½·¨(¹ØÓÚµÚÈıÈË³Æ×ªÎªÔ½¼çÊÓ½Ç
+	//ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½á·½ï¿½ï¿½(ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½Ë³ï¿½×ªÎªÔ½ï¿½ï¿½ï¿½Ó½ï¿½
 	InitTimeLineCurveFunc();
 
 	InitArttributesUW();
 
-	// »ñÈ¡Íæ¼Ò¶¯»­ÊµÀı
+	// ï¿½ï¿½È¡ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½Êµï¿½ï¿½
 	PlayerAnimInstance = GetMesh()->GetAnimInstance();
 }
 
@@ -120,23 +126,23 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	// Íæ¼ÒÊäÈë°´¼ü°ó¶¨
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë°´ï¿½ï¿½ï¿½ï¿½
 	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
 	{
-		// ÒÆ¶¯
+		// ï¿½Æ¶ï¿½
 		//EnhancedInputComponent->BindAction(moveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move);
 		//EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
 		//EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
-		//¾µÍ·Ğı×ª
+		//ï¿½ï¿½Í·ï¿½ï¿½×ª
 		//EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look);
 
-		//¼¼ÄÜ
+		//ï¿½ï¿½ï¿½ï¿½
 		//EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Started, this, &APlayerCharacter::StartScan);
 		//EnhancedInputComponent->BindAction(ScanAction, ETriggerEvent::Completed, this, &APlayerCharacter::EndScan);
 		//EnhancedInputComponent->BindAction(IterctBlock, ETriggerEvent::Started, this, &APlayerCharacter::InterctBlock);
 
-		//½»»¥
+		//ï¿½ï¿½ï¿½ï¿½
 		//EnhancedInputComponent->BindAction(objectInteraction, ETriggerEvent::Completed, this, &APlayerCharacter::ObjectInteraction);
 
 	}
@@ -163,7 +169,7 @@ void APlayerCharacter::NotifyActorBeginOverlap(AActor* OtherActor)
 
 	CollisionActor = OtherActor;
 
-	// ¼ì²éÅö×²ÌåÊÇ·ñÊÇ´æ´¢µã(½øĞĞ´æ´¢µã½Ó¿Ú·½·¨ÊµÏÖ¼ì²é)
+	// ï¿½ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ç´æ´¢ï¿½ï¿½(ï¿½ï¿½ï¿½Ğ´æ´¢ï¿½ï¿½Ó¿Ú·ï¿½ï¿½ï¿½Êµï¿½Ö¼ï¿½ï¿½)
 	if (IArchivalInterface* Interactable = Cast<IArchivalInterface>(OtherActor))
 	{ 
 		archivalInteractable = Interactable;
@@ -186,7 +192,7 @@ void APlayerCharacter::NotifyActorEndOverlap(AActor* OtherActor)
 };
 
 
-// ÈËÎïÊôĞÔ½Ó¿ÚµÄ·½·¨ÊµÏÖÍ¨¹ıPlaterAttributes.hÎÄ¼şÖĞ¶¨ÒåµÄÊı¾İ½á¹¹À´»ñÈ¡ÓëÉèÖÃ¶ÔÓ¦±äÁ¿
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ó¿ÚµÄ·ï¿½ï¿½ï¿½Êµï¿½ï¿½Í¨ï¿½ï¿½PlaterAttributes.hï¿½Ä¼ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ½á¹¹ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
 #pragma region Player Attributes Interface
 float APlayerCharacter::GetHealth_MAX() const { return fplayerAttributes.GetPlayerAttributes(EPlayerAttributes::ehealthMax);; }
 void APlayerCharacter::SetHealth_MAX(float MaxHealth)
@@ -245,10 +251,10 @@ void APlayerCharacter::SetMoveSpeed(float AddMoveSpeed)
 //void APlayerCharacter::Move(const FInputActionValue& Value)
 //{
 //
-//	// »ñÈ¡Íæ¼ÒÊäÈë·½Ïò
+//	// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë·½ï¿½ï¿½
 //	const FVector2D movementVector = Value.Get<FVector2D>();
 //
-//	// ÓÃÓÚ°Ë·½ÏòÒÆ¶¯µÄfloat
+//	// ï¿½ï¿½ï¿½Ú°Ë·ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½float
 //	moveFBDirection = movementVector.X;
 //	moveLRDirection = movementVector.Y;
 //
@@ -277,10 +283,10 @@ void APlayerCharacter::MoveToTarget(FVector TargetLocation)
 
 //void APlayerCharacter::Look(const FInputActionValue& Value)
 //{
-//	// »ñÈ¡Íæ¼ÒÊäÈë·½Ïò
+//	// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë·½ï¿½ï¿½
 //	const FVector2D lookAxisVector = Value.Get<FVector2D>();
 //
-//	// ÓÃÓÚĞı×ªÊÓ½Ç½ÇÉ«ÊµÊ±¸Ä±äÃæ³¯·½Ïòfloat
+//	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½Ó½Ç½ï¿½É«ÊµÊ±ï¿½Ä±ï¿½ï¿½æ³¯ï¿½ï¿½ï¿½ï¿½float
 //	lookLRDirection = lookAxisVector.X;
 //
 //	AddControllerYawInput(lookAxisVector.X);
@@ -296,15 +302,15 @@ void APlayerCharacter::ObjectInteraction(APawn* ControllerCurrentControlObject)
 		Debug::Print("Controller's Current Control Player", 5.f, false);
 		if (archivalInteractable)
 		{
-			// Ë¢ĞÂÍæ¼Ò×´Ì¬
+			// Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
 			archivalInteractable->RefreshPlayerStatus();
-			// »ñÈ¡´æ´¢µãID
+			// ï¿½ï¿½È¡ï¿½æ´¢ï¿½ï¿½ID
 			collisionArchiveID = archivalInteractable->GetArchiveID();
-			// »ñÈ¡´æ´¢µãÎ»ÖÃ
+			// ï¿½ï¿½È¡ï¿½æ´¢ï¿½ï¿½Î»ï¿½ï¿½
 			archivalLocation = archivalInteractable->GetPlayerStandLocation();
-			// ¼ì²é²¢´æÈë´æ´¢µãID
+			// ï¿½ï¿½é²¢ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ID
 			if (!unlockedArchivalPointsIDArray.Contains(collisionArchiveID)) { unlockedArchivalPointsIDArray.Add(collisionArchiveID); }
-			// ¼ì²é²¢´æÈë´æ´¢µãÎ»ÖÃ
+			// ï¿½ï¿½é²¢ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½Î»ï¿½ï¿½
 			if (!unlockedArchivalPointsLocationArray.Contains(archivalLocation)) { unlockedArchivalPointsLocationArray.Add(archivalLocation); }
 
 			InitArchivalUW();
@@ -338,22 +344,22 @@ void APlayerCharacter::FaceActor(AActor* TargetActor)
 {
 	if (!TargetActor) return;
 
-	// ¼ÆËãÄ¿±êÎ»ÖÃÓëÍæ¼ÒÎ»ÖÃµÄ·½Ïò
+	// ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ÃµÄ·ï¿½ï¿½ï¿½
 	FVector DirectionToFace = TargetActor->GetActorLocation() - GetActorLocation();
-	DirectionToFace.Z = 0;  // ±£Ö¤Ö»ÔÚÆ½ÃæÉÏĞı×ª£¨²»ĞèÒª´¹Ö±Ğı×ª£©
+	DirectionToFace.Z = 0;  // ï¿½ï¿½Ö¤Ö»ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ö±ï¿½ï¿½×ªï¿½ï¿½
 
-	// ¼ÆËãÄ¿±êĞı×ª
+	// ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½×ª
 	//FRotator TargetRotation = FRotator(0.0f, DirectionToFace.Rotation().Yaw, 0.0f);
 	FRotator TargetRotation = DirectionToFace.Rotation();
 
-	// Ğı×ªÍæ¼Òµ½Ä¿±êÎïÌåµÄ·½Ïò
+	// ï¿½ï¿½×ªï¿½ï¿½Òµï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
 	SetActorRotation(TargetRotation);
 }
 #pragma endregion 
 
 
 #pragma region Debug Print
-// ´òÓ¡Íæ¼ÒÊôĞÔ±äÁ¿
+// ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½
 void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes)
 {
 	for (const auto& Pair : Attributes)
@@ -372,10 +378,10 @@ void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Att
 		case EPlayerAttributes::ehealthMax: AttributeName = TEXT("Health_Max"); break;
 		}
 
-		// ´òÓ¡µ½¿ØÖÆÌ¨
+		// ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨
 		//UE_LOG(LogTemp, Log, TEXT("Attribute: %s, Value: %f"), *AttributeName, Value);
 
-		// ´òÓ¡µ½ÆÁÄ»
+		// ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½Ä»
 		if (GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 0.f, FColor::Green, FString::Printf(TEXT("Attribute: %s, Value: %f"), *AttributeName, Value));
@@ -387,7 +393,7 @@ void APlayerCharacter::PrintAttributes(const TMap<EPlayerAttributes, float>& Att
 
 
 #pragma region UI
-// ³õÊ¼»¯UI
+// ï¿½ï¿½Ê¼ï¿½ï¿½UI
 int APlayerCharacter::InitArttributesUW()
 {
 	playerAttributesUW = CreateWidget<UPlayerAttributesUW>(GetWorld(), playerAttributesUWClass);
@@ -420,7 +426,7 @@ void APlayerCharacter::InitArchivalUW()
 
 
 #pragma region Controller
-//Íæ¼ÒÆôÓÃ£¬ ½ûÓÃÊäÈë
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 void APlayerCharacter::StartInput()
 {
 	if (CustomPlayerController) 
@@ -469,20 +475,17 @@ void APlayerCharacter::SetRaftCollider(bool IfUse)
 		CustomRaftComponent->SetMobility(EComponentMobility::Type::Movable);
 		CustomRaftComponent->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 
-		// ÉèÖÃ BoxComponent µÄ´óĞ¡ (ÀıÈç 100x100x100 µ¥Î»)
 		CustomRaftComponent->SetBoxExtent(FVector(400.0f, 80.0f, 40.0f));
-		// ÉèÖÃÅö×²Ô¤ÉèÎª "WorldDynamic"
-		CustomRaftComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);  // ÆôÓÃÅö×²
+		CustomRaftComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 		CustomRaftComponent->SetCollisionObjectType(ECollisionChannel::ECC_WorldDynamic);
 
-		// ÉèÖÃÅö×²ÏìÓ¦£¬Ö»ÓĞ PhysicsBody Îª "×èµ²"£¬ÆäËûÎª "ºöÂÔ"
 		//CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_OverlapAll_Deprecated, ECollisionResponse::ECR_Ignore);
 		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_PhysicsBody, ECollisionResponse::ECR_Block);
 		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Visibility, ECollisionResponse::ECR_Ignore);
 		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Camera, ECollisionResponse::ECR_Ignore);
 		CustomRaftComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
 
-		CustomRaftComponent->RegisterComponent();  // ×¢²á×é¼ş£¬Ê¹ÆäÔÚÓÎÏ·ÖĞÓĞĞ§
+		CustomRaftComponent->RegisterComponent(); 
 		this->AddInstanceComponent(CustomRaftComponent);
 	}
 	else if(CustomRaftComponent)
@@ -522,8 +525,6 @@ void APlayerCharacter::ChangeOutShoulderView()
 		TimelineComponent->SetPlaybackPosition(CurrentTime, false);
 		TimelineComponent->Reverse();
 	}
-
-	//cameraBoom->bUsePawnControlRotation = true;
 }
 
 void APlayerCharacter::OnTimelineUpdate(float Value)
@@ -556,16 +557,13 @@ void APlayerCharacter::InitTimeLineCurveFunc()
 #pragma region TraceLine
 void APlayerCharacter::PerformLineTrace()
 {
-	// »ñÈ¡Íæ¼Ò¿ØÖÆÆ÷
 	APlayerController* PlayerController = Cast<APlayerController>(GetController());
 	if (!PlayerController) return;
 
-	// »ñÈ¡ÆÁÄ»ÖĞĞÄ×ø±ê
 	int32 ViewportSizeX, ViewportSizeY;
 	PlayerController->GetViewportSize(ViewportSizeX, ViewportSizeY);
 	FVector2D ScreenCenter = FVector2D(ViewportSizeX * 0.5f, ViewportSizeY * 0.5f);
 
-	// ¼ÆËãÉãÏñ»úÎ»ÖÃºÍ·½Ïò
 	FVector CameraLocation;
 	FVector CameraDirection;
 	PlayerController->DeprojectScreenPositionToWorld(
@@ -575,36 +573,31 @@ void APlayerCharacter::PerformLineTrace()
 		CameraDirection
 	);
 
-	// ¼ÆËãÉäÏßÖÕµã
 	FVector TraceStart = CameraLocation;
 	FVector TraceEnd = CameraLocation + (CameraDirection * TraceDistance);
 
-	// Ö´ĞĞÉäÏß¼ì²â
 	FHitResult HitResult;
 	FCollisionQueryParams TraceParams(FName(TEXT("LineTrace")), true, this);
-	TraceParams.bReturnPhysicalMaterial = true; // ÊÇ·ñ·µ»ØÎïÀí²ÄÖÊ
+	TraceParams.bReturnPhysicalMaterial = true; 
 
 	bool bHit = GetWorld()->LineTraceSingleByChannel(
 		HitResult,
 		TraceStart,
 		TraceEnd,
-		ECC_Visibility, // Åö×²Í¨µÀ£¨¿É×Ô¶¨Òå£©
+		ECC_Visibility,
 		TraceParams
 	);
 
-	// ´¦ÀíÃüÖĞ½á¹û
 	if (bHit)
 	{
 		AActor* HitActor = HitResult.GetActor();
 		FVector HitLocation = HitResult.Location;
 		FVector HitNormal = HitResult.Normal;
 
-		// Êä³öµ÷ÊÔĞÅÏ¢
 		UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *HitActor->GetName());
 		UE_LOG(LogTemp, Warning, TEXT("Hit Location: %s"), *HitLocation.ToString());
 	}
 
-	// ¿ÉÊÓ»¯µ÷ÊÔÉäÏß
 	if (bDrawDebugLine)
 	{
 		FColor DebugColor = bHit ? FColor::Green : FColor::Red;
@@ -613,10 +606,10 @@ void APlayerCharacter::PerformLineTrace()
 			TraceStart,
 			TraceEnd,
 			DebugColor,
-			false, // ÊÇ·ñ³Ö¾ÃÏÔÊ¾
-			2.f,   // ÏÔÊ¾Ê±³¤£¨Ãë£©
-			0,      // Éî¶ÈÓÅÏÈ¼¶
-			2.f     // Ïß¿í
+			false, 
+			2.f,   
+			0,     
+			2.f    
 		);
 	}
 }
@@ -664,23 +657,20 @@ void APlayerCharacter::ToggleInventory()
 }
 void APlayerCharacter::PickUpItem()
 {
-	// ¶¨ÒåÇòĞÎÅö×²Ìå
 	FCollisionShape CollisionShape = FCollisionShape::MakeSphere(200.0f);
 
-	// ½øĞĞÅö×²¼ì²é£¬·µ»Ø·¶Î§ÄÚµÄËùÓĞÎïÌå
 	TArray<FHitResult> HitResults;
 	FCollisionQueryParams CollisionParams;
-	CollisionParams.AddIgnoredActor(GetOwner()); // ºöÂÔ×ÔÉí
+	CollisionParams.AddIgnoredActor(GetOwner()); 
 
 	bool bHit = GetWorld()->SweepMultiByChannel(HitResults, GetActorLocation(), GetActorLocation(), FQuat::Identity, ECC_Visibility, CollisionShape, CollisionParams);
 
 	if (bHit)
 	{
-		// ´¦ÀíÕÒµ½µÄËùÓĞÎïÌå
 		for (const FHitResult& Hit : HitResults)
 		{
 			AActor* HitActor = Hit.GetActor();
-			//ItemÊ°È¡
+			//Item
 			if (AItemActor* item = Cast<AItemActor>(HitActor))
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Pick Item"));

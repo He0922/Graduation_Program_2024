@@ -2,12 +2,12 @@
 	"RemapUnityFiles": 
 	{
 		"Module.CrazyIvy.cpp.obj": [
-			"CrazyIvy.init.gen.cpp.obj",
-			"IvyGeneratorBase.gen.cpp.obj",
-			"SMeshData.gen.cpp.obj",
 			"CrazyIvy.cpp.obj",
 			"IvyCustomDetailPanel.cpp.obj",
-			"IvyGeneratorBase.cpp.obj"
+			"IvyGeneratorBase.cpp.obj",
+			"CrazyIvy.init.gen.cpp.obj",
+			"IvyGeneratorBase.gen.cpp.obj",
+			"SMeshData.gen.cpp.obj"
 		]
 	}
 }

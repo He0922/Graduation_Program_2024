@@ -852,6 +852,9 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Controller\CustomPlayerController.cpp">
       <Filter>Source\Graduation_2024\Private\Controller</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Graduation_2024\Private\Controller\MayflyAIController.cpp">
+      <Filter>Source\Graduation_2024\Private\Controller</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Graduation_2024\Private\Controller\PlayerAIController.cpp">
       <Filter>Source\Graduation_2024\Private\Controller</Filter>
     </ClCompile>
@@ -1003,6 +1006,9 @@
       <UniqueIdentifier>{3924B88C-ACCB-3029-B645-A04B29BD966E}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Controller\CustomPlayerController.h">
+      <Filter>Source\Graduation_2024\Public\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Graduation_2024\Public\Controller\MayflyAIController.h">
       <Filter>Source\Graduation_2024\Public\Controller</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\Controller\PlayerAIController.h">

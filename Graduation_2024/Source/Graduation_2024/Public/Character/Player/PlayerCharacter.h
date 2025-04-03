@@ -68,7 +68,6 @@ public:
 
 #pragma region Collision
 public:
-	// 重写Collision碰撞事件函数
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 	virtual void NotifyActorEndOverlap(AActor* OtherActor) override;
 
@@ -80,7 +79,6 @@ public:
 
 #pragma region Player Attributes Interface
 public:
-	// 玩家属性变量
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerHealthMax;
 
@@ -100,7 +98,6 @@ public:
 	float playerMoveSpeed;
 
 
-	// 实现玩家属性接口的定义
 	virtual float GetHealth_MAX() const override;
 	virtual void SetHealth_MAX(float MaxHealth) override;
 
@@ -121,7 +118,6 @@ public:
 #pragma endregion
 
 
-// 创建输入映射、输入动作
 #pragma region Player Behavior Control
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
@@ -132,32 +128,27 @@ public:
 
 #pragma region Player Behavior Control Function
 public:
-	//// 用于控制玩家前后左右移动
 	//UFUNCTION()
 	//void Move(const FInputActionValue& Value);
 
 	UFUNCTION()
 	void MoveToTarget(FVector TargetLocation);
 
-	//// 用于控制玩家视角旋转
 	//UFUNCTION()
 	//void Look(const FInputActionValue& Value);
 
 	UFUNCTION()
 	void ObjectInteraction(APawn* ControllerCurrentControlObject);
 
-	//玩家转向输入的物体
 	UFUNCTION(BlueprintCallable)
 	void FaceActor(AActor* TargetActor);
 #pragma endregion
 
 
 #pragma region Player Behavior Control Value
-	// 移动的前后左右方向的float
 	float moveFBDirection;
 	float moveLRDirection;
 
-	// 视角的左右方向的float
 	float lookLRDirection;
 #pragma endregion
 
@@ -171,7 +162,6 @@ public:
 #pragma endregion
 
 
-// 创建自定义的角色移动组件变量
 #pragma region MovementComponent
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Movement Component")
@@ -183,11 +173,9 @@ public:
 
 #pragma region Player Attribute
 public:
-	// 人物属性结构体
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attribute")
 	FPlayerAttributes fplayerAttributes;
 
-	// 人物属性枚举
 	UPROPERTY()
 	EPlayerAttributes eplayerAttributes;
 #pragma endregion
@@ -199,27 +187,21 @@ public:
 #pragma endregion
 
 #pragma region Debug Print
-	// 打印人物属性内容
 	void PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes);
 #pragma endregion
 
 
 #pragma region UI
-// 人物状态UI
 public:
 	UFUNCTION()
 	int InitArttributesUW();
 
-	// 在UE蓝图中指定人物属性UI的蓝图对象
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW|AttributesUW")
 	TSubclassOf<UPlayerAttributesUW> playerAttributesUWClass;
-
-	//// 人物属性UI对象
 	UPROPERTY(BlueprintReadWrite, Category = "UW|AttributesUW")
 	class UPlayerAttributesUW* playerAttributesUW;
 
 
-// 存储点UI
 public:
 	UFUNCTION()
 	void InitArchivalUW();
@@ -227,7 +209,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW|ArchivalUW")
 	TSubclassOf<UArchivalUW> archivalUWClass;
 
-	//// 存储点UI对象
 	UPROPERTY(BlueprintReadWrite, Category = "UW|ArchivalUW")
 	class UArchivalUW* archivalUW;
 
@@ -237,7 +218,6 @@ public:
 #pragma region Controller
 	class ACustomPlayerController* CustomPlayerController;
 	
-	//玩家启用， 禁用输入(额， 很暴力~~~
 	UFUNCTION()
 	void StartInput();
 	UFUNCTION()
@@ -252,6 +232,8 @@ public:
 
 #pragma region Raft Simulation
 public:
+	class AFloorRaft* floorRaft;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Raft Colider")
 	class UBoxComponent* CustomRaftComponent;
 
@@ -291,7 +273,7 @@ public:
 	float CurrentTime;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
-	UCurveFloat* CameraCurve;  // 用于平滑过渡的曲线
+	UCurveFloat* CameraCurve;
 
 	FVector DefualtCameraPos = FVector(0, 0, 0);
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
@@ -300,7 +282,6 @@ public:
 	FOnTimelineFloat TimelineProgress;
 	FOnTimelineEvent TimelineFinished;
 
-	// 动画回调函数
 	UFUNCTION(BlueprintCallable)
 	void OnTimelineUpdate(float Value);
 	void OnTimelineFinished();
@@ -320,11 +301,9 @@ public:
 
 #pragma region TraceLine
 	public:
-		//调试射线可视化
 		UPROPERTY(EditDefaultsOnly, Category = "Debug")
 		bool bDrawDebugLine = true;
 
-		// 射线检测距离
 		UPROPERTY(EditDefaultsOnly, Category = "Debug")
 		float TraceDistance = 10000.f;
 
@@ -368,7 +347,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Custom Function")
 	void MontageToPlay(UAnimMontage* MonteageToPlay);
 #pragma endregion
-
+	
+#pragma region ScenceComponent
+	public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Mayfly")
+	USceneComponent* MayflyLocation; // 鍒涘缓缁勪欢锛岃瀹歁ayfly鐩爣浣嶇疆
+#pragma endregion
 };
 
 

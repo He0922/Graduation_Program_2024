@@ -94,22 +94,16 @@ struct Z_Construct_UClass_AMayfly_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerCharacter_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Character/Mayfly.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_speed_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Speed_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "Public/Character/Mayfly.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_followDistance_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Distance" },
 		{ "ModuleRelativePath", "Public/Character/Mayfly.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_mayflytype_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_mayflytype;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_playerCharacter;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_speed;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_followDistance;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_Speed;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -120,14 +114,12 @@ struct Z_Construct_UClass_AMayfly_Statics
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AMayfly_Statics::NewProp_mayflytype_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AMayfly_Statics::NewProp_mayflytype = { "mayflytype", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMayfly, mayflytype), Z_Construct_UEnum_Graduation_2024_EMayflyType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_mayflytype_MetaData), NewProp_mayflytype_MetaData) }; // 3410330538
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMayfly_Statics::NewProp_playerCharacter = { "playerCharacter", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMayfly, playerCharacter), Z_Construct_UClass_APlayerCharacter_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerCharacter_MetaData), NewProp_playerCharacter_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMayfly_Statics::NewProp_speed = { "speed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMayfly, speed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_speed_MetaData), NewProp_speed_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMayfly_Statics::NewProp_followDistance = { "followDistance", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMayfly, followDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_followDistance_MetaData), NewProp_followDistance_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMayfly_Statics::NewProp_Speed = { "Speed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMayfly, Speed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Speed_MetaData), NewProp_Speed_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMayfly_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMayfly_Statics::NewProp_mayflytype_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMayfly_Statics::NewProp_mayflytype,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMayfly_Statics::NewProp_playerCharacter,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMayfly_Statics::NewProp_speed,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMayfly_Statics::NewProp_followDistance,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMayfly_Statics::NewProp_Speed,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMayfly_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMayfly_Statics::DependentSingletons[])() = {
@@ -167,18 +159,18 @@ AMayfly::~AMayfly() {}
 // End Class AMayfly
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics
+struct Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EMayflyType_StaticEnum, TEXT("EMayflyType"), &Z_Registration_Info_UEnum_EMayflyType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3410330538U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMayfly, AMayfly::StaticClass, TEXT("AMayfly"), &Z_Registration_Info_UClass_AMayfly, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMayfly), 1220003135U) },
+		{ Z_Construct_UClass_AMayfly, AMayfly::StaticClass, TEXT("AMayfly"), &Z_Registration_Info_UClass_AMayfly, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMayfly), 2102964674U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_3759739915(TEXT("/Script/Graduation_2024"),
-	Z_CompiledInDeferFile_FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_3331757196(TEXT("/Script/Graduation_2024"),
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

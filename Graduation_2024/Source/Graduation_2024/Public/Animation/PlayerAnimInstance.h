@@ -29,9 +29,6 @@ private:
 	UPROPERTY()
 	class UPlayerCharacterMovementComponent* PlayerCMC;
 
-	UPROPERTY()
-	class AFloorRaft* FloorRaft;
-
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Reference)
 	float GroundSpeed;

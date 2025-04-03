@@ -67,6 +67,7 @@ void ACustomPlayerController::SetupInputComponent()
 			return;
 		}
 		EnhancedInputComponent->BindAction(moveAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::Move);
+		EnhancedInputComponent->BindAction(moveAction, ETriggerEvent::Completed, this, &ACustomPlayerController::StopMove);
 		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Started, this, &ACustomPlayerController::Jump);
 		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Completed, this, &ACustomPlayerController::JumpStop);
 		EnhancedInputComponent->BindAction(lookAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::Look);
@@ -108,6 +109,17 @@ void ACustomPlayerController::Move(const FInputActionValue& InputValue)
 	
 }
 
+void ACustomPlayerController::StopMove(const FInputActionValue& InputValue)
+{
+	if (PlayerStatus == ECustomPlayerStatus::erowing)
+	{
+		if (Player->floorRaft != NULL)
+		{
+			Player->floorRaft->StopRow();
+		}
+	}
+}
+
 
 void ACustomPlayerController::HandleGroundMovementInput(const FInputActionValue& InputValue)
 {
@@ -124,40 +136,29 @@ void ACustomPlayerController::HandleGroundMovementInput(const FInputActionValue&
 	const FVector forwardDirection = FRotationMatrix(yawRotation).GetUnitAxis(EAxis::X);
 	const FVector rightDirection = FRotationMatrix(yawRotation).GetUnitAxis(EAxis::Y);
 
-	/*if (CurrentControllerPawn)
-	{
-		CurrentControllerPawn->AddMovementInput(forwardDirection, movementVector.X);
-		if (PlayerStatus != ECustomPlayerStatus::erowing)
-		{
-			CurrentControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
-		}
-
-	}*/
-
 	if (CurrentControllerPawn)
 	{
 		if (PlayerStatus != ECustomPlayerStatus::erowing)
 		{
 			CurrentControllerPawn->AddMovementInput(forwardDirection, movementVector.X);
 			CurrentControllerPawn->AddMovementInput(rightDirection, movementVector.Y);
+
+			Player->floorRaft = NULL;
 		}
 		else
 		{
-			if (AFloorRaft* floorRaft = Cast<AFloorRaft>(CurrentControllerPawn))
+			if (Player->floorRaft == NULL)
+			{
+				Player->floorRaft = Cast<AFloorRaft>(CurrentControllerPawn);
+			}
+			else
 			{
 				if (movementVector.X > 0.1f)
 				{
-					floorRaft->StartRow();
+					Player->floorRaft->StartRow();
 				}
-				else
-				{
-					floorRaft->StopRow();
-				}
-
-				FVector tempVec = floorRaft->GetBoatForward();
+				FVector tempVec = Player->floorRaft->GetBoatForward();
 				tempVec.Z = 0;
-
-				//CurrentControllerPawn->AddMovementInput(tempVec, movementVector.X);
 			}
 		}
 	}
