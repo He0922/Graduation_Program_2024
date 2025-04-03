@@ -13,21 +13,15 @@ AMayfly::AMayfly()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-
-
-	GetCharacterMovement()->MaxWalkSpeed = speed = 204.f;
-
-
-	followDistance = 100.0f; // 跟随停止的距离 
-
+	Speed = 0.f;
+	//FollowDistance = 100.0f; // 跟随停止的距离 
 	mayflytype = EMayflyType::eaddHPMAX;
-
 	playerCharacter = nullptr;
-
-
+	
 
 }
+
+
 
 
 // Called when the game starts or when spawned
@@ -60,20 +54,21 @@ void AMayfly::BeginPlay()
 void AMayfly::Tick(float deltaTime)
 {
 	Super::Tick(deltaTime);
-
-	//判断playerCharacter是否失效
-	if (!playerCharacter)
-	{
-		Debug::Print(TEXT("playerCharacter is null in Tick"), 0, true, FColor::Red, 0); 
-		return; 
-	} 
-
-		//跟随玩家
-		FollowPlayer(); 
+	
+	
 
 }
 
+void AMayfly::ChangeCapsuleAndMesh()
+{
+	
+}
 
+
+
+
+#pragma region unused
+/*
 void AMayfly::FollowPlayer()
 {
 	//计算方向
@@ -82,11 +77,11 @@ void AMayfly::FollowPlayer()
 	float distance = FVector::Dist(GetActorLocation(), playerCharacter->GetActorLocation()); 
 
 
-	if (distance > followDistance) 
+	if (distance > FollowDistance) 
 	{ 
 		AddMovementInput(direction, 1.0f, true); 
 		Debug::Print(FString::Printf(TEXT("Following player - Direction: %s, Speed: %f"), 
-			*direction.ToString(), speed), 0, true, FColor::Green, 0); 
+			*direction.ToString(), Speed), 0, true, FColor::Green, 0); 
 	}
 	else 
 	{ 
@@ -96,10 +91,16 @@ void AMayfly::FollowPlayer()
 		Debug::Print(TEXT("Reached follow distance, stopping follow"), 0, true, FColor::Yellow, 0); 
 	}
 }
-
-
-
-#pragma region unused
+*/
+/*//判断playerCharacter是否失效
+	if (!playerCharacter)
+	{
+		Debug::Print(TEXT("playerCharacter is null in Tick"), 0, true, FColor::Red, 0); 
+		return; 
+	} 
+	*/
+//跟随玩家
+//FollowPlayer(); 
 	/*变量
 	isFollowing = true;
 	reengageDistance = 100.0f; // 重新跟随的距离 

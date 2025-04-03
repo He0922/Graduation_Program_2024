@@ -21,15 +21,15 @@ class GRADUATION_2024_API AMayfly : public ACharacter
 {
 	GENERATED_BODY()
 
-public:
-	// Sets default values for this character's properties
-	AMayfly();
+private:
+	void ChangeCapsuleAndMesh();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
+	AMayfly();
 	// Called every frame
 	virtual void Tick(float deltaTime) override;
 
@@ -39,18 +39,16 @@ public:
 	UPROPERTY()
 	class APlayerCharacter* playerCharacter;
 
+	
+
 #pragma region Movement settings 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
-	float speed;
+	float Speed;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Distance", meta = (AllowPrivateAccess = "true"))
-	float followDistance;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Distance", meta = (AllowPrivateAccess = "true"))
+	//float FollowDistance;
 #pragma endregion Movement settings
-
-
-
-	void FollowPlayer();
-
+	//void FollowPlayer();
 
 #pragma region unused
 	/*

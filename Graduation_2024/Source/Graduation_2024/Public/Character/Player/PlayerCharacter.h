@@ -68,7 +68,7 @@ public:
 
 #pragma region Collision
 public:
-	// ÖØĞ´CollisionÅö×²ÊÂ¼şº¯Êı
+	// ï¿½ï¿½Ğ´Collisionï¿½ï¿½×²ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 	virtual void NotifyActorEndOverlap(AActor* OtherActor) override;
 
@@ -80,7 +80,7 @@ public:
 
 #pragma region Player Attributes Interface
 public:
-	// Íæ¼ÒÊôĞÔ±äÁ¿
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attributes")
 	float playerHealthMax;
 
@@ -100,7 +100,7 @@ public:
 	float playerMoveSpeed;
 
 
-	// ÊµÏÖÍæ¼ÒÊôĞÔ½Ó¿ÚµÄ¶¨Òå
+	// Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ó¿ÚµÄ¶ï¿½ï¿½ï¿½
 	virtual float GetHealth_MAX() const override;
 	virtual void SetHealth_MAX(float MaxHealth) override;
 
@@ -121,7 +121,7 @@ public:
 #pragma endregion
 
 
-// ´´½¨ÊäÈëÓ³Éä¡¢ÊäÈë¶¯×÷
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ä¡¢ï¿½ï¿½ï¿½ë¶¯ï¿½ï¿½
 #pragma region Player Behavior Control
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Input")
@@ -132,32 +132,32 @@ public:
 
 #pragma region Player Behavior Control Function
 public:
-	//// ÓÃÓÚ¿ØÖÆÍæ¼ÒÇ°ºó×óÓÒÒÆ¶¯
+	//// ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½
 	//UFUNCTION()
 	//void Move(const FInputActionValue& Value);
 
 	UFUNCTION()
 	void MoveToTarget(FVector TargetLocation);
 
-	//// ÓÃÓÚ¿ØÖÆÍæ¼ÒÊÓ½ÇĞı×ª
+	//// ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó½ï¿½ï¿½ï¿½×ª
 	//UFUNCTION()
 	//void Look(const FInputActionValue& Value);
 
 	UFUNCTION()
 	void ObjectInteraction(APawn* ControllerCurrentControlObject);
 
-	//Íæ¼Ò×ªÏòÊäÈëµÄÎïÌå
+	//ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	UFUNCTION(BlueprintCallable)
 	void FaceActor(AActor* TargetActor);
 #pragma endregion
 
 
 #pragma region Player Behavior Control Value
-	// ÒÆ¶¯µÄÇ°ºó×óÓÒ·½ÏòµÄfloat
+	// ï¿½Æ¶ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ò·ï¿½ï¿½ï¿½ï¿½float
 	float moveFBDirection;
 	float moveLRDirection;
 
-	// ÊÓ½ÇµÄ×óÓÒ·½ÏòµÄfloat
+	// ï¿½Ó½Çµï¿½ï¿½ï¿½ï¿½Ò·ï¿½ï¿½ï¿½ï¿½float
 	float lookLRDirection;
 #pragma endregion
 
@@ -171,7 +171,7 @@ public:
 #pragma endregion
 
 
-// ´´½¨×Ô¶¨ÒåµÄ½ÇÉ«ÒÆ¶¯×é¼ş±äÁ¿
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ä½ï¿½É«ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #pragma region MovementComponent
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Player Movement Component")
@@ -183,11 +183,11 @@ public:
 
 #pragma region Player Attribute
 public:
-	// ÈËÎïÊôĞÔ½á¹¹Ìå
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½á¹¹ï¿½ï¿½
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Attribute")
 	FPlayerAttributes fplayerAttributes;
 
-	// ÈËÎïÊôĞÔÃ¶¾Ù
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½
 	UPROPERTY()
 	EPlayerAttributes eplayerAttributes;
 #pragma endregion
@@ -199,27 +199,27 @@ public:
 #pragma endregion
 
 #pragma region Debug Print
-	// ´òÓ¡ÈËÎïÊôĞÔÄÚÈİ
+	// ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	void PrintAttributes(const TMap<EPlayerAttributes, float>& Attributes);
 #pragma endregion
 
 
 #pragma region UI
-// ÈËÎï×´Ì¬UI
+// ï¿½ï¿½ï¿½ï¿½×´Ì¬UI
 public:
 	UFUNCTION()
 	int InitArttributesUW();
 
-	// ÔÚUEÀ¶Í¼ÖĞÖ¸¶¨ÈËÎïÊôĞÔUIµÄÀ¶Í¼¶ÔÏó
+	// ï¿½ï¿½UEï¿½ï¿½Í¼ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW|AttributesUW")
 	TSubclassOf<UPlayerAttributesUW> playerAttributesUWClass;
 
-	//// ÈËÎïÊôĞÔUI¶ÔÏó
+	//// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½
 	UPROPERTY(BlueprintReadWrite, Category = "UW|AttributesUW")
 	class UPlayerAttributesUW* playerAttributesUW;
 
 
-// ´æ´¢µãUI
+// ï¿½æ´¢ï¿½ï¿½UI
 public:
 	UFUNCTION()
 	void InitArchivalUW();
@@ -227,7 +227,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UW|ArchivalUW")
 	TSubclassOf<UArchivalUW> archivalUWClass;
 
-	//// ´æ´¢µãUI¶ÔÏó
+	//// ï¿½æ´¢ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½
 	UPROPERTY(BlueprintReadWrite, Category = "UW|ArchivalUW")
 	class UArchivalUW* archivalUW;
 
@@ -237,7 +237,7 @@ public:
 #pragma region Controller
 	class ACustomPlayerController* CustomPlayerController;
 	
-	//Íæ¼ÒÆôÓÃ£¬ ½ûÓÃÊäÈë(¶î£¬ ºÜ±©Á¦~~~
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½î£¬ ï¿½Ü±ï¿½ï¿½ï¿½~~~
 	UFUNCTION()
 	void StartInput();
 	UFUNCTION()
@@ -291,7 +291,7 @@ public:
 	float CurrentTime;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
-	UCurveFloat* CameraCurve;  // ÓÃÓÚÆ½»¬¹ı¶ÉµÄÇúÏß
+	UCurveFloat* CameraCurve;  // ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½ï¿½ï¿½ï¿½ï¿½
 
 	FVector DefualtCameraPos = FVector(0, 0, 0);
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ShoulderCamera")
@@ -300,7 +300,7 @@ public:
 	FOnTimelineFloat TimelineProgress;
 	FOnTimelineEvent TimelineFinished;
 
-	// ¶¯»­»Øµ÷º¯Êı
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
 	UFUNCTION(BlueprintCallable)
 	void OnTimelineUpdate(float Value);
 	void OnTimelineFinished();
@@ -320,11 +320,11 @@ public:
 
 #pragma region TraceLine
 	public:
-		//µ÷ÊÔÉäÏß¿ÉÊÓ»¯
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¿ï¿½ï¿½Ó»ï¿½
 		UPROPERTY(EditDefaultsOnly, Category = "Debug")
 		bool bDrawDebugLine = true;
 
-		// ÉäÏß¼ì²â¾àÀë
+		// ï¿½ï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½
 		UPROPERTY(EditDefaultsOnly, Category = "Debug")
 		float TraceDistance = 10000.f;
 
@@ -368,7 +368,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Custom Function")
 	void MontageToPlay(UAnimMontage* MonteageToPlay);
 #pragma endregion
-
+	
+#pragma region ScenceComponent
+	public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Mayfly")
+	USceneComponent* MayflyLocation; // åˆ›å»ºç»„ä»¶ï¼Œè®¾å®šMayflyç›®æ ‡ä½ç½®
+#pragma endregion
 };
 
 

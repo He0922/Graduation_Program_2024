@@ -10,8 +10,9 @@
     <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
-    <LocalDebuggerCommandArguments>"$(SolutionDir)Graduation_2024.uproject" -skipcompile</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Graduation_2024.uproject" -skipcompile</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommandArguments>"D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Graduation_2024.uproject" -skipcompile</RemoteDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|arm64'">
     <RemoteDebuggerCommandArguments>"$(SolutionDir)Graduation_2024.uproject" -skipcompile</RemoteDebuggerCommandArguments>
