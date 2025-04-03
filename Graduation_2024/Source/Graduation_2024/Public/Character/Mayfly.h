@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-
 #include "Mayfly.generated.h"
 
 
@@ -24,6 +23,7 @@ class GRADUATION_2024_API AMayfly : public ACharacter
 private:
 	void ChangeCapsuleAndMesh();
 
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -32,7 +32,9 @@ public:
 	AMayfly();
 	// Called every frame
 	virtual void Tick(float deltaTime) override;
+	
 
+	
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Mayfly Type")
 	EMayflyType mayflytype;
 

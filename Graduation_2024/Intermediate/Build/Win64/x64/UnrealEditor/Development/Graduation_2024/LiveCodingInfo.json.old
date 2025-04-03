@@ -20,6 +20,7 @@
 			"InventoryComponent.gen.cpp.obj",
 			"ItemActor.gen.cpp.obj",
 			"ItemWidget.gen.cpp.obj",
+			"MayflyAIController.gen.cpp.obj",
 			"MayflyMovementComponent.gen.cpp.obj",
 			"MyPawn.gen.cpp.obj",
 			"PackageWidget.gen.cpp.obj",
@@ -37,7 +38,9 @@
 			"Archival.cpp.obj",
 			"BlackWuChang.cpp.obj",
 			"BlackWuChangAnimInstance.cpp.obj",
+			"PlayerCharacter.cpp.obj",
 			"CustomPlayerController.cpp.obj",
+			"MayflyAIController.cpp.obj",
 			"PlayerAIController.cpp.obj",
 			"CustomGameModeBase.cpp.obj",
 			"BlockActor.cpp.obj",
@@ -61,10 +64,7 @@
 			"ConversationUW.cpp.obj",
 			"Graduation_2024.init.gen.cpp.obj",
 			"Mayfly.gen.cpp.obj",
-			"MayflyAIController.gen.cpp.obj",
-			"Mayfly.cpp.obj",
-			"PlayerCharacter.cpp.obj",
-			"MayflyAIController.cpp.obj"
+			"Mayfly.cpp.obj"
 		]
 	}
 }

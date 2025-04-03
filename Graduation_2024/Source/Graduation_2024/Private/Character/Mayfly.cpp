@@ -17,8 +17,6 @@ AMayfly::AMayfly()
 	//FollowDistance = 100.0f; // 跟随停止的距离 
 	mayflytype = EMayflyType::eaddHPMAX;
 	playerCharacter = nullptr;
-	
-
 }
 
 
@@ -59,10 +57,6 @@ void AMayfly::Tick(float deltaTime)
 
 }
 
-void AMayfly::ChangeCapsuleAndMesh()
-{
-	
-}
 
 
 
