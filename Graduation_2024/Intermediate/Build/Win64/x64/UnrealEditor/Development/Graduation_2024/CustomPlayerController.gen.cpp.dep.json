@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\customplayercontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\graduation_2024\\definitions.graduation_2024.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\source\\graduation_2024\\public\\controller\\customplayercontroller.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmappingcontext.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedactionkeymapping.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputaction.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmodifiers.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputmodifiers.generated.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputtriggers.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputtriggers.generated.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputaction.generated.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedactionkeymapping.generated.h",
+            "d:\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputmappingcontext.generated.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\source\\graduation_2024\\public\\character\\player\\customplayerstatus.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\customplayerstatus.generated.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\customplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

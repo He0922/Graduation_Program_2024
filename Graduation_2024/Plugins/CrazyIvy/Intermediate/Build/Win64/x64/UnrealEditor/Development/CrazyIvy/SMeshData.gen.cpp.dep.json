@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\crazyivy\\intermediate\\build\\win64\\unrealeditor\\inc\\crazyivy\\uht\\smeshdata.gen.cpp",
+        "Source": "d:\\githubthing\\graduation_program_2024\\graduation_2024\\plugins\\crazyivy\\intermediate\\build\\win64\\unrealeditor\\inc\\crazyivy\\uht\\smeshdata.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\crazyivy\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\crazyivy\\definitions.crazyivy.h",
-            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\crazyivy\\source\\crazyivy\\public\\smeshdata.h",
-            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\crazyivy\\intermediate\\build\\win64\\unrealeditor\\inc\\crazyivy\\uht\\smeshdata.generated.h"
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\plugins\\crazyivy\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\crazyivy\\definitions.crazyivy.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\plugins\\crazyivy\\source\\crazyivy\\public\\smeshdata.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\plugins\\crazyivy\\intermediate\\build\\win64\\unrealeditor\\inc\\crazyivy\\uht\\smeshdata.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

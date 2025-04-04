@@ -14,11 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GRADUATION_2024_Mayfly_generated_h
 
-<<<<<<< Updated upstream
 #define FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_21_INCLASS_NO_PURE_DECLS \
-=======
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_22_INCLASS_NO_PURE_DECLS \
->>>>>>> Stashed changes
 private: \
 	static void StaticRegisterNativesAMayfly(); \
 	friend struct Z_Construct_UClass_AMayfly_Statics; \
@@ -27,11 +23,7 @@ public: \
 	DECLARE_SERIALIZER(AMayfly)
 
 
-<<<<<<< Updated upstream
 #define FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_21_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_22_ENHANCED_CONSTRUCTORS \
->>>>>>> Stashed changes
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMayfly(AMayfly&&); \
@@ -43,21 +35,12 @@ public: \
 	NO_API virtual ~AMayfly();
 
 
-<<<<<<< Updated upstream
 #define FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_18_PROLOG
 #define FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_21_INCLASS_NO_PURE_DECLS \
 	FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_21_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_19_PROLOG
-#define FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_22_GENERATED_BODY \
-PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-public: \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h_22_ENHANCED_CONSTRUCTORS \
->>>>>>> Stashed changes
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -65,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> GRADUATION_2024_API UClass* StaticClass<class AMayfly>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Programes_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h
+#define CURRENT_FILE_ID FID_GitHubThing_Graduation_Program_2024_Graduation_2024_Source_Graduation_2024_Public_Character_Mayfly_h
 
 
 #define FOREACH_ENUM_EMAYFLYTYPE(op) \
