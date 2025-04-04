@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\playerattributesinterface.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\graduation_2024\\definitions.graduation_2024.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\source\\graduation_2024\\public\\interface\\playerattributesinterface.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\unrealeditor\\inc\\graduation_2024\\uht\\playerattributesinterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

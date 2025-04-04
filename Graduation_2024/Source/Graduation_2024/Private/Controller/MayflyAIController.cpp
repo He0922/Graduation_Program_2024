@@ -12,13 +12,13 @@
 
 AMayflyAIController::AMayflyAIController()
 {
-	MayflyBlackboard = CreateDefaultSubobject<UBlackboardComponent>(TEXT("MayflyBlackboard"));
+	mayflyBlackboard = CreateDefaultSubobject<UBlackboardComponent>(TEXT("MayflyBlackboard"));
 }
 
 void AMayflyAIController::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	if (PlayerCharacter && MayflyBlackboard && Mayfly)
+	if (playerCharacter && mayflyBlackboard && mayfly)
 	{
 		SetBlackboardKey();
 		DistanceDetection();
@@ -43,22 +43,22 @@ void AMayflyAIController::OnPossess(APawn* PossessedPawn)
 
 void AMayflyAIController::TryGetInstance()
 {
-	if (!PlayerCharacter)
+	if (!playerCharacter)
 	{
-		PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerPawn(this, 0));
-		if (!PlayerCharacter)
+		playerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerPawn(this, 0));
+		if (!playerCharacter)
 			UE_LOG(LogTemp, Error, TEXT("无法获取 PlayerCharacter！"));
 	}
-	if (!Mayfly)
+	if (!mayfly)
 	{
-		Mayfly = Cast<AMayfly>(GetPawn());
-		if (!Mayfly)
+		mayfly = Cast<AMayfly>(GetPawn());
+		if (!mayfly)
 			UE_LOG(LogTemp, Error, TEXT("无法获取 Mayfly！"));
 	}
-	if (MayflyBehaviorTree && MayflyBlackboard)
+	if (iayflyBehaviorTree && mayflyBlackboard)
 	{
-		UseBlackboard(MayflyBlackboardData, MayflyBlackboard);
-		RunBehaviorTree(MayflyBehaviorTree);
+		UseBlackboard(mayflyBlackboardData, mayflyBlackboard);
+		RunBehaviorTree(iayflyBehaviorTree);
 	}
 	else
 	{
@@ -70,7 +70,7 @@ void AMayflyAIController::TryGetInstance()
 
 void AMayflyAIController::SetBlackboardKey()
 {
-	IsNearPlayer = MayflyBlackboard->GetValueAsBool("IsNearToPlayer");
+	isNearPlayer = mayflyBlackboard->GetValueAsBool("IsNearToPlayer");
 	
 	
 }
@@ -78,38 +78,38 @@ void AMayflyAIController::SetBlackboardKey()
 void AMayflyAIController::DistanceDetection()
 {
 
-	FVector TargetLocation = PlayerCharacter->MayflyLocation->GetComponentLocation();
+	FVector TargetLocation = playerCharacter->MayflyLocation->GetComponentLocation();
 
-	FVector OriginalLocation = Mayfly->GetMesh()->GetComponentLocation();
+	FVector OriginalLocation = mayfly->GetMesh()->GetComponentLocation();
 	
 	float Distance = FVector::Dist(TargetLocation, OriginalLocation);
 	
-	if (Distance >= DistanceBetween)
-		MayflyBlackboard->SetValueAsBool("IsNearToPlayer", false);
+	if (Distance >= distanceBetween)
+		mayflyBlackboard->SetValueAsBool("IsNearToPlayer", false);
 }
 
 void AMayflyAIController::ChangeRotation()
 {
-	FRotator PlayerRotation = PlayerCharacter->GetActorRotation();
-	FRotator MayflyRotation = Mayfly->GetActorRotation();
+	FRotator PlayerRotation = playerCharacter->GetActorRotation();
+	FRotator MayflyRotation = mayfly->GetActorRotation();
 	if (PlayerRotation - MayflyRotation != FRotator(0.f, 0.f, 0.f))
-		IsTheSameRotation = false;
+		isTheSameRotation = false;
 	if (PlayerRotation - MayflyRotation == FRotator(0.f, 0.f, 0.f))
-		IsTheSameRotation = true;
+		isTheSameRotation = true;
 }
 
 void AMayflyAIController::ChangeVelocity()
 {
-	if (!IsNearPlayer)
+	if (!isNearPlayer)
 	{
-		float SpeedOfPlayer = PlayerCharacter->playerMoveSpeed;
+		float SpeedOfPlayer = playerCharacter->playerMoveSpeed;
 		if (SpeedOfPlayer>0.1f)
 		{
-			float TargetSpeed = SpeedOfPlayer - SpeedGap +350.f;
-			Mayfly->GetCharacterMovement()->MaxWalkSpeed = TargetSpeed;
+			float TargetSpeed = SpeedOfPlayer - speedGap +350.f;
+			mayfly->GetCharacterMovement()->MaxWalkSpeed = TargetSpeed;
 		}
 		else 
-			Mayfly->GetCharacterMovement()->MaxWalkSpeed = 450.0f;
+			mayfly->GetCharacterMovement()->MaxWalkSpeed = 450.0f;
 	}
 }
 

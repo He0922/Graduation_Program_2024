@@ -1,19 +1,19 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2edmode\\uht\\sh_settings_waterfallselection.gen.cpp",
+        "Source": "d:\\githubthing\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2edmode\\uht\\sh_settings_waterfallselection.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\ue5\\project\\graduation_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "d:\\githubthing\\graduation_program_2024\\graduation_2024\\intermediate\\build\\win64\\x64\\graduation_2024editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\shadersource_waterfall2edmode\\definitions.shadersource_waterfall2edmode.h",
-            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2edmode\\public\\edmode\\sh_settings_waterfallselection.h",
-            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
-            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
-            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\serialization\\testundeclaredscriptstructobjectreferences.h",
-            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
-            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
-            "d:\\unreal_engine5\\ue_5.4\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
-            "e:\\ue5\\project\\graduation_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2edmode\\uht\\sh_settings_waterfallselection.generated.h"
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\shadersource_waterfall2edmode\\definitions.shadersource_waterfall2edmode.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\source\\shadersource_waterfall2edmode\\public\\edmode\\sh_settings_waterfallselection.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\serialization\\testundeclaredscriptstructobjectreferences.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
+            "d:\\ue_5.4\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
+            "d:\\githubthing\\graduation_program_2024\\graduation_2024\\plugins\\shadersourcewt2\\intermediate\\build\\win64\\unrealeditor\\inc\\shadersource_waterfall2edmode\\uht\\sh_settings_waterfallselection.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

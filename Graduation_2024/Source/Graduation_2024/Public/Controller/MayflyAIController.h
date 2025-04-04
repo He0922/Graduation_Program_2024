@@ -17,13 +17,13 @@ class GRADUATION_2024_API AMayflyAIController : public AAIController
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Component",meta = (AllowPrivateAccess = "true"))
-	UBlackboardComponent* MayflyBlackboard;//黑板组件
+	UBlackboardComponent* mayflyBlackboard;//黑板组件
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Component",meta = (AllowPrivateAccess = "true"))
-	UBlackboardData* MayflyBlackboardData;//黑板数据
+	UBlackboardData* mayflyBlackboardData;//黑板数据
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Component",meta = (AllowPrivateAccess = "true"))
-	UBehaviorTree* MayflyBehaviorTree;//行为树组件
+	UBehaviorTree* iayflyBehaviorTree;//行为树组件
 	UPROPERTY(EditAnywhere, BlueprintReadwrite, Category = "Follow",meta = (AllowPrivateAccess = "true"))
-	bool IsTheSameRotation;
+	bool isTheSameRotation;
 	
 	void TryGetInstance(); //尝试获取
 	void DistanceDetection(); //距离检测
@@ -34,9 +34,9 @@ private:
 public:
 	AMayflyAIController();
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player", meta = (AllowPrivateAccess = "true"))
-	APlayerCharacter* PlayerCharacter;//Player
+	APlayerCharacter* playerCharacter;//Player
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Mayfly", meta = (AllowPrivateAccess = "true"))
-	AMayfly* Mayfly;//Mayfly
+	AMayfly* mayfly;//Mayfly
 	
 	
 
@@ -47,11 +47,11 @@ protected:
 	virtual void OnPossess(APawn* PossessedPawn) override;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Follow",meta = (AllowPrivateAccess = "true"))
-	float DistanceBetween;//Mayfly和Player之间的距离
+	float distanceBetween;//Mayfly和Player之间的距离
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Follow",meta = (AllowPrivateAccess = "true"))
-	float SpeedGap;//跟随时的速度差距
+	float speedGap;//跟随时的速度差距
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Follow", meta = (AllowPrivateAccess = "true"))
-	bool IsNearPlayer;//黑板键：IsNearToPlayer
+	bool isNearPlayer;//黑板键：IsNearToPlayer
 	
 };
 

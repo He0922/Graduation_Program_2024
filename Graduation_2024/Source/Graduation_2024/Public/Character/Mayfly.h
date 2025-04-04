@@ -21,7 +21,7 @@ class GRADUATION_2024_API AMayfly : public ACharacter
 	GENERATED_BODY()
 
 private:
-	void ChangeCapsuleAndMesh();
+	
 
 	
 protected:
