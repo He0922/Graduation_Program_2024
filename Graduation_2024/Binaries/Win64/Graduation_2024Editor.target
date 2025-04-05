@@ -94,10 +94,13 @@
 			"Type": "SymbolFile"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Binaries/Win64/EOSSDK-Win64-Shipping.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Binaries/Win64/OpenColorIO_2_3.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -370,10 +373,13 @@
 			"Type": "DynamicLibrary"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Binaries/Win64/UnrealEditor-CEF3Utils.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Binaries/Win64/UnrealEditor-CSVtoSVG.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -1738,10 +1744,13 @@
 			"Type": "DynamicLibrary"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Binaries/Win64/UnrealEditor-WebBrowser.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Binaries/Win64/UnrealEditor-WidgetCarousel.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -1946,6 +1955,7 @@
 			"Type": "RequiredResource"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Bridge/Binaries/Win64/UnrealEditor-Bridge.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -1966,6 +1976,8 @@
 			"Type": "RequiredResource"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/Cameras/CameraShakePreviewer/Binaries/Win64/UnrealEditor-CameraShakePreviewer.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -2750,6 +2762,7 @@
 			"Type": "RequiredResource"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Experimental/MetaHuman/MetaHumanProjectUtilities/Binaries/Win64/UnrealEditor-MetaHumanProjectUtilities.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -2758,6 +2771,8 @@
 			"Type": "RequiredResource"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/Experimental/OpenImageDenoise/Binaries/Win64/UnrealEditor-OpenImageDenoise.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -2922,6 +2937,7 @@
 			"Type": "RequiredResource"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Fab/Binaries/Win64/UnrealEditor-Fab.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -2934,6 +2950,8 @@
 			"Type": "RequiredResource"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/FastBuildController/Binaries/Win64/UnrealEditor-FastBuildController.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3018,6 +3036,7 @@
 			"Type": "RequiredResource"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Marketplace/Developer/RiderLink/Binaries/Win64/UnrealEditor-RD.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3086,6 +3105,8 @@
 			"Type": "RequiredResource"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/Media/AndroidMedia/Binaries/Win64/UnrealEditor-AndroidMediaEditor.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3274,6 +3295,7 @@
 			"Type": "RequiredResource"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Online/EOSShared/Binaries/Win64/UnrealEditor-EOSShared.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3282,6 +3304,8 @@
 			"Type": "RequiredResource"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/Online/OnlineBase/Binaries/Win64/UnrealEditor-OnlineBase.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -23364,6 +23388,7 @@
 			"Type": "DebugNonUFS"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Binaries/Win64/EOSSDK-Win64-Shipping.dll",
 			"Type": "NonUFS"
 		},
@@ -23372,6 +23397,8 @@
 			"Type": "NonUFS"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Binaries/Win64/OpenColorIO_2_3.dll",
 			"Type": "NonUFS"
 		},
@@ -26308,10 +26335,13 @@
 			"Type": "UFS"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Bridge/Bridge.uplugin",
 			"Type": "UFS"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/Cameras/CameraShakePreviewer/CameraShakePreviewer.uplugin",
 			"Type": "UFS"
 		},
@@ -26636,10 +26666,13 @@
 			"Type": "UFS"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Experimental/MetaHuman/MetaHumanProjectUtilities/MetaHumanProjectUtilities.uplugin",
 			"Type": "UFS"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/Experimental/OpenImageDenoise/OpenImageDenoise.uplugin",
 			"Type": "UFS"
 		},
@@ -26684,10 +26717,13 @@
 			"Type": "UFS"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Fab/Fab.uplugin",
 			"Type": "UFS"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/FastBuildController/FastBuildController.uplugin",
 			"Type": "UFS"
 		},
@@ -26704,10 +26740,13 @@
 			"Type": "UFS"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Marketplace/Developer/RiderLink/RiderLink.uplugin",
 			"Type": "UFS"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/Media/AndroidMedia/AndroidMedia.uplugin",
 			"Type": "UFS"
 		},
@@ -26772,10 +26811,13 @@
 			"Type": "UFS"
 		},
 		{
+<<<<<<< Updated upstream
 			"Path": "$(EngineDir)/Plugins/Online/EOSShared/EOSShared.uplugin",
 			"Type": "UFS"
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"Path": "$(EngineDir)/Plugins/Online/IOS/OnlineSubsystemIOS/OnlineSubsystemIOS.uplugin",
 			"Type": "UFS"
 		},
@@ -27014,7 +27056,10 @@
 		"BlendSpaceMotionAnalysis",
 		"BlueprintHeaderView",
 		"BlueprintMaterialTextureNodes",
+<<<<<<< Updated upstream
 		"Bridge",
+=======
+>>>>>>> Stashed changes
 		"CLionSourceCodeAccess",
 		"CableComponent",
 		"CameraShakePreviewer",
@@ -27049,14 +27094,20 @@
 		"Dataflow",
 		"DatasmithContent",
 		"DumpGPUServices",
+<<<<<<< Updated upstream
 		"EOSShared",
+=======
+>>>>>>> Stashed changes
 		"EditorDebugTools",
 		"EditorScriptingUtilities",
 		"EngineAssetDefinitions",
 		"EnhancedInput",
 		"EnvironmentQueryEditor",
 		"ExampleDeviceProfileSelector",
+<<<<<<< Updated upstream
 		"Fab",
+=======
+>>>>>>> Stashed changes
 		"FacialAnimation",
 		"FastBuildController",
 		"Fracture",
@@ -27098,7 +27149,10 @@
 		"MeshModelingToolset",
 		"MeshModelingToolsetExp",
 		"MeshPainting",
+<<<<<<< Updated upstream
 		"MetaHumanProjectUtilities",
+=======
+>>>>>>> Stashed changes
 		"Metasound",
 		"MobileLauncherProfileWizard",
 		"MobilePatchingUtils",
@@ -27136,7 +27190,10 @@
 		"RenderDocPlugin",
 		"RenderGraphInsights",
 		"ResonanceAudio",
+<<<<<<< Updated upstream
 		"RiderLink",
+=======
+>>>>>>> Stashed changes
 		"RiderSourceCodeAccess",
 		"RigVM",
 		"SQLiteCore",

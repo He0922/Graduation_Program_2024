@@ -21,7 +21,7 @@
 /ALTERNATENAME:__imp___std_init_once_complete=__imp_InitOnceComplete
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"D:\VS\VC\Tools\MSVC\14.38.33130\lib\x64"
+/LIBPATH:"D:\VisualStudio\IDE\VC\Tools\MSVC\14.38.33130\lib\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\ucrt\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\um\x64"
 /NODEFAULTLIB:"LIBCMT"
@@ -36,6 +36,7 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
 /NATVIS:"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\Niagara.natvis"
+<<<<<<< Updated upstream
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Module.Graduation_2024.cpp.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Mayfly.cpp.obj"
@@ -76,11 +77,17 @@
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\PlayerSkillComponent.gen.cpp.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Runepaper.gen.cpp.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Default.rc2.res"
+=======
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Module.Graduation_2024.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\AudioManager.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Default.rc2.res"
+>>>>>>> Stashed changes
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UMG\UnrealEditor-UMG.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\AIModule\UnrealEditor-AIModule.lib"
-"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\InputCore\UnrealEditor-InputCore.lib"
 "..\Plugins\EnhancedInput\Intermediate\Build\Win64\x64\UnrealEditor\Development\EnhancedInput\UnrealEditor-EnhancedInput.lib"
 "..\Plugins\Runtime\ProceduralMeshComponent\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProceduralMeshComponent\UnrealEditor-ProceduralMeshComponent.lib"
@@ -115,7 +122,7 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Binaries\Win64\UnrealEditor-Graduation_2024.dll"
-/IMPLIB:"D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\UnrealEditor-Graduation_2024.sup.lib"
-/PDB:"D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Binaries\Win64\UnrealEditor-Graduation_2024.pdb"
+/OUT:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Binaries\Win64\UnrealEditor-Graduation_2024.dll"
+/IMPLIB:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\UnrealEditor-Graduation_2024.sup.lib"
+/PDB:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Binaries\Win64\UnrealEditor-Graduation_2024.pdb"
 /ignore:4078

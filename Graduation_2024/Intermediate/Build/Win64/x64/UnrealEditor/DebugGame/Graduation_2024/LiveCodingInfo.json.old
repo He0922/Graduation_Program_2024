@@ -3,14 +3,15 @@
 	{
 		"Module.Graduation_2024.cpp.obj": [
 			"Graduation_2024.cpp.obj",
+			"PlayerAnimInstance.cpp.obj",
 			"Archival.cpp.obj",
 			"BlackWuChang.cpp.obj",
 			"BlackWuChangAnimInstance.cpp.obj",
 			"Mayfly.cpp.obj",
 			"PlayerCharacter.cpp.obj",
+			"CustomPlayerController.cpp.obj",
 			"MayflyAIController.cpp.obj",
 			"PlayerAIController.cpp.obj",
-			"CustomGameModeBase.cpp.obj",
 			"BlockActor.cpp.obj",
 			"BlockActorManager.cpp.obj",
 			"Runepaper.cpp.obj",
@@ -26,14 +27,15 @@
 			"PlayerCharacterMovementComponent.cpp.obj",
 			"FloorRaft.cpp.obj",
 			"MyPawn.cpp.obj",
-			"PlayerSkillComponent.cpp.obj",
 			"ArchivalUW.cpp.obj",
 			"PlayerAttributesUW.cpp.obj",
 			"ConversationUW.cpp.obj",
+			"NarrationUW.cpp.obj",
 			"Archival.gen.cpp.obj",
 			"ArchivalInterface.gen.cpp.obj",
 			"ArchivalUW.gen.cpp.obj",
 			"ArchiveID.gen.cpp.obj",
+			"AudioManager.gen.cpp.obj",
 			"BlackWuChang.gen.cpp.obj",
 			"BlackWuChangAnimInstance.gen.cpp.obj",
 			"BlockActor.gen.cpp.obj",
@@ -53,6 +55,7 @@
 			"MayflyAIController.gen.cpp.obj",
 			"MayflyMovementComponent.gen.cpp.obj",
 			"MyPawn.gen.cpp.obj",
+			"NarrationUW.gen.cpp.obj",
 			"PackageWidget.gen.cpp.obj",
 			"PlayerAIController.gen.cpp.obj",
 			"PlayerAnimInstance.gen.cpp.obj",
@@ -63,8 +66,9 @@
 			"PlayerCharacterMovementComponent.gen.cpp.obj",
 			"PlayerSkillComponent.gen.cpp.obj",
 			"Runepaper.gen.cpp.obj",
-			"PlayerAnimInstance.cpp.obj",
-			"CustomPlayerController.cpp.obj"
+			"CustomGameModeBase.cpp.obj",
+			"PlayerSkillComponent.cpp.obj",
+			"AudioManager.cpp.obj"
 		]
 	}
 }

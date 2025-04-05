@@ -6,6 +6,7 @@
 /NAME:"UnrealEditor-Shadersource_Waterfall2EdMode.dll"
 /IGNORE:4221
 /NODEFAULTLIB
+<<<<<<< Updated upstream
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Module.Shadersource_Waterfall2EdMode.cpp.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Shadersource_Waterfall2EdMode.init.gen.cpp.obj"
@@ -14,3 +15,9 @@
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\SH_Waterfall2Settings.gen.cpp.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Default.rc2.res"
 /OUT:"D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\UnrealEditor-Shadersource_Waterfall2EdMode.lib"
+=======
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Module.Shadersource_Waterfall2EdMode.cpp.obj"
+"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\Default.rc2.res"
+/OUT:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\SHADERSOURCEWT2\Intermediate\Build\Win64\x64\UnrealEditor\Development\Shadersource_Waterfall2EdMode\UnrealEditor-Shadersource_Waterfall2EdMode.lib"
+>>>>>>> Stashed changes
