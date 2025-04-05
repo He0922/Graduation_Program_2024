@@ -6,7 +6,6 @@
 /NAME:"UnrealEditor-CrazyIvy.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-<<<<<<< Updated upstream
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\CrazyIvy.init.gen.cpp.obj"
@@ -14,9 +13,3 @@
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\SMeshData.gen.cpp.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Default.rc2.res"
 /OUT:"D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\UnrealEditor-CrazyIvy.lib"
-=======
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Module.CrazyIvy.cpp.obj"
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\Default.rc2.res"
-/OUT:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Plugins\CrazyIvy\Intermediate\Build\Win64\x64\UnrealEditor\Development\CrazyIvy\UnrealEditor-CrazyIvy.lib"
->>>>>>> Stashed changes

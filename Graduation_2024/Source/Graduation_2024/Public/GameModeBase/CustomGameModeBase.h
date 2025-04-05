@@ -15,7 +15,4 @@ class GRADUATION_2024_API ACustomGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 	
 	ACustomGameModeBase();
-
-protected:
-	virtual void StartPlay() override;
 };

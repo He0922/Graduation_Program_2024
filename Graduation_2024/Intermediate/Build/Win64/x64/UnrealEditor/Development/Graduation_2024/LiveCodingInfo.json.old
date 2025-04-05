@@ -2,50 +2,12 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Graduation_2024.cpp.obj": [
-<<<<<<< Updated upstream
 			"NarrationUW.gen.cpp.obj",
-=======
-			"Archival.gen.cpp.obj",
-			"ArchivalInterface.gen.cpp.obj",
-			"ArchivalUW.gen.cpp.obj",
-			"ArchiveID.gen.cpp.obj",
-			"BlackWuChang.gen.cpp.obj",
-			"BlackWuChangAnimInstance.gen.cpp.obj",
-			"BlockActor.gen.cpp.obj",
-			"BlockActorManager.gen.cpp.obj",
-			"ConversationUW.gen.cpp.obj",
-			"CustomFloatingPawnMovement.gen.cpp.obj",
-			"CustomGameModeBase.gen.cpp.obj",
-			"CustomPlayerController.gen.cpp.obj",
-			"CustomPlayerStatus.gen.cpp.obj",
-			"CustomPlayerStatusInterface.gen.cpp.obj",
-			"FloorRaft.gen.cpp.obj",
-			"Graduation_2024.init.gen.cpp.obj",
-			"InventoryComponent.gen.cpp.obj",
-			"ItemActor.gen.cpp.obj",
-			"ItemWidget.gen.cpp.obj",
-			"Mayfly.gen.cpp.obj",
-			"MayflyAIController.gen.cpp.obj",
-			"MayflyMovementComponent.gen.cpp.obj",
-			"MyPawn.gen.cpp.obj",
-			"PackageWidget.gen.cpp.obj",
-			"PlayerAIController.gen.cpp.obj",
-			"PlayerAnimInstance.gen.cpp.obj",
-			"PlayerAttributes.gen.cpp.obj",
-			"PlayerAttributesInterface.gen.cpp.obj",
-			"PlayerAttributesUW.gen.cpp.obj",
-			"PlayerCharacter.gen.cpp.obj",
-			"PlayerCharacterMovementComponent.gen.cpp.obj",
-			"PlayerSkillComponent.gen.cpp.obj",
-			"Runepaper.gen.cpp.obj",
-			"UAudioManager.gen.cpp.obj",
->>>>>>> Stashed changes
 			"Graduation_2024.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
 			"Archival.cpp.obj",
 			"BlackWuChang.cpp.obj",
 			"BlackWuChangAnimInstance.cpp.obj",
-			"Mayfly.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"CustomPlayerController.cpp.obj",
 			"PlayerAIController.cpp.obj",
@@ -69,7 +31,6 @@
 			"ArchivalUW.cpp.obj",
 			"PlayerAttributesUW.cpp.obj",
 			"ConversationUW.cpp.obj",
-<<<<<<< Updated upstream
 			"Archival.gen.cpp.obj",
 			"ArchivalInterface.gen.cpp.obj",
 			"ArchivalUW.gen.cpp.obj",
@@ -106,9 +67,6 @@
 			"Mayfly.cpp.obj",
 			"MayflyAIController.cpp.obj",
 			"NarrationUW.cpp.obj"
-=======
-			"UAudioManager.cpp.obj"
->>>>>>> Stashed changes
 		]
 	}
 }

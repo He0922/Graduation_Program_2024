@@ -957,18 +957,6 @@
     <ClCompile Include="..\..\Source\Graduation_2024\Private\UI\Conversation\ConversationUW.cpp">
       <Filter>Source\Graduation_2024\Private\UI\Conversation</Filter>
     </ClCompile>
-    <Filter Include="Source\Graduation_2024\Private\UI\Narration">
-      <UniqueIdentifier>{8F249ACD-9C1C-33A9-8425-E296FD6103AD}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\Graduation_2024\Private\UI\Narration\NarrationUW.cpp">
-      <Filter>Source\Graduation_2024\Private\UI\Narration</Filter>
-    </ClCompile>
-    <Filter Include="Source\Graduation_2024\Private\Voice">
-      <UniqueIdentifier>{8AC05E6C-98E8-3F76-B7BC-0DB0D794C03C}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\Graduation_2024\Private\Voice\AudioManager.cpp">
-      <Filter>Source\Graduation_2024\Private\Voice</Filter>
-    </ClCompile>
     <Filter Include="Source\Graduation_2024\Public">
       <UniqueIdentifier>{AF1DB00F-51B8-3DD0-B7E1-EEBA9F130934}</UniqueIdentifier>
     </Filter>
@@ -1124,18 +1112,6 @@
     </Filter>
     <ClInclude Include="..\..\Source\Graduation_2024\Public\UI\Conversation\ConversationUW.h">
       <Filter>Source\Graduation_2024\Public\UI\Conversation</Filter>
-    </ClInclude>
-    <Filter Include="Source\Graduation_2024\Public\UI\Narration">
-      <UniqueIdentifier>{18AB5D2A-56AB-3173-8AF0-C1FB2BE35AEE}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\UI\Narration\NarrationUW.h">
-      <Filter>Source\Graduation_2024\Public\UI\Narration</Filter>
-    </ClInclude>
-    <Filter Include="Source\Graduation_2024\Public\Voice">
-      <UniqueIdentifier>{51B108AD-928C-3035-86F6-AA5BEFB5FC78}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\Graduation_2024\Public\Voice\AudioManager.h">
-      <Filter>Source\Graduation_2024\Public\Voice</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -6,7 +6,6 @@
 /NAME:"UnrealEditor-Graduation_2024.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-<<<<<<< Updated upstream
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Module.Graduation_2024.cpp.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Mayfly.cpp.obj"
@@ -48,10 +47,3 @@
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Runepaper.gen.cpp.obj"
 "D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Default.rc2.res"
 /OUT:"D:\GitHubThing\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\UnrealEditor-Graduation_2024.lib"
-=======
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\Graduation_2024Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Module.Graduation_2024.cpp.obj"
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\AudioManager.cpp.obj"
-"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\Default.rc2.res"
-/OUT:"D:\UE\Programes\Graduation_Program_2024\Graduation_2024\Intermediate\Build\Win64\x64\UnrealEditor\Development\Graduation_2024\UnrealEditor-Graduation_2024.lib"
->>>>>>> Stashed changes

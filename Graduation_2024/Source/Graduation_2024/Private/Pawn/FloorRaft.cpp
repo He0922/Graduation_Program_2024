@@ -10,7 +10,6 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Components/TimelineComponent.h"
 
-#include "Voice/AudioManager.h"
 #include "../DebugHelper.h"
 #include "MovementComponent/CustomFloatingPawnMovement.h"
 
@@ -150,16 +149,12 @@ void AFloorRaft::StartRow()
 	TimelineComponent->SetPlaybackPosition(CurrentTime, false);
 	TimelineComponent->Play();
 
-	UAudioManager::GetInstance()->PlayRaftSound(this);
-
 	IfHasStartRow = true;
 }
 void AFloorRaft::StopRow()
 {
 	if (!IfHasStartRow)
 		return;
-
-	UAudioManager::GetInstance()->StopRaftSound(this);
 
 	CurrentTime = TimelineComponent->GetPlaybackPosition();
 	TimelineComponent->SetPlaybackPosition(CurrentTime, false);

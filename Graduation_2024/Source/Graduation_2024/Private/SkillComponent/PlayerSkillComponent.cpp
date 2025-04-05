@@ -7,7 +7,6 @@
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
 
-#include "Voice/AudioManager.h"
 #include "DrawDebugHelpers.h" 
 #include "Components/PrimitiveComponent.h" 
 #include "GeometryCollection/GeometryCollectionComponent.h"
@@ -155,8 +154,6 @@ void UPlayerSkillComponent::StartScan()
 	}
 
 	StartScanEvent.Broadcast();
-
-	UAudioManager::GetInstance()->PlayScanStartSound(GetOwner());
 
 	UE_LOG(PlayerSkillComponentLog, Warning, TEXT("StartScan"));
 
